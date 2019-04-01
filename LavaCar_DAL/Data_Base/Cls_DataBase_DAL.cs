@@ -11,7 +11,7 @@ namespace LavaCar_DAL.Data_Base
     public class Cls_DataBase_DAL
     {
         public DataTable DT_Parametros = new DataTable("Parametros");
-        public SqlConnection Obj_Connec_DT = new SqlConnection();
+        public SqlConnection Obj_Connec_DB = new SqlConnection();
         public SqlDataAdapter Obj_DAdapter = new SqlDataAdapter();
         public DataSet Obj_DSet = new DataSet();
         public SqlCommand Obj_Command;

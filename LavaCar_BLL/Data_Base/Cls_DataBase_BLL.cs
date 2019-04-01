@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LavaCar_DAL.Data_Base;
 
+//LIBRERIAS SQL SERVER CLIENT
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
@@ -20,19 +21,19 @@ namespace LavaCar_BLL.Data_Base
             try
             {
                 Obj_DB_DAL.sCxCadena = ConfigurationManager.ConnectionStrings["Windows_AUT"].ConnectionString;
-                Obj_DB_DAL.Obj_Connec_DT = new SqlConnection(Obj_DB_DAL.sCxCadena);
+                Obj_DB_DAL.Obj_Connec_DB = new SqlConnection(Obj_DB_DAL.sCxCadena);
                 Obj_DB_DAL.sMsjError = string.Empty;
             }
             catch (Exception ex)
             {
                 Obj_DB_DAL.sMsjError = ex.Message.ToString();
-                Obj_DB_DAL.Obj_Connec_DT = null;
+                Obj_DB_DAL.Obj_Connec_DB = null;
                 Obj_DB_DAL.sCxCadena = string.Empty; ;
             }
         }
 
-        //METODO DE CREACION DE PARAMETROS RELACIONANDO
-        //LAS VARIABLES DE LA BASE DE DATOS CON LA DE LA PLATAFORMA VISUAL
+        //METODO DE CREACION DE PARAMETROS, QUE RELACIONAN LAS VARIABLES
+        //DE LA BASE DE DATOS CON LA DE LA PLATAFORMA DE VISUAL(DAL)
 
         public void CrearParametros(ref Cls_DataBase_DAL Obj_DB_DAL)
         {
@@ -49,6 +50,107 @@ namespace LavaCar_BLL.Data_Base
             {
                 Obj_DB_DAL.sMsjError = ex.Message.ToString();
                 Obj_DB_DAL.DT_Parametros = null;
+            }
+        }
+
+        //METODO EJECUTABLE DE LAS ACCIONES DE LISTAR Y FILTRAR
+
+        public void Execute_DataAdapter(ref Cls_DataBase_DAL Obj_DB_DAL)
+        {
+            try
+            {
+                //SE CREA LA CONECXION A LA BD SQL
+                CrearConx(ref Obj_DB_DAL);
+
+                //COMPROBAR SI HAY CONECXION A LA BD SQL
+                if ((Obj_DB_DAL.Obj_Connec_DB != null) && (Obj_DB_DAL.sMsjError == string.Empty))
+                {
+                    //ABRIR LA ENTRADA DE DATOS
+                    if (Obj_DB_DAL.Obj_Connec_DB.State == ConnectionState.Closed)
+                    {
+                        Obj_DB_DAL.Obj_Connec_DB.Open();
+                    }
+
+                    //INSTANCIAR EL DATA ADAPTER CON LOS PARAMETROS QUE RECIBE
+                    Obj_DB_DAL.Obj_DAdapter = new SqlDataAdapter(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
+
+                    //DEFINICION DEL VALOR DEL PARAMETRO (VARIABLES)
+                    if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
+                    {
+                        foreach (DataRow DR in Obj_DB_DAL.DT_Parametros.Rows)
+                        {
+                            SqlDbType DBType = SqlDbType.VarChar;
+
+                            switch (DR[1].ToString())
+                            {
+                                case "1":
+                                    {
+                                        DBType = SqlDbType.Decimal;
+                                        break;
+                                    }
+                                case "2":
+                                    {
+                                        DBType = SqlDbType.NVarChar;
+                                        break;
+                                    }
+                                case "3":
+                                    {
+                                        DBType = SqlDbType.VarChar;
+                                        break;
+                                    }
+                                case "4":
+                                    {
+                                        DBType = SqlDbType.NChar;
+                                        break;
+                                    }
+                                case "5":
+                                    {
+                                        DBType = SqlDbType.Char;
+                                        break;
+                                    }
+                                case "6":
+                                    {
+                                        DBType = SqlDbType.Int;
+                                        break;
+                                    }
+                                case "7":
+                                    {
+                                        DBType = SqlDbType.DateTime;
+                                        break;
+                                    }
+                                default:
+
+                                    DBType = SqlDbType.VarChar;
+                                    break;
+                            }
+
+                            Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR[0].ToString(), DBType).Value = DR[2].ToString();
+                        }
+                    }
+
+                    //LLAMADO DEL STORED PROCEDURE
+                    Obj_DB_DAL.Obj_DAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                    Obj_DB_DAL.Obj_DAdapter.Fill(Obj_DB_DAL.Obj_DSet, Obj_DB_DAL.sTableName);
+
+                    Obj_DB_DAL.sMsjError = string.Empty;
+                }
+            }
+            catch (Exception error)
+            {
+
+                Obj_DB_DAL.sMsjError = error.Message.ToString() ;
+            }
+            finally
+            {
+                //CIERRE DE LA ENTRADA DE DATOS
+                if (Obj_DB_DAL.Obj_Connec_DB != null)
+                {
+                    Obj_DB_DAL.Obj_Connec_DB.Close();
+                }
+
+                //DESTRUCCION DE LA CONECXION PARA NO CONSUMIR
+                Obj_DB_DAL.Obj_Connec_DB.Dispose();
             }
         }
     }
