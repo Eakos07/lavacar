@@ -15,7 +15,6 @@ namespace LavaCar_BLL.Data_Base
     public class Cls_DataBase_BLL
     {
         //METODO DE CONECXION A LA BASE DE DATOS SQL SERVER
-
         public void CrearConx(ref Cls_DataBase_DAL Obj_DB_DAL)
         {
             try
@@ -34,7 +33,6 @@ namespace LavaCar_BLL.Data_Base
 
         //METODO DE CREACION DE PARAMETROS, QUE RELACIONAN LAS VARIABLES
         //DE LA BASE DE DATOS CON LA DE LA PLATAFORMA DE VISUAL(DAL)
-
         public void CrearParametros(ref Cls_DataBase_DAL Obj_DB_DAL)
         {
             try
@@ -54,7 +52,6 @@ namespace LavaCar_BLL.Data_Base
         }
 
         //METODO EJECUTABLE DE LAS ACCIONES DE LISTAR Y FILTRAR
-
         public void Execute_DataAdapter(ref Cls_DataBase_DAL Obj_DB_DAL)
         {
             try
@@ -138,7 +135,6 @@ namespace LavaCar_BLL.Data_Base
             }
             catch (Exception error)
             {
-
                 Obj_DB_DAL.sMsjError = error.Message.ToString() ;
             }
             finally
