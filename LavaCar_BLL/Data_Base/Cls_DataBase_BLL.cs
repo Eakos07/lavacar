@@ -68,7 +68,7 @@ namespace LavaCar_BLL.Data_Base
                         Obj_DB_DAL.Obj_Connec_DB.Open();
                     }
 
-                    //INSTANCIAR EL DATA ADAPTER CON LOS PARAMETROS QUE RECIBE
+                    //INSTANCIAR EL DATA ADAPTER CON LOS PARAMETROS QUE RECIBE SP
                     Obj_DB_DAL.Obj_DAdapter = new SqlDataAdapter(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
 
                     //DEFINICION DEL VALOR DEL PARAMETRO (VARIABLES)
@@ -142,11 +142,14 @@ namespace LavaCar_BLL.Data_Base
                 //CIERRE DE LA ENTRADA DE DATOS
                 if (Obj_DB_DAL.Obj_Connec_DB != null)
                 {
-                    Obj_DB_DAL.Obj_Connec_DB.Close();
-                }
+                    if (Obj_DB_DAL.Obj_Connec_DB.State == ConnectionState.Open)
+                    {
+                        Obj_DB_DAL.Obj_Connec_DB.Close(); 
+                    }
 
-                //DESTRUCCION DE LA CONECXION PARA NO CONSUMIR
-                Obj_DB_DAL.Obj_Connec_DB.Dispose();
+                    //DESTRUCCION DE LA CONECXION PARA NO CONSUMIR
+                    Obj_DB_DAL.Obj_Connec_DB.Dispose();
+                }
             }
         }
 
