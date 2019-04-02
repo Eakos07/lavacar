@@ -10,13 +10,92 @@ namespace LavaCar_DAL.Data_Base
 {
     public class Cls_DataBase_DAL
     {
-        public DataTable DT_Parametros = new DataTable("Parametros");
-        public SqlConnection Obj_Connec_DB = new SqlConnection();
-        public SqlDataAdapter Obj_DAdapter = new SqlDataAdapter();
-        public DataSet Obj_DSet = new DataSet();
-        public SqlCommand Obj_Command;
+        private DataTable _DT_Parametros;
+        private SqlConnection _Obj_Connec_DB;
+        private SqlDataAdapter _Obj_DAdapter;
+        private DataSet _Obj_DSet;
+        private SqlCommand _Obj_Command;
+        private int _iValorScalar;
 
         private string _sCxCadena, _sTableName, _sSP_Name, _sScalarV, _sMsjError;
+
+        public DataTable DT_Parametros
+        {
+            get
+            {
+                return DT_Parametros;
+            }
+
+            set
+            {
+                DT_Parametros = value;
+            }
+        }
+
+        public SqlConnection Obj_Connec_DB
+        {
+            get
+            {
+                return Obj_Connec_DB;
+            }
+
+            set
+            {
+                Obj_Connec_DB = value;
+            }
+        }
+
+        public SqlDataAdapter Obj_DAdapter
+        {
+            get
+            {
+                return Obj_DAdapter;
+            }
+
+            set
+            {
+                Obj_DAdapter = value;
+            }
+        }
+
+        public DataSet Obj_DSet
+        {
+            get
+            {
+                return Obj_DSet;
+            }
+
+            set
+            {
+                Obj_DSet = value;
+            }
+        }
+
+        public SqlCommand Obj_Command
+        {
+            get
+            {
+                return Obj_Command;
+            }
+
+            set
+            {
+                Obj_Command = value;
+            }
+        }
+
+        public int iValorScalar
+        {
+            get
+            {
+                return _iValorScalar;
+            }
+
+            set
+            {
+                _iValorScalar = value;
+            }
+        }
 
         public string sCxCadena
         {
@@ -44,19 +123,6 @@ namespace LavaCar_DAL.Data_Base
             }
         }
 
-        public string sScalarV
-        {
-            get
-            {
-                return _sScalarV;
-            }
-
-            set
-            {
-                _sScalarV = value;
-            }
-        }
-
         public string sSP_Name
         {
             get
@@ -67,6 +133,19 @@ namespace LavaCar_DAL.Data_Base
             set
             {
                 _sSP_Name = value;
+            }
+        }
+
+        public string sScalarV
+        {
+            get
+            {
+                return _sScalarV;
+            }
+
+            set
+            {
+                _sScalarV = value;
             }
         }
 

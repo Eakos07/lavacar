@@ -71,6 +71,9 @@ namespace LavaCar_BLL.Data_Base
                     //INSTANCIAR EL DATA ADAPTER CON LOS PARAMETROS QUE RECIBE SP
                     Obj_DB_DAL.Obj_DAdapter = new SqlDataAdapter(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
 
+                    //Ejecutar Stored Procedure
+                    Obj_DB_DAL.Obj_DAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
                     //DEFINICION DEL VALOR DEL PARAMETRO (VARIABLES)
                     if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
                     {
@@ -125,9 +128,6 @@ namespace LavaCar_BLL.Data_Base
                         }
                     }
 
-                    //LLAMADO DEL STORED PROCEDURE
-                    Obj_DB_DAL.Obj_DAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-
                     Obj_DB_DAL.Obj_DAdapter.Fill(Obj_DB_DAL.Obj_DSet, Obj_DB_DAL.sTableName);
 
                     Obj_DB_DAL.sMsjError = string.Empty;
@@ -168,6 +168,8 @@ namespace LavaCar_BLL.Data_Base
                     }
 
                     Obj_DB_DAL.Obj_Command = new SqlCommand(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
+
+                    Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
 
                     if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
                     {
@@ -223,9 +225,103 @@ namespace LavaCar_BLL.Data_Base
                         }
                     }
 
+                    Obj_DB_DAL.Obj_Command.ExecuteNonQuery();
+
+                    Obj_DB_DAL.sMsjError = string.Empty;
+                }
+
+                Obj_DB_DAL.sMsjError = string.Empty;
+            }
+            catch (Exception error)
+            {
+                Obj_DB_DAL.sMsjError = error.Message.ToString();
+            }
+            finally
+            {
+                if (Obj_DB_DAL.Obj_Connec_DB != null)
+                {
+                    if (Obj_DB_DAL.Obj_Connec_DB.State == ConnectionState.Open)
+                    {
+                        Obj_DB_DAL.Obj_Connec_DB.Close();
+                    }
+
+                    Obj_DB_DAL.Obj_Connec_DB.Dispose();
+                }
+            }
+        }
+
+        public void Ejec_Scalar (ref Cls_DataBase_DAL Obj_DB_DAL)
+        {
+            try
+            {
+                CrearConx(ref Obj_DB_DAL);
+
+                if ((Obj_DB_DAL.Obj_Connec_DB != null) && (Obj_DB_DAL.sMsjError == string.Empty)) { }
+                {
+                    if (Obj_DB_DAL.Obj_Connec_DB.State == ConnectionState.Closed)
+                    {
+                        Obj_DB_DAL.Obj_Connec_DB.Open();
+                    }
+
+                    Obj_DB_DAL.Obj_Command = new SqlCommand(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
+
                     Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
 
-                    Obj_DB_DAL.Obj_Command.ExecuteNonQuery();
+                    if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
+                    {
+                        foreach (DataRow DR in Obj_DB_DAL.DT_Parametros.Rows)
+                        {
+                            SqlDbType DBType = SqlDbType.VarChar;
+
+                            switch (DR[1].ToString())
+                            {
+                                case "1":
+                                    {
+                                        DBType = SqlDbType.Decimal;
+                                        break;
+                                    }
+                                case "2":
+                                    {
+                                        DBType = SqlDbType.NVarChar;
+                                        break;
+                                    }
+                                case "3":
+                                    {
+                                        DBType = SqlDbType.VarChar;
+                                        break;
+                                    }
+                                case "4":
+                                    {
+                                        DBType = SqlDbType.NChar;
+                                        break;
+                                    }
+                                case "5":
+                                    {
+                                        DBType = SqlDbType.Char;
+                                        break;
+                                    }
+                                case "6":
+                                    {
+                                        DBType = SqlDbType.Int;
+                                        break;
+                                    }
+                                case "7":
+                                    {
+                                        DBType = SqlDbType.DateTime;
+                                        break;
+                                    }
+                                default:
+
+                                    DBType = SqlDbType.VarChar;
+                                    break;
+                            }
+
+                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR[0].ToString(), DBType).Value = DR[2].ToString();
+
+                        }
+                    }
+
+                    Obj_DB_DAL.iValorScalar = Convert.ToInt32(Obj_DB_DAL.Obj_Command.ExecuteScalar());
 
                     Obj_DB_DAL.sMsjError = string.Empty;
                 }
