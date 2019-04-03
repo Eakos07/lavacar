@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_AjustesInventario_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesCompra_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesVenta_DAL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
