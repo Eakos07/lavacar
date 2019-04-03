@@ -220,7 +220,7 @@ namespace LavaCar_BLL.Data_Base
                                     break;
                             }
 
-                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR[0].ToString(), DBType).Value = DR[2].ToString();
+                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
 
                         }
                     }
@@ -250,6 +250,8 @@ namespace LavaCar_BLL.Data_Base
             }
         }
 
+
+        //Metodo para modificar tablas con variables identity
         public void Ejec_Scalar (ref Cls_DataBase_DAL Obj_DB_DAL)
         {
             try
@@ -316,7 +318,7 @@ namespace LavaCar_BLL.Data_Base
                                     break;
                             }
 
-                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR[0].ToString(), DBType).Value = DR[2].ToString();
+                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
 
                         }
                     }
