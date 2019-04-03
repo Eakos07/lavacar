@@ -33,10 +33,7 @@ namespace FRM_Login.Menu
             vh.Show();
 
         }   //Evento para abrir ventana seleccionada
-        private void btnCitas_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Citas());
-        }
+   
 
         private void pnlTop_MouseDown(object sender, MouseEventArgs e)
         {
@@ -44,14 +41,39 @@ namespace FRM_Login.Menu
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Estados());
-        }
-
         private void btnPolizas_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Polizas());
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Marcas());
+        }
+
+        private void btnSupervisor_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Supervisor());
+        }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Articulos());
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Proveedores());
+        }
+
+        private void btnEstados_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Estados());
+        }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Citas());
         }
 
         private void button2_Click(object sender, EventArgs e)
