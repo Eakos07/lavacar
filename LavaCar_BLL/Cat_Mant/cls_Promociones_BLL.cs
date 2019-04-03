@@ -12,53 +12,51 @@ namespace LavaCar_BLL.Cat_Mant
 {
     public class cls_Promociones_BLL
     {
-        public class cls_TipoCambio_BLL
+        public DataTable Listar_Promociones(ref string sMsjError)
         {
-            public DataTable Listar_Promociones(ref string sMsjError)
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+            Obj_DAL.sTableName = "Promociones";
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Promociones"].ToString().Trim();
+            Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
             {
-                Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
-                Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
-                Obj_DAL.sTableName = "Promociones";
-                Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Promociones"].ToString().Trim();
-                Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
-
-                if (Obj_DAL.sMsjError == string.Empty)
-                {
-                    sMsjError = string.Empty;
-                    return Obj_DAL.Obj_DSet.Tables[0];
-                }
-                else
-                {
-                    sMsjError = Obj_DAL.sMsjError;
-                    return null;
-                }
-
+                sMsjError = string.Empty;
+                return Obj_DAL.Obj_DSet.Tables[0];
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+                return null;
             }
 
-            public DataTable Filtrar_Promociones(ref string sMsjError, string sFiltro)
+        }
+
+        public DataTable Filtrar_Promociones(ref string sMsjError, string sFiltro)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@TipoPromocion", 3, sFiltro);
+
+            Obj_DAL.sTableName = "Promociones";
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Promociones"].ToString().Trim();
+            Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
+
+
+            if (Obj_DAL.sMsjError == string.Empty)
             {
-                Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
-                Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
-
-                Obj_BLL.CrearParametros(ref Obj_DAL);
-                Obj_DAL.DT_Parametros.Rows.Add("@TipoPromocion", 3, sFiltro);
-
-                Obj_DAL.sTableName = "Promociones";
-                Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Promociones"].ToString().Trim();
-                Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
-
-
-                if (Obj_DAL.sMsjError == string.Empty)
-                {
-                    sMsjError = string.Empty;
-                    return Obj_DAL.Obj_DSet.Tables[0];
-                }
-                else
-                {
-                    sMsjError = Obj_DAL.sMsjError;
-                    return null;
-                }
+                sMsjError = string.Empty;
+                return Obj_DAL.Obj_DSet.Tables[0];
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+                return null;
             }
         }
     }
 }
+
