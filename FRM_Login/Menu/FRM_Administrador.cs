@@ -48,5 +48,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new Menu.FRM_Estados());
         }
+
+        private void btnPolizas_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Polizas());
+        }
     }
 }
