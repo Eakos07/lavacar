@@ -48,5 +48,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new Menu.FRM_Estados());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new Menu.FRM_Articulos());
+        }
     }
 }
