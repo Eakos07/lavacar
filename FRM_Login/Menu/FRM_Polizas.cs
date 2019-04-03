@@ -32,11 +32,6 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         public void Cargar_Datos()
         {
             cls_Polizas_BLL Obj_BLL = new cls_Polizas_BLL();

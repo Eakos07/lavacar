@@ -69,6 +69,12 @@
     <Compile Include="Menu\FRM_Administrador.Designer.cs">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\FRM_Ajuste_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Ajuste_Inventario.Designer.cs">
+      <DependentUpon>FRM_Ajuste_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\FRM_Articulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="Menu\FRM_Cambio_Contraseña.Designer.cs">
       <DependentUpon>FRM_Cambio_Contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Centro_Lavado_Octupus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Centro_Lavado_Octupus.Designer.cs">
+      <DependentUpon>FRM_Centro_Lavado_Octupus.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\FRM_Citas.cs">
       <SubType>Form</SubType>
@@ -105,6 +117,12 @@
     <Compile Include="Menu\FRM_Estados.Designer.cs">
       <DependentUpon>FRM_Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\FRM_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Factura.Designer.cs">
+      <DependentUpon>FRM_Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\FRM_Horarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +141,29 @@
     <Compile Include="Menu\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\FRM_Ordenes _ de_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Ordenes _ de_Compras.Designer.cs">
+      <DependentUpon>FRM_Ordenes _ de_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Planillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Planillas.Designer.cs">
+      <DependentUpon>FRM_Planillas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\FRM_Polizas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\FRM_Polizas.Designer.cs">
       <DependentUpon>FRM_Polizas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Promociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Promociones.Designer.cs">
+      <DependentUpon>FRM_Promociones.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\FRM_Proveedores.cs">
       <SubType>Form</SubType>
@@ -135,11 +171,47 @@
     <Compile Include="Menu\FRM_Proveedores.Designer.cs">
       <DependentUpon>FRM_Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\FRM_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Roles.Designer.cs">
+      <DependentUpon>FRM_Roles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\FRM_Supervisor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\FRM_Supervisor.Designer.cs">
       <DependentUpon>FRM_Supervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Cambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Cambio.Designer.cs">
+      <DependentUpon>FRM_Tipo_Cambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Factura.Designer.cs">
+      <DependentUpon>FRM_Tipo_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Placa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Placa.Designer.cs">
+      <DependentUpon>FRM_Tipo_Placa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Servicio.Designer.cs">
+      <DependentUpon>FRM_Tipo_Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Vehículo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Tipo_Vehículo.Designer.cs">
+      <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,11 +224,17 @@
     <EmbeddedResource Include="Menu\FRM_Administrador.resx">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Ajuste_Inventario.resx">
+      <DependentUpon>FRM_Ajuste_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Articulos.resx">
       <DependentUpon>FRM_Articulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Cambio_Contraseña.resx">
       <DependentUpon>FRM_Cambio_Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Centro_Lavado_Octupus.resx">
+      <DependentUpon>FRM_Centro_Lavado_Octupus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Citas.resx">
       <DependentUpon>FRM_Citas.cs</DependentUpon>
@@ -170,6 +248,9 @@
     <EmbeddedResource Include="Menu\FRM_Estados.resx">
       <DependentUpon>FRM_Estados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Factura.resx">
+      <DependentUpon>FRM_Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Horarios.resx">
       <DependentUpon>FRM_Horarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,14 +260,41 @@
     <EmbeddedResource Include="Menu\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Ordenes _ de_Compras.resx">
+      <DependentUpon>FRM_Ordenes _ de_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Planillas.resx">
+      <DependentUpon>FRM_Planillas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Polizas.resx">
       <DependentUpon>FRM_Polizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Promociones.resx">
+      <DependentUpon>FRM_Promociones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Proveedores.resx">
       <DependentUpon>FRM_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Roles.resx">
+      <DependentUpon>FRM_Roles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Supervisor.resx">
       <DependentUpon>FRM_Supervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Tipo_Cambio.resx">
+      <DependentUpon>FRM_Tipo_Cambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Tipo_Factura.resx">
+      <DependentUpon>FRM_Tipo_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Tipo_Placa.resx">
+      <DependentUpon>FRM_Tipo_Placa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Tipo_Servicio.resx">
+      <DependentUpon>FRM_Tipo_Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Tipo_Vehículo.resx">
+      <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
