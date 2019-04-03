@@ -19,7 +19,7 @@ namespace LavaCar_BLL.Data_Base
         {
             try
             {
-                Obj_DB_DAL.sCxCadena = ConfigurationManager.ConnectionStrings["Windows_AUT"].ConnectionString;
+                Obj_DB_DAL.sCxCadena = ConfigurationManager.ConnectionStrings[1].ConnectionString;
                 Obj_DB_DAL.Obj_Connec_DB = new SqlConnection(Obj_DB_DAL.sCxCadena);
                 Obj_DB_DAL.sMsjError = string.Empty;
             }
