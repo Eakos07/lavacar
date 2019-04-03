@@ -105,5 +105,40 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Tipo_Placa());
         }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Empleados());
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Factura());
+        }
+
+        private void btnTipoCambio_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Tipo_Cambio());
+        }
+
+        private void btnTipoFactura_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Tipo_Factura());
+        }
+
+        private void btnTipoServicio_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Tipo_Servicio());
+        }
+
+        private void btnTipoVehiculo_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Tipo_Vehículo());
+        }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Roles());
+        }
     }
 }

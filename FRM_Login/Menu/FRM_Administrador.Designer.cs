@@ -274,6 +274,7 @@
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnCompra
             // 
@@ -308,6 +309,7 @@
             this.btnRoles.Text = "Roles";
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRoles.UseVisualStyleBackColor = true;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
             // btnTipoFactura
             // 
@@ -325,6 +327,7 @@
             this.btnTipoFactura.Text = "Tipo Factura";
             this.btnTipoFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTipoFactura.UseVisualStyleBackColor = true;
+            this.btnTipoFactura.Click += new System.EventHandler(this.btnTipoFactura_Click);
             // 
             // pnlTop
             // 
@@ -432,6 +435,7 @@
             this.btnTipoVehiculo.Text = "Tipo Vehiculo";
             this.btnTipoVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTipoVehiculo.UseVisualStyleBackColor = true;
+            this.btnTipoVehiculo.Click += new System.EventHandler(this.btnTipoVehiculo_Click);
             // 
             // btnTipoServicio
             // 
@@ -449,6 +453,7 @@
             this.btnTipoServicio.Text = "Tipo Servicio";
             this.btnTipoServicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTipoServicio.UseVisualStyleBackColor = true;
+            this.btnTipoServicio.Click += new System.EventHandler(this.btnTipoServicio_Click);
             // 
             // btnTipoCambio
             // 
@@ -466,6 +471,7 @@
             this.btnTipoCambio.Text = "Tipo Cambio";
             this.btnTipoCambio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTipoCambio.UseVisualStyleBackColor = true;
+            this.btnTipoCambio.Click += new System.EventHandler(this.btnTipoCambio_Click);
             // 
             // btnFactura
             // 
@@ -483,6 +489,7 @@
             this.btnFactura.Text = "Factura";
             this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFactura.UseVisualStyleBackColor = true;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // btnOctopus
             // 
