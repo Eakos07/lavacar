@@ -49,7 +49,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu2 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.btnTipoPlaca = new System.Windows.Forms.Button();
             this.btnTipoVehiculo = new System.Windows.Forms.Button();
             this.btnTipoServicio = new System.Windows.Forms.Button();
             this.btnTipoCambio = new System.Windows.Forms.Button();
@@ -238,6 +238,7 @@
             this.btnEstados.Text = "Estados";
             this.btnEstados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEstados.UseVisualStyleBackColor = true;
+            this.btnEstados.Click += new System.EventHandler(this.btnEstados_Click);
             // 
             // btnClientes
             // 
@@ -366,7 +367,7 @@
             // 
             this.pnlMenu2.BackColor = System.Drawing.Color.SkyBlue;
             this.pnlMenu2.Controls.Add(this.button19);
-            this.pnlMenu2.Controls.Add(this.button18);
+            this.pnlMenu2.Controls.Add(this.btnTipoPlaca);
             this.pnlMenu2.Controls.Add(this.btnTipoVehiculo);
             this.pnlMenu2.Controls.Add(this.btnTipoServicio);
             this.pnlMenu2.Controls.Add(this.btnTipoCambio);
@@ -397,22 +398,23 @@
             this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button19.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // btnTipoPlaca
             // 
-            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.Black;
-            this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.Location = new System.Drawing.Point(1, 338);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(140, 45);
-            this.button18.TabIndex = 16;
-            this.button18.Text = "Estados";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnTipoPlaca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTipoPlaca.FlatAppearance.BorderSize = 0;
+            this.btnTipoPlaca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTipoPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoPlaca.ForeColor = System.Drawing.Color.Black;
+            this.btnTipoPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoPlaca.Location = new System.Drawing.Point(1, 338);
+            this.btnTipoPlaca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTipoPlaca.Name = "btnTipoPlaca";
+            this.btnTipoPlaca.Size = new System.Drawing.Size(140, 45);
+            this.btnTipoPlaca.TabIndex = 16;
+            this.btnTipoPlaca.Text = "Tipo Placa";
+            this.btnTipoPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTipoPlaca.UseVisualStyleBackColor = true;
+            this.btnTipoPlaca.Click += new System.EventHandler(this.btnTipoPlaca_Click);
             // 
             // btnTipoVehiculo
             // 
@@ -579,7 +581,7 @@
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Button btnTipoFactura;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btnTipoPlaca;
         private System.Windows.Forms.Button btnTipoVehiculo;
         private System.Windows.Forms.Button btnTipoServicio;
         private System.Windows.Forms.Button btnTipoCambio;

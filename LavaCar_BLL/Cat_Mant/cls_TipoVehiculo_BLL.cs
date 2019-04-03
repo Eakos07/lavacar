@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 using System.Data;
 using LavaCar_DAL.Data_Base;
 using LavaCar_BLL.Data_Base;
-using System.Configuration;
+
 
 namespace LavaCar_BLL.Cat_Mant
 {
-    public class cls_TipoPlaca_BLL
+    public class cls_TipoVehiculo_BLL
     {
-        public DataTable Listar_TipoPlaca(ref string sMsjError)
+        public DataTable Listar_TipoVehiculo(ref string sMsjError)
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
-            Obj_DAL.sTableName = "Tipo Placa";
+            Obj_DAL.sTableName = "Tipo Vehiculo";
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_TipoPlaca"].ToString().Trim();
             Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
 
@@ -33,16 +34,16 @@ namespace LavaCar_BLL.Cat_Mant
 
         }
 
-        public DataTable Filtrar_TipoPlaca(ref string sMsjError, string sFiltro)
+        public DataTable Filtrar_TipoVehiculo(ref string sMsjError, string sFiltro)
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
             Obj_BLL.CrearParametros(ref Obj_DAL);
-            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPlaca", 8, sFiltro);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, sFiltro);
 
-            Obj_DAL.sTableName = "Tipo Placa";
-            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_TipoPlaca"].ToString().Trim();
+            Obj_DAL.sTableName = "Tipo Vehiculo";
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Vehiculo"].ToString().Trim();
             Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
 
 

@@ -100,5 +100,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Clientes());
         }
+
+        private void btnTipoPlaca_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Tipo_Placa());
+        }
     }
 }
