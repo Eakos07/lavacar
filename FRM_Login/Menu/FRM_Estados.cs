@@ -41,6 +41,9 @@ namespace FRM_Login.Menu
             {
                 dtEstados = Obj_BLL.Filtrar_Estados(ref sMsjError, toolStripTextBox1.Text);
             }
+
+            
+
             if (sMsjError == string.Empty)
             {
                 dataGridView1.DataSource = null;
