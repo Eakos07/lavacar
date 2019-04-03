@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace FRM_Login.Menu
 {
-    public partial class FRM_Articulos : Form
+    public partial class FRM_Empleados : Form
     {
-        public FRM_Articulos()
+        public FRM_Empleados()
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-       
     }
 }

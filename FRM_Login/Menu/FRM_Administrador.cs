@@ -44,39 +44,14 @@ namespace FRM_Login.Menu
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btn_Marca_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             AbrirVentana(new Menu.FRM_Estados());
-        }
-
-        private void btn_Estados_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Estados());
-        }
-
-        private void btn_Marca_Click_1(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Marcas());
-        }
-
-        private void btn_Superv_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Supervisor());
-        }
-
-        private void btn_Artic_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Articulos());
-        }
-
-        private void btn_Prove_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Proveedores());
         }
 
         private void btnPolizas_Click(object sender, EventArgs e)
         {
-            AbrirVentana(new Menu.FRM_Polizas());
+            AbrirVentana(new FRM_Polizas());
         }
     }
 }

@@ -33,13 +33,24 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtEstados = new DataTable();
 
-            dtEstados = Obj_BLL.Listar_Estados(ref sMsjError);
-
+            if(toolStripTextBox1.Text == string.Empty)
+            {
+                dtEstados = Obj_BLL.Listar_Estados(ref sMsjError);
+            }
+            else
+            {
+                dtEstados = Obj_BLL.Filtrar_Estados(ref sMsjError, toolStripTextBox1.Text);
+            }
             if (sMsjError == string.Empty)
             {
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = dtEstados;
             }
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos();
         }
     }
 }
