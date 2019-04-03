@@ -9,6 +9,8 @@ using LavaCar_DAL.Data_Base;
 using LavaCar_DAL.Cat_Mant;
 using LavaCar_BLL.Data_Base;
 
+
+
 namespace LavaCar_BLL.Cat_Mant
 {
     public class cls_Estados_BLL
@@ -19,7 +21,7 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
             Obj_DAL.sTableName = "Estados";
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Estados"].ToString().Trim();
-            Obj_BLL.Ejec_Scalar(ref Obj_DAL);
+            Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
 
             if(Obj_DAL.sMsjError == string.Empty)
             {
