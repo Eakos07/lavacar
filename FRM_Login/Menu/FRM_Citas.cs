@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LavaCar_BLL.Cat_Mant;
+using LavaCar_DAL.Cat_Mant;
 
 namespace FRM_Login.Menu
 {
@@ -22,6 +24,10 @@ namespace FRM_Login.Menu
             this.Close();
         }
 
-        
+        private void FRM_Citas_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
