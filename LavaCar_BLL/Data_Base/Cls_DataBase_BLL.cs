@@ -118,10 +118,11 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.TinyInt;
+                                        break;
+                                    }
                             }
 
                             Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
@@ -214,10 +215,11 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.TinyInt;
+                                        break;
+                                    }
                             }
 
                             Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
@@ -312,10 +314,11 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.TinyInt;
+                                        break;
+                                    }
                             }
 
                             Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
