@@ -9,8 +9,6 @@ using LavaCar_DAL.Data_Base;
 using LavaCar_DAL.Cat_Mant;
 using LavaCar_BLL.Data_Base;
 
-
-
 namespace LavaCar_BLL.Cat_Mant
 {
     public class cls_Estados_BLL
