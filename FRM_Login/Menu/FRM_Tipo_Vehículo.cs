@@ -35,6 +35,7 @@ namespace FRM_Login.Menu
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = dtTipoVehiculo;
             }
+        }
 
 
         private void FRM_Tipo_Vehículo_Load(object sender, EventArgs e)
