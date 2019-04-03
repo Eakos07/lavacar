@@ -17,7 +17,7 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
             Obj_DAL.sTableName = "Facturas";
-            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Facturas"].ToString().Trim();
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Factura"].ToString().Trim();
             Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
 
             if (Obj_DAL.sMsjError == string.Empty)
@@ -42,7 +42,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@NumFactura", 6, sFiltro);
 
             Obj_DAL.sTableName = "Facturas";
-            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Facturas"].ToString().Trim();
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Factura"].ToString().Trim();
             Obj_BLL.Execute_DataAdapter(ref Obj_DAL);
 
 
