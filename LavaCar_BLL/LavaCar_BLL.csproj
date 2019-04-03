@@ -42,7 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cat_Mant\cls_Estados_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Factura_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_FamiliaArticulos_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Horarios_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Planillas_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Promociones_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Proveedores_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Roles_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoCambio_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoFactura_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Usuarios_BLL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

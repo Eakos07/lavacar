@@ -41,7 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Factura_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_FamiliaArticulos_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Horarios_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Planillas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Promociones_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Proveedores_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Roles_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoCambio_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoFactura_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Usuarios_DAL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
