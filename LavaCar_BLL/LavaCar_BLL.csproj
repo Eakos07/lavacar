@@ -59,6 +59,7 @@
     <Compile Include="Cat_Mant\cls_TipoPlaca_BLL.cs" />
     <Compile Include="Cat_Mant\cls_TipoPolizas_BLL.cs" />
     <Compile Include="Cat_Mant\cls_TipoVehiculo_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesCompra_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Usuarios_BLL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
