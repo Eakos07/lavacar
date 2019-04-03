@@ -80,5 +80,25 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Articulos());
         }
+
+        private void btnProveedores_Click_1(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Proveedores());
+        }
+
+        private void btnMarcas_Click_1(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Marcas());
+        }
+
+        private void btnPlanillas_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Planillas());
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Clientes());
+        }
     }
 }
