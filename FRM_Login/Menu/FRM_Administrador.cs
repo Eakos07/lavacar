@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace FRM_Login.Menu
 {
@@ -16,6 +17,10 @@ namespace FRM_Login.Menu
         {
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwmd, int wmsg, int wparam, int lparam);
         private void AbrirVentana(object VentanaHija)
         {
             if (pnlVentana.Controls.Count > 0)
