@@ -26,8 +26,8 @@ namespace FRM_Login.Menu
 
         private void FRM_Citas_Load(object sender, EventArgs e)
         {
-
+          
         }
-
+        
     }
 }

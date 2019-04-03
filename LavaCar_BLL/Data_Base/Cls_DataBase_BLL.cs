@@ -75,7 +75,7 @@ namespace LavaCar_BLL.Data_Base
                     Obj_DB_DAL.Obj_DAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                     //DEFINICION DEL VALOR DEL PARAMETRO (VARIABLES)
-                    if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
+                    if (Obj_DB_DAL.DT_Parametros != null)
                     {
                         foreach (DataRow DR in Obj_DB_DAL.DT_Parametros.Rows)
                         {
@@ -124,10 +124,10 @@ namespace LavaCar_BLL.Data_Base
                                     break;
                             }
 
-                            Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR[0].ToString(), DBType).Value = DR[2].ToString();
+                            Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
                         }
                     }
-
+                    Obj_DB_DAL.Obj_DSet = new DataSet();
                     Obj_DB_DAL.Obj_DAdapter.Fill(Obj_DB_DAL.Obj_DSet, Obj_DB_DAL.sTableName);
 
                     Obj_DB_DAL.sMsjError = string.Empty;

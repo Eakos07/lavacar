@@ -17,6 +17,10 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
-        
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            FRM_Citas PantallaCitas = new FRM_Citas();
+            PantallaCitas.ShowDialog();
+        }
     }
 }

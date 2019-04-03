@@ -19,16 +19,17 @@ namespace LavaCar_DAL.Data_Base
 
         private string _sCxCadena, _sTableName, _sSP_Name, _sScalarV, _sMsjError;
 
+        #region Variables Publicas
         public DataTable DT_Parametros
         {
             get
             {
-                return DT_Parametros;
+                return _DT_Parametros;
             }
 
             set
             {
-                DT_Parametros = value;
+                _DT_Parametros = value;
             }
         }
 
@@ -36,12 +37,12 @@ namespace LavaCar_DAL.Data_Base
         {
             get
             {
-                return Obj_Connec_DB;
+                return _Obj_Connec_DB;
             }
 
             set
             {
-                Obj_Connec_DB = value;
+                _Obj_Connec_DB = value;
             }
         }
 
@@ -49,12 +50,12 @@ namespace LavaCar_DAL.Data_Base
         {
             get
             {
-                return Obj_DAdapter;
+                return _Obj_DAdapter;
             }
 
             set
             {
-                Obj_DAdapter = value;
+                _Obj_DAdapter = value;
             }
         }
 
@@ -62,12 +63,12 @@ namespace LavaCar_DAL.Data_Base
         {
             get
             {
-                return Obj_DSet;
+                return _Obj_DSet;
             }
 
             set
             {
-                Obj_DSet = value;
+                _Obj_DSet = value;
             }
         }
 
@@ -75,12 +76,12 @@ namespace LavaCar_DAL.Data_Base
         {
             get
             {
-                return Obj_Command;
+                return _Obj_Command;
             }
 
             set
             {
-                Obj_Command = value;
+                _Obj_Command = value;
             }
         }
 
@@ -163,3 +164,4 @@ namespace LavaCar_DAL.Data_Base
         }
     }
 }
+#endregion
