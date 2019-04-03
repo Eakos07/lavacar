@@ -60,8 +60,8 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_FiltrarArticulos = new System.Windows.Forms.ToolStripTextBox();
+            this.dgv_Articulos = new System.Windows.Forms.DataGridView();
             this.tcArticulos = new System.Windows.Forms.TabControl();
             this.tbRegistroClientes = new System.Windows.Forms.TabPage();
             this.tbcCreacionCitas = new System.Windows.Forms.TabPage();
@@ -101,8 +101,8 @@
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.txt_FiltrarTipoArticulos = new System.Windows.Forms.ToolStripTextBox();
+            this.dgv_TipoArticulos = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
@@ -115,7 +115,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).BeginInit();
             this.tcArticulos.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.tbcCreacionCitas.SuspendLayout();
@@ -126,7 +126,7 @@
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.toolStrip3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,9 +153,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(782, 238);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -165,7 +165,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(566, 107);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(139, 25);
             this.comboBox3.TabIndex = 28;
@@ -174,7 +174,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(209, 150);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(139, 25);
             this.comboBox2.TabIndex = 27;
@@ -183,7 +183,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(566, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 25);
             this.comboBox1.TabIndex = 26;
@@ -192,7 +192,7 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(566, 69);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(139, 27);
@@ -202,7 +202,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(209, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(139, 27);
@@ -212,7 +212,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(566, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(139, 27);
@@ -222,7 +222,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(209, 67);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(139, 27);
@@ -232,7 +232,7 @@
             // 
             this.txtNumPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumPlaca.Location = new System.Drawing.Point(209, 28);
-            this.txtNumPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumPlaca.Multiline = true;
             this.txtNumPlaca.Name = "txtNumPlaca";
             this.txtNumPlaca.Size = new System.Drawing.Size(139, 27);
@@ -245,7 +245,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(650, 193);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 30);
             this.button2.TabIndex = 17;
@@ -260,7 +260,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(500, 193);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 30);
             this.button1.TabIndex = 16;
@@ -358,12 +358,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_Articulos);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(2, 247);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(786, 293);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -383,7 +383,7 @@
             this.toolStripButton3,
             this.toolStripSeparator3,
             this.toolStripLabel4,
-            this.toolStripTextBox1});
+            this.txt_FiltrarArticulos});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(782, 27);
@@ -456,21 +456,22 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel4.Text = "Buscar";
             // 
-            // toolStripTextBox1
+            // txt_FiltrarArticulos
             // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(76, 27);
+            this.txt_FiltrarArticulos.Name = "txt_FiltrarArticulos";
+            this.txt_FiltrarArticulos.Size = new System.Drawing.Size(76, 27);
+            this.txt_FiltrarArticulos.TextChanged += new System.EventHandler(this.txt_FiltrarArticulos_TextChanged);
             // 
-            // dataGridView1
+            // dgv_Articulos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(767, 228);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_Articulos.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Articulos.Location = new System.Drawing.Point(4, 51);
+            this.dgv_Articulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Articulos.Name = "dgv_Articulos";
+            this.dgv_Articulos.RowTemplate.Height = 24;
+            this.dgv_Articulos.Size = new System.Drawing.Size(767, 228);
+            this.dgv_Articulos.TabIndex = 0;
             // 
             // tcArticulos
             // 
@@ -479,7 +480,7 @@
             this.tcArticulos.Controls.Add(this.tabPage1);
             this.tcArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcArticulos.Location = new System.Drawing.Point(2, 9);
-            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.tcArticulos.Name = "tcArticulos";
             this.tcArticulos.SelectedIndex = 0;
             this.tcArticulos.Size = new System.Drawing.Size(799, 557);
@@ -490,9 +491,9 @@
             this.tbRegistroClientes.Controls.Add(this.groupBox1);
             this.tbRegistroClientes.Controls.Add(this.groupBox2);
             this.tbRegistroClientes.Location = new System.Drawing.Point(4, 26);
-            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Name = "tbRegistroClientes";
-            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Size = new System.Drawing.Size(791, 527);
             this.tbRegistroClientes.TabIndex = 0;
             this.tbRegistroClientes.Text = "Artículos";
@@ -503,9 +504,9 @@
             this.tbcCreacionCitas.Controls.Add(this.groupBox4);
             this.tbcCreacionCitas.Controls.Add(this.groupBox3);
             this.tbcCreacionCitas.Location = new System.Drawing.Point(4, 26);
-            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Name = "tbcCreacionCitas";
-            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Size = new System.Drawing.Size(791, 527);
             this.tbcCreacionCitas.TabIndex = 1;
             this.tbcCreacionCitas.Text = "Familia Artículos";
@@ -517,9 +518,9 @@
             this.groupBox4.Controls.Add(this.toolStrip2);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox4.Location = new System.Drawing.Point(2, 231);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(788, 296);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
@@ -530,7 +531,7 @@
             this.dgv_FamiliaArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgv_FamiliaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_FamiliaArticulos.Location = new System.Drawing.Point(10, 47);
-            this.dgv_FamiliaArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_FamiliaArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_FamiliaArticulos.Name = "dgv_FamiliaArticulos";
             this.dgv_FamiliaArticulos.RowTemplate.Height = 24;
             this.dgv_FamiliaArticulos.Size = new System.Drawing.Size(779, 236);
@@ -641,9 +642,9 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox3.Location = new System.Drawing.Point(2, 4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(782, 222);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -656,7 +657,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(640, 160);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 30);
             this.button3.TabIndex = 25;
@@ -670,7 +671,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(485, 160);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 30);
             this.button4.TabIndex = 24;
@@ -680,7 +681,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(122, 85);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(178, 23);
             this.textBox5.TabIndex = 5;
@@ -689,7 +690,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(122, 131);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(178, 25);
             this.comboBox4.TabIndex = 4;
@@ -698,7 +699,7 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(122, 45);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(178, 25);
             this.comboBox5.TabIndex = 3;
@@ -738,9 +739,9 @@
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(791, 527);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Tipo Artículos";
@@ -749,12 +750,12 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.toolStrip3);
-            this.groupBox6.Controls.Add(this.dataGridView3);
+            this.groupBox6.Controls.Add(this.dgv_TipoArticulos);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox6.Location = new System.Drawing.Point(6, 228);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(784, 301);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
@@ -774,7 +775,7 @@
             this.toolStripButton9,
             this.toolStripSeparator9,
             this.toolStripLabel12,
-            this.toolStripTextBox3});
+            this.txt_FiltrarTipoArticulos});
             this.toolStrip3.Location = new System.Drawing.Point(2, 18);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.Size = new System.Drawing.Size(780, 27);
@@ -847,21 +848,22 @@
             this.toolStripLabel12.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel12.Text = "Buscar";
             // 
-            // toolStripTextBox3
+            // txt_FiltrarTipoArticulos
             // 
-            this.toolStripTextBox3.Name = "toolStripTextBox3";
-            this.toolStripTextBox3.Size = new System.Drawing.Size(76, 27);
+            this.txt_FiltrarTipoArticulos.Name = "txt_FiltrarTipoArticulos";
+            this.txt_FiltrarTipoArticulos.Size = new System.Drawing.Size(76, 27);
+            this.txt_FiltrarTipoArticulos.TextChanged += new System.EventHandler(this.txt_FiltrarTipoArticulos_TextChanged);
             // 
-            // dataGridView3
+            // dgv_TipoArticulos
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(769, 232);
-            this.dataGridView3.TabIndex = 0;
+            this.dgv_TipoArticulos.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_TipoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TipoArticulos.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TipoArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TipoArticulos.Name = "dgv_TipoArticulos";
+            this.dgv_TipoArticulos.RowTemplate.Height = 24;
+            this.dgv_TipoArticulos.Size = new System.Drawing.Size(769, 232);
+            this.dgv_TipoArticulos.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -876,9 +878,9 @@
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox5.Location = new System.Drawing.Point(6, 5);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(773, 218);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
@@ -888,7 +890,7 @@
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(202, 145);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(150, 25);
             this.comboBox6.TabIndex = 28;
@@ -897,7 +899,7 @@
             // 
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(202, 37);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(150, 25);
             this.comboBox7.TabIndex = 27;
@@ -906,7 +908,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(202, 89);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(150, 27);
@@ -919,7 +921,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(652, 170);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 30);
             this.button5.TabIndex = 17;
@@ -933,7 +935,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(490, 170);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(110, 30);
             this.button6.TabIndex = 16;
@@ -981,7 +983,7 @@
             this.ClientSize = new System.Drawing.Size(803, 575);
             this.Controls.Add(this.tcArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Articulos";
             this.Text = "FRM_Articulos";
             this.Load += new System.EventHandler(this.FRM_Articulos_Load);
@@ -991,7 +993,7 @@
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).EndInit();
             this.tcArticulos.ResumeLayout(false);
             this.tbRegistroClientes.ResumeLayout(false);
             this.tbcCreacionCitas.ResumeLayout(false);
@@ -1007,7 +1009,7 @@
             this.groupBox6.PerformLayout();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -1045,8 +1047,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripTextBox txt_FiltrarArticulos;
+        private System.Windows.Forms.DataGridView dgv_Articulos;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TabControl tcArticulos;
@@ -1097,7 +1099,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripLabel toolStripLabel12;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ToolStripTextBox txt_FiltrarTipoArticulos;
+        private System.Windows.Forms.DataGridView dgv_TipoArticulos;
     }
 }

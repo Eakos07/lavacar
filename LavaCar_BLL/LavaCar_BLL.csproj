@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_Articulos_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Centro_de_Lavado_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Clientes_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_BLL.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Cat_Mant\cls_Promociones_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Proveedores_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Roles_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoArticulo_BLL.cs" />
     <Compile Include="Cat_Mant\cls_TipoCambio_BLL.cs" />
     <Compile Include="Cat_Mant\cls_TipoFactura_BLL.cs" />
     <Compile Include="Cat_Mant\cls_TipoPlaca_BLL.cs" />

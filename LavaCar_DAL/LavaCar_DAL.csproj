@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_Articulos_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Centro_de_Lavado_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Clientes_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Cat_Mant\cls_Promociones_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Proveedores_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Roles_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoArticulo_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoCambio_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoFactura_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoPlaca_DAL.cs" />
