@@ -41,18 +41,29 @@ namespace FRM_Login.Menu
         {
             cls_Polizas_BLL Obj_BLL = new cls_Polizas_BLL();
             string sMsjError = string.Empty;
-            DataTable dtEstados = new DataTable();
+            DataTable dtPolizas = new DataTable();
 
-            dtEstados = Obj_BLL.Listar_Polizas(ref sMsjError);
-
+            if (toolStripTextBox1.Text == string.Empty)
+            {
+                dtPolizas = Obj_BLL.Listar_Polizas(ref sMsjError);
+            }
+            else
+            {
+                dtPolizas = Obj_BLL.Filtrar_Polizas(ref sMsjError, toolStripTextBox1.Text);
+            }
             if (sMsjError == string.Empty)
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = dtEstados;
+                dataGridView1.DataSource = dtPolizas;
             }
         }
 
         private void FRM_Polizas_Load(object sender, EventArgs e)
+        {
+            Cargar_Datos();
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
         {
             Cargar_Datos();
         }
