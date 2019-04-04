@@ -8,9 +8,9 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Promociones_DAL
     {
-        private char _cIdPromocion;
+        private char _cIdPromocion, _cBandIM;
         private string _sTipoPromocion, _sDescripcion;
-
+        
         #region Variables publicas
         public char cIdPromocion
         {
@@ -48,6 +48,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _sTipoPromocion = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion

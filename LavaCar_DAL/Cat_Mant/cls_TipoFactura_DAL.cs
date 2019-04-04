@@ -8,10 +8,23 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_TipoFactura_DAL
     {
-        private char _cIdTipoFactura;
+        private char _cIdTipoFactura, _cBandIM;
         private string _sTipoFactura, _sDescripcion;
 
         #region Variables Publicas
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
+            }
+        }
+
         public char cIdTipoFactura
         {
             get

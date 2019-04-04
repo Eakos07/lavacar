@@ -10,7 +10,7 @@ namespace LavaCar_DAL.Cat_Mant
     {
         private int _iNumFactura, _iCedulaJuridica;
         private string _sNumPlaca;
-        private char _cCodServicio, _cIdTipoCambio, _cIdPromocion, _cIdTipoFactura;
+        private char _cCodServicio, _cIdTipoCambio, _cIdPromocion, _cIdTipoFactura, _cBandIM;
         private decimal _dMontoNeto, _dDescuento, _dMontoTotal;
 
         #region Variables Publicas
@@ -141,6 +141,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _dMontoTotal = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion

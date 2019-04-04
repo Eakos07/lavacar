@@ -22,13 +22,13 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtTipoVehiculo = new DataTable();
 
-            if (toolStripTextBox1.Text == string.Empty)
+            if (txt_FiltTipVehicul.Text == string.Empty)
             {
                 dtTipoVehiculo = Obj_BLL.Listar_TipoVehiculo(ref sMsjError);
             }
             else
             {
-                dtTipoVehiculo = Obj_BLL.Filtrar_TipoVehiculo(ref sMsjError, toolStripTextBox1.Text);
+                dtTipoVehiculo = Obj_BLL.Filtrar_TipoVehiculo(ref sMsjError, txt_FiltTipVehicul.Text);
             }
             if (sMsjError == string.Empty)
             {

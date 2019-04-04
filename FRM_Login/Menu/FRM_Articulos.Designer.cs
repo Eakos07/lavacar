@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Articulos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtNumPlaca = new System.Windows.Forms.TextBox();
+            this.cmb_Tipo_Articulo = new System.Windows.Forms.ComboBox();
+            this.cmb_IdFamilia_Articulo = new System.Windows.Forms.ComboBox();
+            this.cmb_Estado_Articulos = new System.Windows.Forms.ComboBox();
+            this.txt_InventarioMin_Articulo = new System.Windows.Forms.TextBox();
+            this.txt_Cantidad_Articulo = new System.Windows.Forms.TextBox();
+            this.txt_PrecioVenta_Articulo = new System.Windows.Forms.TextBox();
+            this.txt_NombreArticulo = new System.Windows.Forms.TextBox();
+            this.txt_Articulo = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.btn_Guardar = new System.Windows.Forms.Button();
+            this.btn_GuardarArticulo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Refrescar_Articulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Modificar_Articulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -94,7 +94,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Modificar_TipoArticulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
@@ -106,14 +106,15 @@
             this.txt_FiltrarTipoArticulos = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_TipoArticulos = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cmb_EstadoTipoArticulo = new System.Windows.Forms.ComboBox();
+            this.txt_DescripcionTipoArticulo = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_GuardarTipoArticulo = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.btn_Refrescar_TipoArticulos = new System.Windows.Forms.ToolStripButton();
+            this.txt_IdTipoArticulo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -135,16 +136,16 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txtNumPlaca);
+            this.groupBox1.Controls.Add(this.cmb_Tipo_Articulo);
+            this.groupBox1.Controls.Add(this.cmb_IdFamilia_Articulo);
+            this.groupBox1.Controls.Add(this.cmb_Estado_Articulos);
+            this.groupBox1.Controls.Add(this.txt_InventarioMin_Articulo);
+            this.groupBox1.Controls.Add(this.txt_Cantidad_Articulo);
+            this.groupBox1.Controls.Add(this.txt_PrecioVenta_Articulo);
+            this.groupBox1.Controls.Add(this.txt_NombreArticulo);
+            this.groupBox1.Controls.Add(this.txt_Articulo);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btn_Guardar);
+            this.groupBox1.Controls.Add(this.btn_GuardarArticulo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -163,82 +164,82 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos";
             // 
-            // comboBox3
+            // cmb_Tipo_Articulo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(566, 107);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(139, 25);
-            this.comboBox3.TabIndex = 28;
+            this.cmb_Tipo_Articulo.FormattingEnabled = true;
+            this.cmb_Tipo_Articulo.Location = new System.Drawing.Point(566, 107);
+            this.cmb_Tipo_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Tipo_Articulo.Name = "cmb_Tipo_Articulo";
+            this.cmb_Tipo_Articulo.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Tipo_Articulo.TabIndex = 28;
             // 
-            // comboBox2
+            // cmb_IdFamilia_Articulo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 150);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(139, 25);
-            this.comboBox2.TabIndex = 27;
+            this.cmb_IdFamilia_Articulo.FormattingEnabled = true;
+            this.cmb_IdFamilia_Articulo.Location = new System.Drawing.Point(209, 150);
+            this.cmb_IdFamilia_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IdFamilia_Articulo.Name = "cmb_IdFamilia_Articulo";
+            this.cmb_IdFamilia_Articulo.Size = new System.Drawing.Size(139, 25);
+            this.cmb_IdFamilia_Articulo.TabIndex = 27;
             // 
-            // comboBox1
+            // cmb_Estado_Articulos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(566, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 25);
-            this.comboBox1.TabIndex = 26;
+            this.cmb_Estado_Articulos.FormattingEnabled = true;
+            this.cmb_Estado_Articulos.Location = new System.Drawing.Point(566, 27);
+            this.cmb_Estado_Articulos.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Estado_Articulos.Name = "cmb_Estado_Articulos";
+            this.cmb_Estado_Articulos.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Estado_Articulos.TabIndex = 26;
             // 
-            // textBox4
+            // txt_InventarioMin_Articulo
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(566, 69);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 27);
-            this.textBox4.TabIndex = 22;
+            this.txt_InventarioMin_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_InventarioMin_Articulo.Location = new System.Drawing.Point(566, 69);
+            this.txt_InventarioMin_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_InventarioMin_Articulo.Multiline = true;
+            this.txt_InventarioMin_Articulo.Name = "txt_InventarioMin_Articulo";
+            this.txt_InventarioMin_Articulo.Size = new System.Drawing.Size(139, 27);
+            this.txt_InventarioMin_Articulo.TabIndex = 22;
             // 
-            // textBox3
+            // txt_Cantidad_Articulo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(209, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 27);
-            this.textBox3.TabIndex = 21;
+            this.txt_Cantidad_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 106);
+            this.txt_Cantidad_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Cantidad_Articulo.Multiline = true;
+            this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
+            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(139, 27);
+            this.txt_Cantidad_Articulo.TabIndex = 21;
             // 
-            // textBox2
+            // txt_PrecioVenta_Articulo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(566, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 27);
-            this.textBox2.TabIndex = 20;
+            this.txt_PrecioVenta_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PrecioVenta_Articulo.Location = new System.Drawing.Point(566, 151);
+            this.txt_PrecioVenta_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_PrecioVenta_Articulo.Multiline = true;
+            this.txt_PrecioVenta_Articulo.Name = "txt_PrecioVenta_Articulo";
+            this.txt_PrecioVenta_Articulo.Size = new System.Drawing.Size(139, 27);
+            this.txt_PrecioVenta_Articulo.TabIndex = 20;
             // 
-            // textBox1
+            // txt_NombreArticulo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(209, 67);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 27);
-            this.textBox1.TabIndex = 19;
+            this.txt_NombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NombreArticulo.Location = new System.Drawing.Point(209, 67);
+            this.txt_NombreArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NombreArticulo.Multiline = true;
+            this.txt_NombreArticulo.Name = "txt_NombreArticulo";
+            this.txt_NombreArticulo.Size = new System.Drawing.Size(139, 27);
+            this.txt_NombreArticulo.TabIndex = 19;
             // 
-            // txtNumPlaca
+            // txt_Articulo
             // 
-            this.txtNumPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumPlaca.Location = new System.Drawing.Point(209, 28);
-            this.txtNumPlaca.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNumPlaca.Multiline = true;
-            this.txtNumPlaca.Name = "txtNumPlaca";
-            this.txtNumPlaca.Size = new System.Drawing.Size(139, 27);
-            this.txtNumPlaca.TabIndex = 18;
+            this.txt_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Articulo.Location = new System.Drawing.Point(209, 28);
+            this.txt_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Articulo.Multiline = true;
+            this.txt_Articulo.Name = "txt_Articulo";
+            this.txt_Articulo.Size = new System.Drawing.Size(139, 27);
+            this.txt_Articulo.TabIndex = 18;
             // 
             // button2
             // 
@@ -255,19 +256,20 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_Guardar
+            // btn_GuardarArticulo
             // 
-            this.btn_Guardar.BackColor = System.Drawing.Color.Aqua;
-            this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar.Location = new System.Drawing.Point(500, 193);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(110, 30);
-            this.btn_Guardar.TabIndex = 16;
-            this.btn_Guardar.Text = "Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = false;
+            this.btn_GuardarArticulo.BackColor = System.Drawing.Color.Aqua;
+            this.btn_GuardarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_GuardarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_GuardarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarArticulo.Location = new System.Drawing.Point(500, 193);
+            this.btn_GuardarArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_GuardarArticulo.Name = "btn_GuardarArticulo";
+            this.btn_GuardarArticulo.Size = new System.Drawing.Size(110, 30);
+            this.btn_GuardarArticulo.TabIndex = 16;
+            this.btn_GuardarArticulo.Text = "Guardar";
+            this.btn_GuardarArticulo.UseVisualStyleBackColor = false;
+            this.btn_GuardarArticulo.Click += new System.EventHandler(this.btn_GuardarArticulo_Click);
             // 
             // label8
             // 
@@ -375,9 +377,9 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton10,
+            this.btn_Refrescar_Articulo,
             this.toolStripLabel1,
-            this.toolStripButton1,
+            this.btn_Modificar_Articulo,
             this.toolStripSeparator1,
             this.toolStripLabel2,
             this.toolStripButton2,
@@ -393,14 +395,15 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton10
+            // btn_Refrescar_Articulo
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton10.Text = "toolStripButton10";
+            this.btn_Refrescar_Articulo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar_Articulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_Articulo.Image")));
+            this.btn_Refrescar_Articulo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar_Articulo.Name = "btn_Refrescar_Articulo";
+            this.btn_Refrescar_Articulo.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar_Articulo.Text = "toolStripButton10";
+            this.btn_Refrescar_Articulo.Click += new System.EventHandler(this.btn_Refrescar_Articulo_Click);
             // 
             // toolStripLabel1
             // 
@@ -408,14 +411,15 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
-            // toolStripButton1
+            // btn_Modificar_Articulo
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.btn_Modificar_Articulo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Modificar_Articulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_Articulo.Image")));
+            this.btn_Modificar_Articulo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Modificar_Articulo.Name = "btn_Modificar_Articulo";
+            this.btn_Modificar_Articulo.Size = new System.Drawing.Size(24, 24);
+            this.btn_Modificar_Articulo.Text = "toolStripButton1";
+            this.btn_Modificar_Articulo.Click += new System.EventHandler(this.btn_Modificar_Articulo_Click);
             // 
             // toolStripSeparator1
             // 
@@ -795,8 +799,9 @@
             // 
             this.toolStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_Refrescar_TipoArticulos,
             this.toolStripLabel9,
-            this.toolStripButton7,
+            this.btn_Modificar_TipoArticulo,
             this.toolStripSeparator7,
             this.toolStripLabel10,
             this.toolStripButton8,
@@ -818,14 +823,15 @@
             this.toolStripLabel9.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel9.Text = "Refrescar";
             // 
-            // toolStripButton7
+            // btn_Modificar_TipoArticulo
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton7.Text = "toolStripButton1";
+            this.btn_Modificar_TipoArticulo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Modificar_TipoArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_TipoArticulo.Image")));
+            this.btn_Modificar_TipoArticulo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Modificar_TipoArticulo.Name = "btn_Modificar_TipoArticulo";
+            this.btn_Modificar_TipoArticulo.Size = new System.Drawing.Size(24, 24);
+            this.btn_Modificar_TipoArticulo.Text = "toolStripButton1";
+            this.btn_Modificar_TipoArticulo.Click += new System.EventHandler(this.btn_Modificar_TipoArticulo_Click);
             // 
             // toolStripSeparator7
             // 
@@ -886,23 +892,29 @@
             // 
             // dgv_TipoArticulos
             // 
+            this.dgv_TipoArticulos.AllowUserToAddRows = false;
+            this.dgv_TipoArticulos.AllowUserToDeleteRows = false;
             this.dgv_TipoArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgv_TipoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TipoArticulos.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TipoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_TipoArticulos.Location = new System.Drawing.Point(11, 47);
             this.dgv_TipoArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TipoArticulos.MultiSelect = false;
             this.dgv_TipoArticulos.Name = "dgv_TipoArticulos";
             this.dgv_TipoArticulos.RowTemplate.Height = 24;
+            this.dgv_TipoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TipoArticulos.Size = new System.Drawing.Size(769, 232);
             this.dgv_TipoArticulos.TabIndex = 0;
+            this.dgv_TipoArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoArticulos_CellDoubleClick);
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.White;
-            this.groupBox5.Controls.Add(this.comboBox6);
-            this.groupBox5.Controls.Add(this.comboBox7);
-            this.groupBox5.Controls.Add(this.textBox6);
+            this.groupBox5.Controls.Add(this.txt_IdTipoArticulo);
+            this.groupBox5.Controls.Add(this.cmb_EstadoTipoArticulo);
+            this.groupBox5.Controls.Add(this.txt_DescripcionTipoArticulo);
             this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.btn_GuardarTipoArticulo);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.label14);
@@ -916,33 +928,24 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tipo Artículo";
             // 
-            // comboBox6
+            // cmb_EstadoTipoArticulo
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(202, 145);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(150, 25);
-            this.comboBox6.TabIndex = 28;
+            this.cmb_EstadoTipoArticulo.FormattingEnabled = true;
+            this.cmb_EstadoTipoArticulo.Location = new System.Drawing.Point(202, 145);
+            this.cmb_EstadoTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_EstadoTipoArticulo.Name = "cmb_EstadoTipoArticulo";
+            this.cmb_EstadoTipoArticulo.Size = new System.Drawing.Size(150, 25);
+            this.cmb_EstadoTipoArticulo.TabIndex = 28;
             // 
-            // comboBox7
+            // txt_DescripcionTipoArticulo
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(202, 37);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(150, 25);
-            this.comboBox7.TabIndex = 27;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(202, 89);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 27);
-            this.textBox6.TabIndex = 22;
+            this.txt_DescripcionTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DescripcionTipoArticulo.Location = new System.Drawing.Point(202, 89);
+            this.txt_DescripcionTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_DescripcionTipoArticulo.Multiline = true;
+            this.txt_DescripcionTipoArticulo.Name = "txt_DescripcionTipoArticulo";
+            this.txt_DescripcionTipoArticulo.Size = new System.Drawing.Size(150, 27);
+            this.txt_DescripcionTipoArticulo.TabIndex = 22;
             // 
             // button5
             // 
@@ -958,19 +961,20 @@
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_GuardarTipoArticulo
             // 
-            this.button6.BackColor = System.Drawing.Color.Aqua;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(490, 170);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(110, 30);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "Guardar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_GuardarTipoArticulo.BackColor = System.Drawing.Color.Aqua;
+            this.btn_GuardarTipoArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_GuardarTipoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_GuardarTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarTipoArticulo.Location = new System.Drawing.Point(490, 170);
+            this.btn_GuardarTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_GuardarTipoArticulo.Name = "btn_GuardarTipoArticulo";
+            this.btn_GuardarTipoArticulo.Size = new System.Drawing.Size(110, 30);
+            this.btn_GuardarTipoArticulo.TabIndex = 16;
+            this.btn_GuardarTipoArticulo.Text = "Guardar";
+            this.btn_GuardarTipoArticulo.UseVisualStyleBackColor = false;
+            this.btn_GuardarTipoArticulo.Click += new System.EventHandler(this.btn_GuardarTipoArticulo_Click);
             // 
             // label12
             // 
@@ -1004,6 +1008,23 @@
             this.label14.Size = new System.Drawing.Size(106, 17);
             this.label14.TabIndex = 7;
             this.label14.Text = "Id Tipo Artículo:";
+            // 
+            // btn_Refrescar_TipoArticulos
+            // 
+            this.btn_Refrescar_TipoArticulos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar_TipoArticulos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_TipoArticulos.Image")));
+            this.btn_Refrescar_TipoArticulos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar_TipoArticulos.Name = "btn_Refrescar_TipoArticulos";
+            this.btn_Refrescar_TipoArticulos.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar_TipoArticulos.Text = "toolStripButton1";
+            this.btn_Refrescar_TipoArticulos.Click += new System.EventHandler(this.btn_Refrescar_TipoArticulos_Click);
+            // 
+            // txt_IdTipoArticulo
+            // 
+            this.txt_IdTipoArticulo.Location = new System.Drawing.Point(202, 41);
+            this.txt_IdTipoArticulo.Name = "txt_IdTipoArticulo";
+            this.txt_IdTipoArticulo.Size = new System.Drawing.Size(150, 23);
+            this.txt_IdTipoArticulo.TabIndex = 29;
             // 
             // FRM_Articulos
             // 
@@ -1057,18 +1078,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_Guardar;
+        private System.Windows.Forms.Button btn_GuardarArticulo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtNumPlaca;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_InventarioMin_Articulo;
+        private System.Windows.Forms.TextBox txt_Cantidad_Articulo;
+        private System.Windows.Forms.TextBox txt_PrecioVenta_Articulo;
+        private System.Windows.Forms.TextBox txt_NombreArticulo;
+        private System.Windows.Forms.TextBox txt_Articulo;
+        private System.Windows.Forms.ComboBox cmb_Estado_Articulos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_Modificar_Articulo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -1079,8 +1100,8 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarArticulos;
         private System.Windows.Forms.DataGridView dgv_Articulos;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_Tipo_Articulo;
+        private System.Windows.Forms.ComboBox cmb_IdFamilia_Articulo;
         private System.Windows.Forms.TabControl tcArticulos;
         private System.Windows.Forms.TabPage tbRegistroClientes;
         private System.Windows.Forms.TabPage tbcCreacionCitas;
@@ -1108,18 +1129,17 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarFamiliaArticulos;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cmb_EstadoTipoArticulo;
+        private System.Windows.Forms.TextBox txt_DescripcionTipoArticulo;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_GuardarTipoArticulo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ToolStrip toolStrip3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton btn_Modificar_TipoArticulo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripLabel toolStripLabel10;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
@@ -1130,8 +1150,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel12;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarTipoArticulos;
         private System.Windows.Forms.DataGridView dgv_TipoArticulos;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar_Articulo;
         private System.Windows.Forms.ToolStripButton btn_RefrescarFamilia;
         private System.Windows.Forms.TextBox txt_IdFamilia;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar_TipoArticulos;
+        private System.Windows.Forms.TextBox txt_IdTipoArticulo;
     }
 }

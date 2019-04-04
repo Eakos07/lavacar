@@ -11,6 +11,7 @@ namespace LavaCar_DAL.Cat_Mant
         private byte _bIdProveedor, _bPlazoPago, _bIdEstado;
         private string _sNombreProveedor, _sEmail;
         private int _iTelefono;
+        private char _cBandIM;
 
         #region Variables Publicas
         public byte bIdProveedor
@@ -88,6 +89,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _iTelefono = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion
