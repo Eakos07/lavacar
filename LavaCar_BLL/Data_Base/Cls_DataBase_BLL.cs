@@ -128,9 +128,18 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.SmallInt;
                                         break;
                                     }
-                            }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
 
-                            Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
+                                    }
+
+                                    Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
                         }
                     }
                     Obj_DB_DAL.Obj_DSet = new DataSet();
@@ -228,6 +237,16 @@ namespace LavaCar_BLL.Data_Base
                                 case "9":
                                     {
                                         DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
                                         break;
                                     }
                             }
@@ -329,9 +348,23 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.TinyInt;
                                         break;
                                     }
+                                case "9":
+                                    {
+                                        DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
+                                        break;
+                                    }
                             }
-
-                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
+                                    Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
 
                         }
                     }

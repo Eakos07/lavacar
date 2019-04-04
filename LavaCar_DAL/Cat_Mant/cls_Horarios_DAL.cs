@@ -12,7 +12,7 @@ namespace LavaCar_DAL.Cat_Mant
         private string _sDescripcion;
         private float _fCantHoras;
         private DateTime _dtmEntrada, _dtmSalida;
-
+        
         #region Variables Publicas
         public byte bIdHorario
         {
