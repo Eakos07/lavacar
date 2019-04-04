@@ -41,7 +41,7 @@ namespace FRM_Login.Menu
             Cargar_Datos_Articulos();
             Cargar_Datos_TipoArticulo();
         }
-        #region Familia Articulos
+        #region Cargar Familia Articulos
         public void Cargar_Datos_FamiliaArticulos()
         {
             Obj_DAL_Familia.cBandIM = 'I';
@@ -61,7 +61,7 @@ namespace FRM_Login.Menu
 
             txt_IdFamilia.Clear();
             txt_DescripcionFamilia.Clear();
-            cmb_IdEstadoFamilia.Text = " ";
+            
 
             if (txt_FiltrarFamiliaArticulos.Text == string.Empty)
             {
@@ -79,7 +79,7 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        #region Articulos
+        #region CargarArticulos
         public void Cargar_Datos_Articulos()
         {
             
@@ -135,7 +135,7 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        #region Tipo Articulo
+        #region Cargar Tipo Articulo
         public void Cargar_Datos_TipoArticulo()
         {
             
@@ -158,21 +158,7 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        private void txt_FiltrarFamiliaArticulos_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_FamiliaArticulos();
-        }
-
-        private void txt_FiltrarArticulos_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_Articulos();
-        }
-
-        private void txt_FiltrarTipoArticulos_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_TipoArticulo();
-        }
-
+        #region Familia
         private void btn_RefrescarFamilia_Click(object sender, EventArgs e)
         {
             Cargar_Datos_TipoArticulo();
@@ -232,7 +218,13 @@ namespace FRM_Login.Menu
             }
         }
 
+        private void txt_FiltrarFamiliaArticulos_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_FamiliaArticulos();
+        }
+        #endregion
 
+        #region Articulos
         private void dgv_Articulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Obj_DAL_Articulos.cBandIM = 'M';
@@ -287,16 +279,16 @@ namespace FRM_Login.Menu
 
                 if (Obj_DAL_Articulos.cBandIM == 'I')
                 {
-                    Obj_BLL_Familia.Insertar_FamiliaArticulos(ref sMsjError, ref Obj_DAL_Familia);
+                    Obj_BLL_Articulos.Insertar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_FamiliaArticulos();
+                    Cargar_Datos_Articulos();
                 }
                 else if (Obj_DAL_Familia.cBandIM == 'M')
                 {
-                    Obj_BLL_Familia.Modificar_FamiliaArticulos(ref sMsjError, ref Obj_DAL_Familia);
+                    Obj_BLL_Articulos.Modificar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdFamilia.Enabled = true;
-                    Cargar_Datos_FamiliaArticulos();
+                    txt_Articulo.Enabled = true;
+                    Cargar_Datos_Articulos();
                 }
             }
             else
@@ -304,5 +296,85 @@ namespace FRM_Login.Menu
                 MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void txt_FiltrarArticulos_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_Articulos();
+        }
+
+        private void btn_Refrescar_Articulo_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_Articulos();
+        }
+        #endregion
+
+        #region Tipo Articulos
+        private void txt_FiltrarTipoArticulos_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_TipoArticulo();
+        }
+
+        private void btn_Refrescar_TipoArticulos_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_TipoArticulo();
+        }
+
+        private void btn_Modificar_TipoArticulo_Click(object sender, EventArgs e)
+        {
+            if (dgv_TipoArticulos.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL_Tipo.cBandIM = 'M';
+                txt_IdTipoArticulo.Enabled = false;
+                txt_IdTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_DescripcionFamilia.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_EstadoTipoArticulo.SelectedValue = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
+
+        private void btn_GuardarTipoArticulo_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(txt_IdTipoArticulo.Text)) || !(string.IsNullOrEmpty(txt_DescripcionTipoArticulo.Text)) 
+                || cmb_EstadoTipoArticulo.SelectedValue.ToString() == "Elija Opcion")
+            {
+                Obj_DAL_Tipo.cIdTipoArticulo = Convert.ToChar(txt_IdTipoArticulo.Text);
+                Obj_DAL_Tipo.sDescripcion = txt_DescripcionTipoArticulo.Text;
+                Obj_DAL_Tipo.bIdEstado = Convert.ToByte(cmb_EstadoTipoArticulo.SelectedValue);
+                string sMsjError = string.Empty;
+
+                if (Obj_DAL_Tipo.cBandIM == 'I')
+                {
+                    Obj_BLL_Tipo.Insertar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
+                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Datos_TipoArticulo();
+                }
+                else if (Obj_DAL_Familia.cBandIM == 'M')
+                {
+                    Obj_BLL_Tipo.Insertar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
+                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_IdTipoArticulo.Enabled = true;
+                    Cargar_Datos_TipoArticulo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgv_TipoArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Obj_DAL_Tipo.cBandIM = 'M';
+            txt_IdTipoArticulo.Enabled = false;
+            txt_IdTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txt_DescripcionFamilia.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            cmb_EstadoTipoArticulo.SelectedValue = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
+        }
+        #endregion
+
+
     }
 }
