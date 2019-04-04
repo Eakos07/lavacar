@@ -8,10 +8,10 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_TipoPolizas_DAL
     {
-        private char _cIdTipoPoliza;
+        private char _cIdTipoPoliza, _cBandIM;
         private string _sNombrePoliza, _sCompañia;
         private byte _bIdProveedor;
-
+        
         #region Variables Públicas
         public char cIdTipoPoliza
         {
@@ -64,7 +64,20 @@ namespace LavaCar_DAL.Cat_Mant
                 _bIdProveedor = value;
             }
         }
-#endregion
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
+            }
+        }
+        #endregion
 
     }
 }

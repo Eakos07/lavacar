@@ -58,5 +58,33 @@ namespace LavaCar_BLL.Cat_Mant
                 return null;
             }
         }
+
+        public void Insertar_Clientes(ref string sMsjError, ref cls_Clientes_DAL Obj_Clientes_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@NumPlaca", 3, Obj_Clientes_DAL.sNumPlaca.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPlaca", 8, Obj_Clientes_DAL.bIdTipoPlaca.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_Clientes_DAL.bIdTipoVehiculo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@NumVisitas", 8, Obj_Clientes_DAL.bNumVisitas.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Clientes"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+        }
+
+        public void Modificar_Clientes(ref string sMsjError, ref cls_Clientes_DAL Obj_Clientes_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@NumPlaca", 3, Obj_Clientes_DAL.sNumPlaca.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPlaca", 8, Obj_Clientes_DAL.bIdTipoPlaca.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_Clientes_DAL.bIdTipoVehiculo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@NumVisitas", 8, Obj_Clientes_DAL.bNumVisitas.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Clientes"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+        }
     }
 }

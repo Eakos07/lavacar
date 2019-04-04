@@ -90,7 +90,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "2":
                                     {
-                                        DBType = SqlDbType.NVarChar;
+                                        DBType = SqlDbType.Time;
                                         break;
                                     }
                                 case "3":
@@ -100,7 +100,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "4":
                                     {
-                                        DBType = SqlDbType.NChar;
+                                        DBType = SqlDbType.Money;
                                         break;
                                     }
                                 case "5":

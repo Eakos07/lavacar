@@ -58,6 +58,7 @@
     <Compile Include="Cat_Mant\cls_TipoFactura_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoPlaca_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoPolizas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoServicio_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TipoVehiculo_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TransaccionesCompra_DAL.cs" />
     <Compile Include="Cat_Mant\cls_TransaccionesVenta_DAL.cs" />
