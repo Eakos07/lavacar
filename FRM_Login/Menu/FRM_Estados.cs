@@ -67,7 +67,7 @@ namespace FRM_Login.Menu
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            if (!(string.IsNullOrEmpty(txtIdEsta.Text)) || !(string.IsNullOrEmpty(txt_Nombre.Text)) || !(string.IsNullOrEmpty(txtDescEstados.Text)))
+            if (!(string.IsNullOrEmpty(txtIdEsta.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txtDescEstados.Text)))
             {
                 Obj_DAL.bIdEstado = Convert.ToByte(txtIdEsta.Text);
                 Obj_DAL.sNombre = txt_Nombre.Text;

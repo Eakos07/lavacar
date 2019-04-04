@@ -23,13 +23,13 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtClientes= new DataTable();
 
-            if (toolStripTextBox1.Text == string.Empty)
+            if (txt_FiltrarPlaca.Text == string.Empty)
             {
                 dtClientes = Obj_BLL.Listar_Clientes(ref sMsjError);
             }
             else
             {
-                dtClientes= Obj_BLL.Filtrar_Clientes(ref sMsjError, toolStripTextBox1.Text);
+                dtClientes= Obj_BLL.Filtrar_Clientes(ref sMsjError, txt_FiltrarPlaca.Text);
             }
             if (sMsjError == string.Empty)
             {
@@ -50,6 +50,11 @@ namespace FRM_Login.Menu
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,14 +6,29 @@ using System.Threading.Tasks;
 
 namespace LavaCar_DAL.Cat_Mant
 {
-    public class cls_Proveedores_DAL
+    public class cls_Ordenes_Compra_DAL
     {
-        private byte _bIdProveedor, _bPlazoPago, _bIdEstado;
-        private string _sNombreProveedor, _sEmail;
-        private int _iTelefono;
+        private int _iIdNumOrden;
+        private byte _bIdProveedor, _bIdEstado;
+        private Int16 _iCantidad;
+        private decimal _dPrecio;
         private char _cBandIM;
+        private string _sIdArticulo;
 
-        #region Variables Publicas
+        #region Variables Públicas
+        public int iIdNumOrden
+        {
+            get
+            {
+                return _iIdNumOrden;
+            }
+
+            set
+            {
+                _iIdNumOrden = value;
+            }
+        }
+
         public byte bIdProveedor
         {
             get
@@ -24,19 +39,6 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _bIdProveedor = value;
-            }
-        }
-
-        public byte bPlazoPago
-        {
-            get
-            {
-                return _bPlazoPago;
-            }
-
-            set
-            {
-                _bPlazoPago = value;
             }
         }
 
@@ -53,42 +55,29 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public string sNombreProveedor
+        public short iCantidad
         {
             get
             {
-                return _sNombreProveedor;
+                return _iCantidad;
             }
 
             set
             {
-                _sNombreProveedor = value;
+                _iCantidad = value;
             }
         }
 
-        public string sEmail
+        public decimal dPrecio
         {
             get
             {
-                return _sEmail;
+                return _dPrecio;
             }
 
             set
             {
-                _sEmail = value;
-            }
-        }
-
-        public int iTelefono
-        {
-            get
-            {
-                return _iTelefono;
-            }
-
-            set
-            {
-                _iTelefono = value;
+                _dPrecio = value;
             }
         }
 
@@ -102,6 +91,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _cBandIM = value;
+            }
+        }
+
+        public string sIdArticulo
+        {
+            get
+            {
+                return _sIdArticulo;
+            }
+
+            set
+            {
+                _sIdArticulo = value;
             }
         }
         #endregion
