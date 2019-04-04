@@ -35,6 +35,8 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtProveedores = new DataTable();
 
+            
+
             if (txt_FiltrarProveedores.Text == string.Empty)
             {
                 dtProveedores = Obj_BLL.Listar_Proveedores(ref sMsjError);

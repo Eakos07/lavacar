@@ -85,6 +85,7 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtArticulos = new DataTable();
+            Obj_DAL_Articulos.cBandIM = 'I';
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
@@ -119,6 +120,12 @@ namespace FRM_Login.Menu
             cmb_Tipo_Articulo.SelectedValue = "0";
             #endregion
 
+            txt_Articulo.Clear();
+            txt_NombreArticulo.Clear();
+            txt_Cantidad_Articulo.Clear();
+            txt_InventarioMin_Articulo.Clear();
+            txt_PrecioVenta_Articulo.Clear();
+
             if (txt_FiltrarArticulos.Text == string.Empty)
             {
                 dtArticulos = Obj_BLL_Articulos.Listar_Articulos(ref sMsjError);
@@ -141,6 +148,21 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtTipoArticulo = new DataTable();
+            Obj_DAL_Tipo.cBandIM = 'I';
+
+            #region Cargar Estados
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_TipoArticulo = new DataTable();
+            DT_TipoArticulo = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_EstadoTipoArticulo.DataSource = DT_TipoArticulo;
+            DT_TipoArticulo.Rows.Add("0", "Elija Estado");
+            cmb_EstadoTipoArticulo.DisplayMember = DT_TipoArticulo.Columns[1].ToString();
+            cmb_EstadoTipoArticulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
+            cmb_EstadoTipoArticulo.SelectedValue = "0";
+            #endregion
+
+            txt_IdTipoArticulo.Clear();
+            txt_DescripcionTipoArticulo.Clear();
 
             if (txt_FiltrarTipoArticulos.Text == string.Empty)
             {
@@ -157,6 +179,10 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+
+
+
 
         #region Familia
         private void btn_RefrescarFamilia_Click(object sender, EventArgs e)
@@ -232,11 +258,11 @@ namespace FRM_Login.Menu
             txt_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
             txt_NombreArticulo.Text = dgv_Articulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
             txt_Cantidad_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdFamilia_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[3].ToString().Trim();
-            cmb_Tipo_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[4].ToString().Trim();
-            txt_InventarioMin_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[5].ToString().Trim();
-            txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].ToString().Trim();
-            cmb_Estado_Articulos.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[7].ToString().Trim();
+            cmb_IdFamilia_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            cmb_Tipo_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            txt_InventarioMin_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim();
+            cmb_Estado_Articulos.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim();
         }              
 
         private void btn_Modificar_Articulo_Click(object sender, EventArgs e)
@@ -252,11 +278,11 @@ namespace FRM_Login.Menu
                 txt_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_NombreArticulo.Text = dgv_Articulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Cantidad_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdFamilia_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[3].ToString().Trim();
-                cmb_Tipo_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[4].ToString().Trim();
-                txt_InventarioMin_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[5].ToString().Trim();
-                txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].ToString().Trim();
-                cmb_Estado_Articulos.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[7].ToString().Trim();
+                cmb_IdFamilia_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Tipo_Articulo.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_InventarioMin_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[5].Value.ToString().Trim();
+                txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim();
+                cmb_Estado_Articulos.SelectedValue = dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim();
             }
         }
 
@@ -270,7 +296,7 @@ namespace FRM_Login.Menu
                 Obj_DAL_Articulos.sIdArticulo = txt_Articulo.Text;
                 Obj_DAL_Articulos.sNombreArticulo = txt_NombreArticulo.Text;
                 Obj_DAL_Articulos.iCantidad = Convert.ToInt16(txt_Cantidad_Articulo.Text);
-                Obj_DAL_Articulos.sIdFamilia = txt_IdFamilia.Text;
+                Obj_DAL_Articulos.sIdFamilia = cmb_IdFamilia_Articulo.SelectedValue.ToString();
                 Obj_DAL_Articulos.cIdTipoArticulo = Convert.ToChar(cmb_Tipo_Articulo.SelectedValue);
                 Obj_DAL_Articulos.iInventarioMinimo = Convert.ToInt16(txt_InventarioMin_Articulo.Text);
                 Obj_DAL_Articulos.dPrecioVenta = Convert.ToDecimal(txt_PrecioVenta_Articulo.Text);
@@ -283,7 +309,7 @@ namespace FRM_Login.Menu
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_Articulos();
                 }
-                else if (Obj_DAL_Familia.cBandIM == 'M')
+                else if (Obj_DAL_Articulos.cBandIM == 'M')
                 {
                     Obj_BLL_Articulos.Modificar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -330,7 +356,7 @@ namespace FRM_Login.Menu
                 Obj_DAL_Tipo.cBandIM = 'M';
                 txt_IdTipoArticulo.Enabled = false;
                 txt_IdTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_DescripcionFamilia.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_DescripcionTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 cmb_EstadoTipoArticulo.SelectedValue = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
             }
         }
@@ -351,9 +377,9 @@ namespace FRM_Login.Menu
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_TipoArticulo();
                 }
-                else if (Obj_DAL_Familia.cBandIM == 'M')
+                else if (Obj_DAL_Tipo.cBandIM == 'M')
                 {
-                    Obj_BLL_Tipo.Insertar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
+                    Obj_BLL_Tipo.Modificar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_IdTipoArticulo.Enabled = true;
                     Cargar_Datos_TipoArticulo();
@@ -370,7 +396,7 @@ namespace FRM_Login.Menu
             Obj_DAL_Tipo.cBandIM = 'M';
             txt_IdTipoArticulo.Enabled = false;
             txt_IdTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_DescripcionFamilia.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            txt_DescripcionTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
             cmb_EstadoTipoArticulo.SelectedValue = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
         }
         #endregion

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Proveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_Id_Proveedor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -47,13 +47,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarProveedores = new System.Windows.Forms.ToolStripTextBox();
@@ -67,7 +65,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmb_Id_Proveedor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnSalir);
@@ -83,22 +81,22 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(9, 22);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(779, 214);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Proveedores";
             // 
-            // comboBox2
+            // cmb_Id_Proveedor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(205, 27);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(167, 25);
-            this.comboBox2.TabIndex = 33;
+            this.cmb_Id_Proveedor.FormattingEnabled = true;
+            this.cmb_Id_Proveedor.Location = new System.Drawing.Point(205, 27);
+            this.cmb_Id_Proveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Id_Proveedor.Name = "cmb_Id_Proveedor";
+            this.cmb_Id_Proveedor.Size = new System.Drawing.Size(167, 25);
+            this.cmb_Id_Proveedor.TabIndex = 0;
             // 
             // label1
             // 
@@ -115,10 +113,10 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(565, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 25);
-            this.comboBox1.TabIndex = 31;
+            this.comboBox1.TabIndex = 5;
             // 
             // btnSalir
             // 
@@ -127,10 +125,10 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(670, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 30);
-            this.btnSalir.TabIndex = 30;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
@@ -141,10 +139,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(522, 171);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(115, 30);
-            this.btnAceptar.TabIndex = 29;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             // 
@@ -152,31 +150,31 @@
             // 
             this.txtPlazoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlazoPago.Location = new System.Drawing.Point(565, 69);
-            this.txtPlazoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlazoPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlazoPago.Multiline = true;
             this.txtPlazoPago.Name = "txtPlazoPago";
             this.txtPlazoPago.Size = new System.Drawing.Size(167, 25);
-            this.txtPlazoPago.TabIndex = 26;
+            this.txtPlazoPago.TabIndex = 3;
             // 
             // txtTelefoProveedor
             // 
             this.txtTelefoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 28);
-            this.txtTelefoProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefoProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefoProveedor.Multiline = true;
             this.txtTelefoProveedor.Name = "txtTelefoProveedor";
             this.txtTelefoProveedor.Size = new System.Drawing.Size(167, 25);
-            this.txtTelefoProveedor.TabIndex = 25;
+            this.txtTelefoProveedor.TabIndex = 1;
             // 
             // txtEmailProveedor
             // 
             this.txtEmailProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailProveedor.Location = new System.Drawing.Point(205, 111);
-            this.txtEmailProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailProveedor.Multiline = true;
             this.txtEmailProveedor.Name = "txtEmailProveedor";
             this.txtEmailProveedor.Size = new System.Drawing.Size(167, 25);
-            this.txtEmailProveedor.TabIndex = 24;
+            this.txtEmailProveedor.TabIndex = 4;
             // 
             // label6
             // 
@@ -226,11 +224,11 @@
             // 
             this.txtNomProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomProveedor.Location = new System.Drawing.Point(205, 69);
-            this.txtNomProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomProveedor.Multiline = true;
             this.txtNomProveedor.Name = "txtNomProveedor";
             this.txtNomProveedor.Size = new System.Drawing.Size(167, 25);
-            this.txtNomProveedor.TabIndex = 4;
+            this.txtNomProveedor.TabIndex = 2;
             // 
             // label2
             // 
@@ -249,9 +247,9 @@
             this.groupBox2.Controls.Add(this.dgv_Proveedores);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(9, 241);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 269);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -262,13 +260,11 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripButton1,
+            this.btn_Refrescar,
             this.toolStripSeparator1,
             this.toolStripLabel2,
-            this.toolStripButton2,
+            this.btn_Modificar,
             this.toolStripSeparator2,
-            this.toolStripLabel3,
-            this.toolStripButton3,
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_FiltrarProveedores});
@@ -284,14 +280,14 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
-            // toolStripButton1
+            // btn_Refrescar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar.Image")));
+            this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar.Name = "btn_Refrescar";
+            this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar.Text = "toolStripButton1";
             // 
             // toolStripSeparator1
             // 
@@ -304,34 +300,19 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
-            // toolStripButton2
+            // btn_Modificar
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.btn_Modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.Image")));
+            this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
+            this.btn_Modificar.Text = "toolStripButton2";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(50, 24);
-            this.toolStripLabel3.Text = "Eliminar";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // toolStripSeparator3
             // 
@@ -355,7 +336,7 @@
             this.dgv_Proveedores.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proveedores.Location = new System.Drawing.Point(8, 51);
-            this.dgv_Proveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Proveedores.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Proveedores.Name = "dgv_Proveedores";
             this.dgv_Proveedores.RowTemplate.Height = 24;
             this.dgv_Proveedores.Size = new System.Drawing.Size(780, 210);
@@ -370,7 +351,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Proveedores";
             this.Text = "FRM_Proveedores";
             this.Load += new System.EventHandler(this.FRM_Proveedores_Load);
@@ -398,20 +379,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_Id_Proveedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btn_Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarProveedores;

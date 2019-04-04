@@ -69,6 +69,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_Articulos_DAL.sIdArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@NombreArticulo", 3, Obj_Articulos_DAL.sNombreArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_Articulos_DAL.iCantidad.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdFamilia", 3, Obj_Articulos_DAL.sIdFamilia.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_Articulos_DAL.cIdTipoArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@InventarioMinimo", 9, Obj_Articulos_DAL.iInventarioMinimo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@PrecioVenta", 4, Obj_Articulos_DAL.dPrecioVenta.ToString().Trim());
@@ -86,6 +87,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_Articulos_DAL.sIdArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@NombreArticulo", 3, Obj_Articulos_DAL.sNombreArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_Articulos_DAL.iCantidad.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdFamilia", 3, Obj_Articulos_DAL.sIdFamilia.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_Articulos_DAL.cIdTipoArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@InventarioMinimo", 9, Obj_Articulos_DAL.iInventarioMinimo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@PrecioVenta", 4, Obj_Articulos_DAL.dPrecioVenta.ToString().Trim());

@@ -39,13 +39,13 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtPolizas = new DataTable();
 
-            if (toolStripTextBox1.Text == string.Empty)
+            if (txt_FiltrarTipoPoliza.Text == string.Empty)
             {
                 dtPolizas = Obj_Polizas_BLL.Listar_Polizas(ref sMsjError);
             }
             else
             {
-                dtPolizas = Obj_Polizas_BLL.Filtrar_Polizas(ref sMsjError, toolStripTextBox1.Text);
+                dtPolizas = Obj_Polizas_BLL.Filtrar_Polizas(ref sMsjError, txt_FiltrarTipoPoliza.Text);
             }
 
             if (sMsjError == string.Empty)
