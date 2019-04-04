@@ -75,6 +75,17 @@ namespace LavaCar_BLL.Cat_Mant
             ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TransaccionesCompra"].ToString().Trim();
             ObjBLL.Ejec_Scalar(ref ObjDAL);
 
+            if (ObjDAL.sMsjError == string.Empty)
+            {
+                sMsgError = string.Empty;
+                ObjDAL_TransC.iIdTransaccionCompra = ObjDAL.iValorScalar;
+            }
+            else
+            {
+                sMsgError = ObjDAL.sMsjError;
+                ObjDAL_TransC.iIdTransaccionCompra = -1;
+            }
+
         }
 
         public void ModificarTransaccionesCompra(ref string sMsgError,ref cls_TransaccionesCompra_DAL ObjDAL_TransC)
