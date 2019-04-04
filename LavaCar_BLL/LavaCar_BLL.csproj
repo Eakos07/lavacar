@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_Citas_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_BLL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_BLL.cs" />

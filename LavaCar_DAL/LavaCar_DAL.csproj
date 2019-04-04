@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_Citas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_DAL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_DAL.cs" />

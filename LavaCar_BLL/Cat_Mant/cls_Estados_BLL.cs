@@ -17,6 +17,7 @@ namespace LavaCar_BLL.Cat_Mant
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
             Obj_DAL.sTableName = "Estados";
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Listar_Estados"].ToString().Trim();
             Obj_BLL.Execute_DataAdapter(ref Obj_DAL);

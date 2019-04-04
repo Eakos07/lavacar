@@ -118,6 +118,12 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
+
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.Time;
+                                        break;
+                                    }
                                 default:
 
                                     DBType = SqlDbType.VarChar;
@@ -267,8 +273,6 @@ namespace LavaCar_BLL.Data_Base
 
                     Obj_DB_DAL.Obj_Command = new SqlCommand(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
 
-                    Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
-
                     if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
                     {
                         foreach (DataRow DR in Obj_DB_DAL.DT_Parametros.Rows)
@@ -323,7 +327,9 @@ namespace LavaCar_BLL.Data_Base
                         }
                     }
 
-                    Obj_DB_DAL.iValorScalar = Convert.ToInt32(Obj_DB_DAL.Obj_Command.ExecuteScalar());
+                    Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
+
+                    Obj_DB_DAL.sScalarV = Obj_DB_DAL.Obj_Command.ExecuteScalar().ToString() ;
 
                     Obj_DB_DAL.sMsjError = string.Empty;
                 }
