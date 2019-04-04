@@ -77,8 +77,7 @@ namespace LavaCar_BLL.Cat_Mant
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
-
-            Obj_BLL.CrearParametros(ref Obj_DAL);
+            
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Polizas_DAL.sIdPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPoliza", 5, Obj_Polizas_DAL.cIdTipoPoliza.ToString().Trim());

@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using LavaCar_DAL.Data_Base;
 using LavaCar_BLL.Data_Base;
+using LavaCar_DAL.Cat_Mant;
 
 namespace LavaCar_BLL.Cat_Mant
 {
@@ -56,6 +57,33 @@ namespace LavaCar_BLL.Cat_Mant
                 sMsjError = Obj_DAL.sMsjError;
                 return null;
             }
+        }
+        public void Insertar_TipoCambio(ref string sMsjError, ref cls_TipoCambio_DAL Obj_TipoCambio_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoCambio",5, Obj_TipoCambio_DAL.cTipoCambio.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Valor", 4, Obj_TipoCambio_DAL.dValor.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Fecha", 11, Obj_TipoCambio_DAL.dtmFecha.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoCambio"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+        }
+
+        public void Modificar_TipoCambio(ref string sMsjError, ref cls_TipoCambio_DAL Obj_TipoCambio_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoCambio", 5, Obj_TipoCambio_DAL.cTipoCambio.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Valor", 4, Obj_TipoCambio_DAL.dValor.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Fecha", 11, Obj_TipoCambio_DAL.dtmFecha.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoCambio"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
         }
     }
 }
