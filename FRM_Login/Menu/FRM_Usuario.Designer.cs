@@ -200,7 +200,7 @@
             this.comboBox2.Location = new System.Drawing.Point(271, 195);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(211, 29);
-            this.comboBox2.TabIndex = 25;
+            this.comboBox2.TabIndex = 2;
             // 
             // label3
             // 
@@ -220,7 +220,7 @@
             this.button2.Location = new System.Drawing.Point(876, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 37);
-            this.button2.TabIndex = 23;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -233,7 +233,7 @@
             this.button1.Location = new System.Drawing.Point(670, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 37);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -242,7 +242,7 @@
             this.textBox1.Location = new System.Drawing.Point(272, 124);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 28);
-            this.textBox1.TabIndex = 15;
+            this.textBox1.TabIndex = 1;
             // 
             // comboBox4
             // 
@@ -250,7 +250,7 @@
             this.comboBox4.Location = new System.Drawing.Point(272, 256);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(211, 29);
-            this.comboBox4.TabIndex = 14;
+            this.comboBox4.TabIndex = 3;
             // 
             // label11
             // 
@@ -276,7 +276,7 @@
             this.comboBox1.Location = new System.Drawing.Point(272, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(211, 29);
-            this.comboBox1.TabIndex = 1;
+            this.comboBox1.TabIndex = 0;
             // 
             // label1
             // 

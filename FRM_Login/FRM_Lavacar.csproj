@@ -177,12 +177,6 @@
     <Compile Include="Menu\FRM_Roles.Designer.cs">
       <DependentUpon>FRM_Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\FRM_Supervisor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu\FRM_Supervisor.Designer.cs">
-      <DependentUpon>FRM_Supervisor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu\FRM_Tipo_Cambio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Roles.resx">
       <DependentUpon>FRM_Roles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu\FRM_Supervisor.resx">
-      <DependentUpon>FRM_Supervisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Tipo_Cambio.resx">
       <DependentUpon>FRM_Tipo_Cambio.cs</DependentUpon>
