@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Polizas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdPoliza = new System.Windows.Forms.TextBox();
             this.txt_CeduJurid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_FechaVenci = new System.Windows.Forms.TextBox();
@@ -37,19 +38,18 @@
             this.cmb_IdTipoPoliza = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_Guardar_Polizas = new System.Windows.Forms.Button();
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
-            this.cmb_IdPoliza = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Polizas = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
+            this.btn_Refrescar_Polizas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
+            this.btn_Modificar_Polizas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
@@ -60,43 +60,44 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Refrescar_TipoPolizas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Modificar_TipoPolizas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_TipoPoliza = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_IdTipoPoliza = new System.Windows.Forms.TextBox();
+            this.cmb_IdProveedor = new System.Windows.Forms.ComboBox();
+            this.txt_NombrePoliza = new System.Windows.Forms.TextBox();
+            this.txt_Compañia = new System.Windows.Forms.TextBox();
             this.btnSalir_TipoPolizas = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_Guardar_TipoPolizas = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Polizas)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tcArticulos.SuspendLayout();
             this.tbPolizas.SuspendLayout();
             this.tbTipoPoliza.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoPoliza)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_IdPoliza);
             this.groupBox1.Controls.Add(this.txt_CeduJurid);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_FechaVenci);
@@ -104,9 +105,8 @@
             this.groupBox1.Controls.Add(this.cmb_IdTipoPoliza);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btn_Exit);
-            this.groupBox1.Controls.Add(this.btn_Save);
+            this.groupBox1.Controls.Add(this.btn_Guardar_Polizas);
             this.groupBox1.Controls.Add(this.cmb_IdEstado);
-            this.groupBox1.Controls.Add(this.cmb_IdPoliza);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
@@ -118,6 +118,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pólizas";
+            // 
+            // txt_IdPoliza
+            // 
+            this.txt_IdPoliza.Location = new System.Drawing.Point(177, 42);
+            this.txt_IdPoliza.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdPoliza.Name = "txt_IdPoliza";
+            this.txt_IdPoliza.Size = new System.Drawing.Size(178, 24);
+            this.txt_IdPoliza.TabIndex = 31;
             // 
             // txt_CeduJurid
             // 
@@ -139,7 +147,7 @@
             // 
             // txt_FechaVenci
             // 
-            this.txt_FechaVenci.Location = new System.Drawing.Point(174, 137);
+            this.txt_FechaVenci.Location = new System.Drawing.Point(177, 135);
             this.txt_FechaVenci.Margin = new System.Windows.Forms.Padding(2);
             this.txt_FechaVenci.Name = "txt_FechaVenci";
             this.txt_FechaVenci.Size = new System.Drawing.Size(178, 24);
@@ -189,19 +197,20 @@
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_Save
+            // btn_Guardar_Polizas
             // 
-            this.btn_Save.BackColor = System.Drawing.Color.Aqua;
-            this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(485, 160);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(110, 30);
-            this.btn_Save.TabIndex = 5;
-            this.btn_Save.Text = "Guardar";
-            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Guardar_Polizas.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Guardar_Polizas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Guardar_Polizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Guardar_Polizas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_Polizas.Location = new System.Drawing.Point(503, 160);
+            this.btn_Guardar_Polizas.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Guardar_Polizas.Name = "btn_Guardar_Polizas";
+            this.btn_Guardar_Polizas.Size = new System.Drawing.Size(110, 30);
+            this.btn_Guardar_Polizas.TabIndex = 5;
+            this.btn_Guardar_Polizas.Text = "Guardar";
+            this.btn_Guardar_Polizas.UseVisualStyleBackColor = false;
+            this.btn_Guardar_Polizas.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // cmb_IdEstado
             // 
@@ -211,15 +220,6 @@
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(178, 27);
             this.cmb_IdEstado.TabIndex = 1;
-            // 
-            // cmb_IdPoliza
-            // 
-            this.cmb_IdPoliza.FormattingEnabled = true;
-            this.cmb_IdPoliza.Location = new System.Drawing.Point(177, 44);
-            this.cmb_IdPoliza.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_IdPoliza.Name = "cmb_IdPoliza";
-            this.cmb_IdPoliza.Size = new System.Drawing.Size(178, 27);
-            this.cmb_IdPoliza.TabIndex = 0;
             // 
             // label3
             // 
@@ -243,7 +243,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_Polizas);
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(6, 224);
@@ -255,26 +255,31 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabla Pólizas";
             // 
-            // dataGridView1
+            // dgv_Polizas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 50);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 248);
-            this.dataGridView1.TabIndex = 4;
+            this.dgv_Polizas.AllowUserToAddRows = false;
+            this.dgv_Polizas.AllowUserToDeleteRows = false;
+            this.dgv_Polizas.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Polizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Polizas.Location = new System.Drawing.Point(5, 50);
+            this.dgv_Polizas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Polizas.MultiSelect = false;
+            this.dgv_Polizas.Name = "dgv_Polizas";
+            this.dgv_Polizas.RowTemplate.Height = 24;
+            this.dgv_Polizas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Polizas.Size = new System.Drawing.Size(760, 248);
+            this.dgv_Polizas.TabIndex = 4;
+            this.dgv_Polizas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Polizas_CellContentClick);
             // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.btn_Refrescar,
+            this.btn_Refrescar_Polizas,
             this.toolStripSeparator1,
             this.toolStripLabel2,
-            this.btn_Modificar,
+            this.btn_Modificar_Polizas,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.toolStripLabel4,
@@ -291,14 +296,15 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
-            // btn_Refrescar
+            // btn_Refrescar_Polizas
             // 
-            this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_Refrescar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar.Image")));
-            this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Refrescar.Name = "btn_Refrescar";
-            this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar_Polizas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar_Polizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_Polizas.Image")));
+            this.btn_Refrescar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar_Polizas.Name = "btn_Refrescar_Polizas";
+            this.btn_Refrescar_Polizas.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar_Polizas.Text = "toolStripButton1";
+            this.btn_Refrescar_Polizas.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -311,14 +317,15 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
-            // btn_Modificar
+            // btn_Modificar_Polizas
             // 
-            this.btn_Modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.Image")));
-            this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar_Polizas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Modificar_Polizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_Polizas.Image")));
+            this.btn_Modificar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Modificar_Polizas.Name = "btn_Modificar_Polizas";
+            this.btn_Modificar_Polizas.Size = new System.Drawing.Size(24, 24);
+            this.btn_Modificar_Polizas.Text = "toolStripButton2";
+            this.btn_Modificar_Polizas.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -383,7 +390,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.toolStrip2);
-            this.groupBox4.Controls.Add(this.dataGridView2);
+            this.groupBox4.Controls.Add(this.dgv_TipoPoliza);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox4.Location = new System.Drawing.Point(4, 224);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -399,10 +406,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel5,
-            this.toolStripButton4,
+            this.btn_Refrescar_TipoPolizas,
             this.toolStripSeparator4,
             this.toolStripLabel6,
-            this.toolStripButton5,
+            this.btn_Modificar_TipoPolizas,
             this.toolStripSeparator5,
             this.toolStripLabel7,
             this.toolStripButton6,
@@ -421,14 +428,15 @@
             this.toolStripLabel5.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel5.Text = "Refrescar";
             // 
-            // toolStripButton4
+            // btn_Refrescar_TipoPolizas
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton4.Text = "toolStripButton1";
+            this.btn_Refrescar_TipoPolizas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar_TipoPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_TipoPolizas.Image")));
+            this.btn_Refrescar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar_TipoPolizas.Name = "btn_Refrescar_TipoPolizas";
+            this.btn_Refrescar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar_TipoPolizas.Text = "toolStripButton1";
+            this.btn_Refrescar_TipoPolizas.Click += new System.EventHandler(this.btn_Refrescar_TipoPolizas_Click);
             // 
             // toolStripSeparator4
             // 
@@ -441,14 +449,15 @@
             this.toolStripLabel6.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel6.Text = "Modificar";
             // 
-            // toolStripButton5
+            // btn_Modificar_TipoPolizas
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "toolStripButton2";
+            this.btn_Modificar_TipoPolizas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Modificar_TipoPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_TipoPolizas.Image")));
+            this.btn_Modificar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Modificar_TipoPolizas.Name = "btn_Modificar_TipoPolizas";
+            this.btn_Modificar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
+            this.btn_Modificar_TipoPolizas.Text = "toolStripButton2";
+            this.btn_Modificar_TipoPolizas.Click += new System.EventHandler(this.btn_Modificar_TipoPolizas_Click);
             // 
             // toolStripSeparator5
             // 
@@ -487,26 +496,27 @@
             this.toolStripTextBox2.Size = new System.Drawing.Size(76, 27);
             this.toolStripTextBox2.TextChanged += new System.EventHandler(this.toolStripTextBox2_TextChanged);
             // 
-            // dataGridView2
+            // dgv_TipoPoliza
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(755, 232);
-            this.dataGridView2.TabIndex = 0;
+            this.dgv_TipoPoliza.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_TipoPoliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TipoPoliza.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TipoPoliza.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TipoPoliza.Name = "dgv_TipoPoliza";
+            this.dgv_TipoPoliza.RowTemplate.Height = 24;
+            this.dgv_TipoPoliza.Size = new System.Drawing.Size(755, 232);
+            this.dgv_TipoPoliza.TabIndex = 0;
+            this.dgv_TipoPoliza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoPoliza_CellContentClick);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.comboBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txt_IdTipoPoliza);
+            this.groupBox3.Controls.Add(this.cmb_IdProveedor);
+            this.groupBox3.Controls.Add(this.txt_NombrePoliza);
+            this.groupBox3.Controls.Add(this.txt_Compañia);
             this.groupBox3.Controls.Add(this.btnSalir_TipoPolizas);
-            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.btn_Guardar_TipoPolizas);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label8);
@@ -521,43 +531,44 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo Polizas";
             // 
-            // comboBox4
+            // txt_IdTipoPoliza
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(553, 38);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(150, 27);
-            this.comboBox4.TabIndex = 28;
+            this.txt_IdTipoPoliza.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IdTipoPoliza.Location = new System.Drawing.Point(202, 38);
+            this.txt_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdTipoPoliza.Multiline = true;
+            this.txt_IdTipoPoliza.Name = "txt_IdTipoPoliza";
+            this.txt_IdTipoPoliza.Size = new System.Drawing.Size(150, 27);
+            this.txt_IdTipoPoliza.TabIndex = 29;
             // 
-            // comboBox5
+            // cmb_IdProveedor
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(202, 37);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(150, 27);
-            this.comboBox5.TabIndex = 27;
+            this.cmb_IdProveedor.FormattingEnabled = true;
+            this.cmb_IdProveedor.Location = new System.Drawing.Point(553, 38);
+            this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IdProveedor.Name = "cmb_IdProveedor";
+            this.cmb_IdProveedor.Size = new System.Drawing.Size(150, 27);
+            this.cmb_IdProveedor.TabIndex = 28;
             // 
-            // textBox4
+            // txt_NombrePoliza
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(202, 89);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 27);
-            this.textBox4.TabIndex = 22;
+            this.txt_NombrePoliza.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NombrePoliza.Location = new System.Drawing.Point(202, 89);
+            this.txt_NombrePoliza.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NombrePoliza.Multiline = true;
+            this.txt_NombrePoliza.Name = "txt_NombrePoliza";
+            this.txt_NombrePoliza.Size = new System.Drawing.Size(150, 27);
+            this.txt_NombrePoliza.TabIndex = 22;
             // 
-            // textBox3
+            // txt_Compañia
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(202, 149);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 27);
-            this.textBox3.TabIndex = 20;
+            this.txt_Compañia.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Compañia.Location = new System.Drawing.Point(202, 149);
+            this.txt_Compañia.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Compañia.Multiline = true;
+            this.txt_Compañia.Name = "txt_Compañia";
+            this.txt_Compañia.Size = new System.Drawing.Size(150, 27);
+            this.txt_Compañia.TabIndex = 20;
             // 
             // btnSalir_TipoPolizas
             // 
@@ -574,19 +585,20 @@
             this.btnSalir_TipoPolizas.UseVisualStyleBackColor = false;
             this.btnSalir_TipoPolizas.Click += new System.EventHandler(this.btnSalir_TipoPolizas_Click);
             // 
-            // button4
+            // btn_Guardar_TipoPolizas
             // 
-            this.button4.BackColor = System.Drawing.Color.Aqua;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(490, 170);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Guardar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_Guardar_TipoPolizas.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Guardar_TipoPolizas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Guardar_TipoPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Guardar_TipoPolizas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_TipoPolizas.Location = new System.Drawing.Point(490, 170);
+            this.btn_Guardar_TipoPolizas.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Guardar_TipoPolizas.Name = "btn_Guardar_TipoPolizas";
+            this.btn_Guardar_TipoPolizas.Size = new System.Drawing.Size(110, 30);
+            this.btn_Guardar_TipoPolizas.TabIndex = 16;
+            this.btn_Guardar_TipoPolizas.Text = "Guardar";
+            this.btn_Guardar_TipoPolizas.UseVisualStyleBackColor = false;
+            this.btn_Guardar_TipoPolizas.Click += new System.EventHandler(this.btn_Guardar_TipoPolizas_Click);
             // 
             // label7
             // 
@@ -648,7 +660,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Polizas)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tcArticulos.ResumeLayout(false);
@@ -658,7 +670,7 @@
             this.groupBox4.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoPoliza)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -675,19 +687,18 @@
         private System.Windows.Forms.ComboBox cmb_IdTipoPoliza;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Exit;
-        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Button btn_Guardar_Polizas;
         private System.Windows.Forms.ComboBox cmb_IdEstado;
-        private System.Windows.Forms.ComboBox cmb_IdPoliza;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Polizas;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btn_Refrescar;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar_Polizas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton btn_Modificar;
+        private System.Windows.Forms.ToolStripButton btn_Modificar_Polizas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
@@ -696,12 +707,11 @@
         private System.Windows.Forms.TabPage tbPolizas;
         private System.Windows.Forms.TabPage tbTipoPoliza;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cmb_IdProveedor;
+        private System.Windows.Forms.TextBox txt_NombrePoliza;
+        private System.Windows.Forms.TextBox txt_Compañia;
         private System.Windows.Forms.Button btnSalir_TipoPolizas;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_Guardar_TipoPolizas;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -709,16 +719,18 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar_TipoPolizas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton btn_Modificar_TipoPolizas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_TipoPoliza;
+        private System.Windows.Forms.TextBox txt_IdPoliza;
+        private System.Windows.Forms.TextBox txt_IdTipoPoliza;
     }
 }
