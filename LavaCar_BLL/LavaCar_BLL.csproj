@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cat_Mant\cls_AjustesInventario_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Articulos_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Centro_de_Lavado_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Clientes_BLL.cs" />
