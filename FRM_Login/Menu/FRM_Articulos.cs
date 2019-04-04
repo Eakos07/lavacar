@@ -217,7 +217,7 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarFamilia_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txt_IdFamilia.Text)) && !(string.IsNullOrEmpty(txt_DescripcionFamilia.Text)) && !(string.IsNullOrEmpty(cmb_IdEstadoFamilia.Text)))
+            if (!(string.IsNullOrEmpty(txt_IdFamilia.Text)) && !(string.IsNullOrEmpty(txt_DescripcionFamilia.Text)) && cmb_IdEstadoFamilia.SelectedValue.ToString() != "0")
             {
                 Obj_DAL_Familia.sIdFamilia = txt_IdFamilia.Text;
                 Obj_DAL_Familia.sDescripcion = txt_DescripcionFamilia.Text;
@@ -288,10 +288,10 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarArticulo_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txt_IdFamilia.Text)) && !(string.IsNullOrEmpty(txt_NombreArticulo.Text)) && !(string.IsNullOrEmpty(txt_Cantidad_Articulo.Text))
-                && (cmb_IdFamilia_Articulo.SelectedValue.ToString() == "Elija Opcion") && (cmb_Tipo_Articulo.SelectedValue.ToString() == "Elija Opcion")
+            if (!(string.IsNullOrEmpty(txt_Articulo.Text)) && !(string.IsNullOrEmpty(txt_NombreArticulo.Text)) && !(string.IsNullOrEmpty(txt_Cantidad_Articulo.Text))
+                && (cmb_IdFamilia_Articulo.SelectedValue.ToString() != "0") && (cmb_Tipo_Articulo.SelectedValue.ToString() != "0")
                 && !(string.IsNullOrEmpty(txt_InventarioMin_Articulo.Text)) && !(string.IsNullOrEmpty(txt_PrecioVenta_Articulo.Text))
-                && (cmb_Estado_Articulos.SelectedValue.ToString() == "Elija Opcion"))
+                && (cmb_Estado_Articulos.SelectedValue.ToString() != "0"))
             {
                 Obj_DAL_Articulos.sIdArticulo = txt_Articulo.Text;
                 Obj_DAL_Articulos.sNombreArticulo = txt_NombreArticulo.Text;
@@ -364,7 +364,7 @@ namespace FRM_Login.Menu
         private void btn_GuardarTipoArticulo_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_IdTipoArticulo.Text)) && !(string.IsNullOrEmpty(txt_DescripcionTipoArticulo.Text))
-                && cmb_EstadoTipoArticulo.SelectedValue.ToString() == "Elija Opcion")
+                && cmb_EstadoTipoArticulo.SelectedValue.ToString() != "0")
             {
                 Obj_DAL_Tipo.cIdTipoArticulo = Convert.ToChar(txt_IdTipoArticulo.Text);
                 Obj_DAL_Tipo.sDescripcion = txt_DescripcionTipoArticulo.Text;
