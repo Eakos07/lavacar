@@ -480,12 +480,17 @@
             // 
             // dgv_Articulos
             // 
+            this.dgv_Articulos.AllowUserToAddRows = false;
+            this.dgv_Articulos.AllowUserToDeleteRows = false;
             this.dgv_Articulos.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Articulos.Location = new System.Drawing.Point(4, 51);
             this.dgv_Articulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Articulos.MultiSelect = false;
             this.dgv_Articulos.Name = "dgv_Articulos";
             this.dgv_Articulos.RowTemplate.Height = 24;
+            this.dgv_Articulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Articulos.Size = new System.Drawing.Size(767, 228);
             this.dgv_Articulos.TabIndex = 0;
             this.dgv_Articulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Articulos_CellDoubleClick);
