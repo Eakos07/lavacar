@@ -73,7 +73,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
         }
 
-        public void Modificar_TipoVehiculo(ref string sMsjError, ref cls_TipoServicio_DAL Obj_TipoServicio_DAL)
+        public void Modificar_TipoServicio(ref string sMsjError, ref cls_TipoServicio_DAL Obj_TipoServicio_DAL)
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();

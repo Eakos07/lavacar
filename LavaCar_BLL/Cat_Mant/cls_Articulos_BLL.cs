@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Configuration;
 using LavaCar_DAL.Data_Base;
+using LavaCar_DAL.Cat_Mant;
 using LavaCar_BLL.Data_Base;
+
 
 namespace LavaCar_BLL.Cat_Mant
 {
@@ -58,6 +60,38 @@ namespace LavaCar_BLL.Cat_Mant
             }
         }
 
+        public void Insertar_Articulos(ref string sMsjError, ref cls_Articulos_DAL Obj_Articulos_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_Articulos_DAL.sIdArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@NombreArticulo", 3, Obj_Articulos_DAL.sNombreArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_Articulos_DAL.iCantidad.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_Articulos_DAL.cIdTipoArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@InventarioMinimo", 9, Obj_Articulos_DAL.iInventarioMinimo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@PrecioVenta", 4, Obj_Articulos_DAL.dPrecioVenta.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Articulos_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Articulos"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+        }
+
+        public void Modificar_Articulos(ref string sMsjError, ref cls_Articulos_DAL Obj_Articulos_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_Articulos_DAL.sIdArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@NombreArticulo", 3, Obj_Articulos_DAL.sNombreArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_Articulos_DAL.iCantidad.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_Articulos_DAL.cIdTipoArticulo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@InventarioMinimo", 9, Obj_Articulos_DAL.iInventarioMinimo.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@PrecioVenta", 4, Obj_Articulos_DAL.dPrecioVenta.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Articulos_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Articulos"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+        }
     }
 }
