@@ -10,6 +10,7 @@ namespace LavaCar_DAL.Cat_Mant
     {
         private byte _bIdEstado;
         private string _sNombre, _sDescripcion;
+        private char _cBandIM;
 
         #region Variables Publicas
         public byte bIdEstado
@@ -50,6 +51,21 @@ namespace LavaCar_DAL.Cat_Mant
                 _sNombre = value;
             }
         }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
+            }
+        }
+
+
         #endregion
     }
 }

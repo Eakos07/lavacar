@@ -73,5 +73,20 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
         }
+
+        public void Modificar_Estados(ref string sMsjError, ref cls_Estados_DAL Obj_Estados_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new  Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new  Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Estados_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Nombre", 3, Obj_Estados_DAL.sNombre.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_Estados_DAL.sDescripcion.ToString().Trim());
+
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Estados"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+        }
     }
 }
