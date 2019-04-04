@@ -37,6 +37,7 @@
             this.btn_RC_Refrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.btn_RC_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.txt_RC_Filtrar = new System.Windows.Forms.ToolStripTextBox();
@@ -58,13 +59,14 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,8 +84,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
-            this.btn_RC_Modificar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.txt_NumVisitas = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,7 +105,7 @@
             this.tcCitas.Controls.Add(this.tbcCreacionCitas);
             this.tcCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcCitas.Location = new System.Drawing.Point(19, 10);
-            this.tcCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tcCitas.Name = "tcCitas";
             this.tcCitas.SelectedIndex = 0;
             this.tcCitas.Size = new System.Drawing.Size(771, 525);
@@ -114,9 +116,9 @@
             this.tbRegistroClientes.Controls.Add(this.groupBox2);
             this.tbRegistroClientes.Controls.Add(this.groupBox1);
             this.tbRegistroClientes.Location = new System.Drawing.Point(4, 26);
-            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Name = "tbRegistroClientes";
-            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Size = new System.Drawing.Size(763, 495);
             this.tbRegistroClientes.TabIndex = 0;
             this.tbRegistroClientes.Text = "Registro de Cliente";
@@ -126,11 +128,11 @@
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(20, 193);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(714, 292);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -149,7 +151,7 @@
             this.toolStripLabel3,
             this.txt_RC_Filtrar,
             this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(2, 19);
+            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(710, 27);
             this.toolStrip1.TabIndex = 1;
@@ -181,6 +183,15 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
+            // btn_RC_Modificar
+            // 
+            this.btn_RC_Modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_RC_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Modificar.Image")));
+            this.btn_RC_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_RC_Modificar.Name = "btn_RC_Modificar";
+            this.btn_RC_Modificar.Size = new System.Drawing.Size(24, 24);
+            this.btn_RC_Modificar.Text = "btn_Modificar";
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -207,7 +218,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 50);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(705, 230);
@@ -215,6 +226,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_NumVisitas);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.btn_RC_Exit);
             this.groupBox1.Controls.Add(this.btn_RC_Save);
             this.groupBox1.Controls.Add(this.label3);
@@ -223,11 +236,11 @@
             this.groupBox1.Controls.Add(this.cmbTipoPlacaVehiculo);
             this.groupBox1.Controls.Add(this.cmbTipoVehiculo);
             this.groupBox1.Controls.Add(this.txtPlacaVehiculo);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(714, 172);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -238,9 +251,9 @@
             this.btn_RC_Exit.BackColor = System.Drawing.Color.Aqua;
             this.btn_RC_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_RC_Exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RC_Exit.Location = new System.Drawing.Point(596, 126);
-            this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Exit.Name = "btn_RC_Exit";
             this.btn_RC_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Exit.TabIndex = 4;
@@ -252,9 +265,9 @@
             this.btn_RC_Save.BackColor = System.Drawing.Color.Aqua;
             this.btn_RC_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_RC_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RC_Save.Location = new System.Drawing.Point(471, 126);
-            this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Save.Name = "btn_RC_Save";
             this.btn_RC_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Save.TabIndex = 3;
@@ -267,7 +280,7 @@
             this.label3.Location = new System.Drawing.Point(64, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 19);
+            this.label3.Size = new System.Drawing.Size(152, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo placa de Vehículo";
             // 
@@ -277,7 +290,7 @@
             this.label2.Location = new System.Drawing.Point(66, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 19);
+            this.label2.Size = new System.Drawing.Size(114, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tipo de Vehículo";
             // 
@@ -287,7 +300,7 @@
             this.label1.Location = new System.Drawing.Point(66, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 19);
+            this.label1.Size = new System.Drawing.Size(121, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Número de Placa:";
             // 
@@ -295,26 +308,26 @@
             // 
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
             this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(280, 119);
-            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoPlacaVehiculo.Name = "cmbTipoPlacaVehiculo";
-            this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(138, 27);
+            this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(138, 25);
             this.cmbTipoPlacaVehiculo.TabIndex = 2;
             // 
             // cmbTipoVehiculo
             // 
             this.cmbTipoVehiculo.FormattingEnabled = true;
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(280, 67);
-            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
-            this.cmbTipoVehiculo.Size = new System.Drawing.Size(138, 27);
+            this.cmbTipoVehiculo.Size = new System.Drawing.Size(138, 25);
             this.cmbTipoVehiculo.TabIndex = 1;
             // 
             // txtPlacaVehiculo
             // 
             this.txtPlacaVehiculo.Location = new System.Drawing.Point(280, 22);
-            this.txtPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlacaVehiculo.Name = "txtPlacaVehiculo";
-            this.txtPlacaVehiculo.Size = new System.Drawing.Size(138, 24);
+            this.txtPlacaVehiculo.Size = new System.Drawing.Size(138, 23);
             this.txtPlacaVehiculo.TabIndex = 0;
             // 
             // tbcCreacionCitas
@@ -322,9 +335,9 @@
             this.tbcCreacionCitas.Controls.Add(this.groupBox4);
             this.tbcCreacionCitas.Controls.Add(this.groupBox3);
             this.tbcCreacionCitas.Location = new System.Drawing.Point(4, 26);
-            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Name = "tbcCreacionCitas";
-            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Size = new System.Drawing.Size(763, 495);
             this.tbcCreacionCitas.TabIndex = 1;
             this.tbcCreacionCitas.Text = "Citas";
@@ -334,11 +347,11 @@
             // 
             this.groupBox4.Controls.Add(this.toolStrip2);
             this.groupBox4.Controls.Add(this.dataGridView2);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(20, 238);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(741, 254);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
@@ -360,7 +373,7 @@
             this.toolStripLabel7,
             this.toolStripSeparator7,
             this.toolStripButton1});
-            this.toolStrip2.Location = new System.Drawing.Point(2, 19);
+            this.toolStrip2.Location = new System.Drawing.Point(2, 18);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(737, 27);
             this.toolStrip2.TabIndex = 1;
@@ -392,6 +405,15 @@
             this.toolStripLabel5.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel5.Text = "Modificar";
             // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Text = "btn_Cita_Modificar";
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
@@ -419,26 +441,26 @@
             this.toolStripLabel7.Size = new System.Drawing.Size(59, 24);
             this.toolStripLabel7.Text = "Crear Cita";
             // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "btn_Cita_Modificar";
-            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "btn_Cita_CrearCita";
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(4, 54);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(733, 195);
@@ -461,11 +483,11 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.cmb_HoraCita);
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(20, 16);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(741, 206);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -477,7 +499,7 @@
             this.label10.Location = new System.Drawing.Point(346, 139);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 19);
+            this.label10.Size = new System.Drawing.Size(94, 17);
             this.label10.TabIndex = 17;
             this.label10.Text = "Tipo Servicio:";
             // 
@@ -485,17 +507,17 @@
             // 
             this.cmb_TipoServicio.FormattingEnabled = true;
             this.cmb_TipoServicio.Location = new System.Drawing.Point(458, 136);
-            this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoServicio.Name = "cmb_TipoServicio";
-            this.cmb_TipoServicio.Size = new System.Drawing.Size(175, 27);
+            this.cmb_TipoServicio.Size = new System.Drawing.Size(175, 25);
             this.cmb_TipoServicio.TabIndex = 5;
             // 
             // txt_Telefono
             // 
             this.txt_Telefono.Location = new System.Drawing.Point(458, 98);
-            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(175, 24);
+            this.txt_Telefono.Size = new System.Drawing.Size(175, 23);
             this.txt_Telefono.TabIndex = 3;
             // 
             // label9
@@ -504,7 +526,7 @@
             this.label9.Location = new System.Drawing.Point(346, 103);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 19);
+            this.label9.Size = new System.Drawing.Size(68, 17);
             this.label9.TabIndex = 14;
             this.label9.Text = "Teléfono:";
             // 
@@ -514,16 +536,16 @@
             this.label8.Location = new System.Drawing.Point(346, 67);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 19);
+            this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 13;
             this.label8.Text = "Email:";
             // 
             // txt_Email
             // 
             this.txt_Email.Location = new System.Drawing.Point(458, 62);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(175, 24);
+            this.txt_Email.Size = new System.Drawing.Size(175, 23);
             this.txt_Email.TabIndex = 0;
             // 
             // label7
@@ -532,7 +554,7 @@
             this.label7.Location = new System.Drawing.Point(4, 106);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 19);
+            this.label7.Size = new System.Drawing.Size(110, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Registro placas:";
             // 
@@ -540,25 +562,25 @@
             // 
             this.txt_RegistroPlaca.FormattingEnabled = true;
             this.txt_RegistroPlaca.Location = new System.Drawing.Point(150, 103);
-            this.txt_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txt_RegistroPlaca.Name = "txt_RegistroPlaca";
-            this.txt_RegistroPlaca.Size = new System.Drawing.Size(167, 27);
+            this.txt_RegistroPlaca.Size = new System.Drawing.Size(167, 25);
             this.txt_RegistroPlaca.TabIndex = 2;
             // 
             // txt_NomCliente
             // 
             this.txt_NomCliente.Location = new System.Drawing.Point(150, 143);
-            this.txt_NomCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NomCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NomCliente.Name = "txt_NomCliente";
-            this.txt_NomCliente.Size = new System.Drawing.Size(167, 24);
+            this.txt_NomCliente.Size = new System.Drawing.Size(167, 23);
             this.txt_NomCliente.TabIndex = 4;
             // 
             // dtp_Fecha
             // 
             this.dtp_Fecha.Location = new System.Drawing.Point(69, 20);
-            this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_Fecha.Name = "dtp_Fecha";
-            this.dtp_Fecha.Size = new System.Drawing.Size(262, 24);
+            this.dtp_Fecha.Size = new System.Drawing.Size(262, 23);
             this.dtp_Fecha.TabIndex = 8;
             // 
             // btn_Citas_Exit
@@ -568,7 +590,7 @@
             this.btn_Citas_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Citas_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Citas_Exit.Location = new System.Drawing.Point(676, 171);
-            this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Citas_Exit.Name = "btn_Citas_Exit";
             this.btn_Citas_Exit.Size = new System.Drawing.Size(61, 30);
             this.btn_Citas_Exit.TabIndex = 6;
@@ -581,7 +603,7 @@
             this.label4.Location = new System.Drawing.Point(4, 143);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 19);
+            this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Nombre de cliente:";
             // 
@@ -591,7 +613,7 @@
             this.label5.Location = new System.Drawing.Point(4, 67);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 19);
+            this.label5.Size = new System.Drawing.Size(96, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Hora de citas:";
             // 
@@ -601,7 +623,7 @@
             this.label6.Location = new System.Drawing.Point(4, 20);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 19);
+            this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "Fecha:";
             // 
@@ -609,28 +631,28 @@
             // 
             this.cmb_HoraCita.FormattingEnabled = true;
             this.cmb_HoraCita.Location = new System.Drawing.Point(150, 64);
-            this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_HoraCita.Name = "cmb_HoraCita";
-            this.cmb_HoraCita.Size = new System.Drawing.Size(167, 27);
+            this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
             this.cmb_HoraCita.TabIndex = 1;
             // 
-            // btn_RC_Modificar
+            // txt_NumVisitas
             // 
-            this.btn_RC_Modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_RC_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Modificar.Image")));
-            this.btn_RC_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_RC_Modificar.Name = "btn_RC_Modificar";
-            this.btn_RC_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_RC_Modificar.Text = "btn_Modificar";
+            this.txt_NumVisitas.Location = new System.Drawing.Point(568, 22);
+            this.txt_NumVisitas.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NumVisitas.Name = "txt_NumVisitas";
+            this.txt_NumVisitas.Size = new System.Drawing.Size(138, 23);
+            this.txt_NumVisitas.TabIndex = 9;
             // 
-            // toolStripButton1
+            // label11
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "btn_Cita_CrearCita";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(449, 27);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 17);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Numero Visitas:";
             // 
             // FRM_Citas
             // 
@@ -640,7 +662,7 @@
             this.ClientSize = new System.Drawing.Size(810, 544);
             this.Controls.Add(this.tcCitas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Citas";
             this.Text = "FRM_Citas";
             this.Load += new System.EventHandler(this.FRM_Citas_Load);
@@ -722,5 +744,7 @@
         private System.Windows.Forms.Button btn_RC_Save;
         private System.Windows.Forms.ToolStripButton btn_RC_Modificar;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.TextBox txt_NumVisitas;
+        private System.Windows.Forms.Label label11;
     }
 }
