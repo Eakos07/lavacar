@@ -87,21 +87,20 @@ namespace LavaCar_BLL.Cat_Mant
 
         }
 
-        /*public void ModificarTransaccionesVenta(ref string sMsgError, ref cls_TransaccionesVenta_DAL ObjDAL_TransV)
+        public void ModificarAjustesInventario(ref string sMsgError, ref cls_AjustesInventario_DAL ObjDAL_AjusI)
         {
             Cls_DataBase_BLL ObjBll = new Cls_DataBase_BLL();
             Cls_DataBase_DAL ObjDAL = new Cls_DataBase_DAL();
 
             ObjBll.CrearParametros(ref ObjDAL);
-            ObjDAL.DT_Parametros.Rows.Add("@IdTransaccionVenta", 6, ObjDAL_TransV.iIdTransaccionVenta);
-            ObjDAL.DT_Parametros.Rows.Add("@IdArticulo", 3, ObjDAL_TransV.sIdArticulo);
-            ObjDAL.DT_Parametros.Rows.Add("@NumFactura", 6, ObjDAL_TransV.iNumFactura);
-            ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_TransV.dFecha);
-            ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_TransV.iCantidad);
-            ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_TransV.dMonto);
-            ObjDAL.DT_Parametros.Rows.Add("@IdEstado", 8, ObjDAL_TransV.bIdEstado);
+            ObjDAL.DT_Parametros.Rows.Add("@IdTransaccionAjusteInventario", 6, ObjDAL_AjusI.iIdTransaccionAjusteInventario);
+            ObjDAL.DT_Parametros.Rows.Add("@IdArticulo", 3, ObjDAL_AjusI.sIdArticulo);
+            ObjDAL.DT_Parametros.Rows.Add("@Descripcion", 3, ObjDAL_AjusI.sDescripcion);
+            ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_AjusI.dtFecha);
+            ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_AjusI.iCantidad);
+            ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_AjusI.dMonto);
 
-            ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TransaccionesVenta"].ToString().Trim();
+            ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_AjustesInventario"].ToString().Trim();
             ObjBll.Execute_NonQuery(ref ObjDAL);
 
             if (ObjDAL.sMsjError == string.Empty)
@@ -112,7 +111,7 @@ namespace LavaCar_BLL.Cat_Mant
             {
                 sMsgError = ObjDAL.sMsjError;
             }
-        }*/
+        }
 
     }
 }
