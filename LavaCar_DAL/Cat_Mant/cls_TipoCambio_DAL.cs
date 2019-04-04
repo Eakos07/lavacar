@@ -8,7 +8,7 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_TipoCambio_DAL
     {
-        private char _cTipoCambio;
+        private char _cTipoCambio, _cBandIM;
         private decimal _dValor;
         private DateTime _dtmFecha;
 
@@ -49,6 +49,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _dtmFecha = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion
