@@ -57,7 +57,7 @@ namespace LavaCar_BLL.Cat_Mant
             }
         }
 
-        public void InsertarTransaccionesCompra(ref string sMSgError,ref cls_TransaccionesCompra_DAL ObjDAL_TransC)
+        public void InsertarTransaccionesCompra(ref string sMsgError,ref cls_TransaccionesCompra_DAL ObjDAL_TransC)
         {
             Cls_DataBase_DAL ObjDAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL ObjBLL = new Cls_DataBase_BLL();
@@ -75,8 +75,22 @@ namespace LavaCar_BLL.Cat_Mant
             ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TransaccionesCompra"].ToString().Trim();
             ObjBLL.Ejec_Scalar(ref ObjDAL);
 
+        }
 
+        public void ModificarTransaccionesCompra(ref string sMsgError,ref cls_TransaccionesCompra_DAL ObjDAL_TransC)
+        {
+            Cls_DataBase_BLL ObjBll = new Cls_DataBase_BLL();
+            Cls_DataBase_DAL ObjDAL = new Cls_DataBase_DAL();
 
+            ObjBll.CrearParametros(ref ObjDAL);
+            ObjDAL.DT_Parametros.Rows.Add("@IdTransaccionCompra", 6, ObjDAL_TransC.iIdTransaccionCompra);
+            ObjDAL.DT_Parametros.Rows.Add("@IdNumOrden", 6, ObjDAL_TransC.iIdNumOrden);
+            ObjDAL.DT_Parametros.Rows.Add("@IdArticulo", 3, ObjDAL_TransC.sIdArticulo.ToString().Trim());
+            ObjDAL.DT_Parametros.Rows.Add("@IdProveedor", 8, ObjDAL_TransC.bIdProveedor);
+            ObjDAL.DT_Parametros.Rows.Add("@Documento", 3, ObjDAL_TransC.sDocumento.ToString().Trim());
+            ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_TransC.dtFecha);
+            ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_TransC.iCantidad);
+            ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_TransC.dMonto);
         }
     }
 }
