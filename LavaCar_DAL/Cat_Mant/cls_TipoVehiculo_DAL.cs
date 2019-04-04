@@ -10,6 +10,7 @@ namespace LavaCar_DAL.Cat_Mant
     {
         private byte _bIdTipoVehiculo;
         private string _sDescripcion;
+        private char _cBandIM;
 
         #region Variables publicas 
 
@@ -39,7 +40,20 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
+            }
+        }
+
+
         #endregion
     }
 }

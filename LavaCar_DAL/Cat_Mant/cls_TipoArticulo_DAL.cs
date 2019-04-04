@@ -8,7 +8,7 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_TipoArticulo_DAL
     {
-        private char _cIdTipoArticulo;
+        private char _cIdTipoArticulo, _cBandIM;
         private string _sDescripcion;
         private byte _bIdEstado;
 
@@ -49,6 +49,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _bIdEstado = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion
