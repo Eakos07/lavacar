@@ -87,7 +87,7 @@ namespace LavaCar_BLL.Cat_Mant
 
         }
 
-        public void ModificarTransaccionesVenta(ref string sMsgError, ref cls_TransaccionesVenta_DAL ObjDAL_TransV)
+        /*public void ModificarTransaccionesVenta(ref string sMsgError, ref cls_TransaccionesVenta_DAL ObjDAL_TransV)
         {
             Cls_DataBase_BLL ObjBll = new Cls_DataBase_BLL();
             Cls_DataBase_DAL ObjDAL = new Cls_DataBase_DAL();
@@ -112,7 +112,7 @@ namespace LavaCar_BLL.Cat_Mant
             {
                 sMsgError = ObjDAL.sMsjError;
             }
-        }
+        }*/
 
     }
 }
