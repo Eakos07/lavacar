@@ -124,6 +124,7 @@
             this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Guardar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtDescEstados
             // 
