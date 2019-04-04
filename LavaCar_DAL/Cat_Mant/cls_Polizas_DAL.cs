@@ -9,7 +9,7 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_Polizas_DAL
     {
         private string _sIdPoliza;
-        private char _cIdTipoPoliza;
+        private char _cIdTipoPoliza, _cBandIM;
         private DateTime _dFechaVencimiento;
         private byte _bIdEstado;
         private int _iCedulaJuridica;
@@ -77,6 +77,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _iCedulaJuridica = value;
+            }
+        }
+
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
         #endregion

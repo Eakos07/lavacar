@@ -41,9 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cat_Mant\cls_Citas_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_AjustesInventario_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Articulos_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Centro_de_Lavado_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Clientes_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Factura_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_FamiliaArticulos_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Horarios_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Ordenes_Compra_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Planillas_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Promociones_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Proveedores_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Roles_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoArticulo_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoCambio_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoFactura_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoPlaca_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoPolizas_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoServicio_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoVehiculo_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesCompra_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesVenta_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Usuarios_BLL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -177,12 +177,6 @@
     <Compile Include="Menu\FRM_Roles.Designer.cs">
       <DependentUpon>FRM_Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\FRM_Supervisor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu\FRM_Supervisor.Designer.cs">
-      <DependentUpon>FRM_Supervisor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu\FRM_Tipo_Cambio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +206,18 @@
     </Compile>
     <Compile Include="Menu\FRM_Tipo_Vehículo.Designer.cs">
       <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Transaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Transaccion.Designer.cs">
+      <DependentUpon>FRM_Transaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Usuario.Designer.cs">
+      <DependentUpon>FRM_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -278,9 +284,6 @@
     <EmbeddedResource Include="Menu\FRM_Roles.resx">
       <DependentUpon>FRM_Roles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\FRM_Supervisor.resx">
-      <DependentUpon>FRM_Supervisor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Tipo_Cambio.resx">
       <DependentUpon>FRM_Tipo_Cambio.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Tipo_Vehículo.resx">
       <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Transaccion.resx">
+      <DependentUpon>FRM_Transaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Usuario.resx">
+      <DependentUpon>FRM_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

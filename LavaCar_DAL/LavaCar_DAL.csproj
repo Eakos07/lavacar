@@ -40,9 +40,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cat_Mant\cls_Citas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_AjustesInventario_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Articulos_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Centro_de_Lavado_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Clientes_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Factura_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_FamiliaArticulos_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Horarios_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Ordenes_Compra_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Planillas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Promociones_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Proveedores_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Roles_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoArticulo_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoCambio_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoFactura_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoPlaca_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoPolizas_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoServicio_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TipoVehiculo_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesCompra_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_TransaccionesVenta_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Usuarios_DAL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

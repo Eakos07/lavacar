@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace FRM_Login.Menu
 {
-    public partial class FRM_Supervisor : Form
+    public partial class FRM_Usuario : Form
     {
-        public FRM_Supervisor()
+        public FRM_Usuario()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

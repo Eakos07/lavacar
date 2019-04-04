@@ -90,7 +90,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "2":
                                     {
-                                        DBType = SqlDbType.NVarChar;
+                                        DBType = SqlDbType.Time;
                                         break;
                                     }
                                 case "3":
@@ -100,7 +100,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "4":
                                     {
-                                        DBType = SqlDbType.NChar;
+                                        DBType = SqlDbType.Money;
                                         break;
                                     }
                                 case "5":
@@ -118,30 +118,41 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-
                                 case "8":
                                     {
-                                        DBType = SqlDbType.Time;
+                                        DBType = SqlDbType.TinyInt;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "9":
+                                    {
+                                        DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
+                                        break;
+                                    }
                             }
 
-                            Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
+                                    Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
+                            }
                         }
-                    }
-                    Obj_DB_DAL.Obj_DSet = new DataSet();
-                    Obj_DB_DAL.Obj_DAdapter.Fill(Obj_DB_DAL.Obj_DSet, Obj_DB_DAL.sTableName);
+                        Obj_DB_DAL.Obj_DSet = new DataSet();
+                        Obj_DB_DAL.Obj_DAdapter.Fill(Obj_DB_DAL.Obj_DSet, Obj_DB_DAL.sTableName);
 
-                    Obj_DB_DAL.sMsjError = string.Empty;
-                }
+                        Obj_DB_DAL.sMsjError = string.Empty;
+                    }
+                
             }
             catch (Exception error)
             {
-                Obj_DB_DAL.sMsjError = error.Message.ToString() ;
+                Obj_DB_DAL.sMsjError = error.Message.ToString();
             }
             finally
             {
@@ -150,7 +161,7 @@ namespace LavaCar_BLL.Data_Base
                 {
                     if (Obj_DB_DAL.Obj_Connec_DB.State == ConnectionState.Open)
                     {
-                        Obj_DB_DAL.Obj_Connec_DB.Close(); 
+                        Obj_DB_DAL.Obj_Connec_DB.Close();
                     }
 
                     //DESTRUCCION DE LA CONECXION PARA NO CONSUMIR
@@ -192,7 +203,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "2":
                                     {
-                                        DBType = SqlDbType.NVarChar;
+                                        DBType = SqlDbType.Time;
                                         break;
                                     }
                                 case "3":
@@ -202,7 +213,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "4":
                                     {
-                                        DBType = SqlDbType.NChar;
+                                        DBType = SqlDbType.Money;
                                         break;
                                     }
                                 case "5":
@@ -220,10 +231,26 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.TinyInt;
+                                        break;
+                                    }
+                                case "9":
+                                    {
+                                        DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
+                                        break;
+                                    }
                             }
 
                             Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
@@ -273,6 +300,8 @@ namespace LavaCar_BLL.Data_Base
 
                     Obj_DB_DAL.Obj_Command = new SqlCommand(Obj_DB_DAL.sSP_Name, Obj_DB_DAL.Obj_Connec_DB);
 
+                    Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
+
                     if (Obj_DB_DAL.DT_Parametros.Rows.Count >= 1)
                     {
                         foreach (DataRow DR in Obj_DB_DAL.DT_Parametros.Rows)
@@ -288,7 +317,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "2":
                                     {
-                                        DBType = SqlDbType.NVarChar;
+                                        DBType = SqlDbType.Time;
                                         break;
                                     }
                                 case "3":
@@ -298,7 +327,7 @@ namespace LavaCar_BLL.Data_Base
                                     }
                                 case "4":
                                     {
-                                        DBType = SqlDbType.NChar;
+                                        DBType = SqlDbType.Money;
                                         break;
                                     }
                                 case "5":
@@ -316,20 +345,33 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.DateTime;
                                         break;
                                     }
-                                default:
-
-                                    DBType = SqlDbType.VarChar;
-                                    break;
+                                case "8":
+                                    {
+                                        DBType = SqlDbType.TinyInt;
+                                        break;
+                                    }
+                                case "9":
+                                    {
+                                        DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
+                                case "10":
+                                    {
+                                        DBType = SqlDbType.Float;
+                                        break;
+                                    }
+                                case "11":
+                                    {
+                                        DBType = SqlDbType.Date;
+                                        break;
+                                    }
                             }
-
-                            Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
+                                    Obj_DB_DAL.Obj_Command.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();
 
                         }
                     }
 
-                    Obj_DB_DAL.Obj_Command.CommandType = CommandType.StoredProcedure;
-
-                    Obj_DB_DAL.sScalarV = Obj_DB_DAL.Obj_Command.ExecuteScalar().ToString() ;
+                    Obj_DB_DAL.iValorScalar = Convert.ToInt32(Obj_DB_DAL.Obj_Command.ExecuteScalar());
 
                     Obj_DB_DAL.sMsjError = string.Empty;
                 }

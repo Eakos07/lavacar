@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LavaCar_DAL.Cat_Mant;
+using LavaCar_BLL.Cat_Mant;
 
 namespace FRM_Login.Menu
 {
@@ -23,6 +25,120 @@ namespace FRM_Login.Menu
         
         }
 
-       
+        #region Variables Globales
+        cls_Proveedores_BLL Obj_BLL = new cls_Proveedores_BLL();
+        cls_Proveedores_DAL Obj_DAL = new cls_Proveedores_DAL();
+        #endregion
+
+        private void FRM_Proveedores_Load(object sender, EventArgs e)
+        {
+            Cargar_Datos_Proveedores();
+        }
+        public void Cargar_Datos_Proveedores()
+        {
+            
+            string sMsjError = string.Empty;
+            DataTable dtProveedores = new DataTable();
+            Obj_DAL.cBandIM = 'I';
+
+            #region Cargar Estado
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstadoProveedor.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija Estado");
+            cmb_IdEstadoProveedor.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstadoProveedor.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstadoProveedor.SelectedValue = "0";
+            #endregion
+
+            txt_IdProveedor.Clear();
+            txtNomProveedor.Clear();
+            txtEmailProveedor.Clear();
+            txtTelefoProveedor.Clear();
+            txtPlazoPago.Clear();
+
+            if (txt_FiltrarProveedores.Text == string.Empty)
+            {
+                dtProveedores = Obj_BLL.Listar_Proveedores(ref sMsjError);
+            }
+            else
+            {
+                dtProveedores = Obj_BLL.Filtrar_Proveedores(ref sMsjError, txt_FiltrarProveedores.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Proveedores.DataSource = null;
+                dgv_Proveedores.DataSource = dtProveedores;
+            }
+        }
+
+        private void txt_FiltrarProveedores_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_Proveedores();
+        }
+
+        private void btn_Refrescar_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_Proveedores();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            if (dgv_Proveedores.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdProveedor.Enabled = false;
+                txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(txt_IdProveedor.Text)) && !(string.IsNullOrEmpty(txtNomProveedor.Text)) && !(string.IsNullOrEmpty(txtTelefoProveedor.Text))
+                && (string.IsNullOrEmpty(txtEmailProveedor.Text)) && !(string.IsNullOrEmpty(txtPlazoPago.Text)) && cmb_IdEstadoProveedor.SelectedValue.ToString() == "0")
+            {
+                Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
+                Obj_DAL.sNombreProveedor = txtNomProveedor.Text;
+                Obj_DAL.sEmail = txtEmailProveedor.Text;
+                Obj_DAL.iTelefono = Convert.ToInt32(txtTelefoProveedor.Text);
+                Obj_DAL.bPlazoPago = Convert.ToByte(txtPlazoPago.Text);
+                Obj_DAL.bIdEstado = Convert.ToByte(cmb_IdEstadoProveedor.SelectedValue);
+                string sMsjError = string.Empty;
+
+                if (Obj_DAL.cBandIM == 'I')
+                {
+                    // Obj_BLL.Insertar_Proveedores(ref sMsjError, ref Obj_DAL);
+                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Datos_Proveedores();
+                }
+                else if (Obj_DAL.cBandIM == 'M')
+                {
+                    //  Obj_BLL.Modificar_Proveedores(ref sMsjError, ref Obj_DAL);
+                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_IdProveedor.Enabled = true;
+                    Cargar_Datos_Proveedores();
+                }
+            }
+        }
+
+        private void dgv_Proveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Obj_DAL.cBandIM = 'M';
+            txt_IdProveedor.Enabled = false;
+            txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+        }
     }
 }
