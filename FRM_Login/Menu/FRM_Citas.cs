@@ -22,7 +22,7 @@ namespace FRM_Login.Menu
         cls_Citas_BLL Obj_Citas_BLL = new cls_Citas_BLL();
         public cls_Citas_DAL Obj_Citas_DAL;
 
-        private void CargarDatos()
+        /*private void CargarDatos()
         {
             if (tsTxtFiltrar.Text == string.Empty)
             {
@@ -46,8 +46,8 @@ namespace FRM_Login.Menu
         private void FRM_Citas_Load(object sender, EventArgs e)
         {
             CargarDatos();
-        }
-
+        }*/
+/*
         private void tsBtn_CrearCita_Click(object sender, EventArgs e)
         {
             txt_NumCita.Enabled = true;
@@ -85,6 +85,6 @@ namespace FRM_Login.Menu
                 MessageBox.Show("Se presento un error a la hora de modificar los Datos Cliente. \n \n Error [ " + Obj_Citas_DAL.sMsjError + " ].", "ERROR",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
     }
 }

@@ -72,11 +72,7 @@ namespace FRM_Login
             AbrirVentana(new Menu.FRM_Articulos());
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new Menu.FRM_Supervisor());
-        }
-
+        
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirVentana(new Menu.FRM_Marcas());
