@@ -61,7 +61,7 @@
             this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioLogin.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(359, 92);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(357, 86);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Size = new System.Drawing.Size(265, 25);
             this.txtUsuarioLogin.TabIndex = 1;

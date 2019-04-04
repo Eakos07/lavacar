@@ -76,11 +76,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox1.Location = new System.Drawing.Point(5, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(7, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(794, 228);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1059, 272);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
@@ -89,38 +89,35 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(508, 37);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(677, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 17);
+            this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 23;
             this.label6.Text = "Salida";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 153);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(21, 188);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 22;
             this.label5.Text = "Entrada";
             // 
             // txt_CantiHoras
             // 
-            this.txt_CantiHoras.Location = new System.Drawing.Point(142, 110);
-            this.txt_CantiHoras.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_CantiHoras.Location = new System.Drawing.Point(189, 135);
+            this.txt_CantiHoras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_CantiHoras.Name = "txt_CantiHoras";
-            this.txt_CantiHoras.Size = new System.Drawing.Size(180, 23);
+            this.txt_CantiHoras.Size = new System.Drawing.Size(239, 27);
             this.txt_CantiHoras.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 115);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(21, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.Size = new System.Drawing.Size(131, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Cantidad Horas:";
             // 
@@ -130,10 +127,10 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(660, 176);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Exit.Location = new System.Drawing.Point(880, 217);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(110, 30);
+            this.btn_Exit.Size = new System.Drawing.Size(147, 37);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -144,10 +141,10 @@
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(511, 176);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Location = new System.Drawing.Point(681, 217);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(110, 30);
+            this.btn_Save.Size = new System.Drawing.Size(147, 37);
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -155,56 +152,53 @@
             // cmb_IdEstado
             // 
             this.cmb_IdEstado.FormattingEnabled = true;
-            this.cmb_IdEstado.Location = new System.Drawing.Point(591, 113);
-            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IdEstado.Location = new System.Drawing.Point(788, 139);
+            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
-            this.cmb_IdEstado.Size = new System.Drawing.Size(180, 25);
+            this.cmb_IdEstado.Size = new System.Drawing.Size(239, 28);
             this.cmb_IdEstado.TabIndex = 3;
             // 
             // cmb_IdFamilia
             // 
             this.cmb_IdFamilia.FormattingEnabled = true;
-            this.cmb_IdFamilia.Location = new System.Drawing.Point(142, 34);
-            this.cmb_IdFamilia.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IdFamilia.Location = new System.Drawing.Point(189, 42);
+            this.cmb_IdFamilia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmb_IdFamilia.Name = "cmb_IdFamilia";
-            this.cmb_IdFamilia.Size = new System.Drawing.Size(180, 25);
+            this.cmb_IdFamilia.Size = new System.Drawing.Size(239, 28);
             this.cmb_IdFamilia.TabIndex = 0;
             // 
             // txt_Descrip
             // 
-            this.txt_Descrip.Location = new System.Drawing.Point(142, 73);
-            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Descrip.Location = new System.Drawing.Point(189, 90);
+            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Descrip.Name = "txt_Descrip";
-            this.txt_Descrip.Size = new System.Drawing.Size(180, 23);
+            this.txt_Descrip.Size = new System.Drawing.Size(239, 27);
             this.txt_Descrip.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(508, 115);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(677, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Id Estado:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(21, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripción:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Familia:";
             // 
@@ -213,11 +207,11 @@
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dgv_Horarios);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox2.Location = new System.Drawing.Point(9, 236);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 304);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(792, 330);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(1056, 392);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabla Horario";
@@ -235,16 +229,16 @@
             this.toolStripSeparator3,
             this.btn_Buscar,
             this.txt_FiltrarHorarios});
-            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 22);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(788, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1050, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(70, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
             // toolStripButton1
@@ -264,7 +258,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(73, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar
@@ -289,36 +283,36 @@
             // btn_Buscar
             // 
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(42, 24);
+            this.btn_Buscar.Size = new System.Drawing.Size(52, 24);
             this.btn_Buscar.Text = "Buscar";
             // 
             // txt_FiltrarHorarios
             // 
             this.txt_FiltrarHorarios.Name = "txt_FiltrarHorarios";
-            this.txt_FiltrarHorarios.Size = new System.Drawing.Size(76, 27);
+            this.txt_FiltrarHorarios.Size = new System.Drawing.Size(100, 27);
             this.txt_FiltrarHorarios.TextChanged += new System.EventHandler(this.txt_FiltrarHorarios_TextChanged);
             // 
             // dgv_Horarios
             // 
             this.dgv_Horarios.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Horarios.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Horarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Horarios.Location = new System.Drawing.Point(5, 63);
+            this.dgv_Horarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Horarios.Name = "dgv_Horarios";
             this.dgv_Horarios.RowTemplate.Height = 24;
-            this.dgv_Horarios.Size = new System.Drawing.Size(781, 274);
+            this.dgv_Horarios.Size = new System.Drawing.Size(1041, 310);
             this.dgv_Horarios.TabIndex = 0;
             // 
             // FRM_Horarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(803, 575);
+            this.ClientSize = new System.Drawing.Size(1071, 708);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FRM_Horarios";
             this.Text = "FRM_Horarios";
             this.Load += new System.EventHandler(this.FRM_Horarios_Load);

@@ -32,6 +32,11 @@
             this.tcArticulos = new System.Windows.Forms.TabControl();
             this.tbTransacciones = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,12 +65,22 @@
             this.txt_FiltrarArticulos = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Articulos = new System.Windows.Forms.DataGridView();
             this.tbTransVentas = new System.Windows.Forms.TabPage();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -81,21 +96,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.tcArticulos.SuspendLayout();
             this.tbTransacciones.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -103,10 +103,10 @@
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).BeginInit();
             this.tbTransVentas.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcArticulos
@@ -165,6 +165,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compra";
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(755, 131);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(184, 32);
+            this.textBox3.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(755, 35);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 32);
+            this.textBox1.TabIndex = 4;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(279, 38);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(184, 28);
+            this.comboBox8.TabIndex = 0;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(279, 85);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(184, 28);
+            this.comboBox7.TabIndex = 1;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(279, 131);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(184, 28);
+            this.comboBox6.TabIndex = 2;
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -172,7 +219,7 @@
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(184, 28);
-            this.comboBox2.TabIndex = 27;
+            this.comboBox2.TabIndex = 3;
             // 
             // textBox4
             // 
@@ -182,7 +229,7 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(184, 32);
-            this.textBox4.TabIndex = 22;
+            this.textBox4.TabIndex = 5;
             // 
             // textBox2
             // 
@@ -192,7 +239,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(184, 32);
-            this.textBox2.TabIndex = 20;
+            this.textBox2.TabIndex = 7;
             // 
             // button2
             // 
@@ -204,7 +251,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 37);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -218,7 +265,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 37);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -432,52 +479,122 @@
             this.tbTransVentas.Text = "Transacciones Venta";
             this.tbTransVentas.UseVisualStyleBackColor = true;
             // 
-            // comboBox6
+            // groupBox4
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(279, 131);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(184, 28);
-            this.comboBox6.TabIndex = 29;
+            this.groupBox4.Controls.Add(this.toolStrip2);
+            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.groupBox4.Location = new System.Drawing.Point(0, 303);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1048, 346);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tabla Transaccion Venta";
             // 
-            // comboBox7
+            // toolStrip2
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(279, 85);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(184, 28);
-            this.comboBox7.TabIndex = 30;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel5,
+            this.toolStripButton4,
+            this.toolStripSeparator4,
+            this.toolStripLabel6,
+            this.toolStripButton5,
+            this.toolStripSeparator5,
+            this.toolStripLabel7,
+            this.toolStripButton6,
+            this.toolStripSeparator6,
+            this.toolStripLabel8,
+            this.toolStripTextBox1});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 22);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1042, 27);
+            this.toolStrip2.TabIndex = 2;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // comboBox8
+            // toolStripLabel5
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(279, 38);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(184, 28);
-            this.comboBox8.TabIndex = 31;
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(70, 24);
+            this.toolStripLabel5.Text = "Refrescar";
             // 
-            // textBox1
+            // toolStripButton4
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(755, 35);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 32);
-            this.textBox1.TabIndex = 32;
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton4.Text = "toolStripButton1";
             // 
-            // textBox3
+            // toolStripSeparator4
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(755, 131);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 32);
-            this.textBox3.TabIndex = 33;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(73, 24);
+            this.toolStripLabel6.Text = "Modificar";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton5.Text = "toolStripButton2";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripLabel7
+            // 
+            this.toolStripLabel7.Name = "toolStripLabel7";
+            this.toolStripLabel7.Size = new System.Drawing.Size(63, 24);
+            this.toolStripLabel7.Text = "Eliminar";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton6.Text = "toolStripButton3";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripLabel8
+            // 
+            this.toolStripLabel8.Name = "toolStripLabel8";
+            this.toolStripLabel8.Size = new System.Drawing.Size(52, 24);
+            this.toolStripLabel8.Text = "Buscar";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(5, 63);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1037, 279);
+            this.dataGridView1.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -507,6 +624,15 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Venta";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(755, 131);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(184, 28);
+            this.comboBox5.TabIndex = 34;
             // 
             // textBox5
             // 
@@ -663,132 +789,6 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Id Transacciones Venta:";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.toolStrip2);
-            this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox4.Location = new System.Drawing.Point(0, 303);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(1048, 346);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tabla Transaccion Venta";
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel5,
-            this.toolStripButton4,
-            this.toolStripSeparator4,
-            this.toolStripLabel6,
-            this.toolStripButton5,
-            this.toolStripSeparator5,
-            this.toolStripLabel7,
-            this.toolStripButton6,
-            this.toolStripSeparator6,
-            this.toolStripLabel8,
-            this.toolStripTextBox1});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 22);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1042, 27);
-            this.toolStrip2.TabIndex = 2;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripLabel5
-            // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(70, 24);
-            this.toolStripLabel5.Text = "Refrescar";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton4.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(73, 24);
-            this.toolStripLabel6.Text = "Modificar";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "toolStripButton2";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(63, 24);
-            this.toolStripLabel7.Text = "Eliminar";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "toolStripButton3";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel8
-            // 
-            this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(52, 24);
-            this.toolStripLabel8.Text = "Buscar";
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1037, 279);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(755, 131);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(184, 28);
-            this.comboBox5.TabIndex = 34;
-            // 
             // FRM_Transaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -809,13 +809,13 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).EndInit();
             this.tbTransVentas.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
