@@ -7,6 +7,7 @@ using System.Data;
 using System.Configuration;
 using LavaCar_DAL.Data_Base;
 using LavaCar_BLL.Data_Base;
+using LavaCar_DAL.Cat_Mant;
 
 namespace LavaCar_BLL.Cat_Mant
 {
@@ -56,6 +57,40 @@ namespace LavaCar_BLL.Cat_Mant
                 sMsjError = Obj_DAL.sMsjError;
                 return null;
             }
+        }
+        public void Insertar_Horarios(ref string sMsjError, ref cls_Horarios_DAL Obj_Horarios_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdHorario",8, Obj_Horarios_DAL.bIdHorario.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_Horarios_DAL.sDescripcion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@CantHoras", 10, Obj_Horarios_DAL.fCantHoras.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Entrada", 7, Obj_Horarios_DAL.dtmEntrada.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Salida", 7, Obj_Horarios_DAL.dtmSalida.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Horarios_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Horarios"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+        }
+
+        public void Modificar_Horarios(ref string sMsjError, ref cls_Horarios_DAL Obj_Horarios_DAL)
+        {
+            Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
+
+            Obj_BLL.CrearParametros(ref Obj_DAL);
+            Obj_DAL.DT_Parametros.Rows.Add("@IdHorario", 8, Obj_Horarios_DAL.bIdHorario.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_Horarios_DAL.sDescripcion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@CantHoras", 10, Obj_Horarios_DAL.fCantHoras.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Entrada", 7, Obj_Horarios_DAL.dtmEntrada.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Salida", 7, Obj_Horarios_DAL.dtmSalida.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Horarios_DAL.bIdEstado.ToString().Trim());
+           
+            Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Horarios"].ToString().Trim();
+            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
         }
     }
 }
