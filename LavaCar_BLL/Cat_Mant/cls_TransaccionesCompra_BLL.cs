@@ -91,6 +91,18 @@ namespace LavaCar_BLL.Cat_Mant
             ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_TransC.dtFecha);
             ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_TransC.iCantidad);
             ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_TransC.dMonto);
+
+            ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TransaccionesCompra"].ToString().Trim();
+            ObjBll.Execute_NonQuery(ref ObjDAL);
+
+            if (ObjDAL.sMsjError == string.Empty)
+            {
+                sMsgError = string.Empty;
+            }
+            else
+            {
+                sMsgError = ObjDAL.sMsjError;
+            }
         }
     }
 }
