@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 
 namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Citas_DAL
     {
-        public DataTable Obj_DataTable = new DataTable();
-
         private int _iNumCita, _iTel, _iIdEstado, _iIdEmpleado;
         private string _sMsjError, _sNombre, _sNumPlaca, _sEmail;
         private char _cCodeServ;
         private DateTime _dtFechaCita;
-        private int _dtHoraCita;
+        private string _sHoraCita;
 
         public int iNumCita
         {
@@ -40,6 +37,45 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _iTel = value;
+            }
+        }
+
+        public int iIdEstado
+        {
+            get
+            {
+                return _iIdEstado;
+            }
+
+            set
+            {
+                _iIdEstado = value;
+            }
+        }
+
+        public int iIdEmpleado
+        {
+            get
+            {
+                return _iIdEmpleado;
+            }
+
+            set
+            {
+                _iIdEmpleado = value;
+            }
+        }
+
+        public string sMsjError
+        {
+            get
+            {
+                return _sMsjError;
+            }
+
+            set
+            {
+                _sMsjError = value;
             }
         }
 
@@ -108,55 +144,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public string sMsjError
+        public string sHoraCita
         {
             get
             {
-                return _sMsjError;
+                return _sHoraCita;
             }
 
             set
             {
-                _sMsjError = value;
-            }
-        }
-
-        public int iIdEstado
-        {
-            get
-            {
-                return _iIdEstado;
-            }
-
-            set
-            {
-                _iIdEstado = value;
-            }
-        }
-
-        public int iIdEmpleado
-        {
-            get
-            {
-                return _iIdEmpleado;
-            }
-
-            set
-            {
-                _iIdEmpleado = value;
-            }
-        }
-
-        public int dtHoraCita
-        {
-            get
-            {
-                return _dtHoraCita;
-            }
-
-            set
-            {
-                _dtHoraCita = value;
+                _sHoraCita = value;
             }
         }
     }
