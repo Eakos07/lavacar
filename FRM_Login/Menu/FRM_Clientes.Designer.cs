@@ -74,9 +74,9 @@
             this.groupBox1.Controls.Add(this.txtPlacaVehiculo);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(5, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(788, 211);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -85,7 +85,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(539, 19);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 24);
             this.textBox1.TabIndex = 9;
@@ -107,7 +107,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(673, 163);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 30);
             this.btnSalir.TabIndex = 7;
@@ -122,12 +122,13 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(539, 163);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(115, 30);
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label3
             // 
@@ -163,7 +164,7 @@
             // 
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
             this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(206, 116);
-            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoPlacaVehiculo.Name = "cmbTipoPlacaVehiculo";
             this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(138, 27);
             this.cmbTipoPlacaVehiculo.TabIndex = 2;
@@ -172,7 +173,7 @@
             // 
             this.cmbTipoVehiculo.FormattingEnabled = true;
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(206, 64);
-            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
             this.cmbTipoVehiculo.Size = new System.Drawing.Size(138, 27);
             this.cmbTipoVehiculo.TabIndex = 1;
@@ -180,7 +181,7 @@
             // txtPlacaVehiculo
             // 
             this.txtPlacaVehiculo.Location = new System.Drawing.Point(206, 19);
-            this.txtPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlacaVehiculo.Name = "txtPlacaVehiculo";
             this.txtPlacaVehiculo.Size = new System.Drawing.Size(138, 24);
             this.txtPlacaVehiculo.TabIndex = 0;
@@ -191,9 +192,9 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 237);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 328);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -294,12 +295,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(781, 272);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -312,7 +318,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Clientes";
             this.Text = "FRM_Clientes";
             this.Load += new System.EventHandler(this.FRM_Clientes_Load);
