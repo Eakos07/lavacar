@@ -140,5 +140,25 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Roles());
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Transaccion());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Usuario());
+        }
     }
 }

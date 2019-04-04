@@ -213,6 +213,18 @@
     <Compile Include="Menu\FRM_Tipo_Vehículo.Designer.cs">
       <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\FRM_Transaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Transaccion.Designer.cs">
+      <DependentUpon>FRM_Transaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FRM_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FRM_Usuario.Designer.cs">
+      <DependentUpon>FRM_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FRM_Contraseña.resx">
@@ -295,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Tipo_Vehículo.resx">
       <DependentUpon>FRM_Tipo_Vehículo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Transaccion.resx">
+      <DependentUpon>FRM_Transaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FRM_Usuario.resx">
+      <DependentUpon>FRM_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
