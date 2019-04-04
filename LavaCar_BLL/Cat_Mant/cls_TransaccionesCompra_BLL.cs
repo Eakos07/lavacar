@@ -7,6 +7,7 @@ using System.Data;
 using System.Configuration;
 using LavaCar_DAL.Data_Base;
 using LavaCar_BLL.Data_Base;
+using LavaCar_DAL.Cat_Mant;
 
 namespace LavaCar_BLL.Cat_Mant
 {
@@ -54,6 +55,15 @@ namespace LavaCar_BLL.Cat_Mant
                 sMsgError = ObjDAL.sMsjError;
                 return null;
             }
+        }
+
+        public void InsertarTransaccionesCompra(ref string sMSgError,ref cls_TransaccionesCompra_DAL ObjDAL_TransC)
+        {
+            Cls_DataBase_DAL ObjDAL = new Cls_DataBase_DAL();
+            Cls_DataBase_BLL ObjBLL = new Cls_DataBase_BLL();
+
+            ObjBLL.CrearParametros(ref ObjDAL);
+
         }
     }
 }
