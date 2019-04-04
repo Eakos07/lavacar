@@ -143,7 +143,7 @@ namespace FRM_Login.Menu
 
         private void button19_Click(object sender, EventArgs e)
         {
-            AbrirVentana(new FRM_Horarios());
+            AbrirVentana(new FRM_Transaccion());
         }
     }
 }
