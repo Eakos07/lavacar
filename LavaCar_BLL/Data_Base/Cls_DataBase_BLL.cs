@@ -123,6 +123,11 @@ namespace LavaCar_BLL.Data_Base
                                         DBType = SqlDbType.TinyInt;
                                         break;
                                     }
+                                case "9":
+                                    {
+                                        DBType = SqlDbType.SmallInt;
+                                        break;
+                                    }
                             }
 
                             Obj_DB_DAL.Obj_DAdapter.SelectCommand.Parameters.Add(DR["Nombre"].ToString(), DBType).Value = DR["Valor"].ToString();

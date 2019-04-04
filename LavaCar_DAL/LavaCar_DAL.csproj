@@ -48,6 +48,7 @@
     <Compile Include="Cat_Mant\cls_Factura_DAL.cs" />
     <Compile Include="Cat_Mant\cls_FamiliaArticulos_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Horarios_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Ordenes_Compra_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Planillas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Polizas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Promociones_DAL.cs" />
