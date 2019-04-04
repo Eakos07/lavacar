@@ -160,5 +160,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Usuario());
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ajuste_Inventario());
+        }
     }
 }
