@@ -140,5 +140,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Roles());
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Horarios());
+        }
     }
 }

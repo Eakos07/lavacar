@@ -37,7 +37,6 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
-            this.cmb_IdFamilia = new System.Windows.Forms.ComboBox();
             this.txt_Descrip = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +45,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -55,6 +54,9 @@
             this.btn_Buscar = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarHorarios = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
+            this.txt_IdHorario = new System.Windows.Forms.TextBox();
+            this.txt_Entrada = new System.Windows.Forms.TextBox();
+            this.txt_Salida = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -63,6 +65,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_Salida);
+            this.groupBox1.Controls.Add(this.txt_Entrada);
+            this.groupBox1.Controls.Add(this.txt_IdHorario);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_CantiHoras);
@@ -70,7 +75,6 @@
             this.groupBox1.Controls.Add(this.btn_Exit);
             this.groupBox1.Controls.Add(this.btn_Save);
             this.groupBox1.Controls.Add(this.cmb_IdEstado);
-            this.groupBox1.Controls.Add(this.cmb_IdFamilia);
             this.groupBox1.Controls.Add(this.txt_Descrip);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -84,7 +88,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label6
             // 
@@ -151,6 +154,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // cmb_IdEstado
             // 
@@ -160,15 +164,6 @@
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(180, 25);
             this.cmb_IdEstado.TabIndex = 3;
-            // 
-            // cmb_IdFamilia
-            // 
-            this.cmb_IdFamilia.FormattingEnabled = true;
-            this.cmb_IdFamilia.Location = new System.Drawing.Point(142, 34);
-            this.cmb_IdFamilia.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_IdFamilia.Name = "cmb_IdFamilia";
-            this.cmb_IdFamilia.Size = new System.Drawing.Size(180, 25);
-            this.cmb_IdFamilia.TabIndex = 0;
             // 
             // txt_Descrip
             // 
@@ -204,9 +199,9 @@
             this.label1.Location = new System.Drawing.Point(16, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id Familia:";
+            this.label1.Text = "Id Horario:";
             // 
             // groupBox2
             // 
@@ -226,11 +221,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_Refrescar,
             this.toolStripLabel1,
-            this.toolStripButton1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.btn_Buscar,
@@ -247,14 +242,15 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
-            // toolStripButton1
+            // btn_Refrescar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "btn_Refrescar";
+            this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_Refrescar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar.Image")));
+            this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refrescar.Name = "btn_Refrescar";
+            this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
+            this.btn_Refrescar.Text = "btn_Refrescar";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -275,6 +271,7 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -300,14 +297,44 @@
             // 
             // dgv_Horarios
             // 
+            this.dgv_Horarios.AllowUserToAddRows = false;
+            this.dgv_Horarios.AllowUserToDeleteRows = false;
             this.dgv_Horarios.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Horarios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Horarios.Location = new System.Drawing.Point(4, 51);
             this.dgv_Horarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Horarios.MultiSelect = false;
             this.dgv_Horarios.Name = "dgv_Horarios";
             this.dgv_Horarios.RowTemplate.Height = 24;
+            this.dgv_Horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Horarios.Size = new System.Drawing.Size(781, 274);
             this.dgv_Horarios.TabIndex = 0;
+            this.dgv_Horarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Horarios_CellDoubleClick);
+            // 
+            // txt_IdHorario
+            // 
+            this.txt_IdHorario.Location = new System.Drawing.Point(142, 34);
+            this.txt_IdHorario.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdHorario.Name = "txt_IdHorario";
+            this.txt_IdHorario.Size = new System.Drawing.Size(180, 23);
+            this.txt_IdHorario.TabIndex = 24;
+            // 
+            // txt_Entrada
+            // 
+            this.txt_Entrada.Location = new System.Drawing.Point(142, 150);
+            this.txt_Entrada.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Entrada.Name = "txt_Entrada";
+            this.txt_Entrada.Size = new System.Drawing.Size(180, 23);
+            this.txt_Entrada.TabIndex = 25;
+            // 
+            // txt_Salida
+            // 
+            this.txt_Salida.Location = new System.Drawing.Point(591, 34);
+            this.txt_Salida.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Salida.Name = "txt_Salida";
+            this.txt_Salida.Size = new System.Drawing.Size(180, 23);
+            this.txt_Salida.TabIndex = 26;
             // 
             // FRM_Horarios
             // 
@@ -339,7 +366,6 @@
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox cmb_IdEstado;
-        private System.Windows.Forms.ComboBox cmb_IdFamilia;
         private System.Windows.Forms.TextBox txt_Descrip;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -348,7 +374,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_Refrescar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton btn_Modificar;
@@ -361,5 +387,8 @@
         private System.Windows.Forms.TextBox txt_CantiHoras;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_IdHorario;
+        private System.Windows.Forms.TextBox txt_Salida;
+        private System.Windows.Forms.TextBox txt_Entrada;
     }
 }
