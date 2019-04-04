@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb_IdRol = new System.Windows.Forms.ComboBox();
             this.txt_Descrip = new System.Windows.Forms.TextBox();
             this.txt_Nivel = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -42,16 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarRoles = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Roles = new System.Windows.Forms.DataGridView();
+            this.txt_IdRol = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -61,9 +61,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txt_IdRol);
             this.groupBox1.Controls.Add(this.cmb_IdEstado);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cmb_IdRol);
             this.groupBox1.Controls.Add(this.txt_Descrip);
             this.groupBox1.Controls.Add(this.txt_Nivel);
             this.groupBox1.Controls.Add(this.btn_Exit);
@@ -100,15 +100,6 @@
             this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 28;
             this.label1.Text = "Id Estado:";
-            // 
-            // cmb_IdRol
-            // 
-            this.cmb_IdRol.FormattingEnabled = true;
-            this.cmb_IdRol.Location = new System.Drawing.Point(164, 31);
-            this.cmb_IdRol.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_IdRol.Name = "cmb_IdRol";
-            this.cmb_IdRol.Size = new System.Drawing.Size(139, 25);
-            this.cmb_IdRol.TabIndex = 0;
             // 
             // txt_Descrip
             // 
@@ -157,6 +148,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // label7
             // 
@@ -224,12 +216,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
-            this.toolStripLabel1.Text = "Refrescar";
-            // 
             // btn_Refrescar
             // 
             this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -238,17 +224,18 @@
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel1.Text = "Refrescar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
-            this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar
             // 
@@ -258,6 +245,13 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "btn_Modificar";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
+            this.toolStripLabel2.Text = "Modificar";
             // 
             // toolStripSeparator2
             // 
@@ -283,14 +277,27 @@
             // 
             // dgv_Roles
             // 
+            this.dgv_Roles.AllowUserToAddRows = false;
+            this.dgv_Roles.AllowUserToDeleteRows = false;
             this.dgv_Roles.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Roles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Roles.Location = new System.Drawing.Point(4, 51);
             this.dgv_Roles.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Roles.MultiSelect = false;
             this.dgv_Roles.Name = "dgv_Roles";
             this.dgv_Roles.RowTemplate.Height = 24;
+            this.dgv_Roles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Roles.Size = new System.Drawing.Size(781, 237);
             this.dgv_Roles.TabIndex = 0;
+            this.dgv_Roles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Roles_CellDoubleClick);
+            // 
+            // txt_IdRol
+            // 
+            this.txt_IdRol.Location = new System.Drawing.Point(164, 35);
+            this.txt_IdRol.Name = "txt_IdRol";
+            this.txt_IdRol.Size = new System.Drawing.Size(139, 23);
+            this.txt_IdRol.TabIndex = 29;
             // 
             // FRM_Roles
             // 
@@ -319,7 +326,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmb_IdRol;
         private System.Windows.Forms.TextBox txt_Descrip;
         private System.Windows.Forms.TextBox txt_Nivel;
         private System.Windows.Forms.Button btn_Exit;
@@ -341,5 +347,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarRoles;
         private System.Windows.Forms.DataGridView dgv_Roles;
+        private System.Windows.Forms.TextBox txt_IdRol;
     }
 }

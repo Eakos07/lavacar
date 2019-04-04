@@ -35,7 +35,6 @@
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
             this.cmb_IdHorario = new System.Windows.Forms.ComboBox();
             this.cmb_IdEmpleado = new System.Windows.Forms.ComboBox();
-            this.cmb_IdPlanilla = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPlanillas = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Planillas = new System.Windows.Forms.DataGridView();
+            this.txt_IdPlanilla = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -60,12 +60,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_IdPlanilla);
             this.groupBox1.Controls.Add(this.btn_Exite);
             this.groupBox1.Controls.Add(this.btn_Save);
             this.groupBox1.Controls.Add(this.cmb_IdEstado);
             this.groupBox1.Controls.Add(this.cmb_IdHorario);
             this.groupBox1.Controls.Add(this.cmb_IdEmpleado);
-            this.groupBox1.Controls.Add(this.cmb_IdPlanilla);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -107,6 +107,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // cmb_IdEstado
             // 
@@ -134,15 +135,6 @@
             this.cmb_IdEmpleado.Name = "cmb_IdEmpleado";
             this.cmb_IdEmpleado.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdEmpleado.TabIndex = 2;
-            // 
-            // cmb_IdPlanilla
-            // 
-            this.cmb_IdPlanilla.FormattingEnabled = true;
-            this.cmb_IdPlanilla.Location = new System.Drawing.Point(143, 37);
-            this.cmb_IdPlanilla.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_IdPlanilla.Name = "cmb_IdPlanilla";
-            this.cmb_IdPlanilla.Size = new System.Drawing.Size(156, 25);
-            this.cmb_IdPlanilla.TabIndex = 0;
             // 
             // label6
             // 
@@ -202,11 +194,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
             this.btn_Refrescar,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.toolStripLabel4,
@@ -231,6 +223,7 @@
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -251,6 +244,7 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -276,14 +270,27 @@
             // 
             // dgv_Planillas
             // 
+            this.dgv_Planillas.AllowUserToAddRows = false;
+            this.dgv_Planillas.AllowUserToDeleteRows = false;
             this.dgv_Planillas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Planillas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Planillas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Planillas.Location = new System.Drawing.Point(4, 51);
             this.dgv_Planillas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Planillas.MultiSelect = false;
             this.dgv_Planillas.Name = "dgv_Planillas";
             this.dgv_Planillas.RowTemplate.Height = 24;
+            this.dgv_Planillas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Planillas.Size = new System.Drawing.Size(781, 237);
             this.dgv_Planillas.TabIndex = 0;
+            this.dgv_Planillas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Planillas_CellDoubleClick);
+            // 
+            // txt_IdPlanilla
+            // 
+            this.txt_IdPlanilla.Location = new System.Drawing.Point(143, 40);
+            this.txt_IdPlanilla.Name = "txt_IdPlanilla";
+            this.txt_IdPlanilla.Size = new System.Drawing.Size(156, 23);
+            this.txt_IdPlanilla.TabIndex = 6;
             // 
             // FRM_Planillas
             // 
@@ -317,7 +324,6 @@
         private System.Windows.Forms.ComboBox cmb_IdEstado;
         private System.Windows.Forms.ComboBox cmb_IdHorario;
         private System.Windows.Forms.ComboBox cmb_IdEmpleado;
-        private System.Windows.Forms.ComboBox cmb_IdPlanilla;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -334,5 +340,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarPlanillas;
         private System.Windows.Forms.DataGridView dgv_Planillas;
+        private System.Windows.Forms.TextBox txt_IdPlanilla;
     }
 }
