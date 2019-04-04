@@ -46,6 +46,7 @@
     <Compile Include="Cat_Mant\cls_Centro_de_Lavado_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Citas_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Clientes_BLL.cs" />
+    <Compile Include="Cat_Mant\cls_Empleados_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Factura_BLL.cs" />
     <Compile Include="Cat_Mant\cls_FamiliaArticulos_BLL.cs" />

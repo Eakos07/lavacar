@@ -39,6 +39,9 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_DB_BLL = new Cls_DataBase_BLL();
             Cls_DataBase_DAL Obj_DB_DAL = new Cls_DataBase_DAL();
 
+            Obj_DB_BLL.CrearParametros(ref Obj_DB_DAL);
+            Obj_DB_DAL.DT_Parametros.Rows.Add("@Nombre", 3, sFiltro);
+
             Obj_DB_DAL.sTableName = "Citas";
             Obj_DB_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Citas"].ToString().Trim();
             Obj_DB_BLL.Execute_DataAdapter(ref Obj_DB_DAL);
