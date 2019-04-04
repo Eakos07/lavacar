@@ -25,18 +25,17 @@ namespace FRM_Login.Menu
 
         public void Cargar_Datos()
         {
-            cls_TipoPlaca_BLL Obj_BLL = new cls_TipoPlaca_BLL();
             string sMsjError = string.Empty;
             DataTable dtTipoPlaca = new DataTable();
             Obj_TipoPlaca_DAL.cBandIM = 'I';
 
             if (txt_Filtrar.Text == string.Empty)
             {
-                dtTipoPlaca = Obj_BLL.Listar_TipoPlaca(ref sMsjError);
+                dtTipoPlaca = Obj_TipoPlaca_BLL.Listar_TipoPlaca(ref sMsjError);
             }
             else
             {
-                dtTipoPlaca = Obj_BLL.Filtrar_TipoPlaca(ref sMsjError, txt_Filtrar.Text);
+                dtTipoPlaca = Obj_TipoPlaca_BLL.Filtrar_TipoPlaca(ref sMsjError, txt_Filtrar.Text);
             }
             if (sMsjError == string.Empty)
             {
@@ -67,7 +66,7 @@ namespace FRM_Login.Menu
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txt_IdTipoPlaca.Text)) && !(string.IsNullOrEmpty(txt_Descripcion.Text)))
+            if (!(string.IsNullOrEmpty(txt_IdTipoPlaca.Text)) || !(string.IsNullOrEmpty(txt_Descripcion.Text)))
             {
                 Obj_TipoPlaca_DAL.bIdTipoPlaca = Convert.ToByte(txt_IdTipoPlaca.Text);
                 Obj_TipoPlaca_DAL.sDescripcion = txt_Descripcion.Text;
