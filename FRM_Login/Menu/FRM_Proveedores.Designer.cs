@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Proveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmb_Id_Proveedor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_IdEstadoProveedor = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtPlazoPago = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarProveedores = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
+            this.txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -65,9 +65,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.cmb_Id_Proveedor);
+            this.groupBox1.Controls.Add(this.txt_IdProveedor);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_IdEstadoProveedor);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.txtPlazoPago);
@@ -89,15 +89,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Proveedores";
             // 
-            // cmb_Id_Proveedor
-            // 
-            this.cmb_Id_Proveedor.FormattingEnabled = true;
-            this.cmb_Id_Proveedor.Location = new System.Drawing.Point(205, 27);
-            this.cmb_Id_Proveedor.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_Id_Proveedor.Name = "cmb_Id_Proveedor";
-            this.cmb_Id_Proveedor.Size = new System.Drawing.Size(167, 25);
-            this.cmb_Id_Proveedor.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -109,14 +100,14 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Id Proveedor:";
             // 
-            // comboBox1
+            // cmb_IdEstadoProveedor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(565, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 25);
-            this.comboBox1.TabIndex = 5;
+            this.cmb_IdEstadoProveedor.FormattingEnabled = true;
+            this.cmb_IdEstadoProveedor.Location = new System.Drawing.Point(565, 110);
+            this.cmb_IdEstadoProveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_IdEstadoProveedor.Name = "cmb_IdEstadoProveedor";
+            this.cmb_IdEstadoProveedor.Size = new System.Drawing.Size(167, 25);
+            this.cmb_IdEstadoProveedor.TabIndex = 5;
             // 
             // btnSalir
             // 
@@ -145,6 +136,7 @@
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtPlazoPago
             // 
@@ -259,11 +251,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
             this.btn_Refrescar,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.toolStripLabel4,
@@ -288,6 +280,7 @@
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -308,6 +301,7 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -333,14 +327,27 @@
             // 
             // dgv_Proveedores
             // 
+            this.dgv_Proveedores.AllowUserToAddRows = false;
+            this.dgv_Proveedores.AllowUserToDeleteRows = false;
             this.dgv_Proveedores.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Proveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Proveedores.Location = new System.Drawing.Point(8, 51);
             this.dgv_Proveedores.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Proveedores.MultiSelect = false;
             this.dgv_Proveedores.Name = "dgv_Proveedores";
             this.dgv_Proveedores.RowTemplate.Height = 24;
+            this.dgv_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Proveedores.Size = new System.Drawing.Size(780, 210);
             this.dgv_Proveedores.TabIndex = 0;
+            this.dgv_Proveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Proveedores_CellDoubleClick);
+            // 
+            // txt_IdProveedor
+            // 
+            this.txt_IdProveedor.Location = new System.Drawing.Point(205, 31);
+            this.txt_IdProveedor.Name = "txt_IdProveedor";
+            this.txt_IdProveedor.Size = new System.Drawing.Size(167, 23);
+            this.txt_IdProveedor.TabIndex = 33;
             // 
             // FRM_Proveedores
             // 
@@ -379,9 +386,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.ComboBox cmb_Id_Proveedor;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_IdEstadoProveedor;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -395,5 +401,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarProveedores;
         private System.Windows.Forms.DataGridView dgv_Proveedores;
+        private System.Windows.Forms.TextBox txt_IdProveedor;
     }
 }
