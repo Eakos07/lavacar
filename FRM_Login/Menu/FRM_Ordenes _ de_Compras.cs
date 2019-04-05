@@ -85,8 +85,8 @@ namespace FRM_Login.Menu
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_NumOrden.Text) || !string.IsNullOrEmpty(txt_Cantidad.Text) || 
-                !string.IsNullOrEmpty(txt_Precio.Text) || cmb_IdEstado.SelectedValue.ToString() != "0" || 
+            if (!string.IsNullOrEmpty(txt_Cantidad.Text) ||
+                !string.IsNullOrEmpty(txt_Precio.Text) || cmb_IdEstado.SelectedValue.ToString() != "0" ||
                 cmb_IdProve.SelectedValue.ToString() != "0" || cmb_IdArticulo.SelectedValue.ToString() != "0")
             {
                 
