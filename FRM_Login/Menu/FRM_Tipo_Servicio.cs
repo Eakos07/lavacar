@@ -78,7 +78,7 @@ namespace FRM_Login.Menu
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txt_CodigoServicio.Text)) && !(string.IsNullOrEmpty(txt_NombreServicio.Text)) &&
+            if (!(string.IsNullOrEmpty(txt_CodigoServicio.Text)) && !(string.IsNullOrEmpty(txt_NombreServicio.Text))&&
                 !(string.IsNullOrEmpty(txt_Precio.Text)) && !(string.IsNullOrEmpty(txt_Duracion.Text))
                 && (cmb_IdTipoVehiculo.SelectedValue.ToString() != "0"))
             {
