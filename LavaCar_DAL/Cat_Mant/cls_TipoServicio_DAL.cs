@@ -11,7 +11,7 @@ namespace LavaCar_DAL.Cat_Mant
         private char _cCodServicio, _cBandIM;
         private string _sNombreServicio;
         private decimal _dPrecio;
-        private DateTime _dtmDuracion;
+        private string _sDuracion;
         private byte _bIdTipoVehiculo;
 
         #region Variables Públicas
@@ -67,19 +67,6 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public DateTime dtmDuracion
-        {
-            get
-            {
-                return _dtmDuracion;
-            }
-
-            set
-            {
-                _dtmDuracion = value;
-            }
-        }
-
         public byte bIdTipoVehiculo
         {
             get
@@ -92,6 +79,19 @@ namespace LavaCar_DAL.Cat_Mant
                 _bIdTipoVehiculo = value;
             }
         }
-#endregion
+
+        public string sDuracion
+        {
+            get
+            {
+                return _sDuracion;
+            }
+
+            set
+            {
+                _sDuracion = value;
+            }
+        }
+        #endregion
     }
 }

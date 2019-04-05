@@ -67,7 +67,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@CodServicio", 5, Obj_TipoServicio_DAL.cCodServicio.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@NombreServicio", 3, Obj_TipoServicio_DAL.sNombreServicio.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Precio", 4, Obj_TipoServicio_DAL.dPrecio.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Duracion", 2, Obj_TipoServicio_DAL.dtmDuracion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Duracion", 3, Obj_TipoServicio_DAL.sDuracion.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_TipoServicio_DAL.bIdTipoVehiculo.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoServicio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
@@ -82,7 +82,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@CodServicio", 5, Obj_TipoServicio_DAL.cCodServicio.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@NombreServicio", 3, Obj_TipoServicio_DAL.sNombreServicio.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Precio", 4, Obj_TipoServicio_DAL.dPrecio.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Duracion", 2, Obj_TipoServicio_DAL.dtmDuracion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Duracion", 3, Obj_TipoServicio_DAL.sDuracion.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_TipoServicio_DAL.bIdTipoVehiculo.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoServicio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);

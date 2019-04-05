@@ -311,9 +311,8 @@ namespace FRM_Login.Menu
             cmb_EmpleadoCitas.SelectedValue = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
         }
 
+
         #endregion
-
-
     }
 
   }
