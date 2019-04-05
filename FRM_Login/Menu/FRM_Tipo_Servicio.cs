@@ -78,16 +78,16 @@ namespace FRM_Login.Menu
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_CodigoServicio.Text) || !string.IsNullOrEmpty(txt_NombreServicio.Text) ||
-                !string.IsNullOrEmpty(txt_Precio.Text) || !string.IsNullOrEmpty(txt_Duracion.Text)
-                || cmb_IdTipoVehiculo.SelectedValue.ToString() != "0")
+            if (!(string.IsNullOrEmpty(txt_CodigoServicio.Text)) && !(string.IsNullOrEmpty(txt_NombreServicio.Text)) &&
+                !(string.IsNullOrEmpty(txt_Precio.Text)) && !(string.IsNullOrEmpty(txt_Duracion.Text))
+                && (cmb_IdTipoVehiculo.SelectedValue.ToString() != "0"))
             {
                 Obj_TipoServicio_DAL.cCodServicio = Convert.ToChar(txt_CodigoServicio.Text);
                 Obj_TipoServicio_DAL.sNombreServicio = txt_NombreServicio.Text;
                 Obj_TipoServicio_DAL.dPrecio = Convert.ToDecimal(txt_Precio.Text);
-                Obj_TipoServicio_DAL.dtmDuracion = Convert.ToDateTime(txt_Duracion.Text);
+                Obj_TipoServicio_DAL.sDuracion = txt_Duracion.Text;
                 Obj_TipoServicio_DAL.bIdTipoVehiculo = Convert.ToByte(cmb_IdTipoVehiculo.SelectedValue);
-                string sMsjError = String.Empty;
+                string sMsjError = string.Empty;
 
                 if (Obj_TipoServicio_DAL.cBandIM=='I')
                 {

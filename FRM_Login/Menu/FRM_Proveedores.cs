@@ -116,13 +116,13 @@ namespace FRM_Login.Menu
 
                 if (Obj_DAL.cBandIM == 'I')
                 {
-                    // Obj_BLL.Insertar_Proveedores(ref sMsjError, ref Obj_DAL);
+                    Obj_BLL.Insertar_Proveedores(ref sMsjError, ref Obj_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_Proveedores();
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
-                    //  Obj_BLL.Modificar_Proveedores(ref sMsjError, ref Obj_DAL);
+                    Obj_BLL.Modificar_Proveedores(ref sMsjError, ref Obj_DAL);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_IdProveedor.Enabled = true;
                     Cargar_Datos_Proveedores();

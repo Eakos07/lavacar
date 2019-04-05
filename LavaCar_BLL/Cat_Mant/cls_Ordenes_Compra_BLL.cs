@@ -35,7 +35,7 @@ namespace LavaCar_BLL.Cat_Mant
 
         }
 
-        public DataTable Filtrar_TipoArticulo(ref string sMsjError, string sFiltro)
+        public DataTable Filtrar_OrdenesCompra(ref string sMsjError, string sFiltro)
         {
             Cls_DataBase_DAL Obj_DAL = new Cls_DataBase_DAL();
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
