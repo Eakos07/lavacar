@@ -178,9 +178,9 @@ namespace FRM_Login.Menu
                 DataTable DTA = new DataTable();
                 DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
                 comboBox3.DataSource = DTA;
-                comboBox6.DisplayMember = DTA.Columns[1].ToString();
-                comboBox6.ValueMember = DTA.Columns[0].ToString();
-                comboBox6.SelectedValue = TransV_ObjDAL.sIdArticulo;
+                comboBox3.DisplayMember = DTA.Columns[1].ToString();
+                comboBox3.ValueMember = DTA.Columns[0].ToString();
+                comboBox3.SelectedValue = TransV_ObjDAL.sIdArticulo;
                 //Combobox Factura
                 cls_Factura_BLL BLLFactura = new cls_Factura_BLL();
                 DataTable DTP = new DataTable();
