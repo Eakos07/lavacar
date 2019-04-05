@@ -209,6 +209,18 @@ namespace FRM_Login.Menu
             }
         }
 
-
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox8, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox8, "Solo puede digitar numeros ");
+            }
+        }
     }
 }
