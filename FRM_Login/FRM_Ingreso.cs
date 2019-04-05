@@ -82,23 +82,21 @@ namespace FRM_Login
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string cnn = ConfigurationManager.ConnectionStrings["Windows_AUT"].ConnectionString;
-            using (SqlConnection conexion = new SqlConnection(cnn))
+            if (txtUsuarioLogin.Text != "USUARIO" && txtContrase.Text != "CONTRASEÑA")
             {
-                conexion.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT IdUsuario, Contraseña FROM T_Usuarios Where IdUsuario = '" + txtUsuarioLogin.Text +
-                    "' AND Contraseña='" + txtContrase.Text + "'", conexion))
+                if (txtUsuarioLogin.Text == "Admin")
                 {
-                    SqlDataReader dr = cmd.ExecuteReader();
-
                     MessageBox.Show("Validación Exitosa");
                     Menu.FRM_Administrador pantalla = new Menu.FRM_Administrador();
-                    pantalla.Show();
-                    pantalla.FormClosed += cerrarSesion;
-                    this.Hide();
+                    pantalla.ShowDialog();
+                    
                 }
-            }  
-            
+                
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos", "Warining", MessageBoxButtons.OK);
+            }
           
 
         }
