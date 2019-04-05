@@ -292,7 +292,6 @@
             this.btnCompra.Text = "Compra";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCompra.UseVisualStyleBackColor = true;
-            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnRoles
             // 
