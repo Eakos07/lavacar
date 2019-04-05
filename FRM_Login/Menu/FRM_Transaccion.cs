@@ -332,7 +332,41 @@ namespace FRM_Login.Menu
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox4, "Solo puede digitar numeros con (-)");
+                errorIcono.SetError(textBox4, "Solo puede digitar numeros");
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox3, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox3, "Solo puede digitar numeros ");
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox2, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox2, "Solo puede digitar numeros con (.)");
+            }
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox2, "");
             }
         }
     }
