@@ -189,10 +189,16 @@ namespace FRM_Login.Menu
                 comboBox4.DisplayMember = DTP.Columns[0].ToString();
                 comboBox4.ValueMember = DTP.Columns[0].ToString();
                 comboBox4.SelectedValue = TransV_ObjDAL.iNumFactura;
-
-
-
-                txt_FiltrarArticulos.Text = string.Empty;
+                //Combobox Estado
+                cls_Estados_BLL BLLEstado = new cls_Estados_BLL();
+                DataTable DTE = new DataTable();
+                DTE = BLLEstado.Listar_Estados(ref sMsjError);
+                comboBox5.DataSource = DTE;
+                comboBox5.DisplayMember = DTE.Columns[1].ToString();
+                comboBox5.ValueMember = DTE.Columns[0].ToString();
+                comboBox5.SelectedValue = TransV_ObjDAL.bIdEstado;
+                
+                toolStrip1.Text = string.Empty;
                 CargarTransaccionesVentas();
             }
         }
