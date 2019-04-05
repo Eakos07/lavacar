@@ -186,9 +186,9 @@ namespace FRM_Login.Menu
                 DataTable DTP = new DataTable();
                 DTP = BLLFactura.Listar_Factura(ref sMsjError);
                 comboBox4.DataSource = DTP;
-                comboBox4.DisplayMember = DTP.Columns[1].ToString();
+                comboBox4.DisplayMember = DTP.Columns[0].ToString();
                 comboBox4.ValueMember = DTP.Columns[0].ToString();
-                comboBox4.SelectedValue = TransC_ObjDAL.bIdProveedor;
+                comboBox4.SelectedValue = TransV_ObjDAL.iNumFactura;
 
 
 
