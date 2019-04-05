@@ -41,7 +41,6 @@
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_TipoServicio = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_Duracion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Precio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_Duracion = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoServicio)).BeginInit();
@@ -187,16 +187,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Servicio";
             // 
-            // txt_Duracion
-            // 
-            this.txt_Duracion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Duracion.Location = new System.Drawing.Point(584, 24);
-            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Duracion.Multiline = true;
-            this.txt_Duracion.Name = "txt_Duracion";
-            this.txt_Duracion.Size = new System.Drawing.Size(150, 27);
-            this.txt_Duracion.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -320,6 +310,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Id Tipo Vehículo:";
             // 
+            // txt_Duracion
+            // 
+            this.txt_Duracion.Location = new System.Drawing.Point(584, 27);
+            this.txt_Duracion.Mask = "00:00:00";
+            this.txt_Duracion.Name = "txt_Duracion";
+            this.txt_Duracion.Size = new System.Drawing.Size(150, 24);
+            this.txt_Duracion.TabIndex = 32;
+            this.txt_Duracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FRM_Tipo_Servicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +357,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_Filtrar;
         private System.Windows.Forms.DataGridView dgv_TipoServicio;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_Duracion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Precio;
         private System.Windows.Forms.Label label1;
@@ -370,5 +368,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox txt_Duracion;
     }
 }
