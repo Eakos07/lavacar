@@ -293,6 +293,131 @@ namespace FRM_Login.Menu
                 cmb_IdProveedor.SelectedValue = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
-#endregion
+        #endregion
+
+        #region Validaciones
+        private void txt_IdPoliza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdPoliza, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdPoliza, "Solo puede digitar numeros");
+            }
+        }
+
+        private void cmb_IdTipoPoliza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_FechaVenci_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdPoliza, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdPoliza, "Solo puede digitar numeros");
+            }
+        }
+
+        private void cmb_IdEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_CeduJurid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_CeduJurid, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_CeduJurid, "Solo puede digitar cedulas o pasaporte alfanumericas y espacios");
+            }
+        }
+
+        private void txt_IdTipoPoliza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdPoliza, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdPoliza, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_NombrePoliza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdPoliza, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdPoliza, "Solo puede digitar letras");
+            }
+        }
+
+        private void txt_Compañia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_CeduJurid, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_CeduJurid, "Solo puede digitar nuero o letras");
+            }
+        }
+
+        private void cmb_IdProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
     }
 }

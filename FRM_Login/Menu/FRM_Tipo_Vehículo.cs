@@ -112,5 +112,34 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+        private void txt_TipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_TipoVehiculo, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_TipoVehiculo, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_Descrip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumCita, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumCita, "Solo puede digitar letras");
+            }
+        }
     }
 }

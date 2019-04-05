@@ -148,5 +148,66 @@ namespace FRM_Login.Menu
             }
 
         }
+
+        private void txt_CodigoServicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_CodigoServicio, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_CodigoServicio, "Solo puede digitar numeros con (-)");
+            }
+        }
+
+        private void txt_NombreServicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NombreServicio, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NombreServicio, "Solo puede digitar letras");
+            }
+        }
+
+        private void txt_Precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Precio, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Precio, "Solo puede digitar numeros con (.)");
+            }
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Precio, "");
+            }
+        }
+
+        private void cmb_IdTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

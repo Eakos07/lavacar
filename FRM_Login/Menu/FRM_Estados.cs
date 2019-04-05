@@ -133,5 +133,49 @@ namespace FRM_Login.Menu
                 txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
             }
         }
+
+        private void txtIdEsta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtIdEsta, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtIdEsta, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Nombre, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Nombre, "Solo puede digitar letras");
+            }
+        }
+
+        private void txtDescEstados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtDescEstados, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtDescEstados, "Solo puede digitar letras");
+            }
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Roles));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_IdRol = new System.Windows.Forms.TextBox();
@@ -52,10 +53,12 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarRoles = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Roles = new System.Windows.Forms.DataGridView();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Roles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -84,10 +87,11 @@
             // txt_IdRol
             // 
             this.txt_IdRol.Location = new System.Drawing.Point(219, 43);
-            this.txt_IdRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IdRol.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IdRol.Name = "txt_IdRol";
             this.txt_IdRol.Size = new System.Drawing.Size(184, 27);
             this.txt_IdRol.TabIndex = 0;
+            this.txt_IdRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdRol_KeyPress);
             // 
             // cmb_IdEstado
             // 
@@ -97,6 +101,7 @@
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(184, 28);
             this.cmb_IdEstado.TabIndex = 3;
+            this.cmb_IdEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstado_KeyPress);
             // 
             // label1
             // 
@@ -117,6 +122,7 @@
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(184, 32);
             this.txt_Descrip.TabIndex = 2;
+            this.txt_Descrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Descrip_KeyPress);
             // 
             // txt_Nivel
             // 
@@ -296,6 +302,10 @@
             this.dgv_Roles.TabIndex = 0;
             this.dgv_Roles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Roles_CellDoubleClick);
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // FRM_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +326,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Roles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,5 +356,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarRoles;
         private System.Windows.Forms.DataGridView dgv_Roles;
         private System.Windows.Forms.TextBox txt_IdRol;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

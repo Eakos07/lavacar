@@ -140,5 +140,77 @@ namespace FRM_Login.Menu
             txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
             txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
         }
+
+        #region Validaciones
+        private void txt_IdProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdProveedor, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdProveedor, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txtNomProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtNomProveedor, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtNomProveedor, "Solo puede digitar letras");
+            }
+        }
+
+        private void txtEmailProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtEmailProveedor, "No pueden haber espacions vacios en el correo");
+            }
+        }
+
+        private void txtTelefoProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtTelefoProveedor, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtTelefoProveedor, "Solo puede digitar numeros");
+            }
+
+            if (e.KeyChar == '-')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtTelefoProveedor, "");
+            }
+        }
+
+        private void cmb_IdEstadoProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
     }
 }

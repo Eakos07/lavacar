@@ -103,5 +103,151 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_Factura();
         }
+
+        private void txt_NumFact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumFact, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+            }
+        }
+
+        private void cmb_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_CodServ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_IdTipCamb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_CedJuri_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_IdPromo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_IdTipFactu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_MontoNeto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumFact, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+            }
+
+            if (e.KeyChar == ',')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_MontoNeto, "");
+            }
+        }
+
+        private void txt_Descuent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumFact, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+            }
+
+            if (e.KeyChar == ',')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_MontoNeto, "");
+            }
+        }
+
+        private void txt_MontoTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumFact, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+            }
+
+            if (e.KeyChar == ',')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_MontoNeto, "");
+            }
+        }
     }
 }

@@ -116,5 +116,34 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos();
         }
+
+        private void txt_IdTipoPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdTipoPlaca, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdTipoPlaca, "Solo puede digitar numeros ");
+            }
+        }
+
+        private void txt_Descripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Descripcion, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Descripcion, "Solo puede digitar letras");
+            }
+        }
     }
 }

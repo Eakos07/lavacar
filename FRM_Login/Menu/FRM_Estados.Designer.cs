@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Estados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
@@ -53,10 +54,12 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,6 +89,7 @@
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(276, 27);
             this.txt_Nombre.TabIndex = 1;
+            this.txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre_KeyPress);
             // 
             // label3
             // 
@@ -133,6 +137,7 @@
             this.txtDescEstados.Name = "txtDescEstados";
             this.txtDescEstados.Size = new System.Drawing.Size(276, 27);
             this.txtDescEstados.TabIndex = 2;
+            this.txtDescEstados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescEstados_KeyPress);
             // 
             // txtIdEsta
             // 
@@ -141,6 +146,7 @@
             this.txtIdEsta.Name = "txtIdEsta";
             this.txtIdEsta.Size = new System.Drawing.Size(276, 27);
             this.txtIdEsta.TabIndex = 2;
+            this.txtIdEsta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdEsta_KeyPress);
             // 
             // label2
             // 
@@ -296,6 +302,10 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // FRM_Estados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +326,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +357,6 @@
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripButton btn_Refrescar;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

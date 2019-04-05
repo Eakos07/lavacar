@@ -330,5 +330,206 @@ namespace FRM_Login.Menu
 
 
         #endregion
+
+        #region Validaciones
+
+        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) || 
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumPlaca, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumPlaca, "Solo puede digitar placas alfanumericas y espacios");
+            }
+        }
+        
+
+        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+       
+
+        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_NumVisitas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || 
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+        }
+        
+
+        private void txt_NumCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) )
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumCita, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumCita, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumCita, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumCita, "Solo puede digitar numeros con (-)");
+            }
+
+            if (e.KeyChar == '-')
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumCita, "");
+            }
+        }
+        
+
+        private void cmb_HoraCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        
+
+        private void txt_NomCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumCita, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumCita, "Solo puede digitar letras");
+            }
+        }
+        
+
+        private void cmb_RegistroPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        
+
+        private void cmb_TipoServicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_EstadoCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_EmpleadoCitas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        
+
+        private void dtp_Fecha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        
+
+        private void txt_Email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Email, "Email no puede tener espacios vacios");
+            }
+            else
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Email, "");
+            }
+        }
+        #endregion
     }
 }

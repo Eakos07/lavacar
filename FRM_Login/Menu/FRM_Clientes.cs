@@ -61,5 +61,60 @@ namespace FRM_Login.Menu
         {
 
         }
+
+        #region Validaciones
+        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumPlaca, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumPlaca, "Solo puede digitar placas alfanumericas y espacios");
+            }
+        }
+
+        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_NumVisitas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_NumVisitas, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_NumVisitas, "Solo puede digitar numeros");
+            }
+        }
+        #endregion
     }
 }

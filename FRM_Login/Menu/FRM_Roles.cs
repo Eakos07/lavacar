@@ -139,5 +139,49 @@ namespace FRM_Login.Menu
                 cmb_IdEstado.SelectedValue = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
+
+        #region Validaciones
+        private void txt_IdRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_IdRol, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_IdRol, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_Descrip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Descrip, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Descrip, "Solo puede digitar letras o numeros ");
+            }
+        }
+
+        private void cmb_IdEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        #endregion
     }
 }
