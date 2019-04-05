@@ -73,7 +73,7 @@ namespace FRM_Login.Menu
 
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
-            Cargar_Datos();
+            Cargar_Datos(); //
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
