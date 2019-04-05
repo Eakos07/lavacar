@@ -150,65 +150,60 @@ namespace FRM_Login.Menu
         //Modificar Transacciones Venta
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            if (dgv_Articulos.RowCount == 0)
+            if (dataGridView1.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                TransC_ObjDAL = new cls_TransaccionesCompra_DAL();
-                TransC_ObjDAL.cBandera = 'U';
+                TransV_ObjDAL = new cls_TransaccionesVenta_DAL();
+                TransV_ObjDAL.cBandera = 'U';
 
-                TransC_ObjDAL.iIdTransaccionCompra = Convert.ToInt32(dgv_Articulos.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                TransC_ObjDAL.iIdNumOrden = Convert.ToInt32(dgv_Articulos.SelectedRows[0].Cells[1].Value.ToString().Trim());
-                TransC_ObjDAL.sIdArticulo = dgv_Articulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                TransC_ObjDAL.bIdProveedor = Convert.ToByte(dgv_Articulos.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                TransC_ObjDAL.sDocumento = dgv_Articulos.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                TransC_ObjDAL.dtFecha = Convert.ToDateTime(dgv_Articulos.SelectedRows[0].Cells[5].Value.ToString().Trim());
-                TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim());
-                TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim());
+                TransV_ObjDAL.iIdTransaccionVenta = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim());
+                TransV_ObjDAL.sIdArticulo = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                TransV_ObjDAL.iNumFactura = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim());
+                TransV_ObjDAL.dFecha = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim());
+                TransV_ObjDAL.iCantidad = Convert.ToInt16(dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim());
+                TransV_ObjDAL.dMonto = Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[5].Value.ToString().Trim());
 
-                textBox8.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
-                textBox1.Text = TransC_ObjDAL.sDocumento;
-                textBox4.Text = TransC_ObjDAL.dtFecha.ToString();
-                textBox3.Text = TransC_ObjDAL.iCantidad.ToString();
-                textBox2.Text = TransC_ObjDAL.dMonto.ToString();
+                textBox9.Text = TransV_ObjDAL.iIdTransaccionVenta.ToString();
+                textBox6.Text = TransV_ObjDAL.dFecha.ToString();
+                textBox7.Text = TransV_ObjDAL.iCantidad.ToString();
+                textBox5.Text = TransV_ObjDAL.dMonto.ToString();
 
                 string sMsjError = string.Empty;
-                //Combobox Ordenes de Compra
-                cls_Ordenes_Compra_BLL BLLOrden = new cls_Ordenes_Compra_BLL();
-                DataTable DTO = new DataTable();
-                DTO = BLLOrden.Listar_OrdenesCompra(ref sMsjError);
-                //DTO.Rows.Add("0", "Seleccione un Valor");
-                comboBox7.DataSource = DTO;
-                comboBox7.DisplayMember = DTO.Columns[0].ToString();
-                comboBox7.ValueMember = DTO.Columns[0].ToString();
-                comboBox7.SelectedValue = TransC_ObjDAL.iIdNumOrden.ToString();
 
                 //Combobox Articulo
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
                 DataTable DTA = new DataTable();
                 DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
-                comboBox6.DataSource = DTA;
-                comboBox6.DisplayMember = DTA.Columns[1].ToString();
-                comboBox6.ValueMember = DTA.Columns[0].ToString();
-                comboBox6.SelectedValue = TransC_ObjDAL.sIdArticulo;
-                //Combobox Proveedores
-                cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
+                comboBox3.DataSource = DTA;
+                comboBox3.DisplayMember = DTA.Columns[1].ToString();
+                comboBox3.ValueMember = DTA.Columns[0].ToString();
+                comboBox3.SelectedValue = TransV_ObjDAL.sIdArticulo;
+                //Combobox Factura
+                cls_Factura_BLL BLLFactura = new cls_Factura_BLL();
                 DataTable DTP = new DataTable();
-                DTP = BLLProveedores.Listar_Proveedores(ref sMsjError);
-                comboBox2.DataSource = DTP;
-                comboBox2.DisplayMember = DTP.Columns[1].ToString();
-                comboBox2.ValueMember = DTP.Columns[0].ToString();
-                comboBox2.SelectedValue = TransC_ObjDAL.bIdProveedor;
-
-
-
-                txt_FiltrarArticulos.Text = string.Empty;
+                DTP = BLLFactura.Listar_Factura(ref sMsjError);
+                comboBox4.DataSource = DTP;
+                comboBox4.DisplayMember = DTP.Columns[0].ToString();
+                comboBox4.ValueMember = DTP.Columns[0].ToString();
+                comboBox4.SelectedValue = TransV_ObjDAL.iNumFactura;
+                //Combobox Estado
+                cls_Estados_BLL BLLEstado = new cls_Estados_BLL();
+                DataTable DTE = new DataTable();
+                DTE = BLLEstado.Listar_Estados(ref sMsjError);
+                comboBox5.DataSource = DTE;
+                comboBox5.DisplayMember = DTE.Columns[1].ToString();
+                comboBox5.ValueMember = DTE.Columns[0].ToString();
+                comboBox5.SelectedValue = TransV_ObjDAL.bIdEstado;
+                
+                toolStrip1.Text = string.Empty;
                 CargarTransaccionesVentas();
             }
         }
 
+        #region Validaciones
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
@@ -416,6 +411,18 @@ namespace FRM_Login.Menu
                 e.Handled = false;
                 errorIcono.SetError(textBox5, "");
             }
+        }
+
+        #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
