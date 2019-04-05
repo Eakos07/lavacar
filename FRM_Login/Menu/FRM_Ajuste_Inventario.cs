@@ -99,5 +99,10 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+        private void btn_Refrescar_Click(object sender, EventArgs e)
+        {
+            CargarAjustesInventario();
+        }
     }
 }
