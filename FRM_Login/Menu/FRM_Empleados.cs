@@ -19,7 +19,7 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
-        private void CargarTransaccionesCompras()
+        private void CargarEmpleados()
         {
             cls_Empleados_BLL EmplC_ObjBLL = new cls_Empleados_BLL();
             string sMsjError = string.Empty;
@@ -209,5 +209,10 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+        private void FRM_Empleados_Load(object sender, EventArgs e)
+        {
+            CargarEmpleados();
+        }
     }
 }
