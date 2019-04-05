@@ -133,14 +133,21 @@ namespace FRM_Login.Menu
 
         private void dgv_Horarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            //txt_IdHorario.Enabled = false;
-            txt_IdHorario.Text = dgv_Horarios.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Descrip.Text = dgv_Horarios.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_CantiHoras.Text = dgv_Horarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            txt_Entrada.Text = dgv_Horarios.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txt_Salida.Text = dgv_Horarios.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Horarios.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            if (dgv_Horarios.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                //txt_IdHorario.Enabled = false;
+                txt_IdHorario.Text = dgv_Horarios.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Descrip.Text = dgv_Horarios.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_CantiHoras.Text = dgv_Horarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Entrada.Text = dgv_Horarios.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_Salida.Text = dgv_Horarios.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_IdEstado.SelectedValue = dgv_Horarios.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            }
         }
     }
 }

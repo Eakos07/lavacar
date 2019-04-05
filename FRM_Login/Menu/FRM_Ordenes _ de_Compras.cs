@@ -149,15 +149,22 @@ namespace FRM_Login.Menu
 
         private void dgv_Ordenes_Compra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_OrdenesCompra_DAL.cBandIM = 'M';
-            txt_NumOrden.Enabled = false;
+            if (dgv_Ordenes_Compra.RowCount.Equals(0))
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_OrdenesCompra_DAL.cBandIM = 'M';
+                txt_NumOrden.Enabled = false;
 
-            txt_NumOrden.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdProve.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            cmb_IdArticulo.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_NumOrden.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdProve.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdArticulo.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_IdEstado.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            }
         }
     }
 }

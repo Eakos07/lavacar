@@ -120,11 +120,18 @@ namespace FRM_Login.Menu
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txtIdEsta.Enabled = false;
-            txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            if (dataGridView1.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txtIdEsta.Enabled = false;
+                txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
         }
     }
 }
