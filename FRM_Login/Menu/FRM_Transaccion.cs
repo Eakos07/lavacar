@@ -209,14 +209,18 @@ namespace FRM_Login.Menu
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox8, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox8, "Solo puede digitar numeros ");
+            }
         }
     }
 }
