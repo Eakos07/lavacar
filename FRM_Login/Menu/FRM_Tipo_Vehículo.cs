@@ -113,6 +113,8 @@ namespace FRM_Login.Menu
             this.Close();
         }
 
+        #region Validaciones
+
         private void txt_TipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
@@ -133,13 +135,15 @@ namespace FRM_Login.Menu
                 char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumCita, "");
+                errorIcono.SetError(txt_Descrip, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumCita, "Solo puede digitar letras");
+                errorIcono.SetError(txt_Descrip, "Solo puede digitar letras");
             }
         }
+
+        #endregion
     }
 }
