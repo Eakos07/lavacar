@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LavaCar_BLL.Cat_Mant;
 namespace FRM_Login.Menu
-{
+{ 
     public partial class FRM_Tipo_Placa : Form
     {
         public FRM_Tipo_Placa()
