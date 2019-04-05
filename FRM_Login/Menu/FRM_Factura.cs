@@ -104,6 +104,7 @@ namespace FRM_Login.Menu
             Cargar_Datos_Factura();
         }
 
+        #region Validaciones
         private void txt_NumFact_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
@@ -248,6 +249,12 @@ namespace FRM_Login.Menu
                 e.Handled = false;
                 errorIcono.SetError(txt_MontoNeto, "");
             }
+        }
+        #endregion
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

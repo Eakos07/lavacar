@@ -291,6 +291,7 @@
             this.btn_save.TabIndex = 5;
             this.btn_save.Text = "Guardar";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label7
             // 

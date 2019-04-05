@@ -284,6 +284,7 @@
             this.btn_Save.TabIndex = 10;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_MontoTotal
             // 

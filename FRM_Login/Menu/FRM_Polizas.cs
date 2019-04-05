@@ -327,12 +327,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_IdPoliza, "");
+                errorIcono.SetError(txt_FechaVenci, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_IdPoliza, "Solo puede digitar numeros");
+                errorIcono.SetError(txt_FechaVenci, "Solo puede digitar numeros");
             }
         }
 

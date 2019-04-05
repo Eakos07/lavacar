@@ -87,5 +87,19 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox1, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox1, "Solo puede digitar numeros");
+            }
+        }
     }
 }
