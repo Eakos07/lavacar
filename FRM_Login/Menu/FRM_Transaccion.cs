@@ -112,10 +112,28 @@ namespace FRM_Login.Menu
                 textBox3.Text = TransC_ObjDAL.iCantidad.ToString();
                 textBox2.Text = TransC_ObjDAL.dMonto.ToString();
 
-                //Combo box
+                string sMsjError = string.Empty;
+                //Combobox Ordenes de Compra
                 cls_Ordenes_Compra_BLL BLLOrden = new cls_Ordenes_Compra_BLL();
+                DataTable DTO = new DataTable();
+                DTO = BLLOrden.Listar_OrdenesCompra(ref sMsjError);
+                //DTO.Rows.Add("0", "Seleccione un Valor");
+                comboBox7.DataSource = DTO;
+                comboBox7.DisplayMember = DTO.Columns[0].ToString();
+                comboBox7.ValueMember = DTO.Columns[0].ToString();
+                comboBox7.SelectedValue = TransC_ObjDAL.iIdNumOrden.ToString();
+
+                //Combobox Articulo
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
+                DataTable DTA = new DataTable();
+                DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
+                comboBox6.DataSource = DTA;
+                comboBox6.DisplayMember = DTA.Columns[1].ToString();
+                comboBox6.ValueMember = DTA.Columns[0].ToString();
+                comboBox6.SelectedValue = TransC_ObjDAL.sIdArticulo;
+                //Combobox Proveedores
                 cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
+                DataTable DTP = new DataTable();
 
 
 
