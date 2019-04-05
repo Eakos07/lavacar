@@ -143,9 +143,14 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Transaccion());
         }
 
-        private void btnU_Click(object sender, EventArgs e)
+        
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Usuario());
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ajuste_Inventario());        }
     }
 }

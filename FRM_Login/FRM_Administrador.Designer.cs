@@ -499,6 +499,7 @@
             this.btnInventario.TabIndex = 10;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnUsuarios
             // 
@@ -515,6 +516,7 @@
             this.btnUsuarios.TabIndex = 9;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // FRM_Administrador
             // 

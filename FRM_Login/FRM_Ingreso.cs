@@ -87,8 +87,8 @@ namespace FRM_Login
                 if (txtUsuarioLogin.Text == "Admin")
                 {
                     MessageBox.Show("Validación Exitosa");
-                    Menu.FRM_Administrador pantalla = new Menu.FRM_Administrador();
-                    pantalla.ShowDialog();
+                    
+                    
                     
                 }
                 
