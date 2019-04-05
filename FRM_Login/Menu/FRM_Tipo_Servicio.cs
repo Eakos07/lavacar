@@ -28,7 +28,7 @@ namespace FRM_Login.Menu
         {
             string sMsjError = String.Empty;
             DataTable DT_TipoServicio = new DataTable();
-            Obj_TipoServicio_DAL.cBandIM = 'I';
+            
             
             #region Cargar TipoVehiculo
             cls_TipoVehiculo_BLL Obj_TipoVehiculo_BLL = new cls_TipoVehiculo_BLL();
@@ -64,6 +64,7 @@ namespace FRM_Login.Menu
         private void FRM_Tipo_Servicio_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
+            Obj_TipoServicio_DAL.cBandIM = 'I';
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)

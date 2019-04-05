@@ -66,9 +66,17 @@ namespace FRM_Login.Menu
             DT_TipoPolizas = Obj_TipoPolizas_BLL.Listar_TipoPolizas(ref sMsjError);
             cmb_IdTipoPoliza.DataSource = DT_TipoPolizas;
             DT_TipoPolizas.Rows.Add("0", "Elija una opción");
-            cmb_IdTipoPoliza.DisplayMember = DT_TipoPolizas.Columns[1].ToString();
-            cmb_IdTipoPoliza.ValueMember = DT_TipoPolizas.Columns[0].ToString();
+            cmb_IdTipoPoliza.DisplayMember = DT_TipoPolizas.Columns[0].ToString();
+            cmb_IdTipoPoliza.ValueMember = DT_TipoPolizas.Columns[1].ToString();
             cmb_IdTipoPoliza.SelectedValue = "0";
+            #endregion
+
+            #region Cargar Centro Lavado
+            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            DataTable dt_Octopus = new DataTable();
+            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            txt_CeduJurid.Enabled = false;
+            
             #endregion
 
             txt_IdPoliza.Clear();
