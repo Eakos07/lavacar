@@ -120,11 +120,62 @@ namespace FRM_Login.Menu
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txtIdEsta.Enabled = false;
-            txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            if (dataGridView1.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txtIdEsta.Enabled = false;
+                txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
+
+        private void txtIdEsta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtIdEsta, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtIdEsta, "Solo puede digitar numeros");
+            }
+        }
+
+        private void txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txt_Nombre, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txt_Nombre, "Solo puede digitar letras");
+            }
+        }
+
+        private void txtDescEstados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(txtDescEstados, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(txtDescEstados, "Solo puede digitar letras");
+            }
         }
     }
 }

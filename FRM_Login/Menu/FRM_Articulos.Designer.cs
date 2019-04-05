@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Articulos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_Tipo_Articulo = new System.Windows.Forms.ComboBox();
@@ -115,6 +116,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -131,6 +133,7 @@
             this.toolStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -172,6 +175,7 @@
             this.cmb_Tipo_Articulo.Name = "cmb_Tipo_Articulo";
             this.cmb_Tipo_Articulo.Size = new System.Drawing.Size(184, 28);
             this.cmb_Tipo_Articulo.TabIndex = 7;
+            this.cmb_Tipo_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_Tipo_Articulo_KeyPress);
             // 
             // cmb_IdFamilia_Articulo
             // 
@@ -181,6 +185,7 @@
             this.cmb_IdFamilia_Articulo.Name = "cmb_IdFamilia_Articulo";
             this.cmb_IdFamilia_Articulo.Size = new System.Drawing.Size(184, 28);
             this.cmb_IdFamilia_Articulo.TabIndex = 4;
+            this.cmb_IdFamilia_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdFamilia_Articulo_KeyPress);
             // 
             // cmb_Estado_Articulos
             // 
@@ -190,6 +195,7 @@
             this.cmb_Estado_Articulos.Name = "cmb_Estado_Articulos";
             this.cmb_Estado_Articulos.Size = new System.Drawing.Size(184, 28);
             this.cmb_Estado_Articulos.TabIndex = 5;
+            this.cmb_Estado_Articulos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_Estado_Articulos_KeyPress);
             // 
             // txt_InventarioMin_Articulo
             // 
@@ -200,6 +206,7 @@
             this.txt_InventarioMin_Articulo.Name = "txt_InventarioMin_Articulo";
             this.txt_InventarioMin_Articulo.Size = new System.Drawing.Size(184, 32);
             this.txt_InventarioMin_Articulo.TabIndex = 6;
+            this.txt_InventarioMin_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InventarioMin_Articulo_KeyPress);
             // 
             // txt_Cantidad_Articulo
             // 
@@ -210,6 +217,7 @@
             this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
             this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(184, 32);
             this.txt_Cantidad_Articulo.TabIndex = 3;
+            this.txt_Cantidad_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cantidad_Articulo_KeyPress);
             // 
             // txt_PrecioVenta_Articulo
             // 
@@ -220,6 +228,7 @@
             this.txt_PrecioVenta_Articulo.Name = "txt_PrecioVenta_Articulo";
             this.txt_PrecioVenta_Articulo.Size = new System.Drawing.Size(184, 32);
             this.txt_PrecioVenta_Articulo.TabIndex = 8;
+            this.txt_PrecioVenta_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PrecioVenta_Articulo_KeyPress);
             // 
             // txt_NombreArticulo
             // 
@@ -230,6 +239,7 @@
             this.txt_NombreArticulo.Name = "txt_NombreArticulo";
             this.txt_NombreArticulo.Size = new System.Drawing.Size(184, 32);
             this.txt_NombreArticulo.TabIndex = 2;
+            this.txt_NombreArticulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NombreArticulo_KeyPress);
             // 
             // txt_Articulo
             // 
@@ -240,6 +250,7 @@
             this.txt_Articulo.Name = "txt_Articulo";
             this.txt_Articulo.Size = new System.Drawing.Size(184, 32);
             this.txt_Articulo.TabIndex = 1;
+            this.txt_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Articulo_KeyPress);
             // 
             // button2
             // 
@@ -685,10 +696,11 @@
             // txt_IdFamilia
             // 
             this.txt_IdFamilia.Location = new System.Drawing.Point(163, 58);
-            this.txt_IdFamilia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IdFamilia.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IdFamilia.Name = "txt_IdFamilia";
             this.txt_IdFamilia.Size = new System.Drawing.Size(236, 27);
             this.txt_IdFamilia.TabIndex = 0;
+            this.txt_IdFamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdFamilia_KeyPress);
             // 
             // button3
             // 
@@ -726,6 +738,7 @@
             this.txt_DescripcionFamilia.Name = "txt_DescripcionFamilia";
             this.txt_DescripcionFamilia.Size = new System.Drawing.Size(236, 27);
             this.txt_DescripcionFamilia.TabIndex = 1;
+            this.txt_DescripcionFamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DescripcionFamilia_KeyPress);
             // 
             // cmb_IdEstadoFamilia
             // 
@@ -735,6 +748,7 @@
             this.cmb_IdEstadoFamilia.Name = "cmb_IdEstadoFamilia";
             this.cmb_IdEstadoFamilia.Size = new System.Drawing.Size(236, 28);
             this.cmb_IdEstadoFamilia.TabIndex = 2;
+            this.cmb_IdEstadoFamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstadoFamilia_KeyPress);
             // 
             // label9
             // 
@@ -936,10 +950,11 @@
             // txt_IdTipoArticulo
             // 
             this.txt_IdTipoArticulo.Location = new System.Drawing.Point(269, 50);
-            this.txt_IdTipoArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IdTipoArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IdTipoArticulo.Name = "txt_IdTipoArticulo";
             this.txt_IdTipoArticulo.Size = new System.Drawing.Size(199, 27);
             this.txt_IdTipoArticulo.TabIndex = 0;
+            this.txt_IdTipoArticulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdTipoArticulo_KeyPress);
             // 
             // cmb_EstadoTipoArticulo
             // 
@@ -949,6 +964,7 @@
             this.cmb_EstadoTipoArticulo.Name = "cmb_EstadoTipoArticulo";
             this.cmb_EstadoTipoArticulo.Size = new System.Drawing.Size(199, 28);
             this.cmb_EstadoTipoArticulo.TabIndex = 2;
+            this.cmb_EstadoTipoArticulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_EstadoTipoArticulo_KeyPress);
             // 
             // txt_DescripcionTipoArticulo
             // 
@@ -959,6 +975,7 @@
             this.txt_DescripcionTipoArticulo.Name = "txt_DescripcionTipoArticulo";
             this.txt_DescripcionTipoArticulo.Size = new System.Drawing.Size(199, 32);
             this.txt_DescripcionTipoArticulo.TabIndex = 1;
+            this.txt_DescripcionTipoArticulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_DescripcionTipoArticulo_KeyPress);
             // 
             // button5
             // 
@@ -1019,6 +1036,10 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Id Tipo Artículo:";
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // FRM_Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1056,6 +1077,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1148,5 +1170,6 @@
         private System.Windows.Forms.TextBox txt_IdFamilia;
         private System.Windows.Forms.ToolStripButton btn_Refrescar_TipoArticulos;
         private System.Windows.Forms.TextBox txt_IdTipoArticulo;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

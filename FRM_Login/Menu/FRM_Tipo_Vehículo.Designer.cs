@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Tipo_Vehículo));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -40,24 +41,26 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltTipVehicul = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_TipoVehiculo = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_TipoVehiculo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Descrip = new System.Windows.Forms.TextBox();
-            this.cmb_IdTipVehiculo = new System.Windows.Forms.ComboBox();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoVehiculo)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_TipoVehiculo);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(7, 286);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -101,6 +104,7 @@
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -121,6 +125,7 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -142,25 +147,30 @@
             // 
             this.txt_FiltTipVehicul.Name = "txt_FiltTipVehicul";
             this.txt_FiltTipVehicul.Size = new System.Drawing.Size(100, 27);
-            this.txt_FiltTipVehicul.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            this.txt_FiltTipVehicul.TextChanged += new System.EventHandler(this.txt_FiltTipVehicul_TextChanged);
             // 
-            // dataGridView1
+            // dgv_TipoVehiculo
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1041, 341);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_TipoVehiculo.AllowUserToAddRows = false;
+            this.dgv_TipoVehiculo.AllowUserToDeleteRows = false;
+            this.dgv_TipoVehiculo.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_TipoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TipoVehiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_TipoVehiculo.Location = new System.Drawing.Point(5, 63);
+            this.dgv_TipoVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_TipoVehiculo.Name = "dgv_TipoVehiculo";
+            this.dgv_TipoVehiculo.RowTemplate.Height = 24;
+            this.dgv_TipoVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_TipoVehiculo.Size = new System.Drawing.Size(1041, 341);
+            this.dgv_TipoVehiculo.TabIndex = 0;
+            this.dgv_TipoVehiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoVehiculo_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txt_TipoVehiculo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_Descrip);
-            this.groupBox1.Controls.Add(this.cmb_IdTipVehiculo);
             this.groupBox1.Controls.Add(this.btn_Salir);
             this.groupBox1.Controls.Add(this.btn_Save);
             this.groupBox1.Controls.Add(this.label6);
@@ -173,6 +183,17 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Vehículo";
+            // 
+            // txt_TipoVehiculo
+            // 
+            this.txt_TipoVehiculo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TipoVehiculo.Location = new System.Drawing.Point(317, 50);
+            this.txt_TipoVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_TipoVehiculo.Multiline = true;
+            this.txt_TipoVehiculo.Name = "txt_TipoVehiculo";
+            this.txt_TipoVehiculo.Size = new System.Drawing.Size(199, 32);
+            this.txt_TipoVehiculo.TabIndex = 30;
+            this.txt_TipoVehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TipoVehiculo_KeyPress);
             // 
             // label1
             // 
@@ -193,15 +214,7 @@
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(199, 32);
             this.txt_Descrip.TabIndex = 1;
-            // 
-            // cmb_IdTipVehiculo
-            // 
-            this.cmb_IdTipVehiculo.FormattingEnabled = true;
-            this.cmb_IdTipVehiculo.Location = new System.Drawing.Point(317, 43);
-            this.cmb_IdTipVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmb_IdTipVehiculo.Name = "cmb_IdTipVehiculo";
-            this.cmb_IdTipVehiculo.Size = new System.Drawing.Size(199, 29);
-            this.cmb_IdTipVehiculo.TabIndex = 0;
+            this.txt_Descrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Descrip_KeyPress);
             // 
             // btn_Salir
             // 
@@ -216,6 +229,7 @@
             this.btn_Salir.TabIndex = 3;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // btn_Save
             // 
@@ -230,6 +244,7 @@
             this.btn_Save.TabIndex = 2;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // label6
             // 
@@ -240,6 +255,10 @@
             this.label6.Size = new System.Drawing.Size(148, 21);
             this.label6.TabIndex = 9;
             this.label6.Text = "Id Tipo Vehículo:";
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
             // 
             // FRM_Tipo_Vehículo
             // 
@@ -258,9 +277,10 @@
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoVehiculo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,13 +298,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltTipVehicul;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_TipoVehiculo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Descrip;
-        private System.Windows.Forms.ComboBox cmb_IdTipVehiculo;
         private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_TipoVehiculo;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

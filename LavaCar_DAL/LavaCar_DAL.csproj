@@ -43,7 +43,9 @@
     <Compile Include="Cat_Mant\cls_AjustesInventario_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Articulos_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Centro_de_Lavado_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Citas_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Clientes_DAL.cs" />
+    <Compile Include="Cat_Mant\cls_Empleados_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Estados_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Factura_DAL.cs" />
     <Compile Include="Cat_Mant\cls_FamiliaArticulos_DAL.cs" />

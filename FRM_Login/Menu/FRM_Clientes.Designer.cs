@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Clientes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_NumVisitas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Exit = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnAceptarClientes = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTipoPlacaVehiculo = new System.Windows.Forms.ComboBox();
             this.cmbTipoVehiculo = new System.Windows.Forms.ComboBox();
-            this.txtPlacaVehiculo = new System.Windows.Forms.TextBox();
+            this.txt_NumPlaca = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btn_RefrescarClientes = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_ModificarClientes = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPlaca = new System.Windows.Forms.ToolStripTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,14 +66,14 @@
             this.groupBox1.Controls.Add(this.txt_NumVisitas);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btn_Exit);
-            this.groupBox1.Controls.Add(this.btnAceptar);
+            this.groupBox1.Controls.Add(this.btnAceptarClientes);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbTipoPlacaVehiculo);
             this.groupBox1.Controls.Add(this.cmbTipoVehiculo);
-            this.groupBox1.Controls.Add(this.txtPlacaVehiculo);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox1.Controls.Add(this.txt_NumPlaca);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(7, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -85,15 +88,16 @@
             this.txt_NumVisitas.Location = new System.Drawing.Point(719, 23);
             this.txt_NumVisitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_NumVisitas.Name = "txt_NumVisitas";
-            this.txt_NumVisitas.Size = new System.Drawing.Size(183, 28);
+            this.txt_NumVisitas.Size = new System.Drawing.Size(183, 27);
             this.txt_NumVisitas.TabIndex = 3;
+            this.txt_NumVisitas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumVisitas_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(560, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 21);
+            this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Numero Visitas:";
             // 
@@ -112,36 +116,36 @@
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnAceptar
+            // btnAceptarClientes
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Aqua;
-            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(719, 201);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(153, 37);
-            this.btnAceptar.TabIndex = 4;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptarClientes.BackColor = System.Drawing.Color.Aqua;
+            this.btnAceptarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarClientes.Location = new System.Drawing.Point(719, 201);
+            this.btnAceptarClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptarClientes.Name = "btnAceptarClientes";
+            this.btnAceptarClientes.Size = new System.Drawing.Size(153, 37);
+            this.btnAceptarClientes.TabIndex = 4;
+            this.btnAceptarClientes.Text = "Aceptar";
+            this.btnAceptarClientes.UseVisualStyleBackColor = false;
+            this.btnAceptarClientes.Click += new System.EventHandler(this.btnAceptarClientes_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 21);
+            this.label3.Size = new System.Drawing.Size(133, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Id Tipo placa de Vehículo";
+            this.label3.Text = "Id Tipo  Vehículo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 21);
+            this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Id Tipo Placa:";
             // 
@@ -150,41 +154,44 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 21);
+            this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Número de Placa:";
             // 
             // cmbTipoPlacaVehiculo
             // 
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
-            this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(275, 143);
+            this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(275, 79);
             this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTipoPlacaVehiculo.Name = "cmbTipoPlacaVehiculo";
-            this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(183, 29);
+            this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(183, 28);
             this.cmbTipoPlacaVehiculo.TabIndex = 2;
+            this.cmbTipoPlacaVehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoPlacaVehiculo_KeyPress);
             // 
             // cmbTipoVehiculo
             // 
             this.cmbTipoVehiculo.FormattingEnabled = true;
-            this.cmbTipoVehiculo.Location = new System.Drawing.Point(275, 79);
+            this.cmbTipoVehiculo.Location = new System.Drawing.Point(275, 143);
             this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
-            this.cmbTipoVehiculo.Size = new System.Drawing.Size(183, 29);
+            this.cmbTipoVehiculo.Size = new System.Drawing.Size(183, 28);
             this.cmbTipoVehiculo.TabIndex = 1;
+            this.cmbTipoVehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoVehiculo_KeyPress);
             // 
-            // txtPlacaVehiculo
+            // txt_NumPlaca
             // 
-            this.txtPlacaVehiculo.Location = new System.Drawing.Point(275, 23);
-            this.txtPlacaVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPlacaVehiculo.Name = "txtPlacaVehiculo";
-            this.txtPlacaVehiculo.Size = new System.Drawing.Size(183, 28);
-            this.txtPlacaVehiculo.TabIndex = 0;
+            this.txt_NumPlaca.Location = new System.Drawing.Point(275, 23);
+            this.txt_NumPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_NumPlaca.Name = "txt_NumPlaca";
+            this.txt_NumPlaca.Size = new System.Drawing.Size(183, 27);
+            this.txt_NumPlaca.TabIndex = 0;
+            this.txt_NumPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumPlaca_KeyPress);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(7, 292);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -198,20 +205,29 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_RefrescarClientes,
             this.toolStripLabel1,
-            this.btn_Refrescar,
             this.toolStripSeparator1,
+            this.btn_ModificarClientes,
             this.toolStripLabel2,
-            this.btn_Modificar,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_FiltrarPlaca});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 23);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 22);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1050, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btn_RefrescarClientes
+            // 
+            this.btn_RefrescarClientes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_RefrescarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btn_RefrescarClientes.Image")));
+            this.btn_RefrescarClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_RefrescarClientes.Name = "btn_RefrescarClientes";
+            this.btn_RefrescarClientes.Size = new System.Drawing.Size(24, 24);
+            this.btn_RefrescarClientes.Text = "toolStripButton1";
             // 
             // toolStripLabel1
             // 
@@ -219,34 +235,25 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(70, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
-            // btn_Refrescar
-            // 
-            this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_Refrescar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar.Image")));
-            this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Refrescar.Name = "btn_Refrescar";
-            this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // btn_ModificarClientes
+            // 
+            this.btn_ModificarClientes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_ModificarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btn_ModificarClientes.Image")));
+            this.btn_ModificarClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_ModificarClientes.Name = "btn_ModificarClientes";
+            this.btn_ModificarClientes.Size = new System.Drawing.Size(24, 24);
+            this.btn_ModificarClientes.Text = "toolStripButton2";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(73, 24);
             this.toolStripLabel2.Text = "Modificar";
-            // 
-            // btn_Modificar
-            // 
-            this.btn_Modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_Modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar.Image")));
-            this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "toolStripButton2";
             // 
             // toolStripSeparator2
             // 
@@ -280,6 +287,11 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1041, 335);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
             // 
             // FRM_Clientes
             // 
@@ -301,6 +313,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,24 +324,25 @@
         private System.Windows.Forms.TextBox txt_NumVisitas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Exit;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnAceptarClientes;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTipoPlacaVehiculo;
         private System.Windows.Forms.ComboBox cmbTipoVehiculo;
-        private System.Windows.Forms.TextBox txtPlacaVehiculo;
+        private System.Windows.Forms.TextBox txt_NumPlaca;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btn_Refrescar;
+        private System.Windows.Forms.ToolStripButton btn_RefrescarClientes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton btn_Modificar;
+        private System.Windows.Forms.ToolStripButton btn_ModificarClientes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarPlaca;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

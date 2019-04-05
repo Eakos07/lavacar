@@ -48,5 +48,47 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_TipoFactura();
         }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox1, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox1, "Solo puede digitar letras");
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox4, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox4, "Solo puede digitar letras");
+            }
+        }
     }
 }

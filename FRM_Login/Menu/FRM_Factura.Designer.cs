@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Factura));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_Facturas = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarFacturas = new System.Windows.Forms.ToolStripTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_CedJuri = new System.Windows.Forms.ComboBox();
+            this.cmb_CodServ = new System.Windows.Forms.ComboBox();
+            this.cmb_NumPlaca = new System.Windows.Forms.ComboBox();
             this.cmb_IdTipCamb = new System.Windows.Forms.ComboBox();
             this.txt_NumFact = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -49,9 +53,6 @@
             this.txt_MontoTotal = new System.Windows.Forms.TextBox();
             this.txt_Descuent = new System.Windows.Forms.TextBox();
             this.txt_MontoNeto = new System.Windows.Forms.TextBox();
-            this.txt_CedJurid = new System.Windows.Forms.TextBox();
-            this.txt_CodServ = new System.Windows.Forms.TextBox();
-            this.txt_NumPlac = new System.Windows.Forms.TextBox();
             this.cmb_IdTipFactu = new System.Windows.Forms.ComboBox();
             this.cmb_IdPromo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,10 +65,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Facturas)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -99,11 +102,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
             this.btn_Refrescar,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
             this.toolStripLabel4,
@@ -114,12 +117,6 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(70, 24);
-            this.toolStripLabel1.Text = "Refrescar";
-            // 
             // btn_Refrescar
             // 
             this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -129,16 +126,16 @@
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(70, 24);
+            this.toolStripLabel1.Text = "Refrescar";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(73, 24);
-            this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar
             // 
@@ -148,6 +145,12 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(73, 24);
+            this.toolStripLabel2.Text = "Modificar";
             // 
             // toolStripSeparator2
             // 
@@ -173,6 +176,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_CedJuri);
+            this.groupBox1.Controls.Add(this.cmb_CodServ);
+            this.groupBox1.Controls.Add(this.cmb_NumPlaca);
             this.groupBox1.Controls.Add(this.cmb_IdTipCamb);
             this.groupBox1.Controls.Add(this.txt_NumFact);
             this.groupBox1.Controls.Add(this.btn_Exit);
@@ -180,9 +186,6 @@
             this.groupBox1.Controls.Add(this.txt_MontoTotal);
             this.groupBox1.Controls.Add(this.txt_Descuent);
             this.groupBox1.Controls.Add(this.txt_MontoNeto);
-            this.groupBox1.Controls.Add(this.txt_CedJurid);
-            this.groupBox1.Controls.Add(this.txt_CodServ);
-            this.groupBox1.Controls.Add(this.txt_NumPlac);
             this.groupBox1.Controls.Add(this.cmb_IdTipFactu);
             this.groupBox1.Controls.Add(this.cmb_IdPromo);
             this.groupBox1.Controls.Add(this.label10);
@@ -205,6 +208,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Facturación";
             // 
+            // cmb_CedJuri
+            // 
+            this.cmb_CedJuri.FormattingEnabled = true;
+            this.cmb_CedJuri.Location = new System.Drawing.Point(191, 240);
+            this.cmb_CedJuri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_CedJuri.Name = "cmb_CedJuri";
+            this.cmb_CedJuri.Size = new System.Drawing.Size(211, 28);
+            this.cmb_CedJuri.TabIndex = 14;
+            this.cmb_CedJuri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_CedJuri_KeyPress);
+            // 
+            // cmb_CodServ
+            // 
+            this.cmb_CodServ.FormattingEnabled = true;
+            this.cmb_CodServ.Location = new System.Drawing.Point(191, 138);
+            this.cmb_CodServ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_CodServ.Name = "cmb_CodServ";
+            this.cmb_CodServ.Size = new System.Drawing.Size(211, 28);
+            this.cmb_CodServ.TabIndex = 13;
+            this.cmb_CodServ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_CodServ_KeyPress);
+            // 
+            // cmb_NumPlaca
+            // 
+            this.cmb_NumPlaca.FormattingEnabled = true;
+            this.cmb_NumPlaca.Location = new System.Drawing.Point(191, 89);
+            this.cmb_NumPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_NumPlaca.Name = "cmb_NumPlaca";
+            this.cmb_NumPlaca.Size = new System.Drawing.Size(211, 28);
+            this.cmb_NumPlaca.TabIndex = 12;
+            this.cmb_NumPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_NumPlaca_KeyPress);
+            // 
             // cmb_IdTipCamb
             // 
             this.cmb_IdTipCamb.FormattingEnabled = true;
@@ -213,6 +246,7 @@
             this.cmb_IdTipCamb.Name = "cmb_IdTipCamb";
             this.cmb_IdTipCamb.Size = new System.Drawing.Size(211, 28);
             this.cmb_IdTipCamb.TabIndex = 3;
+            this.cmb_IdTipCamb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdTipCamb_KeyPress);
             // 
             // txt_NumFact
             // 
@@ -221,6 +255,7 @@
             this.txt_NumFact.Name = "txt_NumFact";
             this.txt_NumFact.Size = new System.Drawing.Size(209, 27);
             this.txt_NumFact.TabIndex = 0;
+            this.txt_NumFact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumFact_KeyPress);
             // 
             // btn_Exit
             // 
@@ -249,6 +284,7 @@
             this.btn_Save.TabIndex = 10;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_MontoTotal
             // 
@@ -257,6 +293,7 @@
             this.txt_MontoTotal.Name = "txt_MontoTotal";
             this.txt_MontoTotal.Size = new System.Drawing.Size(211, 27);
             this.txt_MontoTotal.TabIndex = 7;
+            this.txt_MontoTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MontoTotal_KeyPress);
             // 
             // txt_Descuent
             // 
@@ -265,6 +302,7 @@
             this.txt_Descuent.Name = "txt_Descuent";
             this.txt_Descuent.Size = new System.Drawing.Size(211, 27);
             this.txt_Descuent.TabIndex = 6;
+            this.txt_Descuent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Descuent_KeyPress);
             // 
             // txt_MontoNeto
             // 
@@ -273,30 +311,7 @@
             this.txt_MontoNeto.Name = "txt_MontoNeto";
             this.txt_MontoNeto.Size = new System.Drawing.Size(211, 27);
             this.txt_MontoNeto.TabIndex = 5;
-            // 
-            // txt_CedJurid
-            // 
-            this.txt_CedJurid.Location = new System.Drawing.Point(191, 241);
-            this.txt_CedJurid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_CedJurid.Name = "txt_CedJurid";
-            this.txt_CedJurid.Size = new System.Drawing.Size(209, 27);
-            this.txt_CedJurid.TabIndex = 4;
-            // 
-            // txt_CodServ
-            // 
-            this.txt_CodServ.Location = new System.Drawing.Point(189, 139);
-            this.txt_CodServ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_CodServ.Name = "txt_CodServ";
-            this.txt_CodServ.Size = new System.Drawing.Size(211, 27);
-            this.txt_CodServ.TabIndex = 2;
-            // 
-            // txt_NumPlac
-            // 
-            this.txt_NumPlac.Location = new System.Drawing.Point(191, 89);
-            this.txt_NumPlac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_NumPlac.Name = "txt_NumPlac";
-            this.txt_NumPlac.Size = new System.Drawing.Size(209, 27);
-            this.txt_NumPlac.TabIndex = 1;
+            this.txt_MontoNeto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MontoNeto_KeyPress);
             // 
             // cmb_IdTipFactu
             // 
@@ -306,6 +321,7 @@
             this.cmb_IdTipFactu.Name = "cmb_IdTipFactu";
             this.cmb_IdTipFactu.Size = new System.Drawing.Size(211, 28);
             this.cmb_IdTipFactu.TabIndex = 9;
+            this.cmb_IdTipFactu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdTipFactu_KeyPress);
             // 
             // cmb_IdPromo
             // 
@@ -315,6 +331,7 @@
             this.cmb_IdPromo.Name = "cmb_IdPromo";
             this.cmb_IdPromo.Size = new System.Drawing.Size(211, 28);
             this.cmb_IdPromo.TabIndex = 8;
+            this.cmb_IdPromo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdPromo_KeyPress);
             // 
             // label10
             // 
@@ -406,6 +423,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Número Factura:";
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // FRM_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -426,6 +447,7 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,9 +474,6 @@
         private System.Windows.Forms.TextBox txt_MontoTotal;
         private System.Windows.Forms.TextBox txt_Descuent;
         private System.Windows.Forms.TextBox txt_MontoNeto;
-        private System.Windows.Forms.TextBox txt_CedJurid;
-        private System.Windows.Forms.TextBox txt_CodServ;
-        private System.Windows.Forms.TextBox txt_NumPlac;
         private System.Windows.Forms.ComboBox cmb_IdTipFactu;
         private System.Windows.Forms.ComboBox cmb_IdPromo;
         private System.Windows.Forms.Label label10;
@@ -467,5 +486,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmb_CedJuri;
+        private System.Windows.Forms.ComboBox cmb_CodServ;
+        private System.Windows.Forms.ComboBox cmb_NumPlaca;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

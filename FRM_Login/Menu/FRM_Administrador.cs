@@ -51,7 +51,10 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Marcas());
         }
 
-        
+        private void btnSupervisor_Click(object sender, EventArgs e)
+        {
+            //AbrirVentana(new FRM_Supervisor());
+        }
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
@@ -143,12 +146,14 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Transaccion());
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que deseas salir de la aplicación?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            AbrirVentana(new FRM_Usuario());
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ordenes___de_Compras()); //
         }
     }
 }

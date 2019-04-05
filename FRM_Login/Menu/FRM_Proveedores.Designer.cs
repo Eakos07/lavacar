@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Proveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_IdProveedor = new System.Windows.Forms.TextBox();
@@ -56,10 +57,12 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarProveedores = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,10 +95,12 @@
             // txt_IdProveedor
             // 
             this.txt_IdProveedor.Location = new System.Drawing.Point(273, 38);
-            this.txt_IdProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IdProveedor.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_IdProveedor.MaxLength = 5;
             this.txt_IdProveedor.Name = "txt_IdProveedor";
             this.txt_IdProveedor.Size = new System.Drawing.Size(221, 27);
             this.txt_IdProveedor.TabIndex = 33;
+            this.txt_IdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdProveedor_KeyPress);
             // 
             // label1
             // 
@@ -115,6 +120,7 @@
             this.cmb_IdEstadoProveedor.Name = "cmb_IdEstadoProveedor";
             this.cmb_IdEstadoProveedor.Size = new System.Drawing.Size(221, 28);
             this.cmb_IdEstadoProveedor.TabIndex = 5;
+            this.cmb_IdEstadoProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstadoProveedor_KeyPress);
             // 
             // btnSalir
             // 
@@ -160,20 +166,23 @@
             this.txtTelefoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoProveedor.Location = new System.Drawing.Point(753, 34);
             this.txtTelefoProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTelefoProveedor.Multiline = true;
+            this.txtTelefoProveedor.MaxLength = 9;
             this.txtTelefoProveedor.Name = "txtTelefoProveedor";
-            this.txtTelefoProveedor.Size = new System.Drawing.Size(221, 30);
+            this.txtTelefoProveedor.Size = new System.Drawing.Size(221, 27);
             this.txtTelefoProveedor.TabIndex = 3;
+            this.txtTelefoProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefoProveedor_KeyPress);
             // 
             // txtEmailProveedor
             // 
             this.txtEmailProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailProveedor.Location = new System.Drawing.Point(273, 137);
             this.txtEmailProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmailProveedor.MaxLength = 50;
             this.txtEmailProveedor.Multiline = true;
             this.txtEmailProveedor.Name = "txtEmailProveedor";
             this.txtEmailProveedor.Size = new System.Drawing.Size(221, 30);
             this.txtEmailProveedor.TabIndex = 2;
+            this.txtEmailProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmailProveedor_KeyPress);
             // 
             // label6
             // 
@@ -220,10 +229,12 @@
             this.txtNomProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomProveedor.Location = new System.Drawing.Point(273, 85);
             this.txtNomProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNomProveedor.MaxLength = 30;
             this.txtNomProveedor.Multiline = true;
             this.txtNomProveedor.Name = "txtNomProveedor";
             this.txtNomProveedor.Size = new System.Drawing.Size(221, 30);
             this.txtNomProveedor.TabIndex = 1;
+            this.txtNomProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomProveedor_KeyPress);
             // 
             // label2
             // 
@@ -344,6 +355,10 @@
             this.dgv_Proveedores.TabIndex = 0;
             this.dgv_Proveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Proveedores_CellDoubleClick);
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
             // FRM_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,6 +379,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,5 +413,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarProveedores;
         private System.Windows.Forms.DataGridView dgv_Proveedores;
         private System.Windows.Forms.TextBox txt_IdProveedor;
+        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }
