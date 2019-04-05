@@ -106,6 +106,19 @@ namespace FRM_Login.Menu
                 TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim());
                 TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim());
 
+                textBox8.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
+                textBox1.Text = TransC_ObjDAL.sDocumento;
+                textBox4.Text = TransC_ObjDAL.dtFecha.ToString();
+                textBox3.Text = TransC_ObjDAL.iCantidad.ToString();
+                textBox2.Text = TransC_ObjDAL.dMonto.ToString();
+
+                //Combo box
+                cls_Ordenes_Compra_BLL BLLOrden = new cls_Ordenes_Compra_BLL();
+                cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
+                cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
+
+
+
                 txt_FiltrarArticulos.Text = string.Empty;
                 CargarTransaccionesCompras();
             }
