@@ -8,11 +8,11 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Citas_DAL
     {
-        private int _iNumCita, _iTel, _iIdEstado, _iIdEmpleado;
-        private string _sMsjError, _sNombre, _sNumPlaca, _sEmail;
-        private char _cCodeServ;
+        private int _iNumCita, _iTel;
+        private string _sMsjError, _sNombre, _sNumPlaca, _sEmail, _sHoraCita;
+        private char _cCodeServ, _cBandIM;
         private DateTime _dtFechaCita;
-        private string _sHoraCita;
+        private byte _bIdEstado, _bIdEmpleado;
 
         public int iNumCita
         {
@@ -40,29 +40,29 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public int iIdEstado
+        public byte bIdEstado
         {
             get
             {
-                return _iIdEstado;
+                return _bIdEstado;
             }
 
             set
             {
-                _iIdEstado = value;
+                _bIdEstado = value;
             }
         }
 
-        public int iIdEmpleado
+        public byte bIdEmpleado
         {
             get
             {
-                return _iIdEmpleado;
+                return _bIdEmpleado;
             }
 
             set
             {
-                _iIdEmpleado = value;
+                _bIdEmpleado = value;
             }
         }
 
@@ -141,6 +141,20 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _dtFechaCita = value;
+            }
+        }
+
+        
+        public char cBandIM
+        {
+            get
+            {
+                return _cBandIM;
+            }
+
+            set
+            {
+                _cBandIM = value;
             }
         }
 

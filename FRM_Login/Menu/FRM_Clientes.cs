@@ -52,7 +52,7 @@ namespace FRM_Login.Menu
             this.Close();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnAceptarClientes_Click(object sender, EventArgs e)
         {
 
         }
