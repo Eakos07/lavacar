@@ -65,9 +65,9 @@
             this.groupBox2.Controls.Add(this.dgv_TipoServicio);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 232);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 333);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -77,11 +77,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
             this.btn_Refrescar,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripLabel4,
             this.txt_Filtrar});
@@ -150,7 +150,7 @@
             this.dgv_TipoServicio.BackgroundColor = System.Drawing.Color.White;
             this.dgv_TipoServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoServicio.Location = new System.Drawing.Point(4, 51);
-            this.dgv_TipoServicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TipoServicio.Name = "dgv_TipoServicio";
             this.dgv_TipoServicio.RowTemplate.Height = 24;
             this.dgv_TipoServicio.Size = new System.Drawing.Size(781, 277);
@@ -174,9 +174,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(5, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(790, 218);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -186,7 +186,7 @@
             // 
             this.txt_Duracion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Duracion.Location = new System.Drawing.Point(584, 24);
-            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Duracion.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Duracion.Multiline = true;
             this.txt_Duracion.Name = "txt_Duracion";
             this.txt_Duracion.Size = new System.Drawing.Size(150, 27);
@@ -207,7 +207,7 @@
             // 
             this.txt_Precio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Precio.Location = new System.Drawing.Point(190, 136);
-            this.txt_Precio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Precio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Precio.Multiline = true;
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(150, 27);
@@ -228,7 +228,7 @@
             // 
             this.txt_NombreServicio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NombreServicio.Location = new System.Drawing.Point(190, 79);
-            this.txt_NombreServicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NombreServicio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NombreServicio.Multiline = true;
             this.txt_NombreServicio.Name = "txt_NombreServicio";
             this.txt_NombreServicio.Size = new System.Drawing.Size(150, 27);
@@ -238,7 +238,7 @@
             // 
             this.cmb_IdTipoVehiculo.FormattingEnabled = true;
             this.cmb_IdTipoVehiculo.Location = new System.Drawing.Point(584, 79);
-            this.cmb_IdTipoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdTipoVehiculo.Name = "cmb_IdTipoVehiculo";
             this.cmb_IdTipoVehiculo.Size = new System.Drawing.Size(150, 27);
             this.cmb_IdTipoVehiculo.TabIndex = 4;
@@ -247,7 +247,7 @@
             // 
             this.txt_CodigoServicio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CodigoServicio.Location = new System.Drawing.Point(190, 24);
-            this.txt_CodigoServicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_CodigoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_CodigoServicio.Multiline = true;
             this.txt_CodigoServicio.Name = "txt_CodigoServicio";
             this.txt_CodigoServicio.Size = new System.Drawing.Size(150, 27);
@@ -260,7 +260,7 @@
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Location = new System.Drawing.Point(652, 170);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(110, 30);
             this.btn_Salir.TabIndex = 6;
@@ -274,7 +274,7 @@
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.Location = new System.Drawing.Point(490, 170);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar.TabIndex = 5;
@@ -324,7 +324,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Tipo_Servicio";
             this.Text = "FRM_Tipo_Servicio";
             this.Load += new System.EventHandler(this.FRM_Tipo_Servicio_Load);
