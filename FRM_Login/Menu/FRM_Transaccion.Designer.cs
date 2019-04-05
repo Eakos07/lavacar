@@ -84,7 +84,6 @@
             this.textBox6 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -98,6 +97,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.tcArticulos.SuspendLayout();
             this.tbTransacciones.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -622,10 +622,10 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Controls.Add(this.textBox6);
             this.groupBox3.Controls.Add(this.comboBox5);
             this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.comboBox3);
             this.groupBox3.Controls.Add(this.comboBox4);
             this.groupBox3.Controls.Add(this.textBox7);
@@ -679,16 +679,6 @@
             this.textBox5.Size = new System.Drawing.Size(139, 27);
             this.textBox5.TabIndex = 33;
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 31);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 25);
-            this.comboBox1.TabIndex = 31;
-            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // comboBox3
             // 
@@ -831,6 +821,16 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(209, 28);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(139, 27);
+            this.textBox9.TabIndex = 36;
+            // 
             // FRM_Transaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -918,7 +918,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.TextBox textBox7;
@@ -935,5 +934,6 @@
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.MaskedTextBox textBox4;
         private System.Windows.Forms.MaskedTextBox textBox6;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
