@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LavaCar_DAL.Cat_Mant;
+using LavaCar_BLL.Cat_Mant;
 
 namespace FRM_Login.Menu
 {
@@ -16,5 +18,7 @@ namespace FRM_Login.Menu
         {
             InitializeComponent();
         }
+
+
     }
 }

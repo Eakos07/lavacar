@@ -51,6 +51,11 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Marcas());
         }
 
+        private void btnSupervisor_Click(object sender, EventArgs e)
+        {
+            //AbrirVentana(new FRM_Supervisor());
+        }
+
         private void btnArticulos_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Articulos());
