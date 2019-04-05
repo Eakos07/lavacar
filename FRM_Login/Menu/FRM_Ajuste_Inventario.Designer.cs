@@ -47,7 +47,6 @@
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_Articulo = new System.Windows.Forms.ComboBox();
-            this.cmb_IdTransAjusteInve = new System.Windows.Forms.ComboBox();
             this.txt_Fecha = new System.Windows.Forms.TextBox();
             this.txt_Descrip = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,9 +68,9 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 232);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 333);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -129,6 +129,7 @@
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -156,7 +157,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 57);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(781, 264);
@@ -165,12 +166,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txt_Monto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_Cantidad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmb_Articulo);
-            this.groupBox1.Controls.Add(this.cmb_IdTransAjusteInve);
             this.groupBox1.Controls.Add(this.txt_Fecha);
             this.groupBox1.Controls.Add(this.txt_Descrip);
             this.groupBox1.Controls.Add(this.label5);
@@ -181,9 +182,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(5, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(790, 218);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -193,7 +194,7 @@
             // 
             this.txt_Monto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Monto.Location = new System.Drawing.Point(532, 77);
-            this.txt_Monto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Monto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Monto.Multiline = true;
             this.txt_Monto.Name = "txt_Monto";
             this.txt_Monto.Size = new System.Drawing.Size(150, 27);
@@ -214,7 +215,7 @@
             // 
             this.txt_Cantidad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cantidad.Location = new System.Drawing.Point(532, 34);
-            this.txt_Cantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Cantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Cantidad.Multiline = true;
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(150, 27);
@@ -235,25 +236,16 @@
             // 
             this.cmb_Articulo.FormattingEnabled = true;
             this.cmb_Articulo.Location = new System.Drawing.Point(242, 72);
-            this.cmb_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Articulo.Name = "cmb_Articulo";
             this.cmb_Articulo.Size = new System.Drawing.Size(150, 27);
             this.cmb_Articulo.TabIndex = 2;
-            // 
-            // cmb_IdTransAjusteInve
-            // 
-            this.cmb_IdTransAjusteInve.FormattingEnabled = true;
-            this.cmb_IdTransAjusteInve.Location = new System.Drawing.Point(242, 33);
-            this.cmb_IdTransAjusteInve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmb_IdTransAjusteInve.Name = "cmb_IdTransAjusteInve";
-            this.cmb_IdTransAjusteInve.Size = new System.Drawing.Size(150, 27);
-            this.cmb_IdTransAjusteInve.TabIndex = 0;
             // 
             // txt_Fecha
             // 
             this.txt_Fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Fecha.Location = new System.Drawing.Point(242, 153);
-            this.txt_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Fecha.Multiline = true;
             this.txt_Fecha.Name = "txt_Fecha";
             this.txt_Fecha.Size = new System.Drawing.Size(150, 27);
@@ -263,7 +255,7 @@
             // 
             this.txt_Descrip.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Descrip.Location = new System.Drawing.Point(242, 111);
-            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Descrip.Multiline = true;
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(150, 27);
@@ -287,12 +279,13 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(652, 170);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 7;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Save
             // 
@@ -301,7 +294,7 @@
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(490, 170);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 6;
@@ -341,6 +334,16 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Id Transaciones Ajuste Inventario:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(242, 33);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 27);
+            this.textBox1.TabIndex = 32;
+            // 
             // FRM_Ajuste_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,7 +353,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Ajuste_Inventario";
             this.Text = "FRM_Ajuste_Inventario";
             this.Load += new System.EventHandler(this.FRM_Ajuste_Inventario_Load);
@@ -385,7 +388,6 @@
         private System.Windows.Forms.TextBox txt_Cantidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmb_Articulo;
-        private System.Windows.Forms.ComboBox cmb_IdTransAjusteInve;
         private System.Windows.Forms.TextBox txt_Fecha;
         private System.Windows.Forms.TextBox txt_Descrip;
         private System.Windows.Forms.Label label5;
@@ -394,5 +396,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
