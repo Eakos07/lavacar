@@ -134,6 +134,11 @@ namespace FRM_Login.Menu
                 //Combobox Proveedores
                 cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
                 DataTable DTP = new DataTable();
+                DTP = BLLProveedores.Listar_Proveedores(ref sMsjError);
+                comboBox2.DataSource = DTP;
+                comboBox2.DisplayMember = DTP.Columns[1].ToString();
+                comboBox2.ValueMember = DTP.Columns[0].ToString();
+                comboBox2.SelectedValue = TransC_ObjDAL.bIdProveedor;
 
 
 
