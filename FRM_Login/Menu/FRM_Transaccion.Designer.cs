@@ -650,6 +650,7 @@
             this.textBox6.TabIndex = 35;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox6.ValidatingType = typeof(System.DateTime);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // comboBox5
             // 
@@ -670,6 +671,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(184, 32);
             this.textBox5.TabIndex = 33;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // comboBox1
             // 
@@ -710,6 +712,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(184, 32);
             this.textBox7.TabIndex = 22;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // button3
             // 

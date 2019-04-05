@@ -369,5 +369,53 @@ namespace FRM_Login.Menu
                 errorIcono.SetError(textBox2, "");
             }
         }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox6, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox6, "Solo puede digitar numeros ");
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox7, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox7, "Solo puede digitar numeros con (.)");
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox5, "");
+            }
+            else
+            {
+                e.Handled = true;
+                errorIcono.SetError(textBox5, "Solo puede digitar numeros con (.)");
+            }
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = false;
+                errorIcono.SetError(textBox5, "");
+            }
+        }
     }
 }
