@@ -19,6 +19,67 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
+        private void CargarTransaccionesCompras()
+        {
+            cls_TransaccionesCompra_BLL TransC_ObjBLL = new cls_TransaccionesCompra_BLL();
+            string sMsjError = string.Empty;
+            DataTable DT = new DataTable();
+            if (txt_FiltrarArticulos.Text == string.Empty)
+            {
+                DT = TransC_ObjBLL.ListarTransaccionesCompra(ref sMsjError);
+            }
+            else
+            {
+                DT = TransC_ObjBLL.FiltrarTransaccionesCompra(ref sMsjError,txt_FiltrarArticulos.Text.Trim());
+            }
 
+            if (sMsjError == string.Empty)
+            {
+                dgv_Articulos.DataSource = null;
+                dgv_Articulos.DataSource = DT;
+            }
+            else
+            {
+                dgv_Articulos.DataSource = null;
+
+                MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void CargarTransaccionesVentas()
+        {
+            cls_TransaccionesVenta_BLL TransV_ObjBLL = new cls_TransaccionesVenta_BLL();
+            string sMsjError = string.Empty;
+            DataTable DT = new DataTable();
+            if (toolStripTextBox1.Text == string.Empty)
+            {
+                DT = TransV_ObjBLL.ListarTransaccionesVenta(ref sMsjError);
+            }
+            else
+            {
+                DT = TransV_ObjBLL.FiltrarTransaccionesVenta(ref sMsjError, txt_FiltrarArticulos.Text.Trim());
+            }
+
+            if (sMsjError == string.Empty)
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = DT;
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+
+                MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void FRM_Transaccion_Load(object sender, EventArgs e)
+        {
+            CargarTransaccionesCompras();
+            CargarTransaccionesVentas();
+        }
     }
 }
