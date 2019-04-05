@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LavaCar_DAL.Cat_Mant;
+using LavaCar_BLL.Cat_Mant;
 
 namespace FRM_Login.Menu
 {
@@ -15,6 +17,35 @@ namespace FRM_Login.Menu
         public FRM_Empleados()
         {
             InitializeComponent();
+        }
+
+        private void CargarTransaccionesCompras()
+        {
+            cls_Empleados_BLL EmplC_ObjBLL = new cls_Empleados_BLL();
+            string sMsjError = string.Empty;
+            DataTable DT = new DataTable();
+            if (txt_Filtrar.Text == string.Empty)
+            {
+                DT = EmplC_ObjBLL.Listar_Empleados(ref sMsjError);
+            }
+            else
+            {
+                DT = EmplC_ObjBLL.Filtrar_Empleados(ref sMsjError, txt_Filtrar.Text.Trim());
+            }
+
+            if (sMsjError == string.Empty)
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = DT;
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+
+                MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
