@@ -364,7 +364,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 8;
             this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+           // this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pnlMenu2
             // 
@@ -542,7 +542,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+           // this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // FRM_Administrador
             // 
