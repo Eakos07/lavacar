@@ -9,7 +9,7 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_Usuarios_DAL
     {
         private string _sIdUsuario, _sContraseña;
-        private byte _bIdRole;
+        private byte _bIdRole, _bIdEstado;
         private char _cBandIM;
 
         #region Variables Publicas
@@ -62,6 +62,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _cBandIM = value;
+            }
+        }
+
+        public byte bIdEstado
+        {
+            get
+            {
+                return _bIdEstado;
+            }
+
+            set
+            {
+                _bIdEstado = value;
             }
         }
         #endregion
