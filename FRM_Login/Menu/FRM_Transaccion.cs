@@ -85,6 +85,7 @@ namespace FRM_Login.Menu
             CargarTransaccionesVentas();
         }
 
+        //Modifiicar Transacciones de Compra
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             if (dgv_Articulos.RowCount == 0)
@@ -105,7 +106,8 @@ namespace FRM_Login.Menu
                 TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim());
                 TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim());
 
-                
+                txt_FiltrarArticulos.Text = string.Empty;
+                CargarTransaccionesCompras();
             }
         }
     }
