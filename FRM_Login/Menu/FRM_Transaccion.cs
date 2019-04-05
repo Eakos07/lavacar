@@ -222,5 +222,15 @@ namespace FRM_Login.Menu
                 errorIcono.SetError(textBox8, "Solo puede digitar numeros ");
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            CargarTransaccionesCompras();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            CargarTransaccionesVentas();
+        }
     }
 }

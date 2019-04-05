@@ -109,6 +109,7 @@
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
