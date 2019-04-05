@@ -209,6 +209,7 @@ namespace FRM_Login.Menu
             }
         }
 
+        #region Validaciones
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
@@ -416,6 +417,18 @@ namespace FRM_Login.Menu
                 e.Handled = false;
                 errorIcono.SetError(textBox5, "");
             }
+        }
+
+        #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
