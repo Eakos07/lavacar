@@ -51,10 +51,7 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Marcas());
         }
 
-        private void btnSupervisor_Click(object sender, EventArgs e)
-        {
-            AbrirVentana(new FRM_Supervisor());
-        }
+        
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
@@ -144,6 +141,14 @@ namespace FRM_Login.Menu
         private void button19_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Transaccion());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que deseas salir de la aplicación?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

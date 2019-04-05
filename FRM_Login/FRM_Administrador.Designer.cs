@@ -100,7 +100,6 @@
             this.pnlMenu.Controls.Add(this.btnEmpleados);
             this.pnlMenu.Controls.Add(this.btnCompra);
             this.pnlMenu.Controls.Add(this.btnRoles);
-            this.pnlMenu.Controls.Add(this.btnTipoFactura);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 27);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -319,10 +318,10 @@
             this.btnTipoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoFactura.ForeColor = System.Drawing.Color.Black;
             this.btnTipoFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoFactura.Location = new System.Drawing.Point(3, 651);
+            this.btnTipoFactura.Location = new System.Drawing.Point(4, 2);
             this.btnTipoFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipoFactura.Name = "btnTipoFactura";
-            this.btnTipoFactura.Size = new System.Drawing.Size(179, 55);
+            this.btnTipoFactura.Size = new System.Drawing.Size(187, 55);
             this.btnTipoFactura.TabIndex = 11;
             this.btnTipoFactura.Text = "Tipo Factura";
             this.btnTipoFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -365,6 +364,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 8;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pnlMenu2
             // 
@@ -378,6 +378,7 @@
             this.pnlMenu2.Controls.Add(this.btnOctopus);
             this.pnlMenu2.Controls.Add(this.btnInventario);
             this.pnlMenu2.Controls.Add(this.btnUsuarios);
+            this.pnlMenu2.Controls.Add(this.btnTipoFactura);
             this.pnlMenu2.Location = new System.Drawing.Point(1269, 27);
             this.pnlMenu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMenu2.Name = "pnlMenu2";
@@ -392,7 +393,7 @@
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.Black;
             this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.Location = new System.Drawing.Point(1, 475);
+            this.button19.Location = new System.Drawing.Point(2, 534);
             this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(187, 55);
@@ -410,7 +411,7 @@
             this.btnTipoPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoPlaca.ForeColor = System.Drawing.Color.Black;
             this.btnTipoPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoPlaca.Location = new System.Drawing.Point(1, 416);
+            this.btnTipoPlaca.Location = new System.Drawing.Point(2, 475);
             this.btnTipoPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipoPlaca.Name = "btnTipoPlaca";
             this.btnTipoPlaca.Size = new System.Drawing.Size(187, 55);
@@ -428,7 +429,7 @@
             this.btnTipoVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoVehiculo.ForeColor = System.Drawing.Color.Black;
             this.btnTipoVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoVehiculo.Location = new System.Drawing.Point(1, 356);
+            this.btnTipoVehiculo.Location = new System.Drawing.Point(2, 415);
             this.btnTipoVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipoVehiculo.Name = "btnTipoVehiculo";
             this.btnTipoVehiculo.Size = new System.Drawing.Size(187, 55);
@@ -446,7 +447,7 @@
             this.btnTipoServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoServicio.ForeColor = System.Drawing.Color.Black;
             this.btnTipoServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoServicio.Location = new System.Drawing.Point(1, 297);
+            this.btnTipoServicio.Location = new System.Drawing.Point(2, 356);
             this.btnTipoServicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipoServicio.Name = "btnTipoServicio";
             this.btnTipoServicio.Size = new System.Drawing.Size(187, 55);
@@ -464,7 +465,7 @@
             this.btnTipoCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoCambio.ForeColor = System.Drawing.Color.Black;
             this.btnTipoCambio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoCambio.Location = new System.Drawing.Point(3, 238);
+            this.btnTipoCambio.Location = new System.Drawing.Point(4, 297);
             this.btnTipoCambio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipoCambio.Name = "btnTipoCambio";
             this.btnTipoCambio.Size = new System.Drawing.Size(187, 55);
@@ -482,7 +483,7 @@
             this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFactura.ForeColor = System.Drawing.Color.Black;
             this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFactura.Location = new System.Drawing.Point(3, 178);
+            this.btnFactura.Location = new System.Drawing.Point(4, 237);
             this.btnFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(187, 55);
@@ -500,7 +501,7 @@
             this.btnOctopus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOctopus.ForeColor = System.Drawing.Color.Black;
             this.btnOctopus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOctopus.Location = new System.Drawing.Point(3, 121);
+            this.btnOctopus.Location = new System.Drawing.Point(4, 180);
             this.btnOctopus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOctopus.Name = "btnOctopus";
             this.btnOctopus.Size = new System.Drawing.Size(187, 55);
@@ -517,7 +518,7 @@
             this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.Black;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(3, 62);
+            this.btnInventario.Location = new System.Drawing.Point(4, 121);
             this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(187, 55);
@@ -534,7 +535,7 @@
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(3, 2);
+            this.btnUsuarios.Location = new System.Drawing.Point(4, 61);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(187, 55);
