@@ -38,6 +38,7 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v12.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -63,10 +64,10 @@
     <Compile Include="FRM_Ingreso.Designer.cs">
       <DependentUpon>FRM_Ingreso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\FRM_Administrador.cs">
+    <Compile Include="FRM_Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\FRM_Administrador.Designer.cs">
+    <Compile Include="FRM_Administrador.Designer.cs">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\FRM_Ajuste_Inventario.cs">
@@ -227,7 +228,7 @@
     <EmbeddedResource Include="FRM_Ingreso.resx">
       <DependentUpon>FRM_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\FRM_Administrador.resx">
+    <EmbeddedResource Include="FRM_Administrador.resx">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Ajuste_Inventario.resx">

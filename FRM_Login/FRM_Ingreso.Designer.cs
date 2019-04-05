@@ -116,7 +116,7 @@
             // lLOlvido
             // 
             this.lLOlvido.AutoSize = true;
-            this.lLOlvido.Location = new System.Drawing.Point(356, 218);
+            this.lLOlvido.Location = new System.Drawing.Point(354, 213);
             this.lLOlvido.Name = "lLOlvido";
             this.lLOlvido.Size = new System.Drawing.Size(154, 17);
             this.lLOlvido.TabIndex = 3;
@@ -134,7 +134,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.Location = new System.Drawing.Point(359, 264);
+            this.btnIngresar.Location = new System.Drawing.Point(359, 278);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(272, 40);
             this.btnIngresar.TabIndex = 0;
