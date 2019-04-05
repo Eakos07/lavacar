@@ -13,6 +13,7 @@ namespace LavaCar_DAL.Cat_Mant
         private DateTime _dtFecha;
         private short _iCantidad;
         private decimal _dMonto;
+        private char _cBandera;
 
         public int iIdTransaccionAjusteInventario
         {
@@ -89,6 +90,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _dMonto = value;
+            }
+        }
+
+        public char cBandera
+        {
+            get
+            {
+                return _cBandera;
+            }
+
+            set
+            {
+                _cBandera = value;
             }
         }
     }

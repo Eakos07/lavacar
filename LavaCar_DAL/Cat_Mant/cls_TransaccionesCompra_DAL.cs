@@ -14,6 +14,7 @@ namespace LavaCar_DAL.Cat_Mant
         private short _iCantidad;
         private byte _bIdProveedor;
         private decimal _dMonto;
+        private char _cBandera;
 
         public string sIdArticulo
         {
@@ -116,6 +117,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _dMonto = value;
+            }
+        }
+
+        public char cBandera
+        {
+            get
+            {
+                return _cBandera;
+            }
+
+            set
+            {
+                _cBandera = value;
             }
         }
     }
