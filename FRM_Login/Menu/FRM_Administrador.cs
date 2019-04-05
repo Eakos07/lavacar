@@ -53,6 +53,7 @@ namespace FRM_Login.Menu
 
         private void btnSupervisor_Click(object sender, EventArgs e)
         {
+            //AbrirVentana(new FRM_Supervisor());
         }
 
         private void btnArticulos_Click(object sender, EventArgs e)
@@ -143,6 +144,16 @@ namespace FRM_Login.Menu
         private void button19_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Transaccion());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Usuario());
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ordenes___de_Compras()); //
         }
     }
 }
