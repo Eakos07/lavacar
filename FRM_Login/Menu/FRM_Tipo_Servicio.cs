@@ -85,7 +85,7 @@ namespace FRM_Login.Menu
                 Obj_TipoServicio_DAL.cCodServicio = Convert.ToChar(txt_CodigoServicio.Text);
                 Obj_TipoServicio_DAL.sNombreServicio = txt_NombreServicio.Text;
                 Obj_TipoServicio_DAL.dPrecio = Convert.ToDecimal(txt_Precio.Text);
-                Obj_TipoServicio_DAL.dtmDuracion = Convert.ToDateTime(txt_Duracion.Text);
+                Obj_TipoServicio_DAL.sDuracion = txt_Duracion.Text;
                 Obj_TipoServicio_DAL.bIdTipoVehiculo = Convert.ToByte(cmb_IdTipoVehiculo.SelectedValue);
                 string sMsjError = String.Empty;
 

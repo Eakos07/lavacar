@@ -750,7 +750,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Citas";
             this.Text = "FRM_Citas";
-//            this.Load += new System.EventHandler(this.FRM_Citas_Load);
+            this.Load += new System.EventHandler(this.FRM_Citas_Load);
             this.tcCitas.ResumeLayout(false);
             this.tbRegistroClientes.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

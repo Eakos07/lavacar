@@ -174,9 +174,9 @@ namespace FRM_Login.Menu
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_IdPoliza.Text) || cmb_IdTipoPoliza.SelectedValue.ToString() !="0" || 
-                !string.IsNullOrEmpty(txt_FechaVenci.Text) || cmb_IdEstado.SelectedValue.ToString() !="0" || 
-                !string.IsNullOrEmpty(txt_CeduJurid.Text))
+            if (!(string.IsNullOrEmpty(txt_IdPoliza.Text)) && cmb_IdTipoPoliza.SelectedValue.ToString() !="0" && 
+                !(string.IsNullOrEmpty(txt_FechaVenci.Text))&& cmb_IdEstado.SelectedValue.ToString() !="0" &&
+                !(string.IsNullOrEmpty(txt_CeduJurid.Text)))
             {
                 Obj_Polizas_DAL.sIdPoliza = txt_IdPoliza.Text;
                 Obj_Polizas_DAL.cIdTipoPoliza = Convert.ToChar(cmb_IdTipoPoliza.SelectedValue);
