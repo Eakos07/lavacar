@@ -76,5 +76,10 @@ namespace FRM_Login.Menu
 
         }
 
+        private void FRM_Transaccion_Load(object sender, EventArgs e)
+        {
+            CargarTransaccionesCompras();
+            CargarTransaccionesVentas();
+        }
     }
 }
