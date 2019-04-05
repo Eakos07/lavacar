@@ -150,5 +150,10 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Usuario());
         }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ordenes___de_Compras()); //
+        }
     }
 }
