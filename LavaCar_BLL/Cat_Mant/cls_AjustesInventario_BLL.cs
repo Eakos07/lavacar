@@ -78,10 +78,12 @@ namespace LavaCar_BLL.Cat_Mant
             {
                 sMsgError = string.Empty;
                 ObjDAL_AjusI.iIdTransaccionAjusteInventario = ObjDAL.iValorScalar;
+                ObjDAL_AjusI.cBandera = 'I';
             }
             else
             {
                 sMsgError = ObjDAL.sMsjError;
+                ObjDAL_AjusI.cBandera = 'U';
                 ObjDAL_AjusI.iIdTransaccionAjusteInventario= -1;
             }
 

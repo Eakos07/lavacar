@@ -125,12 +125,19 @@ namespace FRM_Login.Menu
 
         private void dgv_Roles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txt_IdRol.Enabled = false;
-            txt_IdRol.Text = dgv_Roles.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Nivel.Text = dgv_Roles.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            if (dgv_Roles.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdRol.Enabled = false;
+                txt_IdRol.Text = dgv_Roles.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Nivel.Text = dgv_Roles.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdEstado.SelectedValue = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
         }
     }
 }

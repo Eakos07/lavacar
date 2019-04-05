@@ -14,6 +14,7 @@ namespace LavaCar_DAL.Cat_Mant
         private short _iCantidad;
         private decimal _dMonto;
         private byte _bIdEstado;
+        private char _cBandera;
 
         public int iIdTransaccionVenta
         {
@@ -103,6 +104,19 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _bIdEstado = value;
+            }
+        }
+
+        public char cBandera
+        {
+            get
+            {
+                return _cBandera;
+            }
+
+            set
+            {
+                _cBandera = value;
             }
         }
     }

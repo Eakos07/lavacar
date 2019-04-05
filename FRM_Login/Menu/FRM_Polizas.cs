@@ -71,6 +71,14 @@ namespace FRM_Login.Menu
             cmb_IdTipoPoliza.SelectedValue = "0";
             #endregion
 
+            #region Cargar Centro Lavado
+            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            DataTable dt_Octopus = new DataTable();
+            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            
+            
+            #endregion
+
             txt_IdPoliza.Clear();
             txt_FechaVenci.Clear();
             txt_CeduJurid.Clear();
@@ -174,9 +182,9 @@ namespace FRM_Login.Menu
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_IdPoliza.Text) || cmb_IdTipoPoliza.SelectedValue.ToString() !="0" || 
-                !string.IsNullOrEmpty(txt_FechaVenci.Text) || cmb_IdEstado.SelectedValue.ToString() !="0" || 
-                !string.IsNullOrEmpty(txt_CeduJurid.Text))
+            if (!(string.IsNullOrEmpty(txt_IdPoliza.Text)) && cmb_IdTipoPoliza.SelectedValue.ToString() !="0" && 
+                !(string.IsNullOrEmpty(txt_FechaVenci.Text))&& cmb_IdEstado.SelectedValue.ToString() !="0" &&
+                !(string.IsNullOrEmpty(txt_CeduJurid.Text)))
             {
                 Obj_Polizas_DAL.sIdPoliza = txt_IdPoliza.Text;
                 Obj_Polizas_DAL.cIdTipoPoliza = Convert.ToChar(cmb_IdTipoPoliza.SelectedValue);

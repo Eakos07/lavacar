@@ -40,7 +40,7 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
             Obj_BLL.CrearParametros(ref Obj_DAL);
-            Obj_DAL.DT_Parametros.Rows.Add("@Nivel", 8, sFiltro);
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, sFiltro);
 
             Obj_DAL.sTableName = "Roles";
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Filtrar_Roles"].ToString().Trim();
@@ -66,7 +66,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@IdRole", 8, Obj_Roles_DAL.bIdRole.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Nivel", 8, Obj_Roles_DAL.bNivel.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 5, Obj_Roles_DAL.sDescripcion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_Roles_DAL.sDescripcion.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Roles_DAL.bIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Roles"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
@@ -81,7 +81,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@IdRole", 8, Obj_Roles_DAL.bIdRole.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Nivel", 8, Obj_Roles_DAL.bNivel.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 5, Obj_Roles_DAL.sDescripcion.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_Roles_DAL.sDescripcion.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Roles_DAL.bIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Roles"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
