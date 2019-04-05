@@ -82,10 +82,10 @@ namespace FRM_Login.Menu
         private void FRM_Transaccion_Load(object sender, EventArgs e)
         {
             CargarTransaccionesCompras();
-            CargarTransaccionesVentas();
+          //  CargarTransaccionesVentas();
         }
 
-        //Modifiicar Transacciones de Compra
+        //Modificar Transacciones de Compra
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             if (dgv_Articulos.RowCount == 0)
