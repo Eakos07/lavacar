@@ -31,15 +31,17 @@ namespace FRM_Login.Menu
         private void FRM_Citas_Load(object sender, EventArgs e)
         {
             CargarDatos_Clientes();
+            Cargar_Cmb_Clientes();
             CargarDatos_Citas();
+            Cargar_Cmb_Citas();
+            dtp_Fecha.MinDate = DateTime.Now;
         }
 
         #region Clientes
-        private void CargarDatos_Clientes()
+
+        public void Cargar_Cmb_Clientes()
         {
             string sMsjError = string.Empty;
-            DataTable dtClientes = new DataTable();
-            Obj_Clientes_DAL.cBandIM = 'I';
 
             #region Tipo Placa            
             cls_TipoPlaca_BLL Obj_TipoPlaca_BLL = new cls_TipoPlaca_BLL();
@@ -62,13 +64,19 @@ namespace FRM_Login.Menu
             cmbTipoVehiculo.ValueMember = DT_TipoVehiculo.Columns[0].ToString();
             cmbTipoVehiculo.SelectedValue = "0";
             #endregion
+        }
 
-            txt_NumPlaca.Clear();
-            txt_NumVisitas.Clear();
-            txt_NumVisitas.Enabled = false;
+        public void CargarDatos_Clientes()
+        {
+            string sMsjError = string.Empty;
+            DataTable dtClientes = new DataTable();
+            Obj_Clientes_DAL.cBandIM = 'I';                       
 
             if (txt_FiltrarClientes.Text == string.Empty)
-            {
+            {              
+
+                txt_NumPlaca.Clear();
+                txt_NumVisitas.Clear();
                 dtClientes = Obj_Clientes_BLL.Listar_Clientes(ref sMsjError);
             }
             else
@@ -162,11 +170,36 @@ namespace FRM_Login.Menu
 
         #region Citas
 
-        private void CargarDatos_Citas()
+        public void CargarDatos_Citas()
         {
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
-            Obj_Citas_DAL.cBandIM = 'I';
+            Obj_Citas_DAL.cBandIM = 'I';                        
+
+            txt_NumCita.Clear();
+            txt_NomCliente.Clear();
+            txt_Telefono.Clear();
+            txt_Email.Clear();
+
+
+            if (txt_FiltrarCitas.Text == string.Empty)
+            {
+                dtCitas = Obj_Citas_BLL.Listar_Citas(ref sMsjError);
+            }
+            else
+            {
+                dtCitas = Obj_Citas_BLL.Filtrar_Citas(ref sMsjError, txt_FiltrarClientes.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Citas.DataSource = null;
+                dgv_Citas.DataSource = dtCitas;
+            }
+        }
+
+        public void Cargar_Cmb_Citas()
+        {
+            string sMsjError = string.Empty;
 
             #region Empleados           
             cls_Empleados_BLL Obj_Empleados_BLL = new cls_Empleados_BLL();
@@ -211,26 +244,6 @@ namespace FRM_Login.Menu
             cmb_TipoServicio.ValueMember = DT_TipoServicio.Columns[0].ToString();
             cmb_TipoServicio.SelectedValue = "0";
             #endregion
-
-            txt_NumCita.Clear();
-            txt_NomCliente.Clear();
-            txt_Telefono.Clear();
-            txt_Email.Clear();
-
-
-            if (txt_FiltrarCitas.Text == string.Empty)
-            {
-                dtCitas = Obj_Citas_BLL.Listar_Citas(ref sMsjError);
-            }
-            else
-            {
-                dtCitas = Obj_Citas_BLL.Filtrar_Citas(ref sMsjError, txt_FiltrarClientes.Text);
-            }
-            if (sMsjError == string.Empty)
-            {
-                dgv_Citas.DataSource = null;
-                dgv_Citas.DataSource = dtCitas;
-            }
         }
 
         private void btn_GuardarCitas_Click(object sender, EventArgs e)
@@ -325,8 +338,6 @@ namespace FRM_Login.Menu
                 cmb_EmpleadoCitas.SelectedValue = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
         }
-
-
 
 
         #endregion
