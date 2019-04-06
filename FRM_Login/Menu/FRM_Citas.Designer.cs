@@ -228,6 +228,7 @@
             this.dgv_Cliente.AllowUserToAddRows = false;
             this.dgv_Cliente.AllowUserToDeleteRows = false;
             this.dgv_Cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Cliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv_Cliente.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
