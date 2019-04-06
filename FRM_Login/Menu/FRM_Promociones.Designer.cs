@@ -251,6 +251,8 @@
             // 
             // dgv_Promociones
             // 
+            this.dgv_Promociones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Promociones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv_Promociones.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Promociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Promociones.Location = new System.Drawing.Point(4, 51);

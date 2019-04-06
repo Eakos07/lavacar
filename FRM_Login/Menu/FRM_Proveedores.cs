@@ -103,7 +103,7 @@ namespace FRM_Login.Menu
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(txt_IdProveedor.Text)) && !(string.IsNullOrEmpty(txtNomProveedor.Text)) && !(string.IsNullOrEmpty(txtTelefoProveedor.Text))
+            if (!(string.IsNullOrEmpty(txtNomProveedor.Text)) && !(string.IsNullOrEmpty(txtTelefoProveedor.Text))
                 && (string.IsNullOrEmpty(txtEmailProveedor.Text)) && !(string.IsNullOrEmpty(txtPlazoPago.Text)) && cmb_IdEstadoProveedor.SelectedValue.ToString() == "0")
             {
                 Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
