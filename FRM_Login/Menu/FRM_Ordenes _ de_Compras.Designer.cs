@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Ordenes___de_Compras));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_NumOrden = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.txt_Precio = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Ordenes_Compra = new System.Windows.Forms.DataGridView();
-            this.txt_NumOrden = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -88,6 +88,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ordenes de Compra";
+            // 
+            // txt_NumOrden
+            // 
+            this.txt_NumOrden.Location = new System.Drawing.Point(143, 37);
+            this.txt_NumOrden.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NumOrden.Name = "txt_NumOrden";
+            this.txt_NumOrden.Size = new System.Drawing.Size(156, 24);
+            this.txt_NumOrden.TabIndex = 8;
             // 
             // btn_Exit
             // 
@@ -317,6 +325,8 @@
             // 
             this.dgv_Ordenes_Compra.AllowUserToAddRows = false;
             this.dgv_Ordenes_Compra.AllowUserToDeleteRows = false;
+            this.dgv_Ordenes_Compra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Ordenes_Compra.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv_Ordenes_Compra.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Ordenes_Compra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ordenes_Compra.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -329,14 +339,6 @@
             this.dgv_Ordenes_Compra.Size = new System.Drawing.Size(781, 237);
             this.dgv_Ordenes_Compra.TabIndex = 0;
             this.dgv_Ordenes_Compra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ordenes_Compra_CellContentClick);
-            // 
-            // txt_NumOrden
-            // 
-            this.txt_NumOrden.Location = new System.Drawing.Point(143, 37);
-            this.txt_NumOrden.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_NumOrden.Name = "txt_NumOrden";
-            this.txt_NumOrden.Size = new System.Drawing.Size(156, 24);
-            this.txt_NumOrden.TabIndex = 8;
             // 
             // FRM_Ordenes___de_Compras
             // 

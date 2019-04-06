@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Horarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Salida = new System.Windows.Forms.TextBox();
+            this.txt_Entrada = new System.Windows.Forms.TextBox();
+            this.txt_IdHorario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_CantiHoras = new System.Windows.Forms.TextBox();
@@ -44,19 +47,16 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_Buscar = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarHorarios = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
-            this.txt_IdHorario = new System.Windows.Forms.TextBox();
-            this.txt_Entrada = new System.Windows.Forms.TextBox();
-            this.txt_Salida = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -88,6 +88,30 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
+            // 
+            // txt_Salida
+            // 
+            this.txt_Salida.Location = new System.Drawing.Point(591, 34);
+            this.txt_Salida.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Salida.Name = "txt_Salida";
+            this.txt_Salida.Size = new System.Drawing.Size(180, 23);
+            this.txt_Salida.TabIndex = 26;
+            // 
+            // txt_Entrada
+            // 
+            this.txt_Entrada.Location = new System.Drawing.Point(142, 150);
+            this.txt_Entrada.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Entrada.Name = "txt_Entrada";
+            this.txt_Entrada.Size = new System.Drawing.Size(180, 23);
+            this.txt_Entrada.TabIndex = 25;
+            // 
+            // txt_IdHorario
+            // 
+            this.txt_IdHorario.Location = new System.Drawing.Point(142, 34);
+            this.txt_IdHorario.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdHorario.Name = "txt_IdHorario";
+            this.txt_IdHorario.Size = new System.Drawing.Size(180, 23);
+            this.txt_IdHorario.TabIndex = 24;
             // 
             // label6
             // 
@@ -236,12 +260,6 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
-            this.toolStripLabel1.Text = "Refrescar";
-            // 
             // btn_Refrescar
             // 
             this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -252,16 +270,16 @@
             this.btn_Refrescar.Text = "btn_Refrescar";
             this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel1.Text = "Refrescar";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
-            this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar
             // 
@@ -272,6 +290,12 @@
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
+            this.toolStripLabel2.Text = "Modificar";
             // 
             // toolStripSeparator2
             // 
@@ -299,6 +323,8 @@
             // 
             this.dgv_Horarios.AllowUserToAddRows = false;
             this.dgv_Horarios.AllowUserToDeleteRows = false;
+            this.dgv_Horarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Horarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv_Horarios.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Horarios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -311,30 +337,6 @@
             this.dgv_Horarios.Size = new System.Drawing.Size(781, 274);
             this.dgv_Horarios.TabIndex = 0;
             this.dgv_Horarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Horarios_CellDoubleClick);
-            // 
-            // txt_IdHorario
-            // 
-            this.txt_IdHorario.Location = new System.Drawing.Point(142, 34);
-            this.txt_IdHorario.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_IdHorario.Name = "txt_IdHorario";
-            this.txt_IdHorario.Size = new System.Drawing.Size(180, 23);
-            this.txt_IdHorario.TabIndex = 24;
-            // 
-            // txt_Entrada
-            // 
-            this.txt_Entrada.Location = new System.Drawing.Point(142, 150);
-            this.txt_Entrada.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Entrada.Name = "txt_Entrada";
-            this.txt_Entrada.Size = new System.Drawing.Size(180, 23);
-            this.txt_Entrada.TabIndex = 25;
-            // 
-            // txt_Salida
-            // 
-            this.txt_Salida.Location = new System.Drawing.Point(591, 34);
-            this.txt_Salida.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Salida.Name = "txt_Salida";
-            this.txt_Salida.Size = new System.Drawing.Size(180, 23);
-            this.txt_Salida.TabIndex = 26;
             // 
             // FRM_Horarios
             // 
