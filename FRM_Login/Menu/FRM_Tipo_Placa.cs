@@ -76,6 +76,8 @@ namespace FRM_Login.Menu
                 {
                     Obj_TipoPlaca_BLL.Insertar_TipoPlaca(ref sMsjError, ref Obj_TipoPlaca_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_IdTipoPlaca.Text = string.Empty;
+                    txt_Descripcion.Text = string.Empty;
                     Cargar_Datos();
                 }
                 else if (Obj_TipoPlaca_DAL.cBandIM == 'M')
