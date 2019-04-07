@@ -68,6 +68,8 @@ namespace FRM_Login.Menu
                 {
                     Obj_TipoVehiculo_BLL.Insertar_TipoVehiculo(ref sMsjError, ref Obj_TipoVehiculo_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TipoVehiculo.Text = string.Empty;
+                    txt_Descrip.Text = string.Empty;
                     Cargar_Datos();
                 }
                 else if (Obj_TipoVehiculo_DAL.cBandIM == 'M')
@@ -95,13 +97,6 @@ namespace FRM_Login.Menu
             }
         }
 
-        private void dgv_TipoVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Obj_TipoVehiculo_DAL.cBandIM = 'M';
-            txt_TipoVehiculo.Enabled = false;
-            txt_TipoVehiculo.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Descrip.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[1].Value.ToString().Trim();
-        }
 
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
@@ -145,5 +140,13 @@ namespace FRM_Login.Menu
         }
 
         #endregion
+
+        private void dgv_TipoVehiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Obj_TipoVehiculo_DAL.cBandIM = 'M';
+            txt_TipoVehiculo.Enabled = false;
+            txt_TipoVehiculo.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txt_Descrip.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[1].Value.ToString().Trim();
+        }
     }
 }
