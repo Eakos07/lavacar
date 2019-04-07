@@ -133,8 +133,8 @@ namespace FRM_Login.Menu
                 Obj_Clientes_DAL.cBandIM = 'M';
                 txt_NumPlaca.Enabled = false;
                 txt_NumPlaca.Text = dgv_Cliente.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmbTipoPlacaVehiculo.SelectedValue = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmbTipoVehiculo.SelectedValue = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmbTipoPlacaVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmbTipoVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_NumVisitas.Text = dgv_Cliente.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
@@ -155,8 +155,8 @@ namespace FRM_Login.Menu
                 Obj_Clientes_DAL.cBandIM = 'M';
                 txt_NumPlaca.Enabled = false;
                 txt_NumPlaca.Text = dgv_Cliente.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmbTipoPlacaVehiculo.SelectedValue = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmbTipoVehiculo.SelectedValue = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmbTipoPlacaVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmbTipoVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_NumVisitas.Text = dgv_Cliente.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
@@ -295,12 +295,6 @@ namespace FRM_Login.Menu
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Citas.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -311,9 +305,9 @@ namespace FRM_Login.Menu
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_EstadoCita.SelectedValue = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_EmpleadoCitas.SelectedValue = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            }
+                cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
+            
         }
 
         private void btn_ModificarCitas_Click(object sender, EventArgs e)
@@ -334,8 +328,8 @@ namespace FRM_Login.Menu
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_EstadoCita.SelectedValue = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_EmpleadoCitas.SelectedValue = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
+                cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
         }
 
