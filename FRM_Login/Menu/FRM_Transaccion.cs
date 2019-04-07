@@ -424,5 +424,6 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
     }
 }

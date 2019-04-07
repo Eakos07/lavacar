@@ -50,15 +50,6 @@ namespace FRM_Login.Menu
             Cargar_Datos();
         }
 
-       
-        private void dgv_TipoPlaca_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Obj_TipoPlaca_DAL.cBandIM = 'M';
-            txt_IdTipoPlaca.Enabled = false;
-            txt_IdTipoPlaca.Text = dgv_TipoPlaca.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Descripcion.Text = dgv_TipoPlaca.SelectedRows[0].Cells[1].Value.ToString().Trim();
-        }
-
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)
         {
             Cargar_Datos();
@@ -146,6 +137,14 @@ namespace FRM_Login.Menu
                 e.Handled = true;
                 errorIcono.SetError(txt_Descripcion, "Solo puede digitar letras");
             }
+        }
+
+        private void dgv_TipoPlaca_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Obj_TipoPlaca_DAL.cBandIM = 'M';
+            txt_IdTipoPlaca.Enabled = false;
+            txt_IdTipoPlaca.Text = dgv_TipoPlaca.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txt_Descripcion.Text = dgv_TipoPlaca.SelectedRows[0].Cells[1].Value.ToString().Trim();
         }
     }
 }

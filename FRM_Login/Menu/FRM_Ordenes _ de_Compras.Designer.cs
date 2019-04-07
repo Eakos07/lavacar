@@ -79,7 +79,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -94,7 +94,7 @@
             this.txt_NumOrden.Location = new System.Drawing.Point(143, 37);
             this.txt_NumOrden.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumOrden.Name = "txt_NumOrden";
-            this.txt_NumOrden.Size = new System.Drawing.Size(156, 24);
+            this.txt_NumOrden.Size = new System.Drawing.Size(156, 23);
             this.txt_NumOrden.TabIndex = 8;
             // 
             // btn_Exit
@@ -102,7 +102,7 @@
             this.btn_Exit.BackColor = System.Drawing.Color.Aqua;
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(663, 196);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
@@ -116,7 +116,7 @@
             this.btn_Save.BackColor = System.Drawing.Color.Aqua;
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(514, 196);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
@@ -131,7 +131,7 @@
             this.txt_Precio.Location = new System.Drawing.Point(469, 37);
             this.txt_Precio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Precio.Name = "txt_Precio";
-            this.txt_Precio.Size = new System.Drawing.Size(156, 24);
+            this.txt_Precio.Size = new System.Drawing.Size(156, 23);
             this.txt_Precio.TabIndex = 4;
             // 
             // txt_Cantidad
@@ -139,7 +139,7 @@
             this.txt_Cantidad.Location = new System.Drawing.Point(143, 158);
             this.txt_Cantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Cantidad.Name = "txt_Cantidad";
-            this.txt_Cantidad.Size = new System.Drawing.Size(156, 24);
+            this.txt_Cantidad.Size = new System.Drawing.Size(156, 23);
             this.txt_Cantidad.TabIndex = 3;
             // 
             // cmb_IdEstado
@@ -148,7 +148,7 @@
             this.cmb_IdEstado.Location = new System.Drawing.Point(469, 75);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
-            this.cmb_IdEstado.Size = new System.Drawing.Size(156, 27);
+            this.cmb_IdEstado.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdEstado.TabIndex = 5;
             // 
             // cmb_IdArticulo
@@ -157,7 +157,7 @@
             this.cmb_IdArticulo.Location = new System.Drawing.Point(143, 113);
             this.cmb_IdArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdArticulo.Name = "cmb_IdArticulo";
-            this.cmb_IdArticulo.Size = new System.Drawing.Size(156, 27);
+            this.cmb_IdArticulo.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdArticulo.TabIndex = 2;
             // 
             // cmb_IdProve
@@ -166,7 +166,7 @@
             this.cmb_IdProve.Location = new System.Drawing.Point(143, 75);
             this.cmb_IdProve.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdProve.Name = "cmb_IdProve";
-            this.cmb_IdProve.Size = new System.Drawing.Size(156, 27);
+            this.cmb_IdProve.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdProve.TabIndex = 1;
             // 
             // label6
@@ -175,7 +175,7 @@
             this.label6.Location = new System.Drawing.Point(374, 77);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Id Estado:";
             // 
@@ -185,7 +185,7 @@
             this.label5.Location = new System.Drawing.Point(374, 40);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 19);
+            this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Precio:";
             // 
@@ -195,7 +195,7 @@
             this.label4.Location = new System.Drawing.Point(4, 154);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cantidad:";
             // 
@@ -205,7 +205,7 @@
             this.label3.Location = new System.Drawing.Point(4, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
+            this.label3.Size = new System.Drawing.Size(74, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Id Artículo:";
             // 
@@ -215,7 +215,7 @@
             this.label2.Location = new System.Drawing.Point(4, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 19);
+            this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Id Proveedor:";
             // 
@@ -225,7 +225,7 @@
             this.label1.Location = new System.Drawing.Point(4, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(121, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Número Orden:";
             // 
@@ -233,7 +233,7 @@
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dgv_Ordenes_Compra);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(4, 272);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
@@ -256,7 +256,7 @@
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_Filtrar});
-            this.toolStrip1.Location = new System.Drawing.Point(2, 19);
+            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(788, 27);
             this.toolStrip1.TabIndex = 2;
@@ -338,7 +338,7 @@
             this.dgv_Ordenes_Compra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Ordenes_Compra.Size = new System.Drawing.Size(781, 237);
             this.dgv_Ordenes_Compra.TabIndex = 0;
-            this.dgv_Ordenes_Compra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ordenes_Compra_CellContentClick);
+            this.dgv_Ordenes_Compra.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ordenes_Compra_CellContentDoubleClick);
             // 
             // FRM_Ordenes___de_Compras
             // 

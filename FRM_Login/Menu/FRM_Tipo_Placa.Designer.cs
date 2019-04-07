@@ -63,11 +63,11 @@
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dgv_TipoPlaca);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 232);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 333);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -88,7 +88,7 @@
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_Filtrar});
-            this.toolStrip1.Location = new System.Drawing.Point(2, 19);
+            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(788, 27);
             this.toolStrip1.TabIndex = 2;
@@ -178,13 +178,13 @@
             this.dgv_TipoPlaca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoPlaca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_TipoPlaca.Location = new System.Drawing.Point(4, 51);
-            this.dgv_TipoPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_TipoPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TipoPlaca.Name = "dgv_TipoPlaca";
             this.dgv_TipoPlaca.RowTemplate.Height = 24;
             this.dgv_TipoPlaca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TipoPlaca.Size = new System.Drawing.Size(781, 277);
             this.dgv_TipoPlaca.TabIndex = 0;
-            this.dgv_TipoPlaca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoPlaca_CellContentClick);
+            this.dgv_TipoPlaca.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoPlaca_CellContentDoubleClick);
             // 
             // groupBox1
             // 
@@ -195,11 +195,11 @@
             this.groupBox1.Controls.Add(this.btn_Guardar);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(5, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(790, 218);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -207,9 +207,9 @@
             // 
             // txt_IdTipoPlaca
             // 
-            this.txt_IdTipoPlaca.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IdTipoPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IdTipoPlaca.Location = new System.Drawing.Point(202, 38);
-            this.txt_IdTipoPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IdTipoPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdTipoPlaca.Multiline = true;
             this.txt_IdTipoPlaca.Name = "txt_IdTipoPlaca";
             this.txt_IdTipoPlaca.Size = new System.Drawing.Size(150, 27);
@@ -218,9 +218,9 @@
             // 
             // txt_Descripcion
             // 
-            this.txt_Descripcion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Descripcion.Location = new System.Drawing.Point(202, 108);
-            this.txt_Descripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Descripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(150, 27);
@@ -232,9 +232,9 @@
             this.btn_Salir.BackColor = System.Drawing.Color.Aqua;
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Salir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salir.Location = new System.Drawing.Point(652, 170);
-            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(110, 30);
             this.btn_Salir.TabIndex = 4;
@@ -247,9 +247,9 @@
             this.btn_Guardar.BackColor = System.Drawing.Color.Aqua;
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.Location = new System.Drawing.Point(490, 170);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar.TabIndex = 3;
@@ -260,22 +260,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(16, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 19);
+            this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Descripción:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(16, 41);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 19);
+            this.label4.Size = new System.Drawing.Size(94, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Id Tipo Placa:";
             // 
@@ -292,7 +292,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Tipo_Placa";
             this.Text = "FRM_Tipo_Placa";
             this.Load += new System.EventHandler(this.FRM_Tipo_Placa_Load);

@@ -217,18 +217,6 @@ namespace FRM_Login.Menu
         {
             Cargar_Polizas();
         }
-
-        private void dgv_Polizas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Obj_Polizas_DAL.cBandIM = 'M';
-            txt_IdPoliza.Enabled = false;
-
-            txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdTipoPoliza.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
-        }
         #endregion
 
         #region Tipo Polizas
@@ -419,5 +407,17 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+        private void dgv_Polizas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Obj_Polizas_DAL.cBandIM = 'M';
+            txt_IdPoliza.Enabled = false;
+
+            txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            cmb_IdTipoPoliza.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            cmb_IdEstado.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+        }
     }
 }

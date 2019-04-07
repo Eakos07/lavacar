@@ -48,11 +48,6 @@ namespace FRM_Login.Menu
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         #region Validaciones
         private void cmb_IdEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -147,7 +147,7 @@ namespace FRM_Login.Menu
             }
         }
 
-        private void dgv_Ordenes_Compra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_Ordenes_Compra_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgv_Ordenes_Compra.RowCount.Equals(0))
             {

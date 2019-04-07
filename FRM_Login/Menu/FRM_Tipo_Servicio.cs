@@ -110,24 +110,6 @@ namespace FRM_Login.Menu
             }
         }
 
-        private void dgv_TipoServicio_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgv_TipoServicio.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoServicio_DAL.cBandIM = 'M';
-                txt_CodigoServicio.Enabled = false;
-
-                txt_CodigoServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NombreServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Precio.Text = dgv_TipoServicio.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Duracion.Text = dgv_TipoServicio.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_IdTipoVehiculo.SelectedValue = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
-        }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
@@ -207,6 +189,25 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void dgv_TipoServicio_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_TipoServicio.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_TipoServicio_DAL.cBandIM = 'M';
+                txt_CodigoServicio.Enabled = false;
+
+                txt_CodigoServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_NombreServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Precio.Text = dgv_TipoServicio.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Duracion.Text = dgv_TipoServicio.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdTipoVehiculo.SelectedValue = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
     }

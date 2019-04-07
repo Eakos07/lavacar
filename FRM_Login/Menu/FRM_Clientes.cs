@@ -57,10 +57,6 @@ namespace FRM_Login.Menu
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         #region Validaciones
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
