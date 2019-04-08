@@ -40,7 +40,6 @@ namespace FRM_Login.Menu
             string sMsjError = string.Empty;
             DataTable dtEstados = new DataTable();
 
-            txtIdEsta.Enabled = false;
             txtIdEsta.Clear();
             txt_Nombre.Clear();
             txtDescEstados.Clear();

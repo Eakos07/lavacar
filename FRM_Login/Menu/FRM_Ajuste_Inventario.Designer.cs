@@ -40,9 +40,9 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarDescrip = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Ajuste = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_IdAjus = new System.Windows.Forms.TextBox();
             this.txt_Monto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
@@ -58,14 +58,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Ajuste)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_Ajuste);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 232);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -153,23 +153,26 @@
             this.txt_FiltrarDescrip.Name = "txt_FiltrarDescrip";
             this.txt_FiltrarDescrip.Size = new System.Drawing.Size(76, 27);
             // 
-            // dataGridView1
+            // dgv_Ajuste
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 57);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 264);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_Ajuste.AllowUserToAddRows = false;
+            this.dgv_Ajuste.AllowUserToDeleteRows = false;
+            this.dgv_Ajuste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_Ajuste.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgv_Ajuste.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Ajuste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Ajuste.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_Ajuste.Location = new System.Drawing.Point(4, 57);
+            this.dgv_Ajuste.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Ajuste.Name = "dgv_Ajuste";
+            this.dgv_Ajuste.RowTemplate.Height = 24;
+            this.dgv_Ajuste.Size = new System.Drawing.Size(781, 264);
+            this.dgv_Ajuste.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_IdAjus);
             this.groupBox1.Controls.Add(this.txt_Monto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_Cantidad);
@@ -193,15 +196,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajustes Inventario";
             // 
-            // textBox1
+            // txt_IdAjus
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(242, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 27);
-            this.textBox1.TabIndex = 32;
+            this.txt_IdAjus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IdAjus.Location = new System.Drawing.Point(242, 33);
+            this.txt_IdAjus.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdAjus.Multiline = true;
+            this.txt_IdAjus.Name = "txt_IdAjus";
+            this.txt_IdAjus.Size = new System.Drawing.Size(150, 27);
+            this.txt_IdAjus.TabIndex = 32;
+            this.txt_IdAjus.TabStop = false;
             // 
             // txt_Monto
             // 
@@ -364,7 +368,7 @@
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Ajuste)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -384,7 +388,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarDescrip;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Ajuste;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_Monto;
         private System.Windows.Forms.Label label2;
@@ -399,6 +403,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_IdAjus;
     }
 }

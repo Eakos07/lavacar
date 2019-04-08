@@ -22,6 +22,8 @@ namespace FRM_Login.Menu
 
         private void CargarAjustesInventario()
         {
+            txt_IdAjus.Enabled = false;
+
             cls_AjustesInventario_BLL Ajuste_BLL = new cls_AjustesInventario_BLL();
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
@@ -36,12 +38,12 @@ namespace FRM_Login.Menu
 
             if (sMsjError == string.Empty)
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = DT;
+                dgv_Ajuste.DataSource = null;
+                dgv_Ajuste.DataSource = DT;
             }
             else
             {
-                dataGridView1.DataSource = null;
+                dgv_Ajuste.DataSource = null;
 
                 MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,7 +58,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0)
+            if (dgv_Ajuste.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -65,14 +67,14 @@ namespace FRM_Login.Menu
                 AjuDAL = new cls_AjustesInventario_DAL();
                 AjuDAL.cBandera = 'U';
 
-                AjuDAL.iIdTransaccionAjusteInventario = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                AjuDAL.sIdArticulo = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                AjuDAL.sDescripcion = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                AjuDAL.dtFecha = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                AjuDAL.iCantidad = Convert.ToInt16(dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim());
-                AjuDAL.dMonto = Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[5].Value.ToString().Trim());
+                AjuDAL.iIdTransaccionAjusteInventario = Convert.ToInt32(dgv_Ajuste.SelectedRows[0].Cells[0].Value.ToString().Trim());
+                AjuDAL.sIdArticulo = dgv_Ajuste.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                AjuDAL.sDescripcion = dgv_Ajuste.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                AjuDAL.dtFecha = Convert.ToDateTime(dgv_Ajuste.SelectedRows[0].Cells[3].Value.ToString().Trim());
+                AjuDAL.iCantidad = Convert.ToInt16(dgv_Ajuste.SelectedRows[0].Cells[4].Value.ToString().Trim());
+                AjuDAL.dMonto = Convert.ToDecimal(dgv_Ajuste.SelectedRows[0].Cells[5].Value.ToString().Trim());
 
-                textBox1.Text = AjuDAL.iIdTransaccionAjusteInventario.ToString();
+                txt_IdAjus.Text = AjuDAL.iIdTransaccionAjusteInventario.ToString();
                 txt_Descrip.Text = AjuDAL.sDescripcion;
                 txt_Fecha.Text = AjuDAL.dtFecha.ToString();
                 txt_Cantidad.Text = AjuDAL.iCantidad.ToString();
