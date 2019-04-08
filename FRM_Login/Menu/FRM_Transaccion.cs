@@ -44,6 +44,7 @@ namespace FRM_Login.Menu
             cmb_Orden.Enabled = false;
             cmb_Prov.Enabled = false;
 #endregion
+
             //Load Pantalla
             cls_TransaccionesCompra_BLL TransC_ObjBLL = new cls_TransaccionesCompra_BLL();
             string sMsjError = string.Empty;
@@ -73,6 +74,25 @@ namespace FRM_Login.Menu
         }
         private void CargarTransaccionesVentas()
         {
+            #region Deshabilitar botones
+            //Deshabilitar botones ya los insert a dicha tabla son generadas por otro proceso
+            txt_IdTransV.Clear();
+            txt_FechaV.Clear();
+            txt_CantidadV.Clear();
+            txt_MontoV.Clear();
+            cmb_ArtV.SelectedValue = null;
+            cmb_Estado.SelectedValue = null;
+            cmb_Fact.SelectedValue = null;
+
+            txt_IdTransV.Enabled = false;
+            txt_FechaV.Enabled = false;
+            txt_CantidadV.Enabled = false;
+            txt_MontoV.Enabled = false;
+            cmb_ArtV.Enabled = false;
+            cmb_Estado.Enabled = false;
+            cmb_Fact.Enabled = false;
+            #endregion
+
             cls_TransaccionesVenta_BLL TransV_ObjBLL = new cls_TransaccionesVenta_BLL();
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
@@ -181,6 +201,15 @@ namespace FRM_Login.Menu
         //Modificar Transacciones Venta
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
+            #region Habilitar Botones
+            txt_IdTransV.Enabled = true;
+            txt_FechaV.Enabled = true;
+            txt_CantidadV.Enabled = true;
+            txt_MontoV.Enabled = true;
+            cmb_ArtV.Enabled = true;
+            cmb_Estado.Enabled = true;
+            cmb_Fact.Enabled = true;
+            #endregion
             if (dgv_TransVenta.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
