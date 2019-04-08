@@ -166,5 +166,10 @@ namespace FRM_Login.Menu
                 cmb_IdEstado.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
             }
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

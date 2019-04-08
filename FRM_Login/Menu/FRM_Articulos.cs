@@ -19,10 +19,7 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+     
 
         #region Variables Globales
         cls_FamiliaArticulos_BLL Obj_BLL_Familia = new cls_FamiliaArticulos_BLL();
@@ -592,5 +589,10 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

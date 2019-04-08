@@ -149,5 +149,10 @@ namespace FRM_Login.Menu
                 cmb_IdEstado.SelectedValue = dgv_Horarios.SelectedRows[0].Cells[5].Value.ToString().Trim();
             }
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

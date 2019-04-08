@@ -76,9 +76,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(4, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(790, 258);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -96,7 +96,7 @@
             // 
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(542, 31);
-            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(139, 25);
             this.cmb_IdEstado.TabIndex = 3;
@@ -117,7 +117,7 @@
             // 
             this.txt_Descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Descrip.Location = new System.Drawing.Point(164, 146);
-            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Descrip.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Descrip.Multiline = true;
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(139, 27);
@@ -128,7 +128,7 @@
             // 
             this.txt_Nivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nivel.Location = new System.Drawing.Point(164, 89);
-            this.txt_Nivel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Nivel.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Nivel.Multiline = true;
             this.txt_Nivel.Name = "txt_Nivel";
             this.txt_Nivel.Size = new System.Drawing.Size(139, 27);
@@ -141,12 +141,13 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(662, 200);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Save
             // 
@@ -155,7 +156,7 @@
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(512, 200);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 4;
@@ -202,9 +203,9 @@
             this.groupBox2.Controls.Add(this.dgv_Roles);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(2, 272);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 293);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -298,7 +299,7 @@
             this.dgv_Roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Roles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Roles.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Roles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Roles.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Roles.MultiSelect = false;
             this.dgv_Roles.Name = "dgv_Roles";
             this.dgv_Roles.RowTemplate.Height = 24;
@@ -320,7 +321,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Roles";
             this.Text = "FRM_Roles";
             this.Load += new System.EventHandler(this.FRM_Roles_Load);

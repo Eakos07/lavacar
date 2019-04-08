@@ -68,9 +68,9 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(5, 232);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 333);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -175,7 +175,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(781, 277);
@@ -198,9 +198,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(5, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(790, 218);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -210,7 +210,7 @@
             // 
             this.txt_Email.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Email.Location = new System.Drawing.Point(518, 89);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.Multiline = true;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(150, 27);
@@ -231,7 +231,7 @@
             // 
             this.txt_Direccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Direccion.Location = new System.Drawing.Point(518, 38);
-            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Direccion.Multiline = true;
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(150, 27);
@@ -241,7 +241,7 @@
             // 
             this.txt_CeduJurid.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CeduJurid.Location = new System.Drawing.Point(202, 38);
-            this.txt_CeduJurid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_CeduJurid.Margin = new System.Windows.Forms.Padding(2);
             this.txt_CeduJurid.Multiline = true;
             this.txt_CeduJurid.Name = "txt_CeduJurid";
             this.txt_CeduJurid.Size = new System.Drawing.Size(150, 27);
@@ -251,7 +251,7 @@
             // 
             this.txt_NomComercial.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NomComercial.Location = new System.Drawing.Point(202, 89);
-            this.txt_NomComercial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NomComercial.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NomComercial.Multiline = true;
             this.txt_NomComercial.Name = "txt_NomComercial";
             this.txt_NomComercial.Size = new System.Drawing.Size(150, 27);
@@ -261,7 +261,7 @@
             // 
             this.txt_Telefono.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Telefono.Location = new System.Drawing.Point(202, 139);
-            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Telefono.Multiline = true;
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(150, 27);
@@ -274,12 +274,13 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(652, 170);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 6;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_save
             // 
@@ -288,7 +289,7 @@
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Location = new System.Drawing.Point(490, 170);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(110, 30);
             this.btn_save.TabIndex = 5;
@@ -349,7 +350,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Centro_Lavado_Octupus";
             this.Text = "FRM_Centro_Lavado_Octupus";
             this.groupBox2.ResumeLayout(false);

@@ -16,5 +16,10 @@ namespace FRM_Login.Menu
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

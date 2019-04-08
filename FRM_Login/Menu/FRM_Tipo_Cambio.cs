@@ -101,5 +101,10 @@ namespace FRM_Login.Menu
                 errorIcono.SetError(textBox1, "Solo puede digitar numeros");
             }
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

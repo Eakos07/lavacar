@@ -90,5 +90,10 @@ namespace FRM_Login.Menu
                 errorIcono.SetError(textBox4, "Solo puede digitar letras");
             }
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

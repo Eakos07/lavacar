@@ -47,7 +47,7 @@
             this.txt_Usuario = new System.Windows.Forms.TextBox();
             this.cmb_Rol = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.cmb_Estado = new System.Windows.Forms.ComboBox();
@@ -68,9 +68,9 @@
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(9, 301);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(788, 266);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -86,7 +86,7 @@
             this.dgv_Usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Usuario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Usuario.Location = new System.Drawing.Point(5, 50);
-            this.dgv_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Usuario.MultiSelect = false;
             this.dgv_Usuario.Name = "dgv_Usuario";
             this.dgv_Usuario.RowTemplate.Height = 24;
@@ -185,7 +185,7 @@
             this.groupBox1.Controls.Add(this.txt_Usuario);
             this.groupBox1.Controls.Add(this.cmb_Rol);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btn_Exit);
             this.groupBox1.Controls.Add(this.btn_Guardar);
             this.groupBox1.Controls.Add(this.txt_Contraseña);
             this.groupBox1.Controls.Add(this.cmb_Estado);
@@ -194,9 +194,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(6, 7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(791, 285);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -214,7 +214,7 @@
             // 
             this.cmb_Rol.FormattingEnabled = true;
             this.cmb_Rol.Location = new System.Drawing.Point(203, 158);
-            this.cmb_Rol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Rol.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Rol.Name = "cmb_Rol";
             this.cmb_Rol.Size = new System.Drawing.Size(159, 25);
             this.cmb_Rol.TabIndex = 2;
@@ -230,19 +230,20 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Id Rol";
             // 
-            // button2
+            // btn_Exit
             // 
-            this.button2.BackColor = System.Drawing.Color.Aqua;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(657, 237);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Exit.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(657, 237);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(110, 30);
+            this.btn_Exit.TabIndex = 5;
+            this.btn_Exit.Text = "Salir";
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Guardar
             // 
@@ -251,7 +252,7 @@
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar.Location = new System.Drawing.Point(502, 237);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar.TabIndex = 4;
@@ -262,7 +263,7 @@
             // txt_Contraseña
             // 
             this.txt_Contraseña.Location = new System.Drawing.Point(204, 101);
-            this.txt_Contraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Contraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Contraseña.Name = "txt_Contraseña";
             this.txt_Contraseña.Size = new System.Drawing.Size(158, 23);
             this.txt_Contraseña.TabIndex = 1;
@@ -271,7 +272,7 @@
             // 
             this.cmb_Estado.FormattingEnabled = true;
             this.cmb_Estado.Location = new System.Drawing.Point(204, 208);
-            this.cmb_Estado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Estado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Estado.Name = "cmb_Estado";
             this.cmb_Estado.Size = new System.Drawing.Size(159, 25);
             this.cmb_Estado.TabIndex = 3;
@@ -320,7 +321,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Usuario";
             this.Text = "FRM_Usuario";
             this.Load += new System.EventHandler(this.FRM_Usuario_Load);
@@ -354,7 +355,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmb_Rol;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Button btn_Guardar;
         private System.Windows.Forms.TextBox txt_Contraseña;
         private System.Windows.Forms.ComboBox cmb_Estado;
