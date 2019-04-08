@@ -602,7 +602,7 @@ namespace FRM_Login.Menu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close()
+            this.Close();
         }
     }
 }

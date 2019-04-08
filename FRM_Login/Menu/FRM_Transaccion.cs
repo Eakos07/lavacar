@@ -24,6 +24,27 @@ namespace FRM_Login.Menu
 
         private void CargarTransaccionesCompras()
         {
+            #region Deshabilitar botones
+            //Deshabilitar botones ya los insert a dicha tabla son generadas por otro proceso
+            txt_IdTranC.Clear();
+            txt_FechaC.Clear();
+            txt_Doc.Clear();
+            txt_CantidadC.Clear();
+            txt_MontoC.Clear();
+            cmb_ArtC.SelectedValue = null;
+            cmb_Orden.SelectedValue = null;
+            cmb_Prov.SelectedValue = null;
+
+            txt_IdTranC.Enabled = false;
+            txt_FechaC.Enabled = false;
+            txt_Doc.Enabled = false;
+            txt_CantidadC.Enabled = false;
+            txt_MontoC.Enabled = false;
+            cmb_ArtC.Enabled = false;
+            cmb_Orden.Enabled = false;
+            cmb_Prov.Enabled = false;
+#endregion
+            //Load Pantalla
             cls_TransaccionesCompra_BLL TransC_ObjBLL = new cls_TransaccionesCompra_BLL();
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
@@ -88,6 +109,16 @@ namespace FRM_Login.Menu
         //Modificar Transacciones de Compra
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            #region Habilitar Botones
+            txt_FechaC.Enabled = true;
+            txt_Doc.Enabled = true;
+            txt_CantidadC.Enabled = true;
+            txt_MontoC.Enabled = true;
+            cmb_ArtC.Enabled = true;
+            cmb_Orden.Enabled = true;
+            cmb_Prov.Enabled = true;
+            #endregion
+
             if (dgv_TransCompra.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,11 +137,11 @@ namespace FRM_Login.Menu
                 TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransCompra.SelectedRows[0].Cells[6].Value.ToString().Trim());
                 TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransCompra.SelectedRows[0].Cells[7].Value.ToString().Trim());
 
-                textBox8.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
-                textBox1.Text = TransC_ObjDAL.sDocumento;
-                textBox4.Text = TransC_ObjDAL.dtFecha.ToString();
-                textBox3.Text = TransC_ObjDAL.iCantidad.ToString();
-                textBox2.Text = TransC_ObjDAL.dMonto.ToString();
+                txt_IdTranC.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
+                txt_Doc.Text = TransC_ObjDAL.sDocumento;
+                txt_FechaC.Text = TransC_ObjDAL.dtFecha.ToString();
+                txt_CantidadC.Text = TransC_ObjDAL.iCantidad.ToString();
+                txt_MontoC.Text = TransC_ObjDAL.dMonto.ToString();
 
                 string sMsjError = string.Empty;
                 //Combobox Ordenes de Compra
@@ -118,27 +149,27 @@ namespace FRM_Login.Menu
                 DataTable DTO = new DataTable();
                 DTO = BLLOrden.Listar_OrdenesCompra(ref sMsjError);
                 //DTO.Rows.Add("0", "Seleccione un Valor");
-                comboBox7.DataSource = DTO;
-                comboBox7.DisplayMember = DTO.Columns[0].ToString();
-                comboBox7.ValueMember = DTO.Columns[0].ToString();
-                comboBox7.SelectedValue = TransC_ObjDAL.iIdNumOrden.ToString();
+                cmb_Orden.DataSource = DTO;
+                cmb_Orden.DisplayMember = DTO.Columns[0].ToString();
+                cmb_Orden.ValueMember = DTO.Columns[0].ToString();
+                cmb_Orden.SelectedValue = TransC_ObjDAL.iIdNumOrden.ToString();
 
                 //Combobox Articulo
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
                 DataTable DTA = new DataTable();
                 DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
-                comboBox6.DataSource = DTA;
-                comboBox6.DisplayMember = DTA.Columns[1].ToString();
-                comboBox6.ValueMember = DTA.Columns[0].ToString();
-                comboBox6.SelectedValue = TransC_ObjDAL.sIdArticulo;
+                cmb_ArtC.DataSource = DTA;
+                cmb_ArtC.DisplayMember = DTA.Columns[1].ToString();
+                cmb_ArtC.ValueMember = DTA.Columns[0].ToString();
+                cmb_ArtC.SelectedValue = TransC_ObjDAL.sIdArticulo;
                 //Combobox Proveedores
                 cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
                 DataTable DTP = new DataTable();
                 DTP = BLLProveedores.Listar_Proveedores(ref sMsjError);
-                comboBox2.DataSource = DTP;
-                comboBox2.DisplayMember = DTP.Columns[1].ToString();
-                comboBox2.ValueMember = DTP.Columns[0].ToString();
-                comboBox2.SelectedValue = TransC_ObjDAL.bIdProveedor;
+                cmb_Prov.DataSource = DTP;
+                cmb_Prov.DisplayMember = DTP.Columns[1].ToString();
+                cmb_Prov.ValueMember = DTP.Columns[0].ToString();
+                cmb_Prov.SelectedValue = TransC_ObjDAL.bIdProveedor;
 
 
 
@@ -166,10 +197,10 @@ namespace FRM_Login.Menu
                 TransV_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransVenta.SelectedRows[0].Cells[4].Value.ToString().Trim());
                 TransV_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransVenta.SelectedRows[0].Cells[5].Value.ToString().Trim());
 
-                textBox9.Text = TransV_ObjDAL.iIdTransaccionVenta.ToString();
-                textBox6.Text = TransV_ObjDAL.dFecha.ToString();
-                textBox7.Text = TransV_ObjDAL.iCantidad.ToString();
-                textBox5.Text = TransV_ObjDAL.dMonto.ToString();
+                txt_IdTransV.Text = TransV_ObjDAL.iIdTransaccionVenta.ToString();
+                txt_FechaV.Text = TransV_ObjDAL.dFecha.ToString();
+                txt_CantidadV.Text = TransV_ObjDAL.iCantidad.ToString();
+                txt_MontoV.Text = TransV_ObjDAL.dMonto.ToString();
 
                 string sMsjError = string.Empty;
 
@@ -177,26 +208,26 @@ namespace FRM_Login.Menu
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
                 DataTable DTA = new DataTable();
                 DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
-                comboBox3.DataSource = DTA;
-                comboBox3.DisplayMember = DTA.Columns[1].ToString();
-                comboBox3.ValueMember = DTA.Columns[0].ToString();
-                comboBox3.SelectedValue = TransV_ObjDAL.sIdArticulo;
+                cmb_ArtV.DataSource = DTA;
+                cmb_ArtV.DisplayMember = DTA.Columns[1].ToString();
+                cmb_ArtV.ValueMember = DTA.Columns[0].ToString();
+                cmb_ArtV.SelectedValue = TransV_ObjDAL.sIdArticulo;
                 //Combobox Factura
                 cls_Factura_BLL BLLFactura = new cls_Factura_BLL();
                 DataTable DTP = new DataTable();
                 DTP = BLLFactura.Listar_Factura(ref sMsjError);
-                comboBox4.DataSource = DTP;
-                comboBox4.DisplayMember = DTP.Columns[0].ToString();
-                comboBox4.ValueMember = DTP.Columns[0].ToString();
-                comboBox4.SelectedValue = TransV_ObjDAL.iNumFactura;
+                cmb_Fact.DataSource = DTP;
+                cmb_Fact.DisplayMember = DTP.Columns[0].ToString();
+                cmb_Fact.ValueMember = DTP.Columns[0].ToString();
+                cmb_Fact.SelectedValue = TransV_ObjDAL.iNumFactura;
                 //Combobox Estado
                 cls_Estados_BLL BLLEstado = new cls_Estados_BLL();
                 DataTable DTE = new DataTable();
                 DTE = BLLEstado.Listar_Estados(ref sMsjError);
-                comboBox5.DataSource = DTE;
-                comboBox5.DisplayMember = DTE.Columns[1].ToString();
-                comboBox5.ValueMember = DTE.Columns[0].ToString();
-                comboBox5.SelectedValue = TransV_ObjDAL.bIdEstado;
+                cmb_Estado.DataSource = DTE;
+                cmb_Estado.DisplayMember = DTE.Columns[1].ToString();
+                cmb_Estado.ValueMember = DTE.Columns[0].ToString();
+                cmb_Estado.SelectedValue = TransV_ObjDAL.bIdEstado;
                 
                 toolStrip1.Text = string.Empty;
                 CargarTransaccionesVentas();
@@ -209,12 +240,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox8, "");
+                errorIcono.SetError(txt_IdTranC, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox8, "Solo puede digitar numeros ");
+                errorIcono.SetError(txt_IdTranC, "Solo puede digitar numeros ");
             }
         }
 
@@ -308,12 +339,12 @@ namespace FRM_Login.Menu
                 char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox1, "");
+                errorIcono.SetError(txt_Doc, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox1, "Solo puede digitar letras");
+                errorIcono.SetError(txt_Doc, "Solo puede digitar letras");
             }
         }
 
@@ -322,12 +353,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox4, "");
+                errorIcono.SetError(txt_FechaC, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox4, "Solo puede digitar numeros");
+                errorIcono.SetError(txt_FechaC, "Solo puede digitar numeros");
             }
         }
 
@@ -336,12 +367,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox3, "");
+                errorIcono.SetError(txt_CantidadC, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox3, "Solo puede digitar numeros ");
+                errorIcono.SetError(txt_CantidadC, "Solo puede digitar numeros ");
             }
         }
 
@@ -350,18 +381,18 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox2, "");
+                errorIcono.SetError(txt_MontoC, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox2, "Solo puede digitar numeros con (.)");
+                errorIcono.SetError(txt_MontoC, "Solo puede digitar numeros con (.)");
             }
 
             if (e.KeyChar == '.')
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox2, "");
+                errorIcono.SetError(txt_MontoC, "");
             }
         }
 
@@ -370,12 +401,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox6, "");
+                errorIcono.SetError(txt_FechaV, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox6, "Solo puede digitar numeros ");
+                errorIcono.SetError(txt_FechaV, "Solo puede digitar numeros ");
             }
         }
 
@@ -384,12 +415,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox7, "");
+                errorIcono.SetError(txt_CantidadV, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox7, "Solo puede digitar numeros con (.)");
+                errorIcono.SetError(txt_CantidadV, "Solo puede digitar numeros con (.)");
             }
         }
 
@@ -398,18 +429,18 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox5, "");
+                errorIcono.SetError(txt_MontoV, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(textBox5, "Solo puede digitar numeros con (.)");
+                errorIcono.SetError(txt_MontoV, "Solo puede digitar numeros con (.)");
             }
 
             if (e.KeyChar == '.')
             {
                 e.Handled = false;
-                errorIcono.SetError(textBox5, "");
+                errorIcono.SetError(txt_MontoV, "");
             }
         }
 

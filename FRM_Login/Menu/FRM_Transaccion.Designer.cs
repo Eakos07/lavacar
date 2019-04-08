@@ -33,14 +33,14 @@
             this.tcArticulos = new System.Windows.Forms.TabControl();
             this.tbTransacciones = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_FechaC = new System.Windows.Forms.MaskedTextBox();
+            this.txt_IdTranC = new System.Windows.Forms.TextBox();
+            this.txt_CantidadC = new System.Windows.Forms.TextBox();
+            this.txt_Doc = new System.Windows.Forms.TextBox();
+            this.cmb_Orden = new System.Windows.Forms.ComboBox();
+            this.cmb_ArtC = new System.Windows.Forms.ComboBox();
+            this.cmb_Prov = new System.Windows.Forms.ComboBox();
+            this.txt_MontoC = new System.Windows.Forms.TextBox();
             this.btn_exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,13 +81,13 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_TransVenta = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_IdTransV = new System.Windows.Forms.TextBox();
+            this.txt_FechaV = new System.Windows.Forms.MaskedTextBox();
+            this.cmb_Estado = new System.Windows.Forms.ComboBox();
+            this.txt_MontoV = new System.Windows.Forms.TextBox();
+            this.cmb_ArtV = new System.Windows.Forms.ComboBox();
+            this.cmb_Fact = new System.Windows.Forms.ComboBox();
+            this.txt_CantidadV = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -140,14 +140,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox7);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_FechaC);
+            this.groupBox1.Controls.Add(this.txt_IdTranC);
+            this.groupBox1.Controls.Add(this.txt_CantidadC);
+            this.groupBox1.Controls.Add(this.txt_Doc);
+            this.groupBox1.Controls.Add(this.cmb_Orden);
+            this.groupBox1.Controls.Add(this.cmb_ArtC);
+            this.groupBox1.Controls.Add(this.cmb_Prov);
+            this.groupBox1.Controls.Add(this.txt_MontoC);
             this.groupBox1.Controls.Add(this.btn_exit);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label8);
@@ -168,90 +168,90 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compra";
             // 
-            // textBox4
+            // txt_FechaC
             // 
-            this.textBox4.Location = new System.Drawing.Point(566, 70);
-            this.textBox4.Mask = "00/00/0000";
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 23);
-            this.textBox4.TabIndex = 34;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.ValidatingType = typeof(System.DateTime);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.txt_FechaC.Location = new System.Drawing.Point(566, 70);
+            this.txt_FechaC.Mask = "00/00/0000";
+            this.txt_FechaC.Name = "txt_FechaC";
+            this.txt_FechaC.Size = new System.Drawing.Size(139, 23);
+            this.txt_FechaC.TabIndex = 34;
+            this.txt_FechaC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_FechaC.ValidatingType = typeof(System.DateTime);
+            this.txt_FechaC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
-            // textBox8
+            // txt_IdTranC
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(209, 31);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(139, 27);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.txt_IdTranC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IdTranC.Location = new System.Drawing.Point(209, 31);
+            this.txt_IdTranC.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdTranC.Multiline = true;
+            this.txt_IdTranC.Name = "txt_IdTranC";
+            this.txt_IdTranC.Size = new System.Drawing.Size(139, 27);
+            this.txt_IdTranC.TabIndex = 12;
+            this.txt_IdTranC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
-            // textBox3
+            // txt_CantidadC
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(566, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 27);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txt_CantidadC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CantidadC.Location = new System.Drawing.Point(566, 106);
+            this.txt_CantidadC.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_CantidadC.Multiline = true;
+            this.txt_CantidadC.Name = "txt_CantidadC";
+            this.txt_CantidadC.Size = new System.Drawing.Size(139, 27);
+            this.txt_CantidadC.TabIndex = 6;
+            this.txt_CantidadC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox1
+            // txt_Doc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(566, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 27);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txt_Doc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Doc.Location = new System.Drawing.Point(566, 28);
+            this.txt_Doc.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Doc.Multiline = true;
+            this.txt_Doc.Name = "txt_Doc";
+            this.txt_Doc.Size = new System.Drawing.Size(139, 27);
+            this.txt_Doc.TabIndex = 4;
+            this.txt_Doc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // comboBox7
+            // cmb_Orden
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(209, 69);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(139, 25);
-            this.comboBox7.TabIndex = 1;
-            this.comboBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox7_KeyPress);
+            this.cmb_Orden.FormattingEnabled = true;
+            this.cmb_Orden.Location = new System.Drawing.Point(209, 69);
+            this.cmb_Orden.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Orden.Name = "cmb_Orden";
+            this.cmb_Orden.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Orden.TabIndex = 1;
+            this.cmb_Orden.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox7_KeyPress);
             // 
-            // comboBox6
+            // cmb_ArtC
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(209, 106);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(139, 25);
-            this.comboBox6.TabIndex = 2;
-            this.comboBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox6_KeyPress);
+            this.cmb_ArtC.FormattingEnabled = true;
+            this.cmb_ArtC.Location = new System.Drawing.Point(209, 106);
+            this.cmb_ArtC.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_ArtC.Name = "cmb_ArtC";
+            this.cmb_ArtC.Size = new System.Drawing.Size(139, 25);
+            this.cmb_ArtC.TabIndex = 2;
+            this.cmb_ArtC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox6_KeyPress);
             // 
-            // comboBox2
+            // cmb_Prov
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 150);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(139, 25);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
+            this.cmb_Prov.FormattingEnabled = true;
+            this.cmb_Prov.Location = new System.Drawing.Point(209, 150);
+            this.cmb_Prov.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Prov.Name = "cmb_Prov";
+            this.cmb_Prov.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Prov.TabIndex = 3;
+            this.cmb_Prov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
             // 
-            // textBox2
+            // txt_MontoC
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(566, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 27);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txt_MontoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MontoC.Location = new System.Drawing.Point(566, 151);
+            this.txt_MontoC.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_MontoC.Multiline = true;
+            this.txt_MontoC.Name = "txt_MontoC";
+            this.txt_MontoC.Size = new System.Drawing.Size(139, 27);
+            this.txt_MontoC.TabIndex = 7;
+            this.txt_MontoC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // btn_exit
             // 
@@ -633,13 +633,13 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.comboBox5);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.txt_IdTransV);
+            this.groupBox3.Controls.Add(this.txt_FechaV);
+            this.groupBox3.Controls.Add(this.cmb_Estado);
+            this.groupBox3.Controls.Add(this.txt_MontoV);
+            this.groupBox3.Controls.Add(this.cmb_ArtV);
+            this.groupBox3.Controls.Add(this.cmb_Fact);
+            this.groupBox3.Controls.Add(this.txt_CantidadV);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.label9);
@@ -659,78 +659,78 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Venta";
             // 
-            // textBox9
+            // txt_IdTransV
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(209, 28);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(139, 27);
-            this.textBox9.TabIndex = 36;
+            this.txt_IdTransV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_IdTransV.Location = new System.Drawing.Point(209, 28);
+            this.txt_IdTransV.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdTransV.Multiline = true;
+            this.txt_IdTransV.Name = "txt_IdTransV";
+            this.txt_IdTransV.Size = new System.Drawing.Size(139, 27);
+            this.txt_IdTransV.TabIndex = 36;
             // 
-            // textBox6
+            // txt_FechaV
             // 
-            this.textBox6.Location = new System.Drawing.Point(209, 152);
-            this.textBox6.Mask = "00/00/0000";
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(139, 23);
-            this.textBox6.TabIndex = 35;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.ValidatingType = typeof(System.DateTime);
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.txt_FechaV.Location = new System.Drawing.Point(209, 152);
+            this.txt_FechaV.Mask = "00/00/0000";
+            this.txt_FechaV.Name = "txt_FechaV";
+            this.txt_FechaV.Size = new System.Drawing.Size(139, 23);
+            this.txt_FechaV.TabIndex = 35;
+            this.txt_FechaV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_FechaV.ValidatingType = typeof(System.DateTime);
+            this.txt_FechaV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
-            // comboBox5
+            // cmb_Estado
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(566, 106);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(139, 25);
-            this.comboBox5.TabIndex = 34;
-            this.comboBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox5_KeyPress);
+            this.cmb_Estado.FormattingEnabled = true;
+            this.cmb_Estado.Location = new System.Drawing.Point(566, 106);
+            this.cmb_Estado.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Estado.Name = "cmb_Estado";
+            this.cmb_Estado.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Estado.TabIndex = 34;
+            this.cmb_Estado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox5_KeyPress);
             // 
-            // textBox5
+            // txt_MontoV
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(566, 69);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 27);
-            this.textBox5.TabIndex = 33;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.txt_MontoV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MontoV.Location = new System.Drawing.Point(566, 69);
+            this.txt_MontoV.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_MontoV.Multiline = true;
+            this.txt_MontoV.Name = "txt_MontoV";
+            this.txt_MontoV.Size = new System.Drawing.Size(139, 27);
+            this.txt_MontoV.TabIndex = 33;
+            this.txt_MontoV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
-            // comboBox3
+            // cmb_ArtV
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(209, 69);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(139, 25);
-            this.comboBox3.TabIndex = 30;
-            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
+            this.cmb_ArtV.FormattingEnabled = true;
+            this.cmb_ArtV.Location = new System.Drawing.Point(209, 69);
+            this.cmb_ArtV.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_ArtV.Name = "cmb_ArtV";
+            this.cmb_ArtV.Size = new System.Drawing.Size(139, 25);
+            this.cmb_ArtV.TabIndex = 30;
+            this.cmb_ArtV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
             // 
-            // comboBox4
+            // cmb_Fact
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(209, 106);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(139, 25);
-            this.comboBox4.TabIndex = 29;
-            this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox4_KeyPress);
+            this.cmb_Fact.FormattingEnabled = true;
+            this.cmb_Fact.Location = new System.Drawing.Point(209, 106);
+            this.cmb_Fact.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Fact.Name = "cmb_Fact";
+            this.cmb_Fact.Size = new System.Drawing.Size(139, 25);
+            this.cmb_Fact.TabIndex = 29;
+            this.cmb_Fact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox4_KeyPress);
             // 
-            // textBox7
+            // txt_CantidadV
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(566, 31);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(139, 27);
-            this.textBox7.TabIndex = 22;
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
+            this.txt_CantidadV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CantidadV.Location = new System.Drawing.Point(566, 31);
+            this.txt_CantidadV.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_CantidadV.Multiline = true;
+            this.txt_CantidadV.Name = "txt_CantidadV";
+            this.txt_CantidadV.Size = new System.Drawing.Size(139, 27);
+            this.txt_CantidadV.TabIndex = 22;
+            this.txt_CantidadV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // button3
             // 
@@ -881,8 +881,8 @@
         private System.Windows.Forms.TabControl tcArticulos;
         private System.Windows.Forms.TabPage tbTransacciones;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cmb_Prov;
+        private System.Windows.Forms.TextBox txt_MontoC;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
@@ -908,10 +908,10 @@
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarArticulos;
         private System.Windows.Forms.DataGridView dgv_TransCompra;
         private System.Windows.Forms.TabPage tbTransVentas;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.TextBox txt_CantidadC;
+        private System.Windows.Forms.TextBox txt_Doc;
+        private System.Windows.Forms.ComboBox cmb_Orden;
+        private System.Windows.Forms.ComboBox cmb_ArtC;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
@@ -927,11 +927,11 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.DataGridView dgv_TransVenta;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox cmb_Estado;
+        private System.Windows.Forms.TextBox txt_MontoV;
+        private System.Windows.Forms.ComboBox cmb_ArtV;
+        private System.Windows.Forms.ComboBox cmb_Fact;
+        private System.Windows.Forms.TextBox txt_CantidadV;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;
@@ -941,10 +941,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_IdTranC;
         private System.Windows.Forms.ErrorProvider errorIcono;
-        private System.Windows.Forms.MaskedTextBox textBox4;
-        private System.Windows.Forms.MaskedTextBox textBox6;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.MaskedTextBox txt_FechaC;
+        private System.Windows.Forms.MaskedTextBox txt_FechaV;
+        private System.Windows.Forms.TextBox txt_IdTransV;
     }
 }
