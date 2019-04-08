@@ -724,6 +724,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_GuardarFamilia
             // 
@@ -1001,6 +1002,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btn_GuardarTipoArticulo
             // 

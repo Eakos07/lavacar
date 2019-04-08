@@ -64,7 +64,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarArticulos = new System.Windows.Forms.ToolStripTextBox();
-            this.dgv_Articulos = new System.Windows.Forms.DataGridView();
+            this.dgv_TransCompra = new System.Windows.Forms.DataGridView();
             this.tbTransVentas = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -79,7 +79,7 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_TransVenta = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.MaskedTextBox();
@@ -103,11 +103,11 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TransCompra)).BeginInit();
             this.tbTransVentas.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TransVenta)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
@@ -373,7 +373,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.dgv_Articulos);
+            this.groupBox2.Controls.Add(this.dgv_TransCompra);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(2, 247);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -477,18 +477,22 @@
             this.txt_FiltrarArticulos.Name = "txt_FiltrarArticulos";
             this.txt_FiltrarArticulos.Size = new System.Drawing.Size(76, 27);
             // 
-            // dgv_Articulos
+            // dgv_TransCompra
             // 
-            this.dgv_Articulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgv_Articulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgv_Articulos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Articulos.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Articulos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Articulos.Name = "dgv_Articulos";
-            this.dgv_Articulos.RowTemplate.Height = 24;
-            this.dgv_Articulos.Size = new System.Drawing.Size(767, 228);
-            this.dgv_Articulos.TabIndex = 0;
+            this.dgv_TransCompra.AllowUserToAddRows = false;
+            this.dgv_TransCompra.AllowUserToDeleteRows = false;
+            this.dgv_TransCompra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_TransCompra.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgv_TransCompra.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_TransCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TransCompra.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_TransCompra.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TransCompra.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TransCompra.Name = "dgv_TransCompra";
+            this.dgv_TransCompra.RowTemplate.Height = 24;
+            this.dgv_TransCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_TransCompra.Size = new System.Drawing.Size(767, 228);
+            this.dgv_TransCompra.TabIndex = 0;
             // 
             // tbTransVentas
             // 
@@ -506,7 +510,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.toolStrip2);
-            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.dgv_TransVenta);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox4.Location = new System.Drawing.Point(0, 246);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -610,16 +614,21 @@
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(76, 27);
             // 
-            // dataGridView1
+            // dgv_TransVenta
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 51);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 227);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_TransVenta.AllowUserToAddRows = false;
+            this.dgv_TransVenta.AllowUserToDeleteRows = false;
+            this.dgv_TransVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgv_TransVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgv_TransVenta.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_TransVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TransVenta.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_TransVenta.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TransVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TransVenta.Name = "dgv_TransVenta";
+            this.dgv_TransVenta.RowTemplate.Height = 24;
+            this.dgv_TransVenta.Size = new System.Drawing.Size(778, 227);
+            this.dgv_TransVenta.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -736,6 +745,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -852,13 +862,13 @@
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TransCompra)).EndInit();
             this.tbTransVentas.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TransVenta)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
@@ -896,7 +906,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarArticulos;
-        private System.Windows.Forms.DataGridView dgv_Articulos;
+        private System.Windows.Forms.DataGridView dgv_TransCompra;
         private System.Windows.Forms.TabPage tbTransVentas;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
@@ -915,7 +925,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_TransVenta;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.TextBox textBox5;

@@ -52,6 +52,7 @@ namespace FRM_Login.Menu
             cmb_IdEstadoProveedor.SelectedValue = "0";
             #endregion
 
+            txt_IdProveedor.Enabled = false;
             txt_IdProveedor.Clear();
             txtNomProveedor.Clear();
             txtEmailProveedor.Clear();

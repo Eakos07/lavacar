@@ -38,12 +38,12 @@ namespace FRM_Login.Menu
 
             if (sMsjError == string.Empty)
             {
-                dgv_Articulos.DataSource = null;
-                dgv_Articulos.DataSource = DT;
+                dgv_TransCompra.DataSource = null;
+                dgv_TransCompra.DataSource = DT;
             }
             else
             {
-                dgv_Articulos.DataSource = null;
+                dgv_TransCompra.DataSource = null;
 
                 MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -66,12 +66,12 @@ namespace FRM_Login.Menu
 
             if (sMsjError == string.Empty)
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = DT;
+                dgv_TransVenta.DataSource = null;
+                dgv_TransVenta.DataSource = DT;
             }
             else
             {
-                dataGridView1.DataSource = null;
+                dgv_TransVenta.DataSource = null;
 
                 MessageBox.Show("Se presento un error a la hora de listar los estados.\n\nDetalle Error : [" + sMsjError + "]",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -88,7 +88,7 @@ namespace FRM_Login.Menu
         //Modificar Transacciones de Compra
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if (dgv_Articulos.RowCount == 0)
+            if (dgv_TransCompra.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -97,14 +97,14 @@ namespace FRM_Login.Menu
                 TransC_ObjDAL = new cls_TransaccionesCompra_DAL();
                 TransC_ObjDAL.cBandera = 'U';
 
-                TransC_ObjDAL.iIdTransaccionCompra = Convert.ToInt32(dgv_Articulos.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                TransC_ObjDAL.iIdNumOrden = Convert.ToInt32(dgv_Articulos.SelectedRows[0].Cells[1].Value.ToString().Trim());
-                TransC_ObjDAL.sIdArticulo = dgv_Articulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                TransC_ObjDAL.bIdProveedor = Convert.ToByte(dgv_Articulos.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                TransC_ObjDAL.sDocumento = dgv_Articulos.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                TransC_ObjDAL.dtFecha = Convert.ToDateTime(dgv_Articulos.SelectedRows[0].Cells[5].Value.ToString().Trim());
-                TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim());
-                TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim());
+                TransC_ObjDAL.iIdTransaccionCompra = Convert.ToInt32(dgv_TransCompra.SelectedRows[0].Cells[0].Value.ToString().Trim());
+                TransC_ObjDAL.iIdNumOrden = Convert.ToInt32(dgv_TransCompra.SelectedRows[0].Cells[1].Value.ToString().Trim());
+                TransC_ObjDAL.sIdArticulo = dgv_TransCompra.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                TransC_ObjDAL.bIdProveedor = Convert.ToByte(dgv_TransCompra.SelectedRows[0].Cells[3].Value.ToString().Trim());
+                TransC_ObjDAL.sDocumento = dgv_TransCompra.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                TransC_ObjDAL.dtFecha = Convert.ToDateTime(dgv_TransCompra.SelectedRows[0].Cells[5].Value.ToString().Trim());
+                TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransCompra.SelectedRows[0].Cells[6].Value.ToString().Trim());
+                TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransCompra.SelectedRows[0].Cells[7].Value.ToString().Trim());
 
                 textBox8.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
                 textBox1.Text = TransC_ObjDAL.sDocumento;
@@ -150,7 +150,7 @@ namespace FRM_Login.Menu
         //Modificar Transacciones Venta
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount == 0)
+            if (dgv_TransVenta.RowCount == 0)
             {
                 MessageBox.Show("No existen datos para modificar", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -159,12 +159,12 @@ namespace FRM_Login.Menu
                 TransV_ObjDAL = new cls_TransaccionesVenta_DAL();
                 TransV_ObjDAL.cBandera = 'U';
 
-                TransV_ObjDAL.iIdTransaccionVenta = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                TransV_ObjDAL.sIdArticulo = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                TransV_ObjDAL.iNumFactura = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim());
-                TransV_ObjDAL.dFecha = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                TransV_ObjDAL.iCantidad = Convert.ToInt16(dataGridView1.SelectedRows[0].Cells[4].Value.ToString().Trim());
-                TransV_ObjDAL.dMonto = Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[5].Value.ToString().Trim());
+                TransV_ObjDAL.iIdTransaccionVenta = Convert.ToInt32(dgv_TransVenta.SelectedRows[0].Cells[0].Value.ToString().Trim());
+                TransV_ObjDAL.sIdArticulo = dgv_TransVenta.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                TransV_ObjDAL.iNumFactura = Convert.ToInt32(dgv_TransVenta.SelectedRows[0].Cells[2].Value.ToString().Trim());
+                TransV_ObjDAL.dFecha = Convert.ToDateTime(dgv_TransVenta.SelectedRows[0].Cells[3].Value.ToString().Trim());
+                TransV_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransVenta.SelectedRows[0].Cells[4].Value.ToString().Trim());
+                TransV_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransVenta.SelectedRows[0].Cells[5].Value.ToString().Trim());
 
                 textBox9.Text = TransV_ObjDAL.iIdTransaccionVenta.ToString();
                 textBox6.Text = TransV_ObjDAL.dFecha.ToString();
@@ -418,6 +418,11 @@ namespace FRM_Login.Menu
         #endregion
 
         private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
