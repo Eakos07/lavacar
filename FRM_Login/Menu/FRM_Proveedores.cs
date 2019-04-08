@@ -105,9 +105,9 @@ namespace FRM_Login.Menu
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txtNomProveedor.Text)) && !(string.IsNullOrEmpty(txtTelefoProveedor.Text))
-                && (string.IsNullOrEmpty(txtEmailProveedor.Text)) && !(string.IsNullOrEmpty(txtPlazoPago.Text)) && cmb_IdEstadoProveedor.SelectedValue.ToString() == "0")
+                && !(string.IsNullOrEmpty(txtEmailProveedor.Text)) && !(string.IsNullOrEmpty(txtPlazoPago.Text)) && cmb_IdEstadoProveedor.SelectedValue.ToString() != "0")
             {
-                Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
+                //Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
                 Obj_DAL.sNombreProveedor = txtNomProveedor.Text;
                 Obj_DAL.sEmail = txtEmailProveedor.Text;
                 Obj_DAL.iTelefono = Convert.ToInt32(txtTelefoProveedor.Text);
@@ -134,7 +134,7 @@ namespace FRM_Login.Menu
         private void dgv_Proveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Obj_DAL.cBandIM = 'M';
-            txt_IdProveedor.Enabled = false;
+            //txt_IdProveedor.Enabled = false;
             txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
             txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
             txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
