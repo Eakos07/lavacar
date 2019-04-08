@@ -26,6 +26,7 @@ namespace FRM_Login.Menu
         #endregion
         public void Cargar_Datos()
         {
+            txt_NumOrden.Enabled = false;
             string sMsjError = string.Empty;
             DataTable DT_Ordenes = new DataTable();
             Obj_OrdenesCompra_DAL.cBandIM = 'I';

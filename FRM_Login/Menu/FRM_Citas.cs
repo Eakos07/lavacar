@@ -174,8 +174,9 @@ namespace FRM_Login.Menu
         {
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
-            Obj_Citas_DAL.cBandIM = 'I';                        
+            Obj_Citas_DAL.cBandIM = 'I';
 
+            txt_NumCita.Enabled = false;
             txt_NumCita.Clear();
             txt_NomCliente.Clear();
             txt_Telefono.Clear();
