@@ -242,7 +242,7 @@ namespace FRM_Login.Menu
                 !string.IsNullOrEmpty(txt_Compañia.Text) || cmb_IdProveedor.SelectedValue.ToString()!="0")
             {
                 string sMsjError = String.Empty;
-                Obj_Polizas_DAL.cIdTipoPoliza = Convert.ToChar(txt_IdTipoPoliza.Text);
+                Obj_TipoPolizas_DAL.cIdTipoPoliza = Convert.ToChar(txt_IdTipoPoliza.Text);
                 Obj_TipoPolizas_DAL.sNombrePoliza = txt_NombrePoliza.Text;
                 Obj_TipoPolizas_DAL.sCompañia = txt_Compañia.Text;
                 Obj_TipoPolizas_DAL.bIdProveedor = Convert.ToByte(cmb_IdProveedor.SelectedValue);

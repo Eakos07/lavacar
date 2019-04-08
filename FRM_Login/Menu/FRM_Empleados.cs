@@ -35,6 +35,7 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
+            Obj_DAL.cBandIM = 'I';
             if (txt_Filtrar.Text == string.Empty)
             {
                 DT = EmplC_ObjBLL.Listar_Empleados(ref sMsjError);
@@ -100,9 +101,9 @@ namespace FRM_Login.Menu
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_Identificacion.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txt_Apellido.Text))
-                && !(string.IsNullOrEmpty(txt_Telefono.Text)) && (string.IsNullOrEmpty(txt_Direccion.Text)) && (string.IsNullOrEmpty(txt_Email.Text))
-                && (string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() == "0" && cmb_IdPoliza.SelectedValue.ToString() == "0" 
-                && cmb_IdUsuario.SelectedValue.ToString() == "0")
+                && !(string.IsNullOrEmpty(txt_Telefono.Text)) && !(string.IsNullOrEmpty(txt_Direccion.Text)) && !(string.IsNullOrEmpty(txt_Email.Text))
+                && !(string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" && cmb_IdPoliza.SelectedValue.ToString() != "0" 
+                && cmb_IdUsuario.SelectedValue.ToString() != "0")
             {
                 Obj_DAL.sIdenti = txt_Identificacion.Text;
                 Obj_DAL.sNombre = txt_Nombre.Text;

@@ -86,9 +86,9 @@ namespace FRM_Login.Menu
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_Cantidad.Text) ||
-                !string.IsNullOrEmpty(txt_Precio.Text) || cmb_IdEstado.SelectedValue.ToString() != "0" ||
-                cmb_IdProve.SelectedValue.ToString() != "0" || cmb_IdArticulo.SelectedValue.ToString() != "0")
+            if (!(string.IsNullOrEmpty(txt_Cantidad.Text)) &&
+                !(string.IsNullOrEmpty(txt_Precio.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" ||
+                cmb_IdProve.SelectedValue.ToString() != "0" && cmb_IdArticulo.SelectedValue.ToString() != "0")
             {
                 
                 Obj_OrdenesCompra_DAL.iCantidad = Convert.ToInt16(txt_Cantidad.Text);
@@ -96,7 +96,7 @@ namespace FRM_Login.Menu
                 Obj_OrdenesCompra_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
                 Obj_OrdenesCompra_DAL.bIdProveedor = Convert.ToByte(cmb_IdProve.SelectedValue);
                 Obj_OrdenesCompra_DAL.sIdArticulo = cmb_IdArticulo.SelectedValue.ToString();
-                string sMsjError = String.Empty;
+                string sMsjError = string.Empty;
 
                 if (Obj_OrdenesCompra_DAL.cBandIM =='I')
                 {
@@ -150,12 +150,7 @@ namespace FRM_Login.Menu
 
         private void dgv_Ordenes_Compra_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Ordenes_Compra.RowCount.Equals(0))
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
+           
                 Obj_OrdenesCompra_DAL.cBandIM = 'M';
                 txt_NumOrden.Enabled = false;
 
@@ -165,7 +160,7 @@ namespace FRM_Login.Menu
                 txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 cmb_IdEstado.SelectedValue = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            }
+            
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)

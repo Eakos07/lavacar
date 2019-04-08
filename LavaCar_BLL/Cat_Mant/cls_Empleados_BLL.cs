@@ -65,7 +65,7 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
             Obj_BLL.CrearParametros(ref Obj_DAL);
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 6, Obj_Empleados_DAL.iIdEmpleado.ToString().Trim());
+            //Obj_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 6, Obj_Empleados_DAL.iIdEmpleado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Identificacion", 3, Obj_Empleados_DAL.sIdenti.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Nombre", 3, Obj_Empleados_DAL.sNombre.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Apellidos", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
@@ -78,7 +78,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Empleados"].ToString().Trim();
-            Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+            Obj_BLL.Ejec_Scalar(ref Obj_DAL);
         }
 
         public void Modificar_Clientes(ref string sMsjError, ref cls_Empleados_DAL Obj_Empleados_DAL)

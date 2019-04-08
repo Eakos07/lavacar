@@ -22,12 +22,34 @@ namespace FRM_Login.Menu
         private void FRM_Factura_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Factura();
+            Cargar_cmb();
         }
         public void Cargar_Datos_Factura()
         {
             cls_Factura_BLL Obj_BLL = new cls_Factura_BLL();
             string sMsjError = string.Empty;
             DataTable dtFactura = new DataTable();
+
+            
+
+            if (txt_FiltrarFacturas.Text == string.Empty)
+            {
+                dtFactura = Obj_BLL.Listar_Factura(ref sMsjError);
+            }
+            else
+            {
+                dtFactura = Obj_BLL.Filtrar_Factura(ref sMsjError, txt_FiltrarFacturas.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Facturas.DataSource = null;
+                dgv_Facturas.DataSource = dtFactura;
+            }
+        }
+
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
 
             #region Cliente
             cls_Clientes_BLL Obj_Clientes_BLL = new cls_Clientes_BLL();
@@ -74,7 +96,7 @@ namespace FRM_Login.Menu
             #endregion
 
             #region Tipo Factura
-            cls_TipoFactura_BLL Obj_TipoFactura_BLL = new  cls_TipoFactura_BLL();
+            cls_TipoFactura_BLL Obj_TipoFactura_BLL = new cls_TipoFactura_BLL();
             DataTable DT_TipoFactura = new DataTable();
             DT_TipoFactura = Obj_TipoFactura_BLL.Listar_TipoFactura(ref sMsjError);
             cmb_IdTipFactu.DataSource = DT_Promociones;
@@ -83,20 +105,6 @@ namespace FRM_Login.Menu
             cmb_IdTipFactu.ValueMember = DT_Promociones.Columns[0].ToString();
             cmb_IdTipFactu.SelectedValue = "0";
             #endregion
-
-            if (txt_FiltrarFacturas.Text == string.Empty)
-            {
-                dtFactura = Obj_BLL.Listar_Factura(ref sMsjError);
-            }
-            else
-            {
-                dtFactura = Obj_BLL.Filtrar_Factura(ref sMsjError, txt_FiltrarFacturas.Text);
-            }
-            if (sMsjError == string.Empty)
-            {
-                dgv_Facturas.DataSource = null;
-                dgv_Facturas.DataSource = dtFactura;
-            }
         }
 
         private void txt_FiltrarFacturas_TextChanged(object sender, EventArgs e)
