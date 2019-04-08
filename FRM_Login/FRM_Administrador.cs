@@ -151,6 +151,17 @@ namespace FRM_Login.Menu
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            AbrirVentana(new FRM_Ajuste_Inventario());        }
+            AbrirVentana(new FRM_Ajuste_Inventario());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Ordenes___de_Compras());
+        }
     }
 }

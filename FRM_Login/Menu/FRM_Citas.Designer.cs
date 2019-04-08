@@ -297,6 +297,7 @@
             this.btn_RC_Exit.TabIndex = 4;
             this.btn_RC_Exit.Text = "Salir";
             this.btn_RC_Exit.UseVisualStyleBackColor = false;
+            this.btn_RC_Exit.Click += new System.EventHandler(this.btn_RC_Exit_Click);
             // 
             // btn_RC_Save
             // 
@@ -714,6 +715,7 @@
             this.btn_Citas_Exit.TabIndex = 6;
             this.btn_Citas_Exit.Text = "Salir";
             this.btn_Citas_Exit.UseVisualStyleBackColor = false;
+            this.btn_Citas_Exit.Click += new System.EventHandler(this.btn_Citas_Exit_Click);
             // 
             // label4
             // 

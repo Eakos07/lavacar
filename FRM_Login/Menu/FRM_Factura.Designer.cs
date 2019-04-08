@@ -79,9 +79,9 @@
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(9, 301);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(788, 266);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -93,7 +93,7 @@
             this.dgv_Facturas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Facturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Facturas.Location = new System.Drawing.Point(5, 50);
-            this.dgv_Facturas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Facturas.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Facturas.Name = "dgv_Facturas";
             this.dgv_Facturas.RowTemplate.Height = 24;
             this.dgv_Facturas.Size = new System.Drawing.Size(779, 209);
@@ -201,9 +201,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(6, 7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(791, 285);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -213,7 +213,7 @@
             // 
             this.cmb_CedJuri.FormattingEnabled = true;
             this.cmb_CedJuri.Location = new System.Drawing.Point(143, 195);
-            this.cmb_CedJuri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_CedJuri.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_CedJuri.Name = "cmb_CedJuri";
             this.cmb_CedJuri.Size = new System.Drawing.Size(159, 25);
             this.cmb_CedJuri.TabIndex = 14;
@@ -223,7 +223,7 @@
             // 
             this.cmb_CodServ.FormattingEnabled = true;
             this.cmb_CodServ.Location = new System.Drawing.Point(143, 112);
-            this.cmb_CodServ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_CodServ.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_CodServ.Name = "cmb_CodServ";
             this.cmb_CodServ.Size = new System.Drawing.Size(159, 25);
             this.cmb_CodServ.TabIndex = 13;
@@ -233,7 +233,7 @@
             // 
             this.cmb_NumPlaca.FormattingEnabled = true;
             this.cmb_NumPlaca.Location = new System.Drawing.Point(143, 72);
-            this.cmb_NumPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_NumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_NumPlaca.Name = "cmb_NumPlaca";
             this.cmb_NumPlaca.Size = new System.Drawing.Size(159, 25);
             this.cmb_NumPlaca.TabIndex = 12;
@@ -243,7 +243,7 @@
             // 
             this.cmb_IdTipCamb.FormattingEnabled = true;
             this.cmb_IdTipCamb.Location = new System.Drawing.Point(143, 155);
-            this.cmb_IdTipCamb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdTipCamb.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdTipCamb.Name = "cmb_IdTipCamb";
             this.cmb_IdTipCamb.Size = new System.Drawing.Size(159, 25);
             this.cmb_IdTipCamb.TabIndex = 3;
@@ -253,7 +253,7 @@
             // 
             this.txt_NumFact.Enabled = false;
             this.txt_NumFact.Location = new System.Drawing.Point(143, 32);
-            this.txt_NumFact.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NumFact.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumFact.Name = "txt_NumFact";
             this.txt_NumFact.Size = new System.Drawing.Size(158, 23);
             this.txt_NumFact.TabIndex = 0;
@@ -266,12 +266,13 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(657, 237);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 11;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Save
             // 
@@ -280,7 +281,7 @@
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(502, 237);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 10;
@@ -291,7 +292,7 @@
             // txt_MontoTotal
             // 
             this.txt_MontoTotal.Location = new System.Drawing.Point(502, 72);
-            this.txt_MontoTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MontoTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MontoTotal.Name = "txt_MontoTotal";
             this.txt_MontoTotal.Size = new System.Drawing.Size(159, 23);
             this.txt_MontoTotal.TabIndex = 7;
@@ -300,7 +301,7 @@
             // txt_Descuent
             // 
             this.txt_Descuent.Location = new System.Drawing.Point(502, 32);
-            this.txt_Descuent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Descuent.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Descuent.Name = "txt_Descuent";
             this.txt_Descuent.Size = new System.Drawing.Size(159, 23);
             this.txt_Descuent.TabIndex = 6;
@@ -309,7 +310,7 @@
             // txt_MontoNeto
             // 
             this.txt_MontoNeto.Location = new System.Drawing.Point(142, 235);
-            this.txt_MontoNeto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MontoNeto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MontoNeto.Name = "txt_MontoNeto";
             this.txt_MontoNeto.Size = new System.Drawing.Size(159, 23);
             this.txt_MontoNeto.TabIndex = 5;
@@ -319,7 +320,7 @@
             // 
             this.cmb_IdTipFactu.FormattingEnabled = true;
             this.cmb_IdTipFactu.Location = new System.Drawing.Point(502, 155);
-            this.cmb_IdTipFactu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdTipFactu.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdTipFactu.Name = "cmb_IdTipFactu";
             this.cmb_IdTipFactu.Size = new System.Drawing.Size(159, 25);
             this.cmb_IdTipFactu.TabIndex = 9;
@@ -329,7 +330,7 @@
             // 
             this.cmb_IdPromo.FormattingEnabled = true;
             this.cmb_IdPromo.Location = new System.Drawing.Point(502, 113);
-            this.cmb_IdPromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdPromo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdPromo.Name = "cmb_IdPromo";
             this.cmb_IdPromo.Size = new System.Drawing.Size(159, 25);
             this.cmb_IdPromo.TabIndex = 8;
@@ -448,7 +449,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Factura";
             this.Text = "FRM_Factura";
             this.Load += new System.EventHandler(this.FRM_Factura_Load);

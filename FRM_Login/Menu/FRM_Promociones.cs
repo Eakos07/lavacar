@@ -49,5 +49,10 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_Promociones();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

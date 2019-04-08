@@ -84,9 +84,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(9, 22);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(779, 214);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -116,7 +116,7 @@
             // 
             this.cmb_IdEstadoProveedor.FormattingEnabled = true;
             this.cmb_IdEstadoProveedor.Location = new System.Drawing.Point(565, 110);
-            this.cmb_IdEstadoProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdEstadoProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstadoProveedor.Name = "cmb_IdEstadoProveedor";
             this.cmb_IdEstadoProveedor.Size = new System.Drawing.Size(167, 25);
             this.cmb_IdEstadoProveedor.TabIndex = 5;
@@ -129,12 +129,13 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(670, 171);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 30);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAceptar
             // 
@@ -143,7 +144,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(522, 171);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(115, 30);
             this.btnAceptar.TabIndex = 6;
@@ -155,7 +156,7 @@
             // 
             this.txtPlazoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlazoPago.Location = new System.Drawing.Point(565, 69);
-            this.txtPlazoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlazoPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlazoPago.Multiline = true;
             this.txtPlazoPago.Name = "txtPlazoPago";
             this.txtPlazoPago.Size = new System.Drawing.Size(167, 25);
@@ -165,7 +166,7 @@
             // 
             this.txtTelefoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 28);
-            this.txtTelefoProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefoProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefoProveedor.MaxLength = 9;
             this.txtTelefoProveedor.Name = "txtTelefoProveedor";
             this.txtTelefoProveedor.Size = new System.Drawing.Size(167, 23);
@@ -176,7 +177,7 @@
             // 
             this.txtEmailProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailProveedor.Location = new System.Drawing.Point(205, 111);
-            this.txtEmailProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailProveedor.MaxLength = 50;
             this.txtEmailProveedor.Multiline = true;
             this.txtEmailProveedor.Name = "txtEmailProveedor";
@@ -232,7 +233,7 @@
             // 
             this.txtNomProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomProveedor.Location = new System.Drawing.Point(205, 69);
-            this.txtNomProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomProveedor.MaxLength = 30;
             this.txtNomProveedor.Multiline = true;
             this.txtNomProveedor.Name = "txtNomProveedor";
@@ -257,9 +258,9 @@
             this.groupBox2.Controls.Add(this.dgv_Proveedores);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(9, 241);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 269);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -353,7 +354,7 @@
             this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Proveedores.Location = new System.Drawing.Point(8, 51);
-            this.dgv_Proveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Proveedores.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Proveedores.MultiSelect = false;
             this.dgv_Proveedores.Name = "dgv_Proveedores";
             this.dgv_Proveedores.RowTemplate.Height = 24;
@@ -375,7 +376,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Proveedores";
             this.Text = "FRM_Proveedores";
             this.Load += new System.EventHandler(this.FRM_Proveedores_Load);

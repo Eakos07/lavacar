@@ -536,5 +536,15 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
+        private void btn_RC_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Citas_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

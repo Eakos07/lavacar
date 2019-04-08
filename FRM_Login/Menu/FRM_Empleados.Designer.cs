@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Empleados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.txt_Puesto = new System.Windows.Forms.TextBox();
@@ -57,17 +58,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_Empleados = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Refrescar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -111,6 +111,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Empleados";
             // 
+            // txt_IdEmpleado
+            // 
+            this.txt_IdEmpleado.Enabled = false;
+            this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
+            this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdEmpleado.Name = "txt_IdEmpleado";
+            this.txt_IdEmpleado.Size = new System.Drawing.Size(158, 23);
+            this.txt_IdEmpleado.TabIndex = 13;
+            // 
             // btn_Exit
             // 
             this.btn_Exit.BackColor = System.Drawing.Color.Aqua;
@@ -124,6 +133,7 @@
             this.btn_Exit.TabIndex = 12;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Save
             // 
@@ -395,12 +405,6 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
-            this.toolStripLabel1.Text = "Refrescar";
-            // 
             // btn_Refrescar
             // 
             this.btn_Refrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -411,16 +415,16 @@
             this.btn_Refrescar.Text = "toolStripButton1";
             this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel1.Text = "Refrescar";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
-            this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar
             // 
@@ -431,6 +435,12 @@
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar.Text = "toolStripButton2";
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
+            this.toolStripLabel2.Text = "Modificar";
             // 
             // toolStripSeparator2
             // 
@@ -457,15 +467,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // txt_IdEmpleado
-            // 
-            this.txt_IdEmpleado.Enabled = false;
-            this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
-            this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_IdEmpleado.Name = "txt_IdEmpleado";
-            this.txt_IdEmpleado.Size = new System.Drawing.Size(158, 23);
-            this.txt_IdEmpleado.TabIndex = 13;
             // 
             // FRM_Empleados
             // 

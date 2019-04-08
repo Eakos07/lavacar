@@ -39,7 +39,7 @@
             this.txt_PrecioVenta_Articulo = new System.Windows.Forms.TextBox();
             this.txt_NombreArticulo = new System.Windows.Forms.TextBox();
             this.txt_Articulo = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_GuardarArticulo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -147,7 +147,7 @@
             this.groupBox1.Controls.Add(this.txt_PrecioVenta_Articulo);
             this.groupBox1.Controls.Add(this.txt_NombreArticulo);
             this.groupBox1.Controls.Add(this.txt_Articulo);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btn_Exit);
             this.groupBox1.Controls.Add(this.btn_GuardarArticulo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -159,9 +159,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(782, 238);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -171,7 +171,7 @@
             // 
             this.cmb_Tipo_Articulo.FormattingEnabled = true;
             this.cmb_Tipo_Articulo.Location = new System.Drawing.Point(566, 107);
-            this.cmb_Tipo_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Tipo_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Tipo_Articulo.Name = "cmb_Tipo_Articulo";
             this.cmb_Tipo_Articulo.Size = new System.Drawing.Size(139, 25);
             this.cmb_Tipo_Articulo.TabIndex = 7;
@@ -181,7 +181,7 @@
             // 
             this.cmb_IdFamilia_Articulo.FormattingEnabled = true;
             this.cmb_IdFamilia_Articulo.Location = new System.Drawing.Point(209, 150);
-            this.cmb_IdFamilia_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdFamilia_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdFamilia_Articulo.Name = "cmb_IdFamilia_Articulo";
             this.cmb_IdFamilia_Articulo.Size = new System.Drawing.Size(139, 25);
             this.cmb_IdFamilia_Articulo.TabIndex = 4;
@@ -191,7 +191,7 @@
             // 
             this.cmb_Estado_Articulos.FormattingEnabled = true;
             this.cmb_Estado_Articulos.Location = new System.Drawing.Point(566, 27);
-            this.cmb_Estado_Articulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Estado_Articulos.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Estado_Articulos.Name = "cmb_Estado_Articulos";
             this.cmb_Estado_Articulos.Size = new System.Drawing.Size(139, 25);
             this.cmb_Estado_Articulos.TabIndex = 5;
@@ -201,7 +201,7 @@
             // 
             this.txt_InventarioMin_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_InventarioMin_Articulo.Location = new System.Drawing.Point(566, 69);
-            this.txt_InventarioMin_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_InventarioMin_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_InventarioMin_Articulo.Multiline = true;
             this.txt_InventarioMin_Articulo.Name = "txt_InventarioMin_Articulo";
             this.txt_InventarioMin_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -212,7 +212,7 @@
             // 
             this.txt_Cantidad_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 106);
-            this.txt_Cantidad_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Cantidad_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Cantidad_Articulo.Multiline = true;
             this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
             this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -223,7 +223,7 @@
             // 
             this.txt_PrecioVenta_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PrecioVenta_Articulo.Location = new System.Drawing.Point(566, 151);
-            this.txt_PrecioVenta_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrecioVenta_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrecioVenta_Articulo.Multiline = true;
             this.txt_PrecioVenta_Articulo.Name = "txt_PrecioVenta_Articulo";
             this.txt_PrecioVenta_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -234,7 +234,7 @@
             // 
             this.txt_NombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NombreArticulo.Location = new System.Drawing.Point(209, 67);
-            this.txt_NombreArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NombreArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NombreArticulo.Multiline = true;
             this.txt_NombreArticulo.Name = "txt_NombreArticulo";
             this.txt_NombreArticulo.Size = new System.Drawing.Size(139, 27);
@@ -245,27 +245,27 @@
             // 
             this.txt_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Articulo.Location = new System.Drawing.Point(209, 28);
-            this.txt_Articulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Articulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Articulo.Multiline = true;
             this.txt_Articulo.Name = "txt_Articulo";
             this.txt_Articulo.Size = new System.Drawing.Size(139, 27);
             this.txt_Articulo.TabIndex = 1;
             this.txt_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Articulo_KeyPress);
             // 
-            // button2
+            // btn_Exit
             // 
-            this.button2.BackColor = System.Drawing.Color.Aqua;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(650, 193);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Exit.BackColor = System.Drawing.Color.Aqua;
+            this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(650, 193);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(110, 30);
+            this.btn_Exit.TabIndex = 10;
+            this.btn_Exit.Text = "Salir";
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_GuardarArticulo
             // 
@@ -274,7 +274,7 @@
             this.btn_GuardarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GuardarArticulo.Location = new System.Drawing.Point(500, 193);
-            this.btn_GuardarArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_GuardarArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarArticulo.Name = "btn_GuardarArticulo";
             this.btn_GuardarArticulo.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarArticulo.TabIndex = 9;
@@ -376,9 +376,9 @@
             this.groupBox2.Controls.Add(this.dgv_Articulos);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(2, 247);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(786, 293);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -499,7 +499,7 @@
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Articulos.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Articulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Articulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Articulos.MultiSelect = false;
             this.dgv_Articulos.Name = "dgv_Articulos";
             this.dgv_Articulos.RowTemplate.Height = 24;
@@ -515,7 +515,7 @@
             this.tcArticulos.Controls.Add(this.tabPage1);
             this.tcArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcArticulos.Location = new System.Drawing.Point(2, 9);
-            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.tcArticulos.Name = "tcArticulos";
             this.tcArticulos.SelectedIndex = 0;
             this.tcArticulos.Size = new System.Drawing.Size(799, 557);
@@ -526,9 +526,9 @@
             this.tbRegistroClientes.Controls.Add(this.groupBox1);
             this.tbRegistroClientes.Controls.Add(this.groupBox2);
             this.tbRegistroClientes.Location = new System.Drawing.Point(4, 26);
-            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Name = "tbRegistroClientes";
-            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Size = new System.Drawing.Size(791, 527);
             this.tbRegistroClientes.TabIndex = 0;
             this.tbRegistroClientes.Text = "Artículos";
@@ -539,9 +539,9 @@
             this.tbcCreacionCitas.Controls.Add(this.groupBox4);
             this.tbcCreacionCitas.Controls.Add(this.groupBox3);
             this.tbcCreacionCitas.Location = new System.Drawing.Point(4, 26);
-            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Name = "tbcCreacionCitas";
-            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Size = new System.Drawing.Size(791, 527);
             this.tbcCreacionCitas.TabIndex = 1;
             this.tbcCreacionCitas.Text = "Familia Artículos";
@@ -553,9 +553,9 @@
             this.groupBox4.Controls.Add(this.toolStrip2);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox4.Location = new System.Drawing.Point(2, 231);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(788, 296);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
@@ -569,7 +569,7 @@
             this.dgv_FamiliaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_FamiliaArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_FamiliaArticulos.Location = new System.Drawing.Point(10, 47);
-            this.dgv_FamiliaArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_FamiliaArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_FamiliaArticulos.MultiSelect = false;
             this.dgv_FamiliaArticulos.Name = "dgv_FamiliaArticulos";
             this.dgv_FamiliaArticulos.RowTemplate.Height = 24;
@@ -695,9 +695,9 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox3.Location = new System.Drawing.Point(2, 4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(782, 222);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -718,7 +718,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(640, 160);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 30);
             this.button3.TabIndex = 4;
@@ -732,7 +732,7 @@
             this.btn_GuardarFamilia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GuardarFamilia.Location = new System.Drawing.Point(485, 160);
-            this.btn_GuardarFamilia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_GuardarFamilia.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarFamilia.Name = "btn_GuardarFamilia";
             this.btn_GuardarFamilia.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarFamilia.TabIndex = 3;
@@ -743,7 +743,7 @@
             // txt_DescripcionFamilia
             // 
             this.txt_DescripcionFamilia.Location = new System.Drawing.Point(122, 85);
-            this.txt_DescripcionFamilia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_DescripcionFamilia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_DescripcionFamilia.Name = "txt_DescripcionFamilia";
             this.txt_DescripcionFamilia.Size = new System.Drawing.Size(178, 23);
             this.txt_DescripcionFamilia.TabIndex = 1;
@@ -753,7 +753,7 @@
             // 
             this.cmb_IdEstadoFamilia.FormattingEnabled = true;
             this.cmb_IdEstadoFamilia.Location = new System.Drawing.Point(122, 131);
-            this.cmb_IdEstadoFamilia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdEstadoFamilia.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstadoFamilia.Name = "cmb_IdEstadoFamilia";
             this.cmb_IdEstadoFamilia.Size = new System.Drawing.Size(178, 25);
             this.cmb_IdEstadoFamilia.TabIndex = 2;
@@ -794,9 +794,9 @@
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(791, 527);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Tipo Artículos";
@@ -808,9 +808,9 @@
             this.groupBox6.Controls.Add(this.dgv_TipoArticulos);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox6.Location = new System.Drawing.Point(6, 228);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(784, 301);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
@@ -929,7 +929,7 @@
             this.dgv_TipoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_TipoArticulos.Location = new System.Drawing.Point(11, 47);
-            this.dgv_TipoArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_TipoArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TipoArticulos.MultiSelect = false;
             this.dgv_TipoArticulos.Name = "dgv_TipoArticulos";
             this.dgv_TipoArticulos.RowTemplate.Height = 24;
@@ -951,9 +951,9 @@
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox5.Location = new System.Drawing.Point(6, 5);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(773, 218);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
@@ -971,7 +971,7 @@
             // 
             this.cmb_EstadoTipoArticulo.FormattingEnabled = true;
             this.cmb_EstadoTipoArticulo.Location = new System.Drawing.Point(202, 145);
-            this.cmb_EstadoTipoArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_EstadoTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EstadoTipoArticulo.Name = "cmb_EstadoTipoArticulo";
             this.cmb_EstadoTipoArticulo.Size = new System.Drawing.Size(150, 25);
             this.cmb_EstadoTipoArticulo.TabIndex = 2;
@@ -981,7 +981,7 @@
             // 
             this.txt_DescripcionTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DescripcionTipoArticulo.Location = new System.Drawing.Point(202, 89);
-            this.txt_DescripcionTipoArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_DescripcionTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_DescripcionTipoArticulo.Multiline = true;
             this.txt_DescripcionTipoArticulo.Name = "txt_DescripcionTipoArticulo";
             this.txt_DescripcionTipoArticulo.Size = new System.Drawing.Size(150, 27);
@@ -995,7 +995,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(652, 170);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 30);
             this.button5.TabIndex = 4;
@@ -1009,7 +1009,7 @@
             this.btn_GuardarTipoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GuardarTipoArticulo.Location = new System.Drawing.Point(490, 170);
-            this.btn_GuardarTipoArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_GuardarTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarTipoArticulo.Name = "btn_GuardarTipoArticulo";
             this.btn_GuardarTipoArticulo.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarTipoArticulo.TabIndex = 3;
@@ -1062,7 +1062,7 @@
             this.ClientSize = new System.Drawing.Size(803, 575);
             this.Controls.Add(this.tcArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Articulos";
             this.Text = "FRM_Articulos";
             this.Load += new System.EventHandler(this.FRM_Articulos_Load);
@@ -1108,7 +1108,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_GuardarArticulo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.TextBox txt_InventarioMin_Articulo;
         private System.Windows.Forms.TextBox txt_Cantidad_Articulo;
         private System.Windows.Forms.TextBox txt_PrecioVenta_Articulo;

@@ -164,6 +164,7 @@
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Save
             // 
