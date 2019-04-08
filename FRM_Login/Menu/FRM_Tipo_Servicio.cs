@@ -210,5 +210,10 @@ namespace FRM_Login.Menu
                 cmb_IdTipoVehiculo.SelectedValue = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

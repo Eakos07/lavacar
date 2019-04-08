@@ -279,6 +279,7 @@
             this.btn_Salir.TabIndex = 6;
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
             // btn_Guardar
             // 
