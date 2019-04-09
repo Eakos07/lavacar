@@ -66,17 +66,33 @@ namespace FRM_Login.Menu
                 if (Obj_TipoPlaca_DAL.cBandIM == 'I')
                 {
                     Obj_TipoPlaca_BLL.Insertar_TipoPlaca(ref sMsjError, ref Obj_TipoPlaca_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdTipoPlaca.Text = string.Empty;
-                    txt_Descripcion.Text = string.Empty;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdTipoPlaca.Text = string.Empty;
+                        txt_Descripcion.Text = string.Empty;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_TipoPlaca_DAL.cBandIM == 'M')
                 {
                     Obj_TipoPlaca_BLL.Modificar_TipoPlaca(ref sMsjError, ref Obj_TipoPlaca_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdTipoPlaca.Enabled = true;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdTipoPlaca.Enabled = true;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else

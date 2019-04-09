@@ -208,20 +208,36 @@ namespace FRM_Login.Menu
                 Obj_Polizas_DAL.dFechaVencimiento = Convert.ToDateTime(txt_FechaVenci.Text);
                 Obj_Polizas_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
                 Obj_Polizas_DAL.iCedulaJuridica = Convert.ToInt32(txt_CeduJurid.Text);
-                string sMsjError = String.Empty;
+                string sMsjError = string.Empty;
 
                 if (Obj_Polizas_DAL.cBandIM =='I')
                 {
                     Obj_Polizas_BLL.Insertar_Polizas(ref sMsjError, ref Obj_Polizas_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Polizas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Polizas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_Polizas_DAL.cBandIM == 'M')
                 {
                     Obj_Polizas_BLL.Modificar_Polizas(ref sMsjError, ref Obj_Polizas_DAL);
-                    MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdPoliza.Enabled = false;
-                    Cargar_Polizas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdPoliza.Enabled = false;
+                        Cargar_Polizas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 Cargar_cmb_Polizas();
             }
@@ -269,7 +285,7 @@ namespace FRM_Login.Menu
             if (!string.IsNullOrEmpty(txt_IdTipoPoliza.Text) || !string.IsNullOrEmpty(txt_NombrePoliza.Text)||
                 !string.IsNullOrEmpty(txt_Compañia.Text) || cmb_IdProveedor.SelectedValue.ToString()!="0")
             {
-                string sMsjError = String.Empty;
+                string sMsjError = string.Empty;
                 Obj_TipoPolizas_DAL.cIdTipoPoliza = Convert.ToChar(txt_IdTipoPoliza.Text);
                 Obj_TipoPolizas_DAL.sNombrePoliza = txt_NombrePoliza.Text;
                 Obj_TipoPolizas_DAL.sCompañia = txt_Compañia.Text;
@@ -278,15 +294,31 @@ namespace FRM_Login.Menu
                 if (Obj_TipoPolizas_DAL.cBandIM =='I')
                 {
                     Obj_TipoPolizas_BLL.Insertar_TipoPolizas(ref sMsjError, ref Obj_TipoPolizas_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_TipoPolizas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_TipoPolizas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_TipoPolizas_DAL.cBandIM == 'M')
                 {
                     Obj_TipoPolizas_BLL.Insertar_TipoPolizas(ref sMsjError, ref Obj_TipoPolizas_DAL);
-                    MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdTipoPoliza.Enabled = false;
-                    Cargar_TipoPolizas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdTipoPoliza.Enabled = false;
+                        Cargar_TipoPolizas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
 
                 }
                 Cargar_cmb_TipoPolizas();

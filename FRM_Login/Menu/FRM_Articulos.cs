@@ -43,9 +43,11 @@ namespace FRM_Login.Menu
             Cargar_Datos_TipoArticulo();
             Cargar_cmb_TipoArticulos();
         }
+
         #region Cargar Familia Articulos
         public void Cargar_Datos_FamiliaArticulos()
         {
+            txt_IdFamilia.Enabled = true;
             Obj_DAL_Familia.cBandIM = 'I';
             string sMsjError = string.Empty;
             DataTable dtFamiliaArticulos = new DataTable();            
@@ -85,7 +87,7 @@ namespace FRM_Login.Menu
         #region CargarArticulos
         public void Cargar_Datos_Articulos()
         {
-            
+            txt_Articulo.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtArticulos = new DataTable();
             Obj_DAL_Articulos.cBandIM = 'I';            
@@ -152,7 +154,7 @@ namespace FRM_Login.Menu
         #region Cargar Tipo Articulo
         public void Cargar_Datos_TipoArticulo()
         {
-            
+            txt_IdTipoArticulo.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtTipoArticulo = new DataTable();
             Obj_DAL_Tipo.cBandIM = 'I';            
@@ -242,17 +244,33 @@ namespace FRM_Login.Menu
                 if (Obj_DAL_Familia.cBandIM == 'I')
                 {
                     Obj_BLL_Familia.Insertar_FamiliaArticulos(ref sMsjError, ref Obj_DAL_Familia);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_FamiliaArticulos();
-                    Cargar_cmb_FamiliaArticulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_FamiliaArticulos();
+                        Cargar_cmb_FamiliaArticulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL_Familia.cBandIM == 'M')
                 {
                     Obj_BLL_Familia.Modificar_FamiliaArticulos(ref sMsjError, ref Obj_DAL_Familia);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdFamilia.Enabled = true;
-                    Cargar_Datos_FamiliaArticulos();
-                    Cargar_cmb_FamiliaArticulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdFamilia.Enabled = true;
+                        Cargar_Datos_FamiliaArticulos();
+                        Cargar_cmb_FamiliaArticulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else
@@ -330,17 +348,33 @@ namespace FRM_Login.Menu
                 if (Obj_DAL_Articulos.cBandIM == 'I')
                 {
                     Obj_BLL_Articulos.Insertar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_Articulos();
-                    Cargar_cmb_Articulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Articulos();
+                        Cargar_cmb_Articulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL_Articulos.cBandIM == 'M')
                 {
                     Obj_BLL_Articulos.Modificar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_Articulo.Enabled = true;
-                    Cargar_Datos_Articulos();
-                    Cargar_cmb_Articulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_Articulo.Enabled = true;
+                        Cargar_Datos_Articulos();
+                        Cargar_cmb_Articulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else
@@ -402,17 +436,33 @@ namespace FRM_Login.Menu
                 if (Obj_DAL_Tipo.cBandIM == 'I')
                 {
                     Obj_BLL_Tipo.Insertar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_TipoArticulo();
-                    Cargar_cmb_TipoArticulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_TipoArticulo();
+                        Cargar_cmb_TipoArticulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL_Tipo.cBandIM == 'M')
                 {
                     Obj_BLL_Tipo.Modificar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_IdTipoArticulo.Enabled = true;
-                    Cargar_Datos_TipoArticulo();
-                    Cargar_cmb_TipoArticulos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_IdTipoArticulo.Enabled = true;
+                        Cargar_Datos_TipoArticulo();
+                        Cargar_cmb_TipoArticulos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else

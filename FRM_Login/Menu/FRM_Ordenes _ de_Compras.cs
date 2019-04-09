@@ -108,15 +108,31 @@ namespace FRM_Login.Menu
                 if (Obj_OrdenesCompra_DAL.cBandIM =='I')
                 {
                     Obj_OrdenesCompra_BLL.Insertar_OrdenesCompra(ref sMsjError, ref Obj_OrdenesCompra_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_OrdenesCompra_DAL.cBandIM == 'M')
                 {
                     Obj_OrdenesCompra_BLL.Modificar_OrdenesCompra(ref sMsjError, ref Obj_OrdenesCompra_DAL);
-                    MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_NumOrden.Enabled = false;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitosa", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_NumOrden.Enabled = false;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 Cargar_cmb();
             }

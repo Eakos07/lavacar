@@ -37,7 +37,7 @@ namespace FRM_Login.Menu
 
         public void Cargar_Datos()
         {
-            
+            txtIdEsta.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtEstados = new DataTable();
             Obj_DAL.cBandIM = 'I';
@@ -87,16 +87,24 @@ namespace FRM_Login.Menu
                     }
                     else
                     {
-                        MessageBox.Show("Se genera el siguiente error: " + sMsjError, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se genera el siguiente error: " + "["+ sMsjError +"]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
                     Obj_BLL.Modificar_Estados(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtIdEsta.Enabled = true;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtIdEsta.Enabled = true;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }                
             }
             else

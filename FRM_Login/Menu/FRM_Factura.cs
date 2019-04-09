@@ -278,14 +278,30 @@ namespace FRM_Login.Menu
                 if (Obj_DAL.cBandIM == 'I')
                 {
                     Obj_BLL.Insertar_Factura(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_Factura();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Factura();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
                     Obj_BLL.Modificar_Factura(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos_Factura();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Factura();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 Cargar_cmb();
             }

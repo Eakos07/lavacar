@@ -68,6 +68,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Clientes()
         {
+            txt_NumPlaca.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtClientes = new DataTable();
             Obj_Clientes_DAL.cBandIM = 'I';                       
@@ -105,17 +106,33 @@ namespace FRM_Login.Menu
                 if (Obj_Clientes_DAL.cBandIM == 'I')
                 {
                     Obj_Clientes_BLL.Insertar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Cmb_Clientes();
-                    CargarDatos_Clientes();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Cmb_Clientes();
+                        CargarDatos_Clientes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_Clientes_DAL.cBandIM == 'M')
                 {
                     Obj_Clientes_BLL.Modificar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_NumPlaca.Enabled = true;
-                    Cargar_Cmb_Clientes();
-                    CargarDatos_Clientes();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_NumPlaca.Enabled = true;
+                        Cargar_Cmb_Clientes();
+                        CargarDatos_Clientes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else
@@ -275,18 +292,34 @@ namespace FRM_Login.Menu
                 {
                     Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
                     Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Cmb_Citas();
-                    CargarDatos_Citas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Cmb_Citas();
+                        CargarDatos_Citas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_Citas_DAL.cBandIM == 'M')
                 {
                     Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
                     Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_NumCita.Enabled = true;
-                    Cargar_Cmb_Citas();
-                    CargarDatos_Citas();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_NumCita.Enabled = true;
+                        Cargar_Cmb_Citas();
+                        CargarDatos_Citas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else
                 {

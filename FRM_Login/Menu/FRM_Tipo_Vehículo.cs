@@ -67,17 +67,33 @@ namespace FRM_Login.Menu
                 if (Obj_TipoVehiculo_DAL.cBandIM=='I')
                 {
                     Obj_TipoVehiculo_BLL.Insertar_TipoVehiculo(ref sMsjError, ref Obj_TipoVehiculo_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_TipoVehiculo.Text = string.Empty;
-                    txt_Descrip.Text = string.Empty;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_TipoVehiculo.Text = string.Empty;
+                        txt_Descrip.Text = string.Empty;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_TipoVehiculo_DAL.cBandIM == 'M')
                 {
                     Obj_TipoVehiculo_BLL.Modificar_TipoVehiculo(ref sMsjError, ref Obj_TipoVehiculo_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_TipoVehiculo.Enabled = true;
-                    Cargar_Datos();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_TipoVehiculo.Enabled = true;
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
         }

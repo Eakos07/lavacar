@@ -120,16 +120,32 @@ namespace FRM_Login.Menu
                 if (Obj_DAL.cBandIM == 'I')
                 {
                     EmplC_ObjBLL.Insertar_Clientes(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarEmpleados();
-                    Cargar_CMB();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarEmpleados();
+                        Cargar_CMB();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
                     EmplC_ObjBLL.Modificar_Clientes(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarEmpleados();
-                    Cargar_CMB();
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarEmpleados();
+                        Cargar_CMB();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
             }
             else
