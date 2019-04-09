@@ -71,6 +71,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_TipoServicio_DAL.bIdTipoVehiculo.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoServicio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
 
         public void Modificar_TipoServicio(ref string sMsjError, ref cls_TipoServicio_DAL Obj_TipoServicio_DAL)
@@ -86,6 +95,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoVehiculo", 8, Obj_TipoServicio_DAL.bIdTipoVehiculo.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoServicio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
     }
 }

@@ -71,6 +71,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Roles"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_Roles(ref string sMsjError, ref cls_Roles_DAL Obj_Roles_DAL)
@@ -85,6 +94,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Roles_DAL.bIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Roles"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
     }
 }

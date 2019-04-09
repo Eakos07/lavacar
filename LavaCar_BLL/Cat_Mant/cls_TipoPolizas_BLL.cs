@@ -70,6 +70,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdProveedor", 8, Obj_TipoPolizas_DAL.bIdProveedor.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoPolizas"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
 
         public void Modificar_TipoPolizas(ref string sMsjError, ref cls_TipoPolizas_DAL Obj_TipoPolizas_DAL)
@@ -84,6 +93,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdProveedor", 8, Obj_TipoPolizas_DAL.bIdProveedor.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoPolizas"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
     }
 }

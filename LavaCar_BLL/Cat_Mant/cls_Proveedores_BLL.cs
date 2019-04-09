@@ -74,6 +74,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Proveedores"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_Proveedores(ref string sMsjError, ref cls_Proveedores_DAL Obj_Provedores_DAL)
@@ -91,6 +100,15 @@ namespace LavaCar_BLL.Cat_Mant
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Proveedores"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
 
         }
     }

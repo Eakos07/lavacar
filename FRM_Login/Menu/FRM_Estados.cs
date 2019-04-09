@@ -79,8 +79,17 @@ namespace FRM_Login.Menu
                 if(Obj_DAL.cBandIM == 'I')
                 {
                     Obj_BLL.Insertar_Estados(ref sMsjError, ref Obj_DAL);
-                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Cargar_Datos();
+
+                    if(sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + sMsjError, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {

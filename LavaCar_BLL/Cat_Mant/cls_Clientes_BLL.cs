@@ -71,6 +71,15 @@ namespace LavaCar_BLL.Cat_Mant
             //Obj_DAL.DT_Parametros.Rows.Add("@NumVisitas", 8, Obj_Clientes_DAL.bNumVisitas.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Clientes"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
 
         public void Modificar_Clientes(ref string sMsjError, ref cls_Clientes_DAL Obj_Clientes_DAL)
@@ -85,6 +94,15 @@ namespace LavaCar_BLL.Cat_Mant
             //Obj_DAL.DT_Parametros.Rows.Add("@NumVisitas", 8, Obj_Clientes_DAL.bNumVisitas.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Clientes"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
     }
 }

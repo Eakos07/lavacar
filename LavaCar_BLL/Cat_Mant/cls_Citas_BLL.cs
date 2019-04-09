@@ -77,6 +77,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 8, Obj_Citas_DAL.bIdEmpleado.ToString().Trim());
             Obj_DB_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Citas"].ToString().Trim();
             Obj_DB_BLL.Ejec_Scalar(ref Obj_DB_DAL);
+
+            if (Obj_DB_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DB_DAL.sMsjError;
+            }
         }
 
         public void Modificar_Citas(ref string sMsjError, ref cls_Citas_DAL Obj_Citas_DAL)
@@ -98,6 +107,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 8, Obj_Citas_DAL.bIdEmpleado.ToString().Trim());
             Obj_DB_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Citas"].ToString().Trim();
             Obj_DB_BLL.Execute_NonQuery(ref Obj_DB_DAL);
+
+            if (Obj_DB_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DB_DAL.sMsjError;
+            }
         }
     }
 }

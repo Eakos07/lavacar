@@ -70,6 +70,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoCambio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_TipoCambio(ref string sMsjError, ref cls_TipoCambio_DAL Obj_TipoCambio_DAL)
@@ -83,6 +92,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Fecha", 11, Obj_TipoCambio_DAL.dtmFecha.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoCambio"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
 
         }
     }

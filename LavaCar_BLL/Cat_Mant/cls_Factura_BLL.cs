@@ -77,6 +77,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Factura"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_Factura(ref string sMsjError, ref cls_Factura_DAL Obj_Factura_DAL)
@@ -98,6 +107,15 @@ namespace LavaCar_BLL.Cat_Mant
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Factura"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
 
         }
     }

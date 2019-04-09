@@ -75,6 +75,15 @@ namespace LavaCar_BLL.Cat_Mant
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_OrdenesCompra"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
 
         public void Modificar_OrdenesCompra(ref string sMsjError, ref cls_Ordenes_Compra_DAL Obj_OrdenesCompra_DAL)
@@ -91,6 +100,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_OrdenesCompra_DAL.bIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_OrdenesCompra"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
         }
     }
 }

@@ -72,6 +72,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_FamiliaArticulos"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_FamiliaArticulos(ref string sMsjError, ref cls_FamiliaArticulos_DAL Obj_FamiliaArticulos_DAL)
@@ -86,6 +95,15 @@ namespace LavaCar_BLL.Cat_Mant
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_FamiliaArticulos"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
 
         }
     }

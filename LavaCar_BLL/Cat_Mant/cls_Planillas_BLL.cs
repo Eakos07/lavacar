@@ -72,6 +72,15 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Planillas"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
+
         }
 
         public void Modificar_Planillas(ref string sMsjError, ref cls_Planillas_DAL Obj_Planillas_DAL)
@@ -89,6 +98,15 @@ namespace LavaCar_BLL.Cat_Mant
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Planillas"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
+
+            if (Obj_DAL.sMsjError == string.Empty)
+            {
+                sMsjError = string.Empty;
+            }
+            else
+            {
+                sMsjError = Obj_DAL.sMsjError;
+            }
 
         }
     }
