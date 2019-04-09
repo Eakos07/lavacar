@@ -160,9 +160,9 @@ namespace FRM_Login.Menu
                 txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
                 txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-                cmb_IdUsuario.Text = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
+                cmb_IdEstado.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_IdPoliza.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
+                cmb_IdUsuario.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
             }
         }
 
