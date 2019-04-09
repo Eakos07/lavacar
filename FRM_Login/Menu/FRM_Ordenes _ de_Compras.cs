@@ -49,7 +49,7 @@ namespace FRM_Login.Menu
 
         public void Cargar_cmb()
         {
-            txt_NumOrden.Enabled = false;
+            string sMsjError = string.Empty;
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
