@@ -548,7 +548,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(347, 178);
+            this.label12.Location = new System.Drawing.Point(353, 181);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 17);
@@ -568,7 +568,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(351, 138);
+            this.label13.Location = new System.Drawing.Point(353, 138);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 17);
@@ -608,7 +608,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(353, 98);
+            this.label10.Location = new System.Drawing.Point(353, 104);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 17);
@@ -761,7 +761,7 @@
             // txt_Telefono
             // 
             this.txt_Telefono.Location = new System.Drawing.Point(121, 135);
-            this.txt_Telefono.Mask = "0000-0000";
+            this.txt_Telefono.Mask = "00000000";
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(78, 23);
             this.txt_Telefono.TabIndex = 30;
