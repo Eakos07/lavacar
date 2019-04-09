@@ -138,9 +138,9 @@ namespace FRM_Login.Menu
                 Obj_DAL.cBandIM = 'M';
                 txt_IdPlanilla.Enabled = false;
                 txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmb_IdEmpleado.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_IdHorario.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
 
@@ -149,9 +149,9 @@ namespace FRM_Login.Menu
             Obj_DAL.cBandIM = 'M';
             txt_IdPlanilla.Enabled = false;
             txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdEmpleado.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            cmb_IdHorario.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
         }
 
         #region Validaciones

@@ -80,7 +80,7 @@ namespace FRM_Login.Menu
             DataTable DT_Polizas = new DataTable();
             DT_Polizas = Obj_Polizas_BLL.Listar_Polizas(ref sMsjError);
             cmb_IdPoliza.DataSource = DT_Polizas;
-            DT_Polizas.Rows.Add("0", "Elija Estado");
+            DT_Polizas.Rows.Add("0", "Elija una póliza");
             cmb_IdPoliza.DisplayMember = DT_Polizas.Columns[1].ToString();
             cmb_IdPoliza.ValueMember = DT_Polizas.Columns[0].ToString();
             cmb_IdPoliza.SelectedValue = "0";
@@ -91,7 +91,7 @@ namespace FRM_Login.Menu
             DataTable DT_Usuarios = new DataTable();
             DT_Usuarios = Obj_Usuarios_BLL.Listar_Usuarios(ref sMsjError);
             cmb_IdUsuario.DataSource = DT_Usuarios;
-            DT_Usuarios.Rows.Add("0", "Elija Estado");
+            DT_Usuarios.Rows.Add("0", "Elija un usuario");
             cmb_IdUsuario.DisplayMember = DT_Usuarios.Columns[1].ToString();
             cmb_IdUsuario.ValueMember = DT_Usuarios.Columns[0].ToString();
             cmb_IdUsuario.SelectedValue = "0";
@@ -160,9 +160,9 @@ namespace FRM_Login.Menu
                 txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
                 txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_IdEstado.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_IdPoliza.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-                cmb_IdUsuario.SelectedItem = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
+                cmb_IdUsuario.Text = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
             }
         }
 
