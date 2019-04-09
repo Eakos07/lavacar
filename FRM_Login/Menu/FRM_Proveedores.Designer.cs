@@ -352,7 +352,7 @@
             // txtTelefoProveedor
             // 
             this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 31);
-            this.txtTelefoProveedor.Mask = "0000-0000";
+            this.txtTelefoProveedor.Mask = "00000000";
             this.txtTelefoProveedor.Name = "txtTelefoProveedor";
             this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
             this.txtTelefoProveedor.TabIndex = 34;

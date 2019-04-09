@@ -34,7 +34,6 @@
             this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.txt_Puesto = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Direccion = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
@@ -68,6 +67,7 @@
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Puesto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -77,11 +77,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_Puesto);
             this.groupBox1.Controls.Add(this.txt_Telefono);
             this.groupBox1.Controls.Add(this.txt_IdEmpleado);
             this.groupBox1.Controls.Add(this.btn_Exit);
             this.groupBox1.Controls.Add(this.btn_Save);
-            this.groupBox1.Controls.Add(this.txt_Puesto);
             this.groupBox1.Controls.Add(this.txt_Email);
             this.groupBox1.Controls.Add(this.txt_Direccion);
             this.groupBox1.Controls.Add(this.txt_Apellido);
@@ -148,15 +148,6 @@
             this.btn_Save.Text = "Guardar";
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // txt_Puesto
-            // 
-            this.txt_Puesto.Location = new System.Drawing.Point(502, 72);
-            this.txt_Puesto.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Puesto.Name = "txt_Puesto";
-            this.txt_Puesto.Size = new System.Drawing.Size(159, 23);
-            this.txt_Puesto.TabIndex = 7;
-            this.txt_Puesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Puesto_KeyPress);
             // 
             // txt_Email
             // 
@@ -461,10 +452,26 @@
             // txt_Telefono
             // 
             this.txt_Telefono.Location = new System.Drawing.Point(142, 195);
-            this.txt_Telefono.Mask = "0000-0000";
+            this.txt_Telefono.Mask = "00000000";
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(80, 23);
             this.txt_Telefono.TabIndex = 14;
+            // 
+            // txt_Puesto
+            // 
+            this.txt_Puesto.FormattingEnabled = true;
+            this.txt_Puesto.Items.AddRange(new object[] {
+            "Administrador",
+            "Supervisor",
+            "Cajero",
+            "Recepcionista",
+            "Encargado Inventario",
+            "Lavandero",
+            "Gerente"});
+            this.txt_Puesto.Location = new System.Drawing.Point(502, 77);
+            this.txt_Puesto.Name = "txt_Puesto";
+            this.txt_Puesto.Size = new System.Drawing.Size(159, 25);
+            this.txt_Puesto.TabIndex = 15;
             // 
             // FRM_Empleados
             // 
@@ -494,7 +501,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_Puesto;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Direccion;
         private System.Windows.Forms.TextBox txt_Apellido;
@@ -531,5 +537,6 @@
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.TextBox txt_IdEmpleado;
         private System.Windows.Forms.MaskedTextBox txt_Telefono;
+        private System.Windows.Forms.ComboBox txt_Puesto;
     }
 }

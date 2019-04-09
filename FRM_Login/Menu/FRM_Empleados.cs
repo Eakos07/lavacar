@@ -80,10 +80,10 @@ namespace FRM_Login.Menu
             DataTable DT_Polizas = new DataTable();
             DT_Polizas = Obj_Polizas_BLL.Listar_Polizas(ref sMsjError);
             cmb_IdPoliza.DataSource = DT_Polizas;
-            DT_Polizas.Rows.Add("0", "Elija Estado");
-            cmb_IdPoliza.DisplayMember = DT_Polizas.Columns[1].ToString();
+            DT_Polizas.Rows.Add("Elija una póliza","0");
+            cmb_IdPoliza.DisplayMember = DT_Polizas.Columns[0].ToString();
             cmb_IdPoliza.ValueMember = DT_Polizas.Columns[0].ToString();
-            cmb_IdPoliza.SelectedValue = "0";
+            cmb_IdPoliza.SelectedValue = "Elija una póliza";
             #endregion
 
             #region Cargar Usuarios
@@ -91,10 +91,10 @@ namespace FRM_Login.Menu
             DataTable DT_Usuarios = new DataTable();
             DT_Usuarios = Obj_Usuarios_BLL.Listar_Usuarios(ref sMsjError);
             cmb_IdUsuario.DataSource = DT_Usuarios;
-            DT_Usuarios.Rows.Add("0", "Elija Estado");
-            cmb_IdUsuario.DisplayMember = DT_Usuarios.Columns[1].ToString();
+            DT_Usuarios.Rows.Add("Elija un usuario","0");
+            cmb_IdUsuario.DisplayMember = DT_Usuarios.Columns[0].ToString();
             cmb_IdUsuario.ValueMember = DT_Usuarios.Columns[0].ToString();
-            cmb_IdUsuario.SelectedValue = "0";
+            cmb_IdUsuario.SelectedValue = "Elija un usuario";
             #endregion
         }        
 

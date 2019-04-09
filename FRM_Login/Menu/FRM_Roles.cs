@@ -88,7 +88,7 @@ namespace FRM_Login.Menu
                 txt_IdRol.Text = dgv_Roles.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Nivel.Text = dgv_Roles.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.SelectedValue = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
 
@@ -136,7 +136,7 @@ namespace FRM_Login.Menu
                 txt_IdRol.Text = dgv_Roles.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Nivel.Text = dgv_Roles.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.SelectedValue = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
 
