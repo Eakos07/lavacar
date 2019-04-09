@@ -251,11 +251,11 @@ namespace FRM_Login.Menu
         {
             if ((txt_NomCliente.Text.Trim() != string.Empty)  && (txt_NumPlaca.Text.Trim() != string.Empty)
                  && (txt_Email.Text.Trim() != string.Empty) && (txt_NumPlaca.Text.Trim() != string.Empty) 
-                 && (cmb_HoraCita.Text != "Elegir Estado") && (cmb_EstadoCita.SelectedValue.ToString() != "0")
+                 && (cmb_HoraCita.SelectedValue.ToString() != "0") && (cmb_EstadoCita.SelectedValue.ToString() != "0")
                  && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
-                //Obj_Citas_DAL.iNumCita = Convert.ToInt32(txt_NumCita.Text.ToString());
+                
                 Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
                 Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
                 Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
@@ -305,6 +305,12 @@ namespace FRM_Login.Menu
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgv_Citas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -317,7 +323,8 @@ namespace FRM_Login.Menu
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            
+            }
+
         }
 
         private void btn_ModificarCitas_Click(object sender, EventArgs e)
