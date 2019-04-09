@@ -35,7 +35,6 @@
             this.cmb_IdFamilia_Articulo = new System.Windows.Forms.ComboBox();
             this.cmb_Estado_Articulos = new System.Windows.Forms.ComboBox();
             this.txt_InventarioMin_Articulo = new System.Windows.Forms.TextBox();
-            this.txt_Cantidad_Articulo = new System.Windows.Forms.TextBox();
             this.txt_PrecioVenta_Articulo = new System.Windows.Forms.TextBox();
             this.txt_NombreArticulo = new System.Windows.Forms.TextBox();
             this.txt_Articulo = new System.Windows.Forms.TextBox();
@@ -73,9 +72,7 @@
             this.btn_ModificarFamilia = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
@@ -115,6 +112,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_Cantidad_Articulo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -132,16 +130,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txt_Cantidad_Articulo);
             this.groupBox1.Controls.Add(this.cmb_Tipo_Articulo);
             this.groupBox1.Controls.Add(this.cmb_IdFamilia_Articulo);
             this.groupBox1.Controls.Add(this.cmb_Estado_Articulos);
             this.groupBox1.Controls.Add(this.txt_InventarioMin_Articulo);
-            this.groupBox1.Controls.Add(this.txt_Cantidad_Articulo);
             this.groupBox1.Controls.Add(this.txt_PrecioVenta_Articulo);
             this.groupBox1.Controls.Add(this.txt_NombreArticulo);
             this.groupBox1.Controls.Add(this.txt_Articulo);
@@ -205,17 +204,6 @@
             this.txt_InventarioMin_Articulo.Size = new System.Drawing.Size(139, 27);
             this.txt_InventarioMin_Articulo.TabIndex = 6;
             this.txt_InventarioMin_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InventarioMin_Articulo_KeyPress);
-            // 
-            // txt_Cantidad_Articulo
-            // 
-            this.txt_Cantidad_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 106);
-            this.txt_Cantidad_Articulo.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Cantidad_Articulo.Multiline = true;
-            this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
-            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(139, 27);
-            this.txt_Cantidad_Articulo.TabIndex = 3;
-            this.txt_Cantidad_Articulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cantidad_Articulo_KeyPress);
             // 
             // txt_PrecioVenta_Articulo
             // 
@@ -568,9 +556,7 @@
             this.btn_ModificarFamilia,
             this.toolStripSeparator4,
             this.toolStripLabel6,
-            this.toolStripButton5,
             this.toolStripSeparator5,
-            this.toolStripLabel7,
             this.toolStripButton6,
             this.toolStripSeparator6,
             this.toolStripLabel8,
@@ -618,25 +604,10 @@
             this.toolStripLabel6.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel6.Text = "Modificar";
             // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "toolStripButton2";
-            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(50, 24);
-            this.toolStripLabel7.Text = "Eliminar";
             // 
             // toolStripButton6
             // 
@@ -1037,6 +1008,18 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // txt_Cantidad_Articulo
+            // 
+            this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 107);
+            this.txt_Cantidad_Articulo.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
+            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(120, 23);
+            this.txt_Cantidad_Articulo.TabIndex = 12;
+            // 
             // FRM_Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1075,6 +1058,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1093,7 +1077,6 @@
         private System.Windows.Forms.Button btn_GuardarArticulo;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.TextBox txt_InventarioMin_Articulo;
-        private System.Windows.Forms.TextBox txt_Cantidad_Articulo;
         private System.Windows.Forms.TextBox txt_PrecioVenta_Articulo;
         private System.Windows.Forms.TextBox txt_NombreArticulo;
         private System.Windows.Forms.TextBox txt_Articulo;
@@ -1131,9 +1114,7 @@
         private System.Windows.Forms.ToolStripButton btn_ModificarFamilia;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
@@ -1166,5 +1147,6 @@
         private System.Windows.Forms.ToolStripButton btn_Refrescar_TipoArticulos;
         private System.Windows.Forms.TextBox txt_IdTipoArticulo;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.NumericUpDown txt_Cantidad_Articulo;
     }
 }

@@ -249,38 +249,47 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarCitas_Click(object sender, EventArgs e)
         {
-            //Obj_Citas_DAL.iNumCita = Convert.ToInt32(txt_NumCita.Text.ToString());
-            Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
-            Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
-            Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
-            Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
-            Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
-            Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
-
-            Obj_Citas_DAL.bIdEstado = Convert.ToByte(cmb_EstadoCita.SelectedValue.ToString());
-            Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
-
-            string sMsjError = string.Empty;
-
-            if (Obj_Citas_DAL.cBandIM == 'I')
+            if ((txt_NomCliente.Text.Trim() != string.Empty)  && (txt_NumPlaca.Text.Trim() != string.Empty)
+                 && (txt_Email.Text.Trim() != string.Empty) && (txt_NumPlaca.Text.Trim() != string.Empty) 
+                 && (cmb_HoraCita.Text != "Elegir Estado") && (cmb_EstadoCita.SelectedValue.ToString() != "0")
+                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
+                 && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
-                Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
-                Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarDatos_Citas();
-            }
-            else if (Obj_Citas_DAL.cBandIM == 'M')
-            {
-                Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
-                Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_NumCita.Enabled = true;
-                CargarDatos_Citas();
-            }
-            else
-            {
+                //Obj_Citas_DAL.iNumCita = Convert.ToInt32(txt_NumCita.Text.ToString());
+                Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
+                Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
+                Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
+                Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
+                Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
+                Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
+
+                Obj_Citas_DAL.bIdEstado = Convert.ToByte(cmb_EstadoCita.SelectedValue.ToString());
+                Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
+
+                string sMsjError = string.Empty;
+
+                if (Obj_Citas_DAL.cBandIM == 'I')
+                {
+                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
+                    Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDatos_Citas();
+                }
+                else if (Obj_Citas_DAL.cBandIM == 'M')
+                {
+                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
+                    Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_NumCita.Enabled = true;
+                    CargarDatos_Citas();
+                }
+                else
+                {
+                    MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            } else
                 MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+
 
         }
 

@@ -119,7 +119,7 @@ namespace FRM_Login.Menu
 
             txt_Articulo.Clear();
             txt_NombreArticulo.Clear();
-            txt_Cantidad_Articulo.Clear();
+            //txt_Cantidad_Articulo.Clear();
             txt_InventarioMin_Articulo.Clear();
             txt_PrecioVenta_Articulo.Clear();
 

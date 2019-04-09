@@ -78,7 +78,6 @@
             this.txt_NumCita = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmb_TipoServicio = new System.Windows.Forms.ComboBox();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
@@ -92,6 +91,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -498,6 +498,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_Telefono);
             this.groupBox3.Controls.Add(this.btn_GuardarCitas);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.cmb_EmpleadoCitas);
@@ -507,7 +508,6 @@
             this.groupBox3.Controls.Add(this.txt_NumCita);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.cmb_TipoServicio);
-            this.groupBox3.Controls.Add(this.txt_Telefono);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.txt_Email);
@@ -624,16 +624,6 @@
             this.cmb_TipoServicio.Size = new System.Drawing.Size(175, 25);
             this.cmb_TipoServicio.TabIndex = 5;
             this.cmb_TipoServicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_TipoServicio_KeyPress);
-            // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.Location = new System.Drawing.Point(121, 137);
-            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Telefono.MaxLength = 9;
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(167, 23);
-            this.txt_Telefono.TabIndex = 3;
-            this.txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Telefono_KeyPress);
             // 
             // label9
             // 
@@ -768,6 +758,14 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.Location = new System.Drawing.Point(121, 135);
+            this.txt_Telefono.Mask = "0000-0000";
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(78, 23);
+            this.txt_Telefono.TabIndex = 30;
+            // 
             // FRM_Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -828,7 +826,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmb_TipoServicio;
-        private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_Email;
@@ -866,5 +863,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_NumCita;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.MaskedTextBox txt_Telefono;
     }
 }

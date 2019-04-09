@@ -37,7 +37,6 @@
             this.txt_Puesto = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Direccion = new System.Windows.Forms.TextBox();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Identificacion = new System.Windows.Forms.TextBox();
@@ -68,6 +67,7 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -77,13 +77,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_Telefono);
             this.groupBox1.Controls.Add(this.txt_IdEmpleado);
             this.groupBox1.Controls.Add(this.btn_Exit);
             this.groupBox1.Controls.Add(this.btn_Save);
             this.groupBox1.Controls.Add(this.txt_Puesto);
             this.groupBox1.Controls.Add(this.txt_Email);
             this.groupBox1.Controls.Add(this.txt_Direccion);
-            this.groupBox1.Controls.Add(this.txt_Telefono);
             this.groupBox1.Controls.Add(this.txt_Apellido);
             this.groupBox1.Controls.Add(this.txt_Nombre);
             this.groupBox1.Controls.Add(this.txt_Identificacion);
@@ -113,7 +113,6 @@
             // 
             // txt_IdEmpleado
             // 
-            this.txt_IdEmpleado.Enabled = false;
             this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
             this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdEmpleado.Name = "txt_IdEmpleado";
@@ -176,15 +175,6 @@
             this.txt_Direccion.Size = new System.Drawing.Size(159, 23);
             this.txt_Direccion.TabIndex = 5;
             this.txt_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Direccion_KeyPress);
-            // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.Location = new System.Drawing.Point(143, 196);
-            this.txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(158, 23);
-            this.txt_Telefono.TabIndex = 4;
-            this.txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Telefono_KeyPress);
             // 
             // txt_Apellido
             // 
@@ -468,6 +458,14 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.Location = new System.Drawing.Point(142, 195);
+            this.txt_Telefono.Mask = "0000-0000";
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(80, 23);
+            this.txt_Telefono.TabIndex = 14;
+            // 
             // FRM_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,7 +497,6 @@
         private System.Windows.Forms.TextBox txt_Puesto;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Direccion;
-        private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.TextBox txt_Identificacion;
@@ -533,5 +530,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_Filtrar;
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.TextBox txt_IdEmpleado;
+        private System.Windows.Forms.MaskedTextBox txt_Telefono;
     }
 }

@@ -57,7 +57,7 @@ namespace FRM_Login.Menu
             txtNomProveedor.Clear();
             txtEmailProveedor.Clear();
             txtTelefoProveedor.Clear();
-            txtPlazoPago.Clear();
+            //txtPlazoPago.Clear();
 
             if (txt_FiltrarProveedores.Text == string.Empty)
             {
