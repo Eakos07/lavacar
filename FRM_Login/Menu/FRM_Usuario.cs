@@ -124,8 +124,8 @@ namespace FRM_Login.Menu
                 txt_Usuario.Enabled = false;
                 txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_Rol.SelectedValue = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_Estado.SelectedValue = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
 
@@ -135,8 +135,8 @@ namespace FRM_Login.Menu
             txt_Usuario.Enabled = false;
             txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
             txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            cmb_Rol.SelectedValue = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_Estado.SelectedValue = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)

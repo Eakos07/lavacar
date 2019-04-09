@@ -173,9 +173,9 @@ namespace FRM_Login.Menu
                 txt_IdPoliza.Enabled = false;
 
                 txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmb_IdTipoPoliza.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.SelectedValue= dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdEstado.Text= dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
@@ -414,9 +414,9 @@ namespace FRM_Login.Menu
             txt_IdPoliza.Enabled = false;
 
             txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdTipoPoliza.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
             txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.SelectedValue = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            cmb_IdEstado.Text = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
             txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
         }
     }
