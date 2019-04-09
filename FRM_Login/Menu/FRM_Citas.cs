@@ -59,7 +59,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoVehiculo = new DataTable();
             DT_TipoVehiculo = Obj_TipoVehiculo_BLL.Listar_TipoVehiculo(ref sMsjError);
             cmbTipoVehiculo.DataSource = DT_TipoVehiculo;
-            DT_TipoVehiculo.Rows.Add("0", "Elija Estado");
+            DT_TipoVehiculo.Rows.Add("0", "Elija Tipo Vehículo");
             cmbTipoVehiculo.DisplayMember = DT_TipoVehiculo.Columns[1].ToString();
             cmbTipoVehiculo.ValueMember = DT_TipoVehiculo.Columns[0].ToString();
             cmbTipoVehiculo.SelectedValue = "0";
@@ -106,6 +106,7 @@ namespace FRM_Login.Menu
                 {
                     Obj_Clientes_BLL.Insertar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Cmb_Clientes();
                     CargarDatos_Clientes();
                 }
                 else if (Obj_Clientes_DAL.cBandIM == 'M')
@@ -113,6 +114,7 @@ namespace FRM_Login.Menu
                     Obj_Clientes_BLL.Modificar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_NumPlaca.Enabled = true;
+                    Cargar_Cmb_Clientes();
                     CargarDatos_Clientes();
                 }
             }
@@ -249,9 +251,9 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarCitas_Click(object sender, EventArgs e)
         {
-            if ((txt_NomCliente.Text.Trim() != string.Empty)  && (txt_NumPlaca.Text.Trim() != string.Empty)
-                 && (txt_Email.Text.Trim() != string.Empty) && (txt_NumPlaca.Text.Trim() != string.Empty) 
-                 && (cmb_HoraCita.SelectedValue.ToString() != "0") && (cmb_EstadoCita.SelectedValue.ToString() != "0")
+            if ((txt_NomCliente.Text.Trim() != string.Empty)  /*&& (txt_NumPlaca.Text.Trim() != string.Empty)*/
+                 && (txt_Email.Text.Trim() != string.Empty) /*&&(txt_NumPlaca.Text.Trim() != string.Empty) */
+                 && (cmb_HoraCita.SelectedItem.ToString() != null)/*(cmb_HoraCita.SelectedValue.ToString() != "0")*/ && (cmb_EstadoCita.SelectedValue.ToString() != "0")
                  && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
