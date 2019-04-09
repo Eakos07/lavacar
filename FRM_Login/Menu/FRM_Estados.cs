@@ -32,13 +32,15 @@ namespace FRM_Login.Menu
         private void FRM_Estados_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
-            Obj_DAL.cBandIM = 'I';
+            
         }
+
         public void Cargar_Datos()
         {
             
             string sMsjError = string.Empty;
             DataTable dtEstados = new DataTable();
+            Obj_DAL.cBandIM = 'I';
 
             txtIdEsta.Clear();
             txt_Nombre.Clear();

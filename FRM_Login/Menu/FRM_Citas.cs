@@ -115,6 +115,7 @@ namespace FRM_Login.Menu
                     txt_NumPlaca.Enabled = true;
                     CargarDatos_Clientes();
                 }
+                Cargar_Cmb_Clientes();
             }
             else
             {
@@ -142,6 +143,7 @@ namespace FRM_Login.Menu
         private void btn_RC_Refrescar_Click(object sender, EventArgs e)
         {
             CargarDatos_Clientes();
+            Cargar_Cmb_Clientes();
         }
 
         private void dgv_Cliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -283,12 +285,13 @@ namespace FRM_Login.Menu
                     txt_NumCita.Enabled = true;
                     CargarDatos_Citas();
                 }
-                else
-                {
-                    MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            } else
+                Cargar_Cmb_Citas();
+                
+            }
+            else
+            {
                 MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
 
         }
@@ -301,23 +304,30 @@ namespace FRM_Login.Menu
         private void btn_RefrescarCitas_Click(object sender, EventArgs e)
         {
             CargarDatos_Citas();
+            Cargar_Cmb_Citas();
         }
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgv_Citas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_TipoServicio.SelectedValue = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_RegistroPlaca.Text = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            
+            }
         }
 
         private void btn_ModificarCitas_Click(object sender, EventArgs e)
@@ -333,8 +343,8 @@ namespace FRM_Login.Menu
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_TipoServicio.SelectedValue = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_RegistroPlaca.Text = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();

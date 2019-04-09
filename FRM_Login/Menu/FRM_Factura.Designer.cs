@@ -43,7 +43,6 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarFacturas = new System.Windows.Forms.ToolStripTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmb_CedJuri = new System.Windows.Forms.ComboBox();
             this.cmb_CodServ = new System.Windows.Forms.ComboBox();
             this.cmb_NumPlaca = new System.Windows.Forms.ComboBox();
             this.cmb_IdTipCamb = new System.Windows.Forms.ComboBox();
@@ -66,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_Ced_Jur = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Facturas)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -177,7 +177,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmb_CedJuri);
+            this.groupBox1.Controls.Add(this.txt_Ced_Jur);
             this.groupBox1.Controls.Add(this.cmb_CodServ);
             this.groupBox1.Controls.Add(this.cmb_NumPlaca);
             this.groupBox1.Controls.Add(this.cmb_IdTipCamb);
@@ -208,16 +208,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Facturación";
-            // 
-            // cmb_CedJuri
-            // 
-            this.cmb_CedJuri.FormattingEnabled = true;
-            this.cmb_CedJuri.Location = new System.Drawing.Point(143, 195);
-            this.cmb_CedJuri.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_CedJuri.Name = "cmb_CedJuri";
-            this.cmb_CedJuri.Size = new System.Drawing.Size(159, 25);
-            this.cmb_CedJuri.TabIndex = 14;
-            this.cmb_CedJuri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_CedJuri_KeyPress);
             // 
             // cmb_CodServ
             // 
@@ -440,6 +430,13 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // txt_Ced_Jur
+            // 
+            this.txt_Ced_Jur.Location = new System.Drawing.Point(142, 198);
+            this.txt_Ced_Jur.Name = "txt_Ced_Jur";
+            this.txt_Ced_Jur.Size = new System.Drawing.Size(159, 23);
+            this.txt_Ced_Jur.TabIndex = 14;
+            // 
             // FRM_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,9 +496,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb_CedJuri;
         private System.Windows.Forms.ComboBox cmb_CodServ;
         private System.Windows.Forms.ComboBox cmb_NumPlaca;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.TextBox txt_Ced_Jur;
     }
 }

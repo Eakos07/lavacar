@@ -19,6 +19,11 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
+        #region Variables Globales
+        cls_Factura_BLL Obj_BLL = new cls_Factura_BLL();
+        cls_Factura_DAL Obj_DAL = new cls_Factura_DAL();
+        #endregion
+
         private void FRM_Factura_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Factura();
@@ -26,11 +31,10 @@ namespace FRM_Login.Menu
         }
         public void Cargar_Datos_Factura()
         {
-            cls_Factura_BLL Obj_BLL = new cls_Factura_BLL();
+            
             string sMsjError = string.Empty;
             DataTable dtFactura = new DataTable();
-
-            
+            Obj_DAL.cBandIM = 'I';
 
             if (txt_FiltrarFacturas.Text == string.Empty)
             {
@@ -262,7 +266,33 @@ namespace FRM_Login.Menu
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            if (!(string.IsNullOrEmpty(txt_MontoNeto.Text)) && !(string.IsNullOrEmpty(txt_Descuent.Text)) && !(string.IsNullOrEmpty(txt_MontoTotal.Text))
+                && cmb_NumPlaca.SelectedValue.ToString() != "0" && cmb_CodServ.ToString() != "0" && cmb_IdTipCamb.SelectedValue.ToString() != "0" 
+                && cmb_IdPromo.SelectedValue.ToString() != "0"
+                && cmb_IdTipFactu.Text != "Elija Estado")
+            {
+                Obj_DAL.sNumPlaca = cmb_NumPlaca.SelectedText.ToString().Trim();
 
+                string sMsjError = string.Empty;
+
+                if (Obj_DAL.cBandIM == 'I')
+                {
+                    Obj_BLL.Insertar_Factura(ref sMsjError, ref Obj_DAL);
+                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Datos_Factura();
+                }
+                else if (Obj_DAL.cBandIM == 'M')
+                {
+                    Obj_BLL.Modificar_Factura(ref sMsjError, ref Obj_DAL);
+                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Datos_Factura();
+                }
+                Cargar_cmb();
+            }
+            else
+            {
+                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
