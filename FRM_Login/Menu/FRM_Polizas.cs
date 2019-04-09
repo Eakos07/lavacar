@@ -117,6 +117,9 @@ namespace FRM_Login.Menu
             cmb_IdProveedor.SelectedValue = "0";
             #endregion
 
+            txt_IdTipoPoliza.Clear();
+            txt_NombrePoliza.Clear();
+            txt_Compañia.Clear();
             
 
             if (toolStripTextBox2.Text == string.Empty)
@@ -233,7 +236,7 @@ namespace FRM_Login.Menu
             txt_IdTipoPoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[0].Value.ToString().Trim();
             txt_NombrePoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[1].Value.ToString().Trim();
             txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdProveedor.SelectedValue = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
         }
 
         private void btn_Guardar_TipoPolizas_Click(object sender, EventArgs e)
@@ -278,7 +281,7 @@ namespace FRM_Login.Menu
                 txt_IdTipoPoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_NombrePoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdProveedor.SelectedValue = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
         }
         #endregion

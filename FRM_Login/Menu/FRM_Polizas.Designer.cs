@@ -512,12 +512,16 @@
             // 
             // dgv_TipoPoliza
             // 
+            this.dgv_TipoPoliza.AllowUserToAddRows = false;
+            this.dgv_TipoPoliza.AllowUserToDeleteRows = false;
             this.dgv_TipoPoliza.BackgroundColor = System.Drawing.Color.White;
             this.dgv_TipoPoliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TipoPoliza.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_TipoPoliza.Location = new System.Drawing.Point(4, 51);
             this.dgv_TipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TipoPoliza.Name = "dgv_TipoPoliza";
             this.dgv_TipoPoliza.RowTemplate.Height = 24;
+            this.dgv_TipoPoliza.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TipoPoliza.Size = new System.Drawing.Size(755, 232);
             this.dgv_TipoPoliza.TabIndex = 0;
             this.dgv_TipoPoliza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoPoliza_CellContentClick);

@@ -57,7 +57,7 @@ namespace FRM_Login.Menu
             txtNomProveedor.Clear();
             txtEmailProveedor.Clear();
             txtTelefoProveedor.Clear();
-            //txtPlazoPago.Clear();
+            txtPlazoPago.Value=1;
 
             if (txt_FiltrarProveedores.Text == string.Empty)
             {
@@ -99,6 +99,7 @@ namespace FRM_Login.Menu
                 txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
             }
         }
 
@@ -140,6 +141,7 @@ namespace FRM_Login.Menu
             txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
             txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
             txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
         }
 
         #region Validaciones

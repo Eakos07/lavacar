@@ -144,6 +144,7 @@ namespace FRM_Login.Menu
         private void btn_RC_Refrescar_Click(object sender, EventArgs e)
         {
             CargarDatos_Clientes();
+            Cargar_Cmb_Clientes();
         }
 
         private void dgv_Cliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -209,7 +210,7 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_EmpleadoCitas.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "Elija Estado");
+            DT_Empleados.Rows.Add("0", "Elija un Empleado");
             cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[1].ToString();
             cmb_EmpleadoCitas.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_EmpleadoCitas.SelectedValue = "0";
@@ -231,10 +232,10 @@ namespace FRM_Login.Menu
             DataTable DT_Clientes = new DataTable();
             DT_Clientes = Obj_Clientes_BLL.Listar_Clientes(ref sMsjError);
             cmb_RegistroPlaca.DataSource = DT_Clientes;
-            DT_Clientes.Rows.Add("Elija Estado", "0");
+            DT_Clientes.Rows.Add("Elija un Cliente", "0");
             cmb_RegistroPlaca.DisplayMember = DT_Clientes.Columns[0].ToString();
             cmb_RegistroPlaca.ValueMember = DT_Clientes.Columns[0].ToString();
-            cmb_RegistroPlaca.SelectedValue = "Elija Estado";
+            cmb_RegistroPlaca.SelectedValue = "Elija un Cliente";
             #endregion
 
             #region Tipo Servicio
@@ -242,7 +243,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoServicio = new DataTable();
             DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
             cmb_TipoServicio.DataSource = DT_TipoServicio;
-            DT_TipoServicio.Rows.Add("0", "Elija Estado");
+            DT_TipoServicio.Rows.Add("0", "Elija un Servicio");
             cmb_TipoServicio.DisplayMember = DT_TipoServicio.Columns[1].ToString();
             cmb_TipoServicio.ValueMember = DT_TipoServicio.Columns[0].ToString();
             cmb_TipoServicio.SelectedValue = "0";
@@ -275,6 +276,7 @@ namespace FRM_Login.Menu
                     Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
                     Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Cmb_Citas();
                     CargarDatos_Citas();
                 }
                 else if (Obj_Citas_DAL.cBandIM == 'M')
@@ -283,6 +285,7 @@ namespace FRM_Login.Menu
                     Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_NumCita.Enabled = true;
+                    Cargar_Cmb_Citas();
                     CargarDatos_Citas();
                 }
                 else
@@ -303,6 +306,8 @@ namespace FRM_Login.Menu
         private void btn_RefrescarCitas_Click(object sender, EventArgs e)
         {
             CargarDatos_Citas();
+            Cargar_Cmb_Citas();
+            cmb_HoraCita.Text = "Elegir Hora";
         }
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -319,9 +324,9 @@ namespace FRM_Login.Menu
                 txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_TipoServicio.SelectedValue = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
+                //dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
@@ -343,9 +348,9 @@ namespace FRM_Login.Menu
                 txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_TipoServicio.SelectedValue = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
+                //dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();

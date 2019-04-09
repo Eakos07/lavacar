@@ -69,6 +69,7 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.dgv_Citas = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.btn_GuardarCitas = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_EmpleadoCitas = new System.Windows.Forms.ComboBox();
@@ -91,7 +92,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -530,6 +530,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Registro Citas";
             // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.Location = new System.Drawing.Point(121, 135);
+            this.txt_Telefono.Mask = "00000000";
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(78, 23);
+            this.txt_Telefono.TabIndex = 30;
+            // 
             // btn_GuardarCitas
             // 
             this.btn_GuardarCitas.BackColor = System.Drawing.Color.Aqua;
@@ -751,20 +759,12 @@
             this.cmb_HoraCita.Name = "cmb_HoraCita";
             this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
             this.cmb_HoraCita.TabIndex = 1;
-            this.cmb_HoraCita.Text = "Elegir Estado";
+            this.cmb_HoraCita.Text = "Elegir Hora";
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
             // 
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.Location = new System.Drawing.Point(121, 135);
-            this.txt_Telefono.Mask = "00000000";
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(78, 23);
-            this.txt_Telefono.TabIndex = 30;
             // 
             // FRM_Citas
             // 
