@@ -27,6 +27,7 @@ namespace FRM_Login.Menu
         private void FRM_Horarios_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Horarios();
+            Cargar_cmb();
         }
         
         public void Cargar_Datos_Horarios()
@@ -34,18 +35,7 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtHorarios = new DataTable();
-            Obj_DAL.cBandIM = 'I';
-
-            #region Cargar Estados
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_Estados = new DataTable();
-            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
-            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
-            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
-            cmb_IdEstado.SelectedValue = "0";
-            #endregion
+            Obj_DAL.cBandIM = 'I';            
 
             txt_IdHorario.Enabled = false;
             txt_IdHorario.Clear();
@@ -69,6 +59,20 @@ namespace FRM_Login.Menu
             }
         }
 
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstado.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija Estado");
+            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstado.SelectedValue = "0";
+            
+        }
+
         private void txt_FiltrarHorarios_TextChanged(object sender, EventArgs e)
         {
             Cargar_Datos_Horarios();
@@ -77,6 +81,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos_Horarios();
+            Cargar_cmb();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -124,6 +129,7 @@ namespace FRM_Login.Menu
                     //txt_IdHorario.Enabled = true;
                     Cargar_Datos_Horarios();
                 }
+                Cargar_cmb();
             }
             else
             {

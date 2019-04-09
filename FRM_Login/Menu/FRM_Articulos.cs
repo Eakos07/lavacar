@@ -35,26 +35,20 @@ namespace FRM_Login.Menu
         private void FRM_Articulos_Load(object sender, EventArgs e)
         {
             Cargar_Datos_FamiliaArticulos();
+            Cargar_cmb_FamiliaArticulos();
+
             Cargar_Datos_Articulos();
+            Cargar_cmb_Articulos();
+
             Cargar_Datos_TipoArticulo();
+            Cargar_cmb_TipoArticulos();
         }
         #region Cargar Familia Articulos
         public void Cargar_Datos_FamiliaArticulos()
         {
             Obj_DAL_Familia.cBandIM = 'I';
             string sMsjError = string.Empty;
-            DataTable dtFamiliaArticulos = new DataTable();
-
-            #region Cargar Estados
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_Estados = new DataTable();
-            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_IdEstadoFamilia.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
-            cmb_IdEstadoFamilia.DisplayMember = DT_Estados.Columns[1].ToString();
-            cmb_IdEstadoFamilia.ValueMember = DT_Estados.Columns[0].ToString();
-            cmb_IdEstadoFamilia.SelectedValue = "0";
-            #endregion
+            DataTable dtFamiliaArticulos = new DataTable();            
 
             txt_IdFamilia.Clear();
             txt_DescripcionFamilia.Clear();
@@ -74,6 +68,18 @@ namespace FRM_Login.Menu
                 dgv_FamiliaArticulos.DataSource = dtFamiliaArticulos;
             }
         }
+        public void Cargar_cmb_FamiliaArticulos()
+        {
+            string sMsjError = string.Empty;
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstadoFamilia.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija Estado");
+            cmb_IdEstadoFamilia.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstadoFamilia.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstadoFamilia.SelectedValue = "0";            
+        }
         #endregion
 
         #region CargarArticulos
@@ -82,8 +88,32 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtArticulos = new DataTable();
-            Obj_DAL_Articulos.cBandIM = 'I';
+            Obj_DAL_Articulos.cBandIM = 'I';            
 
+            txt_Articulo.Clear();
+            txt_NombreArticulo.Clear();
+            //txt_Cantidad_Articulo.Clear();
+            txt_InventarioMin_Articulo.Clear();
+            txt_PrecioVenta_Articulo.Clear();
+
+            if (txt_FiltrarArticulos.Text == string.Empty)
+            {
+                dtArticulos = Obj_BLL_Articulos.Listar_Articulos(ref sMsjError);
+            }
+            else
+            {
+                dtArticulos = Obj_BLL_Articulos.Filtrar_Articulos(ref sMsjError, txt_FiltrarArticulos.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Articulos.DataSource = null;
+                dgv_Articulos.DataSource = dtArticulos;
+            }
+        }
+
+        public void Cargar_cmb_Articulos()
+        {
+            string sMsjError = string.Empty;
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
             DataTable DT_Estados = new DataTable();
@@ -116,26 +146,6 @@ namespace FRM_Login.Menu
             cmb_Tipo_Articulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
             cmb_Tipo_Articulo.SelectedValue = "0";
             #endregion
-
-            txt_Articulo.Clear();
-            txt_NombreArticulo.Clear();
-            //txt_Cantidad_Articulo.Clear();
-            txt_InventarioMin_Articulo.Clear();
-            txt_PrecioVenta_Articulo.Clear();
-
-            if (txt_FiltrarArticulos.Text == string.Empty)
-            {
-                dtArticulos = Obj_BLL_Articulos.Listar_Articulos(ref sMsjError);
-            }
-            else
-            {
-                dtArticulos = Obj_BLL_Articulos.Filtrar_Articulos(ref sMsjError, txt_FiltrarArticulos.Text);
-            }
-            if (sMsjError == string.Empty)
-            {
-                dgv_Articulos.DataSource = null;
-                dgv_Articulos.DataSource = dtArticulos;
-            }
         }
         #endregion
 
@@ -145,18 +155,7 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtTipoArticulo = new DataTable();
-            Obj_DAL_Tipo.cBandIM = 'I';
-
-            #region Cargar Estados
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_TipoArticulo = new DataTable();
-            DT_TipoArticulo = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_EstadoTipoArticulo.DataSource = DT_TipoArticulo;
-            DT_TipoArticulo.Rows.Add("0", "Elija Estado");
-            cmb_EstadoTipoArticulo.DisplayMember = DT_TipoArticulo.Columns[1].ToString();
-            cmb_EstadoTipoArticulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
-            cmb_EstadoTipoArticulo.SelectedValue = "0";
-            #endregion
+            Obj_DAL_Tipo.cBandIM = 'I';            
 
             txt_IdTipoArticulo.Clear();
             txt_DescripcionTipoArticulo.Clear();
@@ -175,16 +174,28 @@ namespace FRM_Login.Menu
                 dgv_TipoArticulos.DataSource = dtTipoArticulo;
             }
         }
+
+        public void Cargar_cmb_TipoArticulos()
+        {
+            string sMsjError = string.Empty;
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_TipoArticulo = new DataTable();
+            DT_TipoArticulo = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_EstadoTipoArticulo.DataSource = DT_TipoArticulo;
+            DT_TipoArticulo.Rows.Add("0", "Elija Estado");
+            cmb_EstadoTipoArticulo.DisplayMember = DT_TipoArticulo.Columns[1].ToString();
+            cmb_EstadoTipoArticulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
+            cmb_EstadoTipoArticulo.SelectedValue = "0";
+            
+        }
         #endregion
 
-
-
-
-
+        
         #region Familia
         private void btn_RefrescarFamilia_Click(object sender, EventArgs e)
         {
-            Cargar_Datos_TipoArticulo();
+            Cargar_cmb_FamiliaArticulos();
+            Cargar_Datos_FamiliaArticulos();
         }
 
         private void btn_ModificarFamilia_Click(object sender, EventArgs e)
@@ -233,6 +244,7 @@ namespace FRM_Login.Menu
                     Obj_BLL_Familia.Insertar_FamiliaArticulos(ref sMsjError, ref Obj_DAL_Familia);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_FamiliaArticulos();
+                    Cargar_cmb_FamiliaArticulos();
                 }
                 else if (Obj_DAL_Familia.cBandIM == 'M')
                 {
@@ -240,6 +252,7 @@ namespace FRM_Login.Menu
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_IdFamilia.Enabled = true;
                     Cargar_Datos_FamiliaArticulos();
+                    Cargar_cmb_FamiliaArticulos();
                 }
             }
             else
@@ -319,6 +332,7 @@ namespace FRM_Login.Menu
                     Obj_BLL_Articulos.Insertar_Articulos(ref sMsjError, ref Obj_DAL_Articulos);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_Articulos();
+                    Cargar_cmb_Articulos();
                 }
                 else if (Obj_DAL_Articulos.cBandIM == 'M')
                 {
@@ -326,6 +340,7 @@ namespace FRM_Login.Menu
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_Articulo.Enabled = true;
                     Cargar_Datos_Articulos();
+                    Cargar_cmb_Articulos();
                 }
             }
             else
@@ -342,6 +357,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Articulo_Click(object sender, EventArgs e)
         {
             Cargar_Datos_Articulos();
+            Cargar_cmb_Articulos();
         }
         #endregion
 
@@ -354,6 +370,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_TipoArticulos_Click(object sender, EventArgs e)
         {
             Cargar_Datos_TipoArticulo();
+            Cargar_cmb_TipoArticulos();
         }
 
         private void btn_Modificar_TipoArticulo_Click(object sender, EventArgs e)
@@ -387,6 +404,7 @@ namespace FRM_Login.Menu
                     Obj_BLL_Tipo.Insertar_TipoArticulo(ref sMsjError, ref Obj_DAL_Tipo);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cargar_Datos_TipoArticulo();
+                    Cargar_cmb_TipoArticulos();
                 }
                 else if (Obj_DAL_Tipo.cBandIM == 'M')
                 {
@@ -394,6 +412,7 @@ namespace FRM_Login.Menu
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_IdTipoArticulo.Enabled = true;
                     Cargar_Datos_TipoArticulo();
+                    Cargar_cmb_TipoArticulos();
                 }
             }
             else

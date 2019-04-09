@@ -21,15 +21,39 @@ namespace FRM_Login.Menu
 
         #region Variables Globales
         cls_TipoServicio_BLL Obj_TipoServicio_BLL = new cls_TipoServicio_BLL();
-        cls_TipoServicio_DAL Obj_TipoServicio_DAL = new cls_TipoServicio_DAL();   
+        cls_TipoServicio_DAL Obj_TipoServicio_DAL = new cls_TipoServicio_DAL();
         #endregion
 
         public void Cargar_Datos()
         {
-            string sMsjError = String.Empty;
+            string sMsjError = string.Empty;
             DataTable DT_TipoServicio = new DataTable();
-            
-            
+            Obj_TipoServicio_DAL.cBandIM = 'I';            
+
+            txt_Duracion.Clear();
+            txt_CodigoServicio.Clear();
+            txt_NombreServicio.Clear();
+            txt_Precio.Clear();
+
+            if (txt_Filtrar.Text == string.Empty)
+            {
+                DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
+            }
+            else
+            {
+                DT_TipoServicio = Obj_TipoServicio_BLL.Filtrar_TipoServicio(ref sMsjError, txt_Filtrar.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_TipoServicio.DataSource = null;
+                dgv_TipoServicio.DataSource = DT_TipoServicio;
+            }
+        }
+
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
+
             #region Cargar TipoVehiculo
             cls_TipoVehiculo_BLL Obj_TipoVehiculo_BLL = new cls_TipoVehiculo_BLL();
             DataTable DT_TipoVehiculo = new DataTable();
@@ -40,31 +64,12 @@ namespace FRM_Login.Menu
             cmb_IdTipoVehiculo.ValueMember = DT_TipoVehiculo.Columns[0].ToString();
             cmb_IdTipoVehiculo.SelectedValue = "0";
             #endregion
-
-            txt_Duracion.Clear();
-            txt_CodigoServicio.Clear();
-            txt_NombreServicio.Clear();
-            txt_Precio.Clear();
-
-            if (txt_Filtrar.Text == String.Empty)
-            {
-              DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
-            }
-            else
-            {
-                DT_TipoServicio = Obj_TipoServicio_BLL.Filtrar_TipoServicio(ref sMsjError, txt_Filtrar.Text);
-            }
-            if (sMsjError == String.Empty)
-            {
-                dgv_TipoServicio.DataSource = null;
-                dgv_TipoServicio.DataSource = DT_TipoServicio;
-            }
         }
 
         private void FRM_Tipo_Servicio_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
-            Obj_TipoServicio_DAL.cBandIM = 'I';
+            Cargar_cmb();
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)
@@ -75,6 +80,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos(); //
+            Cargar_cmb();
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -103,6 +109,7 @@ namespace FRM_Login.Menu
                     txt_CodigoServicio.Enabled = false;
                     Cargar_Datos();
                 }
+                Cargar_cmb();
             }
             else
             {

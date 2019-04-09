@@ -27,6 +27,7 @@ namespace FRM_Login.Menu
         private void FRM_Usuario_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
+            Cargar_cmb();
         }
 
         public void Cargar_Datos()
@@ -34,7 +35,29 @@ namespace FRM_Login.Menu
 
             string sMsjError = string.Empty;
             DataTable dtArticulos = new DataTable();
-            Obj_DAL.cBandIM = 'I';
+            Obj_DAL.cBandIM = 'I';            
+
+            txt_Usuario.Clear();
+            txt_Contraseña.Clear();
+
+            if (txt_Filtrar.Text == string.Empty)
+            {
+                dtArticulos = Obj_BLL.Listar_Usuarios(ref sMsjError);
+            }
+            else
+            {
+                dtArticulos = Obj_BLL.Filtrar_Usuarios(ref sMsjError, txt_Filtrar.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Usuario.DataSource = null;
+                dgv_Usuario.DataSource = dtArticulos;
+            }
+        }
+
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
@@ -57,23 +80,6 @@ namespace FRM_Login.Menu
             cmb_Rol.ValueMember = DT_Roles.Columns[0].ToString();
             cmb_Rol.SelectedValue = "0";
             #endregion
-
-            txt_Usuario.Clear();
-            txt_Contraseña.Clear();
-
-            if (txt_Filtrar.Text == string.Empty)
-            {
-                dtArticulos = Obj_BLL.Listar_Usuarios(ref sMsjError);
-            }
-            else
-            {
-                dtArticulos = Obj_BLL.Filtrar_Usuarios(ref sMsjError, txt_Filtrar.Text);
-            }
-            if (sMsjError == string.Empty)
-            {
-                dgv_Usuario.DataSource = null;
-                dgv_Usuario.DataSource = dtArticulos;
-            }
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -100,6 +106,7 @@ namespace FRM_Login.Menu
                     txt_Usuario.Enabled = true;
                     Cargar_Datos();
                 }
+                Cargar_cmb();
             }
             else
             {
@@ -110,6 +117,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos();
+            Cargar_cmb();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -131,12 +139,20 @@ namespace FRM_Login.Menu
 
         private void dgv_Usuario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txt_Usuario.Enabled = false;
-            txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+
+            if (dgv_Usuario.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_Usuario.Enabled = false;
+                txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)

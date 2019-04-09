@@ -102,8 +102,8 @@ namespace FRM_Login.Menu
         {
             if (!(string.IsNullOrEmpty(txt_Identificacion.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txt_Apellido.Text))
                 && !(string.IsNullOrEmpty(txt_Telefono.Text)) && !(string.IsNullOrEmpty(txt_Direccion.Text)) && !(string.IsNullOrEmpty(txt_Email.Text))
-                && !(string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" && cmb_IdPoliza.SelectedValue.ToString() != "0" 
-                && cmb_IdUsuario.SelectedValue.ToString() != "0")
+                && !(string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" && cmb_IdPoliza.SelectedValue.ToString() != "Elija una póliza"
+                && cmb_IdUsuario.SelectedValue.ToString() != "Elija un usuario")
             {
                 Obj_DAL.sIdenti = txt_Identificacion.Text;
                 Obj_DAL.sNombre = txt_Nombre.Text;
@@ -122,12 +122,14 @@ namespace FRM_Login.Menu
                     EmplC_ObjBLL.Insertar_Clientes(ref sMsjError, ref Obj_DAL);
                     MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarEmpleados();
+                    Cargar_CMB();
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
                     EmplC_ObjBLL.Modificar_Clientes(ref sMsjError, ref Obj_DAL);
                     MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarEmpleados();
+                    Cargar_CMB();
                 }
             }
             else

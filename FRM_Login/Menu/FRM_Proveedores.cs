@@ -33,24 +33,14 @@ namespace FRM_Login.Menu
         private void FRM_Proveedores_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Proveedores();
+            Cargar_cmb();
         }
         public void Cargar_Datos_Proveedores()
         {
             
             string sMsjError = string.Empty;
             DataTable dtProveedores = new DataTable();
-            Obj_DAL.cBandIM = 'I';
-
-            #region Cargar Estado
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_Estados = new DataTable();
-            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_IdEstadoProveedor.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
-            cmb_IdEstadoProveedor.DisplayMember = DT_Estados.Columns[1].ToString();
-            cmb_IdEstadoProveedor.ValueMember = DT_Estados.Columns[0].ToString();
-            cmb_IdEstadoProveedor.SelectedValue = "0";
-            #endregion
+            Obj_DAL.cBandIM = 'I';            
 
             txt_IdProveedor.Enabled = false;
             txt_IdProveedor.Clear();
@@ -74,6 +64,22 @@ namespace FRM_Login.Menu
             }
         }
 
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
+
+            #region Cargar Estado
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstadoProveedor.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija Estado");
+            cmb_IdEstadoProveedor.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstadoProveedor.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstadoProveedor.SelectedValue = "0";
+            #endregion
+        }
+
         private void txt_FiltrarProveedores_TextChanged(object sender, EventArgs e)
         {
             Cargar_Datos_Proveedores();
@@ -82,6 +88,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos_Proveedores();
+            Cargar_cmb();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -129,19 +136,27 @@ namespace FRM_Login.Menu
                     txt_IdProveedor.Enabled = true;
                     Cargar_Datos_Proveedores();
                 }
+                Cargar_cmb();
             }
         }
 
         private void dgv_Proveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            //txt_IdProveedor.Enabled = false;
-            txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            if (dgv_Proveedores.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdProveedor.Enabled = false;
+                txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            }
         }
 
         #region Validaciones

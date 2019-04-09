@@ -19,7 +19,7 @@ namespace FRM_Login.Menu
             InitializeComponent();
         }
 
-        #region 
+        #region Variables Globales
         cls_Roles_BLL Obj_BLL = new cls_Roles_BLL();
         cls_Roles_DAL Obj_DAL = new cls_Roles_DAL();
         #endregion
@@ -27,24 +27,14 @@ namespace FRM_Login.Menu
         private void FRM_Roles_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Roles();
+            Cargar_cmb();
         }
         public void Cargar_Datos_Roles()
         {
             
             string sMsjError = string.Empty;
             DataTable dtRoles = new DataTable();
-            Obj_DAL.cBandIM = 'I';
-
-            #region Cargar Estados
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_Estados = new DataTable();
-            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
-            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
-            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
-            cmb_IdEstado.SelectedValue = "0";
-            #endregion
+            Obj_DAL.cBandIM = 'I';            
 
             txt_IdRol.Clear();
             txt_Nivel.Clear();
@@ -65,6 +55,21 @@ namespace FRM_Login.Menu
             }
         }
 
+        private void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
+            #region Cargar Estados
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstado.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija Estado");
+            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstado.SelectedValue = "0";
+            #endregion
+        }
+
         private void txt_FiltrarRoles_TextChanged(object sender, EventArgs e)
         {
             Cargar_Datos_Roles();
@@ -73,6 +78,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos_Roles();
+            Cargar_cmb();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -116,6 +122,7 @@ namespace FRM_Login.Menu
                     txt_IdRol.Enabled = true;
                     Cargar_Datos_Roles();
                 }
+                Cargar_cmb();
             }
             else
             {

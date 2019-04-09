@@ -61,7 +61,7 @@ namespace FRM_Login.Menu
             DataTable DTA = new DataTable();
             DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
             cmb_Articulo.DataSource = DTA;
-            DTA.Rows.Add("0", "Elija Estado");
+            DTA.Rows.Add("0", "Elija Articulo");
             cmb_Articulo.DisplayMember = DTA.Columns[1].ToString();
             cmb_Articulo.ValueMember = DTA.Columns[0].ToString();
             cmb_Articulo.SelectedValue = "0";

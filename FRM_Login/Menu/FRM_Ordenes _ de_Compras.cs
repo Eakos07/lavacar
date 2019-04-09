@@ -24,12 +24,32 @@ namespace FRM_Login.Menu
         cls_Ordenes_Compra_DAL Obj_OrdenesCompra_DAL = new cls_Ordenes_Compra_DAL();
 
         #endregion
+
         public void Cargar_Datos()
         {
             txt_NumOrden.Enabled = false;
             string sMsjError = string.Empty;
             DataTable DT_Ordenes = new DataTable();
-            Obj_OrdenesCompra_DAL.cBandIM = 'I';
+            Obj_OrdenesCompra_DAL.cBandIM = 'I';            
+
+            if (txt_Filtrar.Text== string.Empty)
+            {
+                DT_Ordenes= Obj_OrdenesCompra_BLL.Listar_OrdenesCompra(ref sMsjError);
+            }
+            else
+            {
+                DT_Ordenes = Obj_OrdenesCompra_BLL.Filtrar_OrdenesCompra(ref sMsjError, txt_Filtrar.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Ordenes_Compra.DataSource = null;
+                dgv_Ordenes_Compra.DataSource = DT_Ordenes;
+            }
+        }
+
+        public void Cargar_cmb()
+        {
+            txt_NumOrden.Enabled = false;
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
@@ -41,7 +61,7 @@ namespace FRM_Login.Menu
             cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstado.SelectedValue = "0";
             #endregion
-            
+
             #region Cargar Proveedor
             cls_Proveedores_BLL Obj_Proveedores_BLL = new cls_Proveedores_BLL();
             DataTable DT_Proveedores = new DataTable();
@@ -63,25 +83,12 @@ namespace FRM_Login.Menu
             cmb_IdArticulo.ValueMember = DT_Articulos.Columns[0].ToString();
             cmb_IdArticulo.SelectedValue = "0";
             #endregion
-
-            if (txt_Filtrar.Text== string.Empty)
-            {
-                DT_Ordenes= Obj_OrdenesCompra_BLL.Listar_OrdenesCompra(ref sMsjError);
-            }
-            else
-            {
-                DT_Ordenes = Obj_OrdenesCompra_BLL.Filtrar_OrdenesCompra(ref sMsjError, txt_Filtrar.Text);
-            }
-            if (sMsjError == String.Empty)
-            {
-                dgv_Ordenes_Compra.DataSource = null;
-                dgv_Ordenes_Compra.DataSource = DT_Ordenes;
-            }
         }
 
         private void FRM_Ordenes___de_Compras_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
+            Cargar_cmb();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -111,6 +118,7 @@ namespace FRM_Login.Menu
                     txt_NumOrden.Enabled = false;
                     Cargar_Datos();
                 }
+                Cargar_cmb();
             }
             else
             {
@@ -121,6 +129,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos();
+            Cargar_cmb();
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)

@@ -27,13 +27,34 @@ namespace FRM_Login.Menu
         private void FRM_Planillas_Load(object sender, EventArgs e)
         {
             Cargar_Datos_Planilla();
+            Cargar_cmb();
         }
         public void Cargar_Datos_Planilla()
-        {
-            
+        {            
             string sMsjError = string.Empty;
             DataTable dtPlanilla = new DataTable();
-            Obj_DAL.cBandIM = 'I';
+            Obj_DAL.cBandIM = 'I';            
+
+            txt_IdPlanilla.Clear();
+
+            if (txt_FiltrarPlanillas.Text == string.Empty)
+            {
+                dtPlanilla = Obj_BLL.Listar_Planilla(ref sMsjError);
+            }
+            else
+            {
+                dtPlanilla = Obj_BLL.Filtrar_Planilla(ref sMsjError, txt_FiltrarPlanillas.Text);
+            }
+            if (sMsjError == string.Empty)
+            {
+                dgv_Planillas.DataSource = null;
+                dgv_Planillas.DataSource = dtPlanilla;
+            }
+        }
+
+        public void Cargar_cmb()
+        {
+            string sMsjError = string.Empty;
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
@@ -57,32 +78,16 @@ namespace FRM_Login.Menu
             cmb_IdHorario.SelectedValue = "0";
             #endregion
 
-            #region Empleado
-            //cls_Horarios_BLL Obj_Horarios_BLL = new cls_Horarios_BLL();
-            //DataTable DT_Horarios = new DataTable();
-            //DT_Horarios = Obj_Horarios_BLL.Listar_Horarios(ref sMsjError);
-            //cmb_IdHorario.DataSource = DT_Horarios;
-            //DT_Horarios.Rows.Add("0", "Elija Estado");
-            //cmb_IdHorario.DisplayMember = DT_Horarios.Columns[1].ToString();
-            //cmb_IdHorario.ValueMember = DT_Horarios.Columns[0].ToString();
-            cmb_IdHorario.SelectedValue = "0";
+            #region Empleados           
+            cls_Empleados_BLL Obj_Empleados_BLL = new cls_Empleados_BLL();
+            DataTable DT_Empleados = new DataTable();
+            DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
+            cmb_IdEmpleado.DataSource = DT_Empleados;
+            DT_Empleados.Rows.Add("0", "Elija un Empleado");
+            cmb_IdEmpleado.DisplayMember = DT_Empleados.Columns[1].ToString();
+            cmb_IdEmpleado.ValueMember = DT_Empleados.Columns[0].ToString();
+            cmb_IdEmpleado.SelectedValue = "0";
             #endregion
-
-            txt_IdPlanilla.Clear();
-
-            if (txt_FiltrarPlanillas.Text == string.Empty)
-            {
-                dtPlanilla = Obj_BLL.Listar_Planilla(ref sMsjError);
-            }
-            else
-            {
-                dtPlanilla = Obj_BLL.Filtrar_Planilla(ref sMsjError, txt_FiltrarPlanillas.Text);
-            }
-            if (sMsjError == string.Empty)
-            {
-                dgv_Planillas.DataSource = null;
-                dgv_Planillas.DataSource = dtPlanilla;
-            }
         }
 
         private void txt_FiltrarPlanillas_TextChanged(object sender, EventArgs e)
@@ -114,6 +119,7 @@ namespace FRM_Login.Menu
                     txt_IdPlanilla.Enabled = true;
                     Cargar_Datos_Planilla();
                 }
+                Cargar_cmb();
             }
             else
             {
@@ -124,6 +130,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Datos_Planilla();
+            Cargar_cmb();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
@@ -146,12 +153,19 @@ namespace FRM_Login.Menu
 
         private void dgv_Planillas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txt_IdPlanilla.Enabled = false;
-            txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            if (dgv_Planillas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdPlanilla.Enabled = false;
+                txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
         }
 
         #region Validaciones

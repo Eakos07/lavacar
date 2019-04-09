@@ -47,37 +47,15 @@ namespace FRM_Login.Menu
            
             string sMsjError = string.Empty;
             DataTable dtPolizas = new DataTable();
-            Obj_Polizas_DAL.cBandIM = 'I';
+            Obj_Polizas_DAL.cBandIM = 'I';            
 
-            #region Cargar Estados
-
-            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
-            DataTable DT_Estados = new DataTable();
-            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
-            cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija una opción");
-            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
-            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
-            cmb_IdEstado.SelectedValue = "0";
-            #endregion
-            #region Cargar TipoPolizas
-
-            DataTable DT_TipoPolizas = new DataTable();
-            DT_TipoPolizas = Obj_TipoPolizas_BLL.Listar_TipoPolizas(ref sMsjError);
-            cmb_IdTipoPoliza.DataSource = DT_TipoPolizas;
-            DT_TipoPolizas.Rows.Add("0", "Elija una opción");
-            cmb_IdTipoPoliza.DisplayMember = DT_TipoPolizas.Columns[1].ToString();
-            cmb_IdTipoPoliza.ValueMember = DT_TipoPolizas.Columns[0].ToString();
-            cmb_IdTipoPoliza.SelectedValue = "0";
-            #endregion
-
-            #region Cargar Centro Lavado
-            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
-            DataTable dt_Octopus = new DataTable();
-            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            //#region Cargar Centro Lavado
+            //cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            //DataTable dt_Octopus = new DataTable();
+            //dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
             
             
-            #endregion
+            //#endregion
 
             txt_IdPoliza.Clear();
             txt_FechaVenci.Clear();
@@ -98,24 +76,40 @@ namespace FRM_Login.Menu
                 dgv_Polizas.DataSource = dtPolizas;
             }
         }
+
+        public void Cargar_cmb_Polizas()
+        {
+            string sMsjError = string.Empty;
+
+            #region Cargar Estados
+
+            cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
+            DataTable DT_Estados = new DataTable();
+            DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
+            cmb_IdEstado.DataSource = DT_Estados;
+            DT_Estados.Rows.Add("0", "Elija una opción");
+            cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
+            cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
+            cmb_IdEstado.SelectedValue = "0";
+            #endregion
+
+            #region Cargar TipoPolizas
+
+            DataTable DT_TipoPolizas = new DataTable();
+            DT_TipoPolizas = Obj_TipoPolizas_BLL.Listar_TipoPolizas(ref sMsjError);
+            cmb_IdTipoPoliza.DataSource = DT_TipoPolizas;
+            DT_TipoPolizas.Rows.Add("0", "Elija una opción");
+            cmb_IdTipoPoliza.DisplayMember = DT_TipoPolizas.Columns[1].ToString();
+            cmb_IdTipoPoliza.ValueMember = DT_TipoPolizas.Columns[0].ToString();
+            cmb_IdTipoPoliza.SelectedValue = "0";
+            #endregion
+        }
         public void Cargar_TipoPolizas()
         {
             cls_TipoPolizas_BLL Obj_TipoPolizas_BLL = new cls_TipoPolizas_BLL();
             string sMsjError = string.Empty;
             DataTable dtTipoPolizas = new DataTable();
-            Obj_TipoPolizas_DAL.cBandIM = 'I';
-
-            #region Cargar Proveedores
-
-            cls_Proveedores_BLL Obj_Proveedor_BLL= new cls_Proveedores_BLL();
-            DataTable DT_Proveedor = new DataTable();
-            DT_Proveedor = Obj_Proveedor_BLL.Listar_Proveedores(ref sMsjError);
-            cmb_IdProveedor.DataSource = DT_Proveedor;
-            DT_Proveedor.Rows.Add("0", "Elija una opción");
-            cmb_IdProveedor.DisplayMember = DT_Proveedor.Columns[1].ToString();
-            cmb_IdProveedor.ValueMember = DT_Proveedor.Columns[0].ToString();
-            cmb_IdProveedor.SelectedValue = "0";
-            #endregion
+            Obj_TipoPolizas_DAL.cBandIM = 'I';            
 
             txt_IdTipoPoliza.Clear();
             txt_NombrePoliza.Clear();
@@ -138,10 +132,29 @@ namespace FRM_Login.Menu
 
         }
 
+        public void Cargar_cmb_TipoPolizas()
+        {
+            string sMsjError = string.Empty;
+
+            #region Cargar Proveedores
+
+            cls_Proveedores_BLL Obj_Proveedor_BLL = new cls_Proveedores_BLL();
+            DataTable DT_Proveedor = new DataTable();
+            DT_Proveedor = Obj_Proveedor_BLL.Listar_Proveedores(ref sMsjError);
+            cmb_IdProveedor.DataSource = DT_Proveedor;
+            DT_Proveedor.Rows.Add("0", "Elija una opción");
+            cmb_IdProveedor.DisplayMember = DT_Proveedor.Columns[1].ToString();
+            cmb_IdProveedor.ValueMember = DT_Proveedor.Columns[0].ToString();
+            cmb_IdProveedor.SelectedValue = "0";
+            #endregion
+        }
+
         private void FRM_Polizas_Load(object sender, EventArgs e)
         {
             Cargar_Polizas();
+            Cargar_cmb_Polizas();
             Cargar_TipoPolizas();
+            Cargar_cmb_TipoPolizas();
         }
 
         private void toolStripTextBox1_TextChanged_1(object sender, EventArgs e)
@@ -163,6 +176,7 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
         #region Polizas
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
@@ -209,6 +223,7 @@ namespace FRM_Login.Menu
                     txt_IdPoliza.Enabled = false;
                     Cargar_Polizas();
                 }
+                Cargar_cmb_Polizas();
             }
             else
             {
@@ -219,6 +234,7 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_Click(object sender, EventArgs e)
         {
             Cargar_Polizas();
+            Cargar_cmb_Polizas();
         }
         #endregion
 
@@ -226,17 +242,26 @@ namespace FRM_Login.Menu
         private void btn_Refrescar_TipoPolizas_Click(object sender, EventArgs e)
         {
             Cargar_TipoPolizas();
+            Cargar_cmb_TipoPolizas();
         }
 
         private void dgv_TipoPoliza_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_TipoPolizas_DAL.cBandIM = 'M';
-            txt_IdTipoPoliza.Enabled = false;
 
-            txt_IdTipoPoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_NombrePoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            if (dgv_TipoPoliza.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_TipoPolizas_DAL.cBandIM = 'M';
+                txt_IdTipoPoliza.Enabled = false;
+
+                txt_IdTipoPoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_NombrePoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
         }
 
         private void btn_Guardar_TipoPolizas_Click(object sender, EventArgs e)
@@ -264,6 +289,7 @@ namespace FRM_Login.Menu
                     Cargar_TipoPolizas();
 
                 }
+                Cargar_cmb_TipoPolizas();
             }
         }
 
@@ -413,14 +439,21 @@ namespace FRM_Login.Menu
 
         private void dgv_Polizas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_Polizas_DAL.cBandIM = 'M';
-            txt_IdPoliza.Enabled = false;
+            if (dgv_Polizas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_Polizas_DAL.cBandIM = 'M';
+                txt_IdPoliza.Enabled = false;
 
-            txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            cmb_IdEstado.Text = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            }
         }
     }
 }
