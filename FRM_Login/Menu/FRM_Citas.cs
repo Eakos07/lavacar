@@ -397,17 +397,31 @@ namespace FRM_Login.Menu
 
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) || 
-                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+
+            if (e.KeyChar == '-' || char.IsControl(e.KeyChar)|| (txt_NumPlaca.SelectionStart.ToString()=="3"))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumPlaca, "");
+
+
+                // txt_NumPlaca.Text.Contains('-')  (e.KeyChar == -'-')
+
             }
+            else if (char.IsNumber(e.KeyChar)|| char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumPlaca, "Solo puede digitar placas alfanumericas y espacios");
+                MessageBox.Show("Solo puede digitar placas alfanumericas");
             }
+               
+            
+             
+              
+
+
         }
         
 
@@ -457,12 +471,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) )
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumCita, "");
+             
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumCita, "Solo puede digitar numeros");
+               MessageBox.Show( "Solo puede digitar numeros");
             }
         }
 
@@ -471,18 +485,18 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumCita, "");
+               
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumCita, "Solo puede digitar numeros con (-)");
+                MessageBox.Show( "Solo puede digitar numeros con (-)");
             }
 
             if (e.KeyChar == '-')
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumCita, "");
+            
             }
         }
         
@@ -506,12 +520,12 @@ namespace FRM_Login.Menu
                 char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumCita, "");
+              
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumCita, "Solo puede digitar letras");
+               MessageBox.Show( "Solo puede digitar letras");
             }
         }
         
@@ -584,12 +598,12 @@ namespace FRM_Login.Menu
             if (char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Email, "Email no puede tener espacios vacios");
+               MessageBox.Show( "Email no puede tener espacios vacios");
             }
             else
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Email, "");
+               
             }
         }
         #endregion
