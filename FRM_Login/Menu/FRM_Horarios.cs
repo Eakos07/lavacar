@@ -93,7 +93,7 @@ namespace FRM_Login.Menu
             else
             {
                 Obj_DAL.cBandIM = 'M';
-                //txt_IdHorario.Enabled = false;
+                txt_IdHorario.Enabled = false;
                 txt_IdHorario.Text = dgv_Horarios.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Descrip.Text = dgv_Horarios.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_CantiHoras.Text = dgv_Horarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
@@ -162,7 +162,7 @@ namespace FRM_Login.Menu
             else
             {
                 Obj_DAL.cBandIM = 'M';
-                //txt_IdHorario.Enabled = false;
+                txt_IdHorario.Enabled = false;
                 txt_IdHorario.Text = dgv_Horarios.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Descrip.Text = dgv_Horarios.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_CantiHoras.Text = dgv_Horarios.SelectedRows[0].Cells[2].Value.ToString().Trim();

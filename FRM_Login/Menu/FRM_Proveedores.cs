@@ -115,12 +115,12 @@ namespace FRM_Login.Menu
             if (!(string.IsNullOrEmpty(txtNomProveedor.Text)) && !(string.IsNullOrEmpty(txtTelefoProveedor.Text))
                 && !(string.IsNullOrEmpty(txtEmailProveedor.Text)) && !(string.IsNullOrEmpty(txtPlazoPago.Text)) && cmb_IdEstadoProveedor.SelectedValue.ToString() != "0")
             {
-                //Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
+               
                 Obj_DAL.sNombreProveedor = txtNomProveedor.Text;
                 Obj_DAL.sEmail = txtEmailProveedor.Text;
                 Obj_DAL.iTelefono = Convert.ToInt32(txtTelefoProveedor.Text);
                 Obj_DAL.bPlazoPago = Convert.ToByte(txtPlazoPago.Text);
-                Obj_DAL.bIdEstado = Convert.ToByte(cmb_IdEstadoProveedor.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstadoProveedor.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')
