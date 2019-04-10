@@ -32,6 +32,7 @@ namespace FRM_Login.Menu
 
             txt_Duracion.Clear();
             txt_CodigoServicio.Clear();
+            txt_CodigoServicio.Enabled = true;
             txt_NombreServicio.Clear();
             txt_Precio.Clear();
 

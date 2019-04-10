@@ -25,7 +25,9 @@ namespace FRM_Login.Menu
 
         public void Cargar_Datos()
         {
-            
+            txt_Descrip.Clear();
+            txt_TipoVehiculo.Clear();
+            txt_TipoVehiculo.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtTipoVehiculo = new DataTable();
             Obj_TipoVehiculo_DAL.cBandIM = 'I';

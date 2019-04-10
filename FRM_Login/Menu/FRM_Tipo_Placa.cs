@@ -25,6 +25,9 @@ namespace FRM_Login.Menu
 
         public void Cargar_Datos()
         {
+            txt_Descripcion.Clear();
+            txt_IdTipoPlaca.Clear();
+            txt_IdTipoPlaca.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtTipoPlaca = new DataTable();
             Obj_TipoPlaca_DAL.cBandIM = 'I';
