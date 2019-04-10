@@ -13,8 +13,7 @@ namespace LavaCar_DAL.Cat_Mant
         private DateTime _dFecha;
         private short _iCantidad;
         private decimal _dMonto;
-        private byte _bIdEstado;
-        private char _cBandera;
+        private char _cBandera, _cIdEstado;
 
         public int iIdTransaccionVenta
         {
@@ -94,16 +93,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

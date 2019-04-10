@@ -66,12 +66,11 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
             Obj_BLL.CrearParametros(ref Obj_DAL);
-            //Obj_DAL.DT_Parametros.Rows.Add("@IdNumOrden", 6, Obj_OrdenesCompra_DAL.iIdNumOrden.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdProveedor", 8, Obj_OrdenesCompra_DAL.bIdProveedor.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_OrdenesCompra_DAL.sIdArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_OrdenesCompra_DAL.iCantidad.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Precio", 4, Obj_OrdenesCompra_DAL.dPrecio.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_OrdenesCompra_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_OrdenesCompra_DAL.cIdEstado.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_OrdenesCompra"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
@@ -97,7 +96,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdArticulo", 3, Obj_OrdenesCompra_DAL.sIdArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Cantidad", 9, Obj_OrdenesCompra_DAL.iCantidad.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Precio", 4, Obj_OrdenesCompra_DAL.dPrecio.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_OrdenesCompra_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_OrdenesCompra_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_OrdenesCompra"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 

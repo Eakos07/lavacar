@@ -8,9 +8,8 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_TipoArticulo_DAL
     {
-        private char _cIdTipoArticulo, _cBandIM;
+        private char _cIdTipoArticulo, _cBandIM, _cIdEstado;
         private string _sDescripcion;
-        private byte _bIdEstado;
 
         #region Variables Publicas
         public char cIdTipoArticulo
@@ -39,16 +38,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

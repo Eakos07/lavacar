@@ -8,33 +8,34 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Empleados_DAL
     {
-        private int _iIdEmpleado, _iTel, _iIdEstado;
+        private int  _iTel;
         private string _sIdenti, _sNombre, _sApellidos, _sAddress, _sEmail, _sPuesto, _sIdPoliza, _sIdUser;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
+        private byte _bIdEmpleado;
 
-        public int iIdEmpleado
+        public byte  bIdEmpleado
         {
             get
             {
-                return _iIdEmpleado;
+                return _bIdEmpleado;
             }
 
             set
             {
-                _iIdEmpleado = value;
+                _bIdEmpleado = value;
             }
         }
 
-        public int iIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _iIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _iIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

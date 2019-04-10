@@ -120,7 +120,7 @@ namespace FRM_Login.Menu
                 Obj_DAL.sAddress = txt_Direccion.Text;
                 Obj_DAL.sEmail = txt_Email.Text;
                 Obj_DAL.sPuesto = txt_Puesto.Text;
-                Obj_DAL.iIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 Obj_DAL.sIdPoliza = cmb_IdPoliza.SelectedValue.ToString().Trim();
                 Obj_DAL.sIdUser = cmb_IdUsuario.SelectedValue.ToString().Trim();
                 string sMsjError = string.Empty;

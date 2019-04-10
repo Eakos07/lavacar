@@ -238,7 +238,7 @@ namespace FRM_Login.Menu
             {
                 Obj_DAL_Familia.sIdFamilia = txt_IdFamilia.Text;
                 Obj_DAL_Familia.sDescripcion = txt_DescripcionFamilia.Text;
-                Obj_DAL_Familia.bIdEstado = Convert.ToByte(cmb_IdEstadoFamilia.SelectedValue);
+                Obj_DAL_Familia.cIdEstado = Convert.ToChar(cmb_IdEstadoFamilia.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL_Familia.cBandIM == 'I')
@@ -342,7 +342,7 @@ namespace FRM_Login.Menu
                 Obj_DAL_Articulos.cIdTipoArticulo = Convert.ToChar(cmb_Tipo_Articulo.SelectedValue);
                 Obj_DAL_Articulos.iInventarioMinimo = Convert.ToInt16(txt_InventarioMin_Articulo.Text);
                 Obj_DAL_Articulos.dPrecioVenta = Convert.ToDecimal(txt_PrecioVenta_Articulo.Text);
-                Obj_DAL_Articulos.bIdEstado = Convert.ToByte(cmb_Estado_Articulos.SelectedValue);
+                Obj_DAL_Articulos.cIdEstado = Convert.ToChar(cmb_Estado_Articulos.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL_Articulos.cBandIM == 'I')
@@ -430,7 +430,7 @@ namespace FRM_Login.Menu
             {
                 Obj_DAL_Tipo.cIdTipoArticulo = Convert.ToChar(txt_IdTipoArticulo.Text);
                 Obj_DAL_Tipo.sDescripcion = txt_DescripcionTipoArticulo.Text;
-                Obj_DAL_Tipo.bIdEstado = Convert.ToByte(cmb_EstadoTipoArticulo.SelectedValue);
+                Obj_DAL_Tipo.cIdEstado = Convert.ToChar(cmb_EstadoTipoArticulo.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL_Tipo.cBandIM == 'I')

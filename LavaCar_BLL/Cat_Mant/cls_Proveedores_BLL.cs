@@ -64,12 +64,11 @@ namespace LavaCar_BLL.Cat_Mant
             Cls_DataBase_BLL Obj_BLL = new Cls_DataBase_BLL();
 
             Obj_BLL.CrearParametros(ref Obj_DAL);
-            //Obj_DAL.DT_Parametros.Rows.Add("@IdProveedor", 8, Obj_Provedores_DAL.bIdProveedor.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@NombreProveedor", 3, Obj_Provedores_DAL.sNombreProveedor.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Provedores_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Telefono", 6, Obj_Provedores_DAL.iTelefono.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@PlazoPago", 8, Obj_Provedores_DAL.bPlazoPago.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Provedores_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Provedores_DAL.cIdEstado.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Proveedores"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
@@ -96,7 +95,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Provedores_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Telefono", 6, Obj_Provedores_DAL.iTelefono.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@PlazoPago", 8, Obj_Provedores_DAL.bPlazoPago.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Provedores_DAL.bIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Provedores_DAL.cIdEstado.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Proveedores"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);

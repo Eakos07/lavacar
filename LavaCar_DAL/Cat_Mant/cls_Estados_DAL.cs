@@ -8,34 +8,21 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Estados_DAL
     {
-        private byte _bIdEstado;
-        private string _sNombre, _sDescripcion;
+        private char _cIdEstado;
+        private string _sNombre;
         private char _cBandIM;
 
         #region Variables Publicas
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
-            }
-        }
-
-        public string sDescripcion
-        {
-            get
-            {
-                return _sDescripcion;
-            }
-
-            set
-            {
-                _sDescripcion = value;
+                _cIdEstado = value;
             }
         }
 

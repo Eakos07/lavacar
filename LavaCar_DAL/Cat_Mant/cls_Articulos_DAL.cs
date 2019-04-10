@@ -10,9 +10,9 @@ namespace LavaCar_DAL.Cat_Mant
     {
         private string _sIdArticulo, _sNombreArticulo, _sIdFamilia;
         private Int16 _iCantidad, _iInventarioMinimo;
-        private char _cIdTipoArticulo, _cBandIM;
+        private char _cIdTipoArticulo, _cBandIM, _cIdEstado;
         private decimal _dPrecioVenta;
-        private byte _bIdEstado;
+        
 
         #region Variables Publicas
         public string sIdArticulo
@@ -106,16 +106,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

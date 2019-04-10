@@ -112,7 +112,7 @@ namespace FRM_Login.Menu
                 Obj_DAL.fCantHoras = Convert.ToSingle(txt_CantiHoras.Text);
                 Obj_DAL.dtmEntrada = Convert.ToDateTime(txt_Entrada.Text);
                 Obj_DAL.dtmSalida = Convert.ToDateTime(txt_Salida.Text);
-                Obj_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')
