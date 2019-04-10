@@ -27,6 +27,9 @@ namespace FRM_Login.Menu
 
         public void Cargar_Datos()
         {
+            txt_Cantidad.Clear();
+            txt_Precio.Clear();
+            txt_NumOrden.Clear();
             txt_NumOrden.Enabled = false;
             string sMsjError = string.Empty;
             DataTable DT_Ordenes = new DataTable();

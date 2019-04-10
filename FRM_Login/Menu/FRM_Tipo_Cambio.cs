@@ -30,7 +30,11 @@ namespace FRM_Login.Menu
         }
         public void Cargar_Datos_TipoCambio()
         {
-            
+
+            txt_IdTipoCambio.Clear();
+            txt_IdTipoCambio.Enabled = true;
+            txt_Valor.Clear();
+            txt_Fecha.Clear();
             string sMsjError = string.Empty;
             DataTable dtTipoCambio = new DataTable();
             Obj_DAL.cBandIM = 'I';

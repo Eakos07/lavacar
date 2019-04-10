@@ -35,8 +35,9 @@ namespace FRM_Login.Menu
 
             string sMsjError = string.Empty;
             DataTable dtArticulos = new DataTable();
-            Obj_DAL.cBandIM = 'I';            
+            Obj_DAL.cBandIM = 'I';
 
+            txt_Usuario.Enabled = true;
             txt_Usuario.Clear();
             txt_Contraseña.Clear();
 

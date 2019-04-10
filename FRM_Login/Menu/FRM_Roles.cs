@@ -37,6 +37,7 @@ namespace FRM_Login.Menu
             Obj_DAL.cBandIM = 'I';            
 
             txt_IdRol.Clear();
+            txt_IdRol.Enabled = true;
             txt_Nivel.Clear();
             txt_Descrip.Clear();
 
