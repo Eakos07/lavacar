@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Articulos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Cantidad_Articulo = new System.Windows.Forms.NumericUpDown();
             this.cmb_Tipo_Articulo = new System.Windows.Forms.ComboBox();
             this.cmb_IdFamilia_Articulo = new System.Windows.Forms.ComboBox();
             this.cmb_Estado_Articulos = new System.Windows.Forms.ComboBox();
@@ -111,9 +111,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_Cantidad_Articulo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).BeginInit();
@@ -129,8 +128,6 @@
             this.toolStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -163,6 +160,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos";
+            // 
+            // txt_Cantidad_Articulo
+            // 
+            this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 107);
+            this.txt_Cantidad_Articulo.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
+            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(120, 23);
+            this.txt_Cantidad_Articulo.TabIndex = 12;
             // 
             // cmb_Tipo_Articulo
             // 
@@ -197,8 +206,9 @@
             // txt_InventarioMin_Articulo
             // 
             this.txt_InventarioMin_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_InventarioMin_Articulo.Location = new System.Drawing.Point(566, 69);
+            this.txt_InventarioMin_Articulo.Location = new System.Drawing.Point(566, 67);
             this.txt_InventarioMin_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_InventarioMin_Articulo.MaxLength = 4;
             this.txt_InventarioMin_Articulo.Multiline = true;
             this.txt_InventarioMin_Articulo.Name = "txt_InventarioMin_Articulo";
             this.txt_InventarioMin_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -210,6 +220,7 @@
             this.txt_PrecioVenta_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PrecioVenta_Articulo.Location = new System.Drawing.Point(566, 151);
             this.txt_PrecioVenta_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_PrecioVenta_Articulo.MaxLength = 28;
             this.txt_PrecioVenta_Articulo.Multiline = true;
             this.txt_PrecioVenta_Articulo.Name = "txt_PrecioVenta_Articulo";
             this.txt_PrecioVenta_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -221,6 +232,7 @@
             this.txt_NombreArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NombreArticulo.Location = new System.Drawing.Point(209, 67);
             this.txt_NombreArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NombreArticulo.MaxLength = 50;
             this.txt_NombreArticulo.Multiline = true;
             this.txt_NombreArticulo.Name = "txt_NombreArticulo";
             this.txt_NombreArticulo.Size = new System.Drawing.Size(139, 27);
@@ -232,6 +244,7 @@
             this.txt_Articulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Articulo.Location = new System.Drawing.Point(209, 28);
             this.txt_Articulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Articulo.MaxLength = 25;
             this.txt_Articulo.Multiline = true;
             this.txt_Articulo.Name = "txt_Articulo";
             this.txt_Articulo.Size = new System.Drawing.Size(139, 27);
@@ -658,6 +671,7 @@
             // txt_IdFamilia
             // 
             this.txt_IdFamilia.Location = new System.Drawing.Point(122, 47);
+            this.txt_IdFamilia.MaxLength = 4;
             this.txt_IdFamilia.Name = "txt_IdFamilia";
             this.txt_IdFamilia.Size = new System.Drawing.Size(178, 23);
             this.txt_IdFamilia.TabIndex = 0;
@@ -697,6 +711,7 @@
             // 
             this.txt_DescripcionFamilia.Location = new System.Drawing.Point(122, 85);
             this.txt_DescripcionFamilia.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_DescripcionFamilia.MaxLength = 20;
             this.txt_DescripcionFamilia.Name = "txt_DescripcionFamilia";
             this.txt_DescripcionFamilia.Size = new System.Drawing.Size(178, 23);
             this.txt_DescripcionFamilia.TabIndex = 1;
@@ -915,6 +930,7 @@
             // txt_IdTipoArticulo
             // 
             this.txt_IdTipoArticulo.Location = new System.Drawing.Point(202, 41);
+            this.txt_IdTipoArticulo.MaxLength = 1;
             this.txt_IdTipoArticulo.Name = "txt_IdTipoArticulo";
             this.txt_IdTipoArticulo.Size = new System.Drawing.Size(150, 23);
             this.txt_IdTipoArticulo.TabIndex = 0;
@@ -935,6 +951,7 @@
             this.txt_DescripcionTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DescripcionTipoArticulo.Location = new System.Drawing.Point(202, 89);
             this.txt_DescripcionTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_DescripcionTipoArticulo.MaxLength = 20;
             this.txt_DescripcionTipoArticulo.Multiline = true;
             this.txt_DescripcionTipoArticulo.Name = "txt_DescripcionTipoArticulo";
             this.txt_DescripcionTipoArticulo.Size = new System.Drawing.Size(150, 27);
@@ -1004,22 +1021,6 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Id Tipo Artículo:";
             // 
-            // errorIcono
-            // 
-            this.errorIcono.ContainerControl = this;
-            // 
-            // txt_Cantidad_Articulo
-            // 
-            this.txt_Cantidad_Articulo.Location = new System.Drawing.Point(209, 107);
-            this.txt_Cantidad_Articulo.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
-            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(120, 23);
-            this.txt_Cantidad_Articulo.TabIndex = 12;
-            // 
             // FRM_Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1034,6 +1035,7 @@
             this.Load += new System.EventHandler(this.FRM_Articulos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -1057,8 +1059,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoArticulos)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Cantidad_Articulo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1146,7 +1146,6 @@
         private System.Windows.Forms.TextBox txt_IdFamilia;
         private System.Windows.Forms.ToolStripButton btn_Refrescar_TipoArticulos;
         private System.Windows.Forms.TextBox txt_IdTipoArticulo;
-        private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.NumericUpDown txt_Cantidad_Articulo;
     }
 }

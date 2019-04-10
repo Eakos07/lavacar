@@ -283,6 +283,50 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_FamiliaArticulos();
         }
+
+        #region Validaciones
+        private void txt_IdFamilia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txt_DescripcionFamilia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
+                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void cmb_IdEstadoFamilia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Articulos
@@ -393,6 +437,116 @@ namespace FRM_Login.Menu
             Cargar_Datos_Articulos();
             Cargar_cmb_Articulos();
         }
+
+        #region Validaciones
+        private void txt_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txt_NombreArticulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
+                char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txt_Cantidad_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void cmb_IdFamilia_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmb_Estado_Articulos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_InventarioMin_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void cmb_Tipo_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_PrecioVenta_Articulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else
+            {
+                e.Handled = true;
+
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Tipo Articulos
@@ -487,168 +641,18 @@ namespace FRM_Login.Menu
             }
         }
 
-        #endregion
-
         #region Validaciones
-        private void txt_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
-            }
-        }
-
-        private void txt_NombreArticulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
-                char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_NombreArticulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_NombreArticulo, "Solo puede digitar letras");
-            }
-        }
-
-        private void txt_Cantidad_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
-            }
-        }
-
-        private void cmb_IdFamilia_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cmb_Estado_Articulos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_InventarioMin_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
-            }
-        }
-
-        private void cmb_Tipo_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_PrecioVenta_Articulo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_PrecioVenta_Articulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_PrecioVenta_Articulo, "Solo puede digitar numeros");
-            }
-        }
-
-        private void txt_IdFamilia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
-            }
-        }
-
-        private void txt_DescripcionFamilia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsLetter(e.KeyChar) ||
-                char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_DescripcionFamilia, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_DescripcionFamilia, "Solo puede digitar numeros y letras y espacios");
-            }
-        }
-
-        private void cmb_IdEstadoFamilia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void txt_IdTipoArticulo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
+
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
+
             }
         }
 
@@ -658,12 +662,12 @@ namespace FRM_Login.Menu
                 char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_DescripcionFamilia, "");
+
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_DescripcionFamilia, "Solo puede digitar numeros y letras y espacios");
+
             }
         }
 
@@ -678,6 +682,8 @@ namespace FRM_Login.Menu
                 e.Handled = true;
             }
         }
+        #endregion
+
         #endregion
 
         private void btn_Exit_Click(object sender, EventArgs e)
