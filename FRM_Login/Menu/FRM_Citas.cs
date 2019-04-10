@@ -398,29 +398,24 @@ namespace FRM_Login.Menu
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == '-' || char.IsControl(e.KeyChar)|| (txt_NumPlaca.SelectionStart.ToString()=="3"))
+            if (e.KeyChar == '-')
             {
-                e.Handled = false;
-
-
-                // txt_NumPlaca.Text.Contains('-')  (e.KeyChar == -'-')
+                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }                
 
             }
-            else if (char.IsNumber(e.KeyChar)|| char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Solo puede digitar placas alfanumericas");
-            }
-               
-            
-             
-              
-
+            //if (char.IsLetter(e.KeyChar))
+            //{
+            //    if(txt_NumPlaca.SelectionStart.ToString().Trim() <= "2")
+            //}
+                   
+   
 
         }
         
