@@ -438,35 +438,35 @@ namespace FRM_Login.Menu
 
         private void txt_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetterOrDigit(e.KeyChar))
+            if (char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == (char)(Keys.Back))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {
-                e.Handled = false;
+                e.Handled = true;
                 MessageBox.Show("Este campo es solo para letras o números");
             }
         }
 
         private void txt_NombreArticulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)(Keys.Back))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
             else
             {
-                e.Handled = false;
+                e.Handled = true;
                 MessageBox.Show("Este campo es solo para letras");
             }
         }
 
         private void txt_Cantidad_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsNumber(e.KeyChar))
             {
-                e.Handled = false;
+               e.Handled = false;                
             }
             else
             {
@@ -476,61 +476,42 @@ namespace FRM_Login.Menu
 
         private void cmb_IdFamilia_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void cmb_Estado_Articulos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void txt_InventarioMin_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)(Keys.Back))
             {
                 e.Handled = false;
             }
             else
             {
                 e.Handled = true;
+                MessageBox.Show("Este campo es solo para números");
             }
         }
 
         private void cmb_Tipo_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void txt_PrecioVenta_Articulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)(Keys.Back))
             {
                 e.Handled = false;
             }
             else
             {
                 e.Handled = true;
+                MessageBox.Show("Este campo es solo para números");
             }
         }
         #endregion
