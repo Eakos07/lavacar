@@ -44,7 +44,6 @@ namespace FRM_Login.Menu
 
             txtIdEsta.Clear();
             txt_Nombre.Clear();
-            txtDescEstados.Clear();
 
             if(toolStripTextBox1.Text == string.Empty)
             {
@@ -69,9 +68,9 @@ namespace FRM_Login.Menu
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            if (!(string.IsNullOrEmpty(txtIdEsta.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txtDescEstados.Text)))
+            if (!(string.IsNullOrEmpty(txtIdEsta.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)))
             {
-                Obj_DAL.cIdEstado = Convert.ToChar(txtIdEsta.Text);
+                Obj_DAL.cIdEstado = Convert.ToChar(txtIdEsta.Text.ToUpper());
                 Obj_DAL.sNombre = txt_Nombre.Text;
            
                 string sMsjError = string.Empty;
@@ -87,7 +86,7 @@ namespace FRM_Login.Menu
                     }
                     else
                     {
-                        MessageBox.Show("Se genera el siguiente error: " + "["+ sMsjError +"]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
                 }
@@ -109,7 +108,7 @@ namespace FRM_Login.Menu
             }
             else
             {
-                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se permiten espacios en blanco", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
                 
         }
@@ -153,44 +152,27 @@ namespace FRM_Login.Menu
 
         private void txtIdEsta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
             else
             {
                 e.Handled = true;
-                MessageBox.Show("No se permiten números");
+                MessageBox.Show("Solo se permiten letras");
             }
         }
 
         private void txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
-                char.IsSeparator(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || (e.KeyChar==((char)Keys.Back)))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Nombre, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Nombre, "Solo puede digitar letras");
-            }
-        }
-
-        private void txtDescEstados_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
-                char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txtDescEstados, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txtDescEstados, "Solo puede digitar letras");
+                MessageBox.Show("Solo se permiten letras");
             }
         }
     }

@@ -69,7 +69,7 @@ namespace LavaCar_BLL.Cat_Mant
             ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_TransV.dFecha);
             ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_TransV.iCantidad);
             ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_TransV.dMonto);
-            ObjDAL.DT_Parametros.Rows.Add("@IdEstado", 8, ObjDAL_TransV.cIdEstado);
+            ObjDAL.DT_Parametros.Rows.Add("@IdEstado", 5, ObjDAL_TransV.cIdEstado);
 
             ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TransaccionesVenta"].ToString().Trim();
             ObjBLL.Ejec_Scalar(ref ObjDAL);
@@ -101,7 +101,7 @@ namespace LavaCar_BLL.Cat_Mant
             ObjDAL.DT_Parametros.Rows.Add("@Fecha", 7, ObjDAL_TransV.dFecha);
             ObjDAL.DT_Parametros.Rows.Add("@Cantidad", 9, ObjDAL_TransV.iCantidad);
             ObjDAL.DT_Parametros.Rows.Add("@Monto", 4, ObjDAL_TransV.dMonto);
-            ObjDAL.DT_Parametros.Rows.Add("@IdEstado", 8, ObjDAL_TransV.cIdEstado);
+            ObjDAL.DT_Parametros.Rows.Add("@IdEstado", 5, ObjDAL_TransV.cIdEstado);
 
             ObjDAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TransaccionesVenta"].ToString().Trim();
             ObjBll.Execute_NonQuery(ref ObjDAL);

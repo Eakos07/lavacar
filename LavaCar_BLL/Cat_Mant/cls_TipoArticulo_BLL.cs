@@ -67,7 +67,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_TipoArticulo_DAL.cIdTipoArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_TipoArticulo_DAL.sDescripcion.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_TipoArticulo_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_TipoArticulo_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_TipoArticulo"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
@@ -89,7 +89,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoArticulo", 5, Obj_TipoArticulo_DAL.cIdTipoArticulo.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Descripcion", 3, Obj_TipoArticulo_DAL.sDescripcion.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_TipoArticulo_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_TipoArticulo_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_TipoArticulo"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
