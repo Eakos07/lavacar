@@ -283,7 +283,7 @@ namespace FRM_Login.Menu
                 Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
                 Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
 
-                Obj_Citas_DAL.bIdEstado = Convert.ToByte(cmb_EstadoCita.SelectedValue.ToString());
+                Obj_Citas_DAL.cIdEstado = Convert.ToChar(cmb_EstadoCita.SelectedValue.ToString());
                 Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
 
                 string sMsjError = string.Empty;
@@ -359,7 +359,7 @@ namespace FRM_Login.Menu
                 cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                //dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
+                dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
                 cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();

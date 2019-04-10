@@ -9,8 +9,8 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_Planillas_DAL
     {
         private int _iIdPlanilla;
-        private byte _bIdEmpleado, _bIdHorario, _bIdEstado;
-        private char _cBandIM;
+        private byte _bIdEmpleado, _bIdHorario;
+        private char _cBandIM , _cIdEstado;
 
         #region Variables Publicas
         public int iIdPlanilla
@@ -52,16 +52,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

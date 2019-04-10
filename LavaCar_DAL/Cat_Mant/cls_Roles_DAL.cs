@@ -8,21 +8,21 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Roles_DAL
     {
-        private byte _bIdRole, _bNivel, _bIdEstado;
+        private byte _bIdRole, _bNivel;
         private string _sDescripcion;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
 
         #region Variables Publicas
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

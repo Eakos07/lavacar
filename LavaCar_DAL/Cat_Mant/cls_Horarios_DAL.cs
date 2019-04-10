@@ -8,11 +8,11 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Horarios_DAL
     {
-        private byte _bIdHorario, _bIdEstado;
+        private byte _bIdHorario;
         private string _sDescripcion;
         private float _fCantHoras;
         private DateTime _dtmEntrada, _dtmSalida;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
 
         #region Variables Publicas
         public byte bIdHorario
@@ -28,16 +28,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

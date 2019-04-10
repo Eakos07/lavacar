@@ -73,7 +73,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DB_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Citas_DAL.sEmail.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@FechaCita", 7, Obj_Citas_DAL.dtFechaCita.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@HoraCita", 3, Obj_Citas_DAL.sHoraCita.ToString().Trim());
-            Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Citas_DAL.bIdEstado.ToString().Trim());
+            Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Citas_DAL.cIdEstado.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 8, Obj_Citas_DAL.bIdEmpleado.ToString().Trim());
             Obj_DB_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Citas"].ToString().Trim();
             Obj_DB_BLL.Ejec_Scalar(ref Obj_DB_DAL);
@@ -103,7 +103,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DB_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Citas_DAL.sEmail.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@FechaCita", 7, Obj_Citas_DAL.dtFechaCita.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@HoraCita", 3, Obj_Citas_DAL.sHoraCita.ToString().Trim());
-            Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Citas_DAL.bIdEstado.ToString().Trim());
+            Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Citas_DAL.cIdEstado.ToString().Trim());
             Obj_DB_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 8, Obj_Citas_DAL.bIdEmpleado.ToString().Trim());
             Obj_DB_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Citas"].ToString().Trim();
             Obj_DB_BLL.Execute_NonQuery(ref Obj_DB_DAL);

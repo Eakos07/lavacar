@@ -9,8 +9,7 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_FamiliaArticulos_DAL
     {
         private string _sIdFamilia, _sDescripcion;
-        private byte _bIdEstado;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
 
         #region Variables Publicas
         public string sIdFamilia
@@ -39,16 +38,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

@@ -155,15 +155,14 @@ namespace FRM_Login.Menu
 
         private void txtIdEsta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (!char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txtIdEsta, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txtIdEsta, "Solo puede digitar numeros");
+                MessageBox.Show("No se permiten números");
             }
         }
 

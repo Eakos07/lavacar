@@ -10,9 +10,9 @@ namespace LavaCar_DAL.Cat_Mant
     {
         private int _iNumCita, _iTel;
         private string _sMsjError, _sNombre, _sNumPlaca, _sEmail, _sHoraCita;
-        private char _cCodeServ, _cBandIM;
+        private char _cCodeServ, _cBandIM, _cIdEstado;
         private DateTime _dtFechaCita;
-        private byte _bIdEstado, _bIdEmpleado;
+        private byte  _bIdEmpleado;
 
         public int iNumCita
         {
@@ -40,16 +40,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

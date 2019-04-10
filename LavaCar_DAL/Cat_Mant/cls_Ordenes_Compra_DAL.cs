@@ -9,10 +9,10 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_Ordenes_Compra_DAL
     {
         private int _iIdNumOrden;
-        private byte _bIdProveedor, _bIdEstado;
+        private byte _bIdProveedor;
         private Int16 _iCantidad;
         private decimal _dPrecio;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
         private string _sIdArticulo;
 
         #region Variables Públicas
@@ -42,16 +42,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 

@@ -8,10 +8,10 @@ namespace LavaCar_DAL.Cat_Mant
 {
     public class cls_Proveedores_DAL
     {
-        private byte _bIdProveedor, _bPlazoPago, _bIdEstado;
+        private byte _bIdProveedor, _bPlazoPago;
         private string _sNombreProveedor, _sEmail;
         private int _iTelefono;
-        private char _cBandIM;
+        private char _cBandIM, _cIdEstado;
 
         #region Variables Publicas
         public byte bIdProveedor
@@ -40,16 +40,16 @@ namespace LavaCar_DAL.Cat_Mant
             }
         }
 
-        public byte bIdEstado
+        public char cIdEstado
         {
             get
             {
-                return _bIdEstado;
+                return _cIdEstado;
             }
 
             set
             {
-                _bIdEstado = value;
+                _cIdEstado = value;
             }
         }
 
