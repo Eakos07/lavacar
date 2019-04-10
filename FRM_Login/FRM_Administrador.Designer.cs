@@ -239,7 +239,7 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(134, 45);
             this.btnClientes.TabIndex = 7;
-            this.btnClientes.Text = "Clientes";
+            this.btnClientes.Text = "Horarios";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
