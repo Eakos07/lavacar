@@ -32,7 +32,15 @@ namespace FRM_Login.Menu
 
         private void CargarEmpleados()
         {
-            
+
+            txt_IdEmpleado.Clear();
+            txt_Identificacion.Clear();
+            txt_Nombre.Clear();
+            txt_Apellido.Clear();
+            txt_Telefono.Clear();
+            txt_Direccion.Clear();
+            txt_Email.Clear();
+
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
             Obj_DAL.cBandIM = 'I';
@@ -63,7 +71,7 @@ namespace FRM_Login.Menu
         public void Cargar_CMB()
         {
             string sMsjError = string.Empty;
-
+            txt_Puesto.Text = "Elija un Puesto";
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
             DataTable DT_Estados = new DataTable();
