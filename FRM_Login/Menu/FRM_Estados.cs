@@ -86,7 +86,7 @@ namespace FRM_Login.Menu
                     }
                     else
                     {
-                        MessageBox.Show("No se permiten espacios en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
                 }
@@ -101,14 +101,14 @@ namespace FRM_Login.Menu
                     }
                     else
                     {
-                        MessageBox.Show("No se permiten espacios en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
                 }                
             }
             else
             {
-                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se permiten espacios en blanco", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
                 
         }
@@ -165,7 +165,7 @@ namespace FRM_Login.Menu
 
         private void txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || (e.KeyChar==((char)Keys.Back)))
             {
                 e.Handled = false;
             }
