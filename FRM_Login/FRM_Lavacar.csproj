@@ -100,12 +100,6 @@
     <Compile Include="Menu\FRM_Citas.Designer.cs">
       <DependentUpon>FRM_Citas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\FRM_Clientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu\FRM_Clientes.Designer.cs">
-      <DependentUpon>FRM_Clientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu\FRM_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Citas.resx">
       <DependentUpon>FRM_Citas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu\FRM_Clientes.resx">
-      <DependentUpon>FRM_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Empleados.resx">
       <DependentUpon>FRM_Empleados.cs</DependentUpon>

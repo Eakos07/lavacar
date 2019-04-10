@@ -95,7 +95,7 @@ namespace FRM_Login.Menu
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            AbrirVentana(new FRM_Clientes());
+            AbrirVentana(new FRM_Horarios());
         }
 
         private void btnTipoPlaca_Click(object sender, EventArgs e)
