@@ -256,7 +256,7 @@ namespace FRM_Login.Menu
                 cmb_Estado.DataSource = DTE;
                 cmb_Estado.DisplayMember = DTE.Columns[1].ToString();
                 cmb_Estado.ValueMember = DTE.Columns[0].ToString();
-                cmb_Estado.SelectedValue = TransV_ObjDAL.bIdEstado;
+                cmb_Estado.SelectedValue = TransV_ObjDAL.cIdEstado;
                 
                 toolStrip1.Text = string.Empty;
                 CargarTransaccionesVentas();

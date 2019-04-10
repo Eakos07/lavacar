@@ -71,9 +71,9 @@ namespace FRM_Login.Menu
 
             if (!(string.IsNullOrEmpty(txtIdEsta.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txtDescEstados.Text)))
             {
-                Obj_DAL.bIdEstado = Convert.ToByte(txtIdEsta.Text);
+                Obj_DAL.cIdEstado = Convert.ToChar(txtIdEsta.Text);
                 Obj_DAL.sNombre = txt_Nombre.Text;
-                Obj_DAL.sDescripcion = txtDescEstados.Text;
+           
                 string sMsjError = string.Empty;
 
                 if(Obj_DAL.cBandIM == 'I')
@@ -131,7 +131,6 @@ namespace FRM_Login.Menu
                 txtIdEsta.Enabled = false;
                 txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
             }
 
             
@@ -149,7 +148,6 @@ namespace FRM_Login.Menu
                 txtIdEsta.Enabled = false;
                 txtIdEsta.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txtDescEstados.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString().Trim();
             }
         }
 

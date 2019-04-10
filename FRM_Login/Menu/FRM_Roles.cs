@@ -107,7 +107,7 @@ namespace FRM_Login.Menu
                 Obj_DAL.bIdRole = Convert.ToByte(txt_IdRol.Text);
                 Obj_DAL.bNivel = Convert.ToByte(txt_Nivel.Text);
                 Obj_DAL.sDescripcion = txt_Descrip.Text;
-                Obj_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')

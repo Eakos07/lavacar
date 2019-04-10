@@ -91,7 +91,7 @@ namespace FRM_Login.Menu
                 Obj_DAL.sIdUsuario = txt_Usuario.Text;
                 Obj_DAL.sContraseña = txt_Contraseña.Text;
                 Obj_DAL.bIdRole = Convert.ToByte(cmb_Rol.SelectedValue);
-                Obj_DAL.bIdEstado = Convert.ToByte(cmb_Estado.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_Estado.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')

@@ -103,7 +103,7 @@ namespace FRM_Login.Menu
                 
                 Obj_OrdenesCompra_DAL.iCantidad = Convert.ToInt16(txt_Cantidad.Text);
                 Obj_OrdenesCompra_DAL.dPrecio = Convert.ToDecimal(txt_Precio.Text);
-                Obj_OrdenesCompra_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_OrdenesCompra_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 Obj_OrdenesCompra_DAL.bIdProveedor = Convert.ToByte(cmb_IdProve.SelectedValue);
                 Obj_OrdenesCompra_DAL.sIdArticulo = cmb_IdArticulo.SelectedValue.ToString();
                 string sMsjError = string.Empty;

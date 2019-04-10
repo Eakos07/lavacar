@@ -103,7 +103,7 @@ namespace FRM_Login.Menu
                 Obj_DAL.iIdPlanilla = Convert.ToInt16(txt_IdPlanilla.Text);
                 Obj_DAL.bIdEmpleado = Convert.ToByte(cmb_IdEmpleado.SelectedValue);
                 Obj_DAL.bIdHorario = Convert.ToByte(cmb_IdHorario.SelectedValue);
-                Obj_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')

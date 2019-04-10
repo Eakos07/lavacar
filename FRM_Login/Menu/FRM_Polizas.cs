@@ -206,7 +206,7 @@ namespace FRM_Login.Menu
                 Obj_Polizas_DAL.sIdPoliza = txt_IdPoliza.Text;
                 Obj_Polizas_DAL.cIdTipoPoliza = Convert.ToChar(cmb_IdTipoPoliza.SelectedValue);
                 Obj_Polizas_DAL.dFechaVencimiento = Convert.ToDateTime(txt_FechaVenci.Text);
-                Obj_Polizas_DAL.bIdEstado = Convert.ToByte(cmb_IdEstado.SelectedValue);
+                Obj_Polizas_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 Obj_Polizas_DAL.iCedulaJuridica = Convert.ToInt32(txt_CeduJurid.Text);
                 string sMsjError = string.Empty;
 
