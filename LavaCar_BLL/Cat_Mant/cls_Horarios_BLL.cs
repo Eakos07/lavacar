@@ -69,7 +69,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@CantHoras", 10, Obj_Horarios_DAL.fCantHoras.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Entrada", 7, Obj_Horarios_DAL.dtmEntrada.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Salida", 7, Obj_Horarios_DAL.dtmSalida.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Horarios_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Horarios_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Horarios"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);
 
@@ -95,7 +95,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@CantHoras", 10, Obj_Horarios_DAL.fCantHoras.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Entrada", 7, Obj_Horarios_DAL.dtmEntrada.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Salida", 7, Obj_Horarios_DAL.dtmSalida.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Horarios_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Horarios_DAL.cIdEstado.ToString().Trim());
            
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Horarios"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);

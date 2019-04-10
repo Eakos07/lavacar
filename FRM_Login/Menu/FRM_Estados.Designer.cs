@@ -35,9 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtDescEstados = new System.Windows.Forms.TextBox();
             this.txtIdEsta = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -65,9 +63,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnAceptar);
-            this.groupBox1.Controls.Add(this.txtDescEstados);
             this.groupBox1.Controls.Add(this.txtIdEsta);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
@@ -81,7 +77,7 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(182, 58);
+            this.txt_Nombre.Location = new System.Drawing.Point(196, 90);
             this.txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(208, 23);
@@ -91,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 64);
+            this.label3.Location = new System.Drawing.Point(75, 96);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 17);
@@ -128,38 +124,20 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtDescEstados
-            // 
-            this.txtDescEstados.Location = new System.Drawing.Point(182, 94);
-            this.txtDescEstados.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescEstados.Name = "txtDescEstados";
-            this.txtDescEstados.Size = new System.Drawing.Size(208, 23);
-            this.txtDescEstados.TabIndex = 2;
-            this.txtDescEstados.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescEstados_KeyPress);
-            // 
             // txtIdEsta
             // 
-            this.txtIdEsta.Location = new System.Drawing.Point(182, 28);
+            this.txtIdEsta.Location = new System.Drawing.Point(196, 60);
             this.txtIdEsta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdEsta.MaxLength = 1;
             this.txtIdEsta.Name = "txtIdEsta";
             this.txtIdEsta.Size = new System.Drawing.Size(208, 23);
             this.txtIdEsta.TabIndex = 2;
             this.txtIdEsta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdEsta_KeyPress);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 33);
+            this.label1.Location = new System.Drawing.Point(75, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
@@ -311,9 +289,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.TextBox txtDescEstados;
         private System.Windows.Forms.TextBox txtIdEsta;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStrip toolStrip1;
