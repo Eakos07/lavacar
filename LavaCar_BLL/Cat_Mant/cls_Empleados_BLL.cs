@@ -72,7 +72,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Direccion", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Empleados_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 6, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
@@ -103,7 +103,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Direccion", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Empleados_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 6, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 

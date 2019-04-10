@@ -65,7 +65,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Polizas_DAL.sIdPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPoliza", 5, Obj_Polizas_DAL.cIdTipoPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@FechaVencimiento", 11, Obj_Polizas_DAL.dFechaVencimiento.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Polizas_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Polizas_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@CedulaJuridica", 6, Obj_Polizas_DAL.iCedulaJuridica.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Polizas"].ToString().Trim();
@@ -91,7 +91,7 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Polizas_DAL.sIdPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdTipoPoliza", 5, Obj_Polizas_DAL.cIdTipoPoliza.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@FechaVencimiento", 11, Obj_Polizas_DAL.dFechaVencimiento.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 8, Obj_Polizas_DAL.cIdEstado.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Polizas_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@CedulaJuridica", 6, Obj_Polizas_DAL.iCedulaJuridica.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Polizas"].ToString().Trim();
