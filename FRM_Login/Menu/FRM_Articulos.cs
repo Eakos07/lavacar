@@ -495,12 +495,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -510,12 +508,10 @@ namespace FRM_Login.Menu
                 char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NombreArticulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NombreArticulo, "Solo puede digitar letras");
             }
         }
 
@@ -524,12 +520,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -562,12 +556,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -588,12 +580,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_PrecioVenta_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_PrecioVenta_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -602,12 +592,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -617,12 +605,10 @@ namespace FRM_Login.Menu
                 char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_DescripcionFamilia, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_DescripcionFamilia, "Solo puede digitar numeros y letras y espacios");
             }
         }
 
@@ -643,12 +629,10 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_Articulo, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_Articulo, "Solo puede digitar numeros");
             }
         }
 
@@ -658,12 +642,10 @@ namespace FRM_Login.Menu
                 char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_DescripcionFamilia, "");
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_DescripcionFamilia, "Solo puede digitar numeros y letras y espacios");
             }
         }
 
