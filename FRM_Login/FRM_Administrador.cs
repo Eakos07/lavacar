@@ -166,6 +166,9 @@ namespace FRM_Login.Menu
             AbrirVentana(new FRM_Ordenes___de_Compras());
         }
 
-        
+        private void btnPromociones_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Promociones());
+        }
     }
 }
