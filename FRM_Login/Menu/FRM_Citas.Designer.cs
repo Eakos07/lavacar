@@ -748,11 +748,23 @@
             // 
             this.cmb_HoraCita.FormattingEnabled = true;
             this.cmb_HoraCita.Items.AddRange(new object[] {
-            "8 am",
-            "9 am",
-            "10 am",
-            "11 am",
-            "12 am"});
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00"});
             this.cmb_HoraCita.Location = new System.Drawing.Point(121, 176);
             this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_HoraCita.Name = "cmb_HoraCita";

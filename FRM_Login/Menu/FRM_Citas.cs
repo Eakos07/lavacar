@@ -342,9 +342,9 @@ namespace FRM_Login.Menu
 
             if ((txt_NomCliente.Text.Trim() != string.Empty)
                  && (txt_Email.Text.Trim() != string.Empty)
-                 && (cmb_HoraCita.SelectedItem.ToString() != null)
+                 && (cmb_HoraCita.Text != "Elegir Hora")
                  && (cmb_EstadoCita.SelectedValue.ToString() != "0")
-                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") 
+                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0")
                  && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
@@ -428,6 +428,7 @@ namespace FRM_Login.Menu
             }
             else
             {
+                cmb_HoraCita.Text = "";
                 dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
@@ -438,7 +439,7 @@ namespace FRM_Login.Menu
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.SelectedItem = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
@@ -463,7 +464,7 @@ namespace FRM_Login.Menu
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
