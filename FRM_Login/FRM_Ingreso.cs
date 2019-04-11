@@ -89,7 +89,7 @@ namespace FRM_Login
                  
               SqlConnection Conex = new SqlConnection();
 
-                 Conex.ConnectionString = "Data Source=LAPTOP-GAN5QKKN;Initial Catalog = BD_Centro_Lavado_Octopus;Integrated Security = True; ";
+                Conex.ConnectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
                  Conex.Open();
 
                  SqlCommand cmd = new SqlCommand("Select IdUsuario, Contraseña from Sch_Administrativo.T_Usuarios where IdUsuario = '" + txtUsuarioLogin.Text+"' and Contraseña='"+txtContrase.Text+"'",Conex);
