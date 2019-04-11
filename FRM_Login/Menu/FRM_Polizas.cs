@@ -59,7 +59,7 @@ namespace FRM_Login.Menu
 
             txt_IdPoliza.Clear();
             txt_FechaVenci.Clear();
-            txt_CeduJurid.Clear();
+            txt_CeduJurid.Text = "2000000020";
 
             if (txt_FiltrarTipoPoliza.Text == string.Empty)
             {
@@ -208,6 +208,14 @@ namespace FRM_Login.Menu
                 Obj_Polizas_DAL.dFechaVencimiento = Convert.ToDateTime(txt_FechaVenci.Text);
                 Obj_Polizas_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                 Obj_Polizas_DAL.iCedulaJuridica = Convert.ToInt32(txt_CeduJurid.Text);
+
+                if ((Convert.ToDateTime(txt_FechaVenci.Text.Trim())) < DateTime.Now )
+                {
+                    MessageBox.Show("La fecha de vencimiento no puede ser menor a la fecha actual", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+
                 string sMsjError = string.Empty;
 
                 if (Obj_Polizas_DAL.cBandIM =='I')
@@ -238,6 +246,7 @@ namespace FRM_Login.Menu
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
+                }
                 }
                 Cargar_cmb_Polizas();
             }
@@ -282,9 +291,15 @@ namespace FRM_Login.Menu
 
         private void btn_Guardar_TipoPolizas_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txt_IdTipoPoliza.Text) || !string.IsNullOrEmpty(txt_NombrePoliza.Text)||
-                !string.IsNullOrEmpty(txt_Compañia.Text) || cmb_IdProveedor.SelectedValue.ToString()!="0")
+            if ((txt_IdTipoPoliza.Text.Trim() == string.Empty) || (txt_NombrePoliza.Text.Trim() == string.Empty) ||
+               (txt_Compañia.Text.Trim() == string.Empty) || (cmb_IdProveedor.SelectedValue.ToString()=="0") )
+
             {
+
+                MessageBox.Show("No pueden haber campos en blanco", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+                else
+	        {        
                 string sMsjError = string.Empty;
                 Obj_TipoPolizas_DAL.cIdTipoPoliza = Convert.ToChar(txt_IdTipoPoliza.Text);
                 Obj_TipoPolizas_DAL.sNombrePoliza = txt_NombrePoliza.Text;
@@ -303,7 +318,8 @@ namespace FRM_Login.Menu
                     {
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
+
                 }
                 else if (Obj_TipoPolizas_DAL.cBandIM == 'M')
                 {
@@ -318,8 +334,6 @@ namespace FRM_Login.Menu
                     {
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
-
                 }
                 Cargar_cmb_TipoPolizas();
             }
@@ -415,7 +429,7 @@ namespace FRM_Login.Menu
 
         private void txt_IdTipoPoliza_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
                 errorIcono.SetError(txt_IdPoliza, "");

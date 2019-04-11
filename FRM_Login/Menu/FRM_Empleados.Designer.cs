@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Empleados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Puesto = new System.Windows.Forms.ComboBox();
+            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -66,8 +68,6 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
-            this.txt_Puesto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
@@ -111,10 +111,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Empleados";
             // 
+            // txt_Puesto
+            // 
+            this.txt_Puesto.FormattingEnabled = true;
+            this.txt_Puesto.Items.AddRange(new object[] {
+            "Administrador",
+            "Supervisor",
+            "Cajero",
+            "Recepcionista",
+            "Encargado Inventario",
+            "Lavandero",
+            "Gerente"});
+            this.txt_Puesto.Location = new System.Drawing.Point(502, 77);
+            this.txt_Puesto.Name = "txt_Puesto";
+            this.txt_Puesto.Size = new System.Drawing.Size(159, 25);
+            this.txt_Puesto.TabIndex = 15;
+            // 
+            // txt_Telefono
+            // 
+            this.txt_Telefono.Location = new System.Drawing.Point(142, 195);
+            this.txt_Telefono.Mask = "00000000";
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(80, 23);
+            this.txt_Telefono.TabIndex = 14;
+            // 
             // txt_IdEmpleado
             // 
             this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
             this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdEmpleado.MaxLength = 3;
             this.txt_IdEmpleado.Name = "txt_IdEmpleado";
             this.txt_IdEmpleado.Size = new System.Drawing.Size(158, 23);
             this.txt_IdEmpleado.TabIndex = 13;
@@ -153,6 +178,7 @@
             // 
             this.txt_Email.Location = new System.Drawing.Point(502, 32);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Email.MaxLength = 30;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(159, 23);
             this.txt_Email.TabIndex = 6;
@@ -162,6 +188,7 @@
             // 
             this.txt_Direccion.Location = new System.Drawing.Point(142, 235);
             this.txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Direccion.MaxLength = 50;
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(159, 23);
             this.txt_Direccion.TabIndex = 5;
@@ -171,6 +198,7 @@
             // 
             this.txt_Apellido.Location = new System.Drawing.Point(142, 155);
             this.txt_Apellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Apellido.MaxLength = 120;
             this.txt_Apellido.Name = "txt_Apellido";
             this.txt_Apellido.Size = new System.Drawing.Size(159, 23);
             this.txt_Apellido.TabIndex = 3;
@@ -180,6 +208,7 @@
             // 
             this.txt_Nombre.Location = new System.Drawing.Point(142, 113);
             this.txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Nombre.MaxLength = 45;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(159, 23);
             this.txt_Nombre.TabIndex = 2;
@@ -189,6 +218,7 @@
             // 
             this.txt_Identificacion.Location = new System.Drawing.Point(143, 72);
             this.txt_Identificacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Identificacion.MaxLength = 50;
             this.txt_Identificacion.Name = "txt_Identificacion";
             this.txt_Identificacion.Size = new System.Drawing.Size(158, 23);
             this.txt_Identificacion.TabIndex = 1;
@@ -448,30 +478,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.Location = new System.Drawing.Point(142, 195);
-            this.txt_Telefono.Mask = "00000000";
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(80, 23);
-            this.txt_Telefono.TabIndex = 14;
-            // 
-            // txt_Puesto
-            // 
-            this.txt_Puesto.FormattingEnabled = true;
-            this.txt_Puesto.Items.AddRange(new object[] {
-            "Administrador",
-            "Supervisor",
-            "Cajero",
-            "Recepcionista",
-            "Encargado Inventario",
-            "Lavandero",
-            "Gerente"});
-            this.txt_Puesto.Location = new System.Drawing.Point(502, 77);
-            this.txt_Puesto.Name = "txt_Puesto";
-            this.txt_Puesto.Size = new System.Drawing.Size(159, 25);
-            this.txt_Puesto.TabIndex = 15;
             // 
             // FRM_Empleados
             // 
