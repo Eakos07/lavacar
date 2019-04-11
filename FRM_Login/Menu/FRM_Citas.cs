@@ -192,29 +192,24 @@ namespace FRM_Login.Menu
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
             string expresion;
-            expresion = "^[AEIOU]*$";
             
             if (char.IsLetter(e.KeyChar))
             {
-                if (txt_NumPlaca.SelectionStart.ToString() == "0")
+                if (e.KeyChar == 'A' || e.KeyChar == 'E' || e.KeyChar == 'I' || e.KeyChar == 'O' || e.KeyChar == 'U')
+                {
+                     e.Handled = true;
+                }
+                                
+                else if  (txt_NumPlaca.SelectionStart.ToString() == "0")
                 {
                     txt_NumPlaca.MaxLength = 7;
                 }
-                                
-                else if (!(Regex.IsMatch(e.KeyChar.ToString(), expresion)))
-                {
-
-                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
                     || txt_NumPlaca.SelectionStart.ToString().Trim() == "1"
                     || txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
+                {
+                    e.Handled = false;
+                }                    
                 else
                 {
                     e.Handled = true;
@@ -230,9 +225,9 @@ namespace FRM_Login.Menu
                     txt_NumPlaca.MaxLength = 6;
                 }
 
-                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                else if ((Regex.IsMatch(txt_NumPlaca.Text, expresion)) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "3"))
                 {
-                    e.Handled = false;
+                    e.Handled = true;
                 }
                 else if (Regex.IsMatch(txt_NumPlaca.Text , expresion) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
                 {
