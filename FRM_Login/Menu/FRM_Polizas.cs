@@ -47,15 +47,15 @@ namespace FRM_Login.Menu
            
             string sMsjError = string.Empty;
             DataTable dtPolizas = new DataTable();
-            Obj_Polizas_DAL.cBandIM = 'I';            
+            Obj_Polizas_DAL.cBandIM = 'I';
 
-            //#region Cargar Centro Lavado
-            //cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
-            //DataTable dt_Octopus = new DataTable();
-            //dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
-            
-            
-            //#endregion
+            #region Cargar Centro Lavado
+            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            DataTable dt_Octopus = new DataTable();
+            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            txt_CeduJurid.Text = dt_Octopus.Columns[0].ToString();
+
+            #endregion
 
             txt_IdPoliza.Clear();
             txt_FechaVenci.Clear();

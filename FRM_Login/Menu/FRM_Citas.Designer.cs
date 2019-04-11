@@ -364,6 +364,7 @@
             // 
             // txt_NumPlaca
             // 
+            this.txt_NumPlaca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_NumPlaca.Location = new System.Drawing.Point(280, 22);
             this.txt_NumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumPlaca.MaxLength = 7;

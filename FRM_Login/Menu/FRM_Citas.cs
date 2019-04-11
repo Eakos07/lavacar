@@ -188,6 +188,7 @@ namespace FRM_Login.Menu
         }
 
         #region Validaciones
+
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {           
             if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
@@ -222,7 +223,16 @@ namespace FRM_Login.Menu
             }
             else if (char.IsDigit(e.KeyChar))
             {
-                e.Handled = false;
+
+                if (txt_NumPlaca.Text.Contains("[^A-Z]") && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+                
             }
 
         }
