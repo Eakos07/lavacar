@@ -113,20 +113,21 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox1.Location = new System.Drawing.Point(9, 6);
+            this.groupBox1.Location = new System.Drawing.Point(6, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1149, 331);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(766, 215);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pólizas";
             // 
             // txt_FechaVenci
             // 
-            this.txt_FechaVenci.Location = new System.Drawing.Point(266, 211);
-            this.txt_FechaVenci.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_FechaVenci.Location = new System.Drawing.Point(177, 137);
             this.txt_FechaVenci.Mask = "00/00/0000";
             this.txt_FechaVenci.Name = "txt_FechaVenci";
-            this.txt_FechaVenci.Size = new System.Drawing.Size(265, 31);
+            this.txt_FechaVenci.Size = new System.Drawing.Size(178, 23);
             this.txt_FechaVenci.TabIndex = 33;
             this.txt_FechaVenci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_FechaVenci.ValidatingType = typeof(System.DateTime);
@@ -134,55 +135,63 @@
             // 
             // txt_IdPoliza
             // 
-            this.txt_IdPoliza.Location = new System.Drawing.Point(266, 65);
+            this.txt_IdPoliza.Location = new System.Drawing.Point(177, 42);
+            this.txt_IdPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_IdPoliza.MaxLength = 5;
             this.txt_IdPoliza.Name = "txt_IdPoliza";
-            this.txt_IdPoliza.Size = new System.Drawing.Size(265, 31);
+            this.txt_IdPoliza.Size = new System.Drawing.Size(178, 23);
             this.txt_IdPoliza.TabIndex = 31;
             this.txt_IdPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPoliza_KeyPress);
             // 
             // txt_CeduJurid
             // 
-            this.txt_CeduJurid.Location = new System.Drawing.Point(836, 142);
+            this.txt_CeduJurid.Enabled = false;
+            this.txt_CeduJurid.Location = new System.Drawing.Point(557, 92);
+            this.txt_CeduJurid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_CeduJurid.MaxLength = 20;
             this.txt_CeduJurid.Name = "txt_CeduJurid";
-            this.txt_CeduJurid.Size = new System.Drawing.Size(265, 31);
+            this.txt_CeduJurid.Size = new System.Drawing.Size(178, 23);
             this.txt_CeduJurid.TabIndex = 3;
+            this.txt_CeduJurid.Text = "3101259478";
             this.txt_CeduJurid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CeduJurid_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(585, 145);
+            this.label5.Location = new System.Drawing.Point(390, 94);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 25);
+            this.label5.Size = new System.Drawing.Size(109, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "Cédula Jurídica:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 215);
+            this.label2.Location = new System.Drawing.Point(22, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 25);
+            this.label2.Size = new System.Drawing.Size(132, 17);
             this.label2.TabIndex = 28;
             this.label2.Text = "Fecha Vencimiento:";
             // 
             // cmb_IdTipoPoliza
             // 
             this.cmb_IdTipoPoliza.FormattingEnabled = true;
-            this.cmb_IdTipoPoliza.Location = new System.Drawing.Point(266, 137);
+            this.cmb_IdTipoPoliza.Location = new System.Drawing.Point(177, 89);
+            this.cmb_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_IdTipoPoliza.Name = "cmb_IdTipoPoliza";
-            this.cmb_IdTipoPoliza.Size = new System.Drawing.Size(265, 33);
+            this.cmb_IdTipoPoliza.Size = new System.Drawing.Size(178, 25);
             this.cmb_IdTipoPoliza.TabIndex = 2;
             this.cmb_IdTipoPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdTipoPoliza_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 138);
+            this.label4.Location = new System.Drawing.Point(22, 90);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
+            this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 26;
             this.label4.Text = "Id Tipo Póliza:";
             // 
@@ -192,9 +201,10 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(960, 246);
+            this.btn_Exit.Location = new System.Drawing.Point(640, 160);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(165, 46);
+            this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 6;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -206,9 +216,10 @@
             this.btn_Guardar_Polizas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar_Polizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar_Polizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar_Polizas.Location = new System.Drawing.Point(754, 246);
+            this.btn_Guardar_Polizas.Location = new System.Drawing.Point(503, 160);
+            this.btn_Guardar_Polizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Guardar_Polizas.Name = "btn_Guardar_Polizas";
-            this.btn_Guardar_Polizas.Size = new System.Drawing.Size(165, 46);
+            this.btn_Guardar_Polizas.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar_Polizas.TabIndex = 5;
             this.btn_Guardar_Polizas.Text = "Guardar";
             this.btn_Guardar_Polizas.UseVisualStyleBackColor = false;
@@ -217,27 +228,30 @@
             // cmb_IdEstado
             // 
             this.cmb_IdEstado.FormattingEnabled = true;
-            this.cmb_IdEstado.Location = new System.Drawing.Point(836, 69);
+            this.cmb_IdEstado.Location = new System.Drawing.Point(557, 45);
+            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
-            this.cmb_IdEstado.Size = new System.Drawing.Size(265, 33);
+            this.cmb_IdEstado.Size = new System.Drawing.Size(178, 25);
             this.cmb_IdEstado.TabIndex = 1;
             this.cmb_IdEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstado_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(585, 72);
+            this.label3.Location = new System.Drawing.Point(390, 47);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Id Estado:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 72);
+            this.label1.Location = new System.Drawing.Point(22, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Póliza:";
             // 
@@ -246,9 +260,11 @@
             this.groupBox2.Controls.Add(this.dgv_Polizas);
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox2.Location = new System.Drawing.Point(9, 345);
+            this.groupBox2.Location = new System.Drawing.Point(6, 224);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1164, 465);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(776, 302);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabla Pólizas";
@@ -262,12 +278,13 @@
             this.dgv_Polizas.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Polizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Polizas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_Polizas.Location = new System.Drawing.Point(8, 77);
+            this.dgv_Polizas.Location = new System.Drawing.Point(5, 50);
+            this.dgv_Polizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Polizas.MultiSelect = false;
             this.dgv_Polizas.Name = "dgv_Polizas";
             this.dgv_Polizas.RowTemplate.Height = 24;
             this.dgv_Polizas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Polizas.Size = new System.Drawing.Size(1140, 382);
+            this.dgv_Polizas.Size = new System.Drawing.Size(760, 248);
             this.dgv_Polizas.TabIndex = 4;
             this.dgv_Polizas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Polizas_CellContentDoubleClick);
             // 
@@ -284,17 +301,16 @@
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_FiltrarTipoPoliza});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 27);
+            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1158, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(772, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(83, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
             // btn_Refrescar_Polizas
@@ -303,19 +319,19 @@
             this.btn_Refrescar_Polizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_Polizas.Image")));
             this.btn_Refrescar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_Polizas.Name = "btn_Refrescar_Polizas";
-            this.btn_Refrescar_Polizas.Size = new System.Drawing.Size(24, 28);
+            this.btn_Refrescar_Polizas.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar_Polizas.Text = "toolStripButton1";
             this.btn_Refrescar_Polizas.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(87, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
             // btn_Modificar_Polizas
@@ -324,30 +340,30 @@
             this.btn_Modificar_Polizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_Polizas.Image")));
             this.btn_Modificar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_Polizas.Name = "btn_Modificar_Polizas";
-            this.btn_Modificar_Polizas.Size = new System.Drawing.Size(24, 28);
+            this.btn_Modificar_Polizas.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar_Polizas.Text = "toolStripButton2";
             this.btn_Modificar_Polizas.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(63, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel4.Text = "Buscar";
             // 
             // txt_FiltrarTipoPoliza
             // 
             this.txt_FiltrarTipoPoliza.Name = "txt_FiltrarTipoPoliza";
-            this.txt_FiltrarTipoPoliza.Size = new System.Drawing.Size(112, 31);
+            this.txt_FiltrarTipoPoliza.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarTipoPoliza.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged_1);
             // 
             // tcArticulos
@@ -355,20 +371,22 @@
             this.tcArticulos.Controls.Add(this.tbPolizas);
             this.tcArticulos.Controls.Add(this.tbTipoPoliza);
             this.tcArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcArticulos.Location = new System.Drawing.Point(14, 14);
+            this.tcArticulos.Location = new System.Drawing.Point(9, 9);
+            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcArticulos.Name = "tcArticulos";
             this.tcArticulos.SelectedIndex = 0;
-            this.tcArticulos.Size = new System.Drawing.Size(1188, 857);
+            this.tcArticulos.Size = new System.Drawing.Size(792, 557);
             this.tcArticulos.TabIndex = 4;
             // 
             // tbPolizas
             // 
             this.tbPolizas.Controls.Add(this.groupBox1);
             this.tbPolizas.Controls.Add(this.groupBox2);
-            this.tbPolizas.Location = new System.Drawing.Point(4, 34);
+            this.tbPolizas.Location = new System.Drawing.Point(4, 26);
+            this.tbPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbPolizas.Name = "tbPolizas";
-            this.tbPolizas.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tbPolizas.Size = new System.Drawing.Size(1180, 819);
+            this.tbPolizas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPolizas.Size = new System.Drawing.Size(784, 527);
             this.tbPolizas.TabIndex = 0;
             this.tbPolizas.Text = "Pólizas";
             this.tbPolizas.UseVisualStyleBackColor = true;
@@ -377,10 +395,11 @@
             // 
             this.tbTipoPoliza.Controls.Add(this.groupBox4);
             this.tbTipoPoliza.Controls.Add(this.groupBox3);
-            this.tbTipoPoliza.Location = new System.Drawing.Point(4, 34);
+            this.tbTipoPoliza.Location = new System.Drawing.Point(4, 26);
+            this.tbTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTipoPoliza.Name = "tbTipoPoliza";
-            this.tbTipoPoliza.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tbTipoPoliza.Size = new System.Drawing.Size(1180, 819);
+            this.tbTipoPoliza.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTipoPoliza.Size = new System.Drawing.Size(784, 527);
             this.tbTipoPoliza.TabIndex = 1;
             this.tbTipoPoliza.Text = "Tipo Poliza";
             this.tbTipoPoliza.UseVisualStyleBackColor = true;
@@ -390,9 +409,11 @@
             this.groupBox4.Controls.Add(this.toolStrip2);
             this.groupBox4.Controls.Add(this.dgv_TipoPoliza);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox4.Location = new System.Drawing.Point(6, 345);
+            this.groupBox4.Location = new System.Drawing.Point(4, 224);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1158, 465);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(772, 302);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tabla Tipo Pólizas";
@@ -412,17 +433,16 @@
             this.toolStripSeparator6,
             this.toolStripLabel8,
             this.toolStripTextBox2});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 27);
+            this.toolStrip2.Location = new System.Drawing.Point(2, 18);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip2.Size = new System.Drawing.Size(1152, 31);
+            this.toolStrip2.Size = new System.Drawing.Size(768, 27);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(83, 28);
+            this.toolStripLabel5.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel5.Text = "Refrescar";
             // 
             // btn_Refrescar_TipoPolizas
@@ -431,19 +451,19 @@
             this.btn_Refrescar_TipoPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refrescar_TipoPolizas.Image")));
             this.btn_Refrescar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_TipoPolizas.Name = "btn_Refrescar_TipoPolizas";
-            this.btn_Refrescar_TipoPolizas.Size = new System.Drawing.Size(24, 28);
+            this.btn_Refrescar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
             this.btn_Refrescar_TipoPolizas.Text = "toolStripButton1";
             this.btn_Refrescar_TipoPolizas.Click += new System.EventHandler(this.btn_Refrescar_TipoPolizas_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(87, 28);
+            this.toolStripLabel6.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel6.Text = "Modificar";
             // 
             // btn_Modificar_TipoPolizas
@@ -452,19 +472,19 @@
             this.btn_Modificar_TipoPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btn_Modificar_TipoPolizas.Image")));
             this.btn_Modificar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_TipoPolizas.Name = "btn_Modificar_TipoPolizas";
-            this.btn_Modificar_TipoPolizas.Size = new System.Drawing.Size(24, 28);
+            this.btn_Modificar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar_TipoPolizas.Text = "toolStripButton2";
             this.btn_Modificar_TipoPolizas.Click += new System.EventHandler(this.btn_Modificar_TipoPolizas_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(74, 28);
+            this.toolStripLabel7.Size = new System.Drawing.Size(50, 24);
             this.toolStripLabel7.Text = "Eliminar";
             // 
             // toolStripButton6
@@ -473,24 +493,24 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 28);
+            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton6.Text = "toolStripButton3";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(63, 28);
+            this.toolStripLabel8.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel8.Text = "Buscar";
             // 
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(112, 31);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(76, 27);
             this.toolStripTextBox2.TextChanged += new System.EventHandler(this.toolStripTextBox2_TextChanged);
             // 
             // dgv_TipoPoliza
@@ -502,12 +522,13 @@
             this.dgv_TipoPoliza.BackgroundColor = System.Drawing.Color.White;
             this.dgv_TipoPoliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoPoliza.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_TipoPoliza.Location = new System.Drawing.Point(6, 78);
+            this.dgv_TipoPoliza.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_TipoPoliza.MultiSelect = false;
             this.dgv_TipoPoliza.Name = "dgv_TipoPoliza";
             this.dgv_TipoPoliza.RowTemplate.Height = 24;
             this.dgv_TipoPoliza.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TipoPoliza.Size = new System.Drawing.Size(1132, 357);
+            this.dgv_TipoPoliza.Size = new System.Drawing.Size(755, 232);
             this.dgv_TipoPoliza.TabIndex = 0;
             this.dgv_TipoPoliza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TipoPoliza_CellContentClick);
             // 
@@ -525,9 +546,11 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox3.Location = new System.Drawing.Point(0, 6);
+            this.groupBox3.Location = new System.Drawing.Point(0, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1166, 331);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(777, 215);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo Polizas";
@@ -535,42 +558,46 @@
             // txt_IdTipoPoliza
             // 
             this.txt_IdTipoPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdTipoPoliza.Location = new System.Drawing.Point(303, 58);
-            this.txt_IdTipoPoliza.MaxLength = 5;
+            this.txt_IdTipoPoliza.Location = new System.Drawing.Point(202, 38);
+            this.txt_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IdTipoPoliza.MaxLength = 1;
             this.txt_IdTipoPoliza.Multiline = true;
             this.txt_IdTipoPoliza.Name = "txt_IdTipoPoliza";
-            this.txt_IdTipoPoliza.Size = new System.Drawing.Size(223, 39);
+            this.txt_IdTipoPoliza.Size = new System.Drawing.Size(150, 27);
             this.txt_IdTipoPoliza.TabIndex = 29;
             this.txt_IdTipoPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdTipoPoliza_KeyPress);
             // 
             // cmb_IdProveedor
             // 
             this.cmb_IdProveedor.FormattingEnabled = true;
-            this.cmb_IdProveedor.Location = new System.Drawing.Point(830, 58);
+            this.cmb_IdProveedor.Location = new System.Drawing.Point(553, 38);
+            this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_IdProveedor.Name = "cmb_IdProveedor";
-            this.cmb_IdProveedor.Size = new System.Drawing.Size(223, 33);
+            this.cmb_IdProveedor.Size = new System.Drawing.Size(150, 25);
             this.cmb_IdProveedor.TabIndex = 28;
             this.cmb_IdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdProveedor_KeyPress);
             // 
             // txt_NombrePoliza
             // 
             this.txt_NombrePoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombrePoliza.Location = new System.Drawing.Point(303, 137);
+            this.txt_NombrePoliza.Location = new System.Drawing.Point(202, 89);
+            this.txt_NombrePoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_NombrePoliza.MaxLength = 30;
             this.txt_NombrePoliza.Multiline = true;
             this.txt_NombrePoliza.Name = "txt_NombrePoliza";
-            this.txt_NombrePoliza.Size = new System.Drawing.Size(223, 39);
+            this.txt_NombrePoliza.Size = new System.Drawing.Size(150, 27);
             this.txt_NombrePoliza.TabIndex = 22;
             this.txt_NombrePoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NombrePoliza_KeyPress);
             // 
             // txt_Compañia
             // 
             this.txt_Compañia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Compañia.Location = new System.Drawing.Point(303, 229);
+            this.txt_Compañia.Location = new System.Drawing.Point(202, 149);
+            this.txt_Compañia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Compañia.MaxLength = 30;
             this.txt_Compañia.Multiline = true;
             this.txt_Compañia.Name = "txt_Compañia";
-            this.txt_Compañia.Size = new System.Drawing.Size(223, 39);
+            this.txt_Compañia.Size = new System.Drawing.Size(150, 27);
             this.txt_Compañia.TabIndex = 20;
             this.txt_Compañia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Compañia_KeyPress);
             // 
@@ -580,9 +607,10 @@
             this.btnSalir_TipoPolizas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir_TipoPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir_TipoPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir_TipoPolizas.Location = new System.Drawing.Point(978, 262);
+            this.btnSalir_TipoPolizas.Location = new System.Drawing.Point(652, 170);
+            this.btnSalir_TipoPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir_TipoPolizas.Name = "btnSalir_TipoPolizas";
-            this.btnSalir_TipoPolizas.Size = new System.Drawing.Size(165, 46);
+            this.btnSalir_TipoPolizas.Size = new System.Drawing.Size(110, 30);
             this.btnSalir_TipoPolizas.TabIndex = 17;
             this.btnSalir_TipoPolizas.Text = "Salir";
             this.btnSalir_TipoPolizas.UseVisualStyleBackColor = false;
@@ -594,9 +622,10 @@
             this.btn_Guardar_TipoPolizas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar_TipoPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar_TipoPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar_TipoPolizas.Location = new System.Drawing.Point(735, 262);
+            this.btn_Guardar_TipoPolizas.Location = new System.Drawing.Point(490, 170);
+            this.btn_Guardar_TipoPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Guardar_TipoPolizas.Name = "btn_Guardar_TipoPolizas";
-            this.btn_Guardar_TipoPolizas.Size = new System.Drawing.Size(165, 46);
+            this.btn_Guardar_TipoPolizas.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar_TipoPolizas.TabIndex = 16;
             this.btn_Guardar_TipoPolizas.Text = "Guardar";
             this.btn_Guardar_TipoPolizas.UseVisualStyleBackColor = false;
@@ -606,9 +635,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 232);
+            this.label7.Location = new System.Drawing.Point(16, 151);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 25);
+            this.label7.Size = new System.Drawing.Size(75, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "Compañia:";
             // 
@@ -616,9 +646,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(634, 63);
+            this.label6.Location = new System.Drawing.Point(423, 41);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 25);
+            this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Id Proveedor:";
             // 
@@ -626,9 +657,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 140);
+            this.label8.Location = new System.Drawing.Point(16, 91);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 25);
+            this.label8.Size = new System.Drawing.Size(104, 17);
             this.label8.TabIndex = 8;
             this.label8.Text = "Nombre Póliza:";
             // 
@@ -636,9 +668,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(24, 63);
+            this.label9.Location = new System.Drawing.Point(16, 41);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 25);
+            this.label9.Size = new System.Drawing.Size(97, 17);
             this.label9.TabIndex = 7;
             this.label9.Text = "Id Tipo Póliza:";
             // 
@@ -648,12 +681,13 @@
             // 
             // FRM_Polizas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 885);
+            this.ClientSize = new System.Drawing.Size(803, 575);
             this.Controls.Add(this.tcArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FRM_Polizas";
             this.Text = "FRM_Polizas";
             this.Load += new System.EventHandler(this.FRM_Polizas_Load);
