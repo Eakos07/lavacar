@@ -195,8 +195,10 @@ namespace FRM_Login.Menu
             
             if (char.IsLetter(e.KeyChar))
             {
-                if (e.KeyChar == 'A' || e.KeyChar == 'E' || e.KeyChar == 'I' || e.KeyChar == 'O' || e.KeyChar == 'U')
-                {
+                if (e.KeyChar == 'A' || e.KeyChar == 'E' || e.KeyChar == 'I' || e.KeyChar == 'O' || e.KeyChar == 'U'
+                 || e.KeyChar == 'a' || e.KeyChar == 'e' || e.KeyChar == 'i' || e.KeyChar == 'o' || e.KeyChar == 'u'
+                    )
+                    {
                      e.Handled = true;
                 }
                                 
