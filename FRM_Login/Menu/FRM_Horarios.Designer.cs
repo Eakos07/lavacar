@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Horarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Salida = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Entrada = new System.Windows.Forms.MaskedTextBox();
+            this.txt_CantiHoras = new System.Windows.Forms.NumericUpDown();
             this.txt_IdHorario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,14 +57,11 @@
             this.btn_Buscar = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarHorarios = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
-            this.txt_CantiHoras = new System.Windows.Forms.NumericUpDown();
-            this.txt_Entrada = new System.Windows.Forms.MaskedTextBox();
-            this.txt_Salida = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CantiHoras)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Horarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CantiHoras)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,6 +89,47 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
+            // 
+            // txt_Salida
+            // 
+            this.txt_Salida.Location = new System.Drawing.Point(138, 176);
+            this.txt_Salida.Mask = "00/00/0000 00:00";
+            this.txt_Salida.Name = "txt_Salida";
+            this.txt_Salida.Size = new System.Drawing.Size(134, 23);
+            this.txt_Salida.TabIndex = 4;
+            this.txt_Salida.ValidatingType = typeof(System.DateTime);
+            // 
+            // txt_Entrada
+            // 
+            this.txt_Entrada.Location = new System.Drawing.Point(142, 121);
+            this.txt_Entrada.Mask = "00/00/0000 00:00";
+            this.txt_Entrada.Name = "txt_Entrada";
+            this.txt_Entrada.Size = new System.Drawing.Size(130, 23);
+            this.txt_Entrada.TabIndex = 3;
+            this.txt_Entrada.ValidatingType = typeof(System.DateTime);
+            // 
+            // txt_CantiHoras
+            // 
+            this.txt_CantiHoras.Location = new System.Drawing.Point(154, 78);
+            this.txt_CantiHoras.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.txt_CantiHoras.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txt_CantiHoras.Name = "txt_CantiHoras";
+            this.txt_CantiHoras.Size = new System.Drawing.Size(84, 23);
+            this.txt_CantiHoras.TabIndex = 2;
+            this.txt_CantiHoras.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txt_CantiHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CantiHoras_KeyPress);
             // 
             // txt_IdHorario
             // 
@@ -161,6 +202,7 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(528, 113);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
@@ -318,47 +360,6 @@
             this.dgv_Horarios.TabIndex = 0;
             this.dgv_Horarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Horarios_CellDoubleClick);
             // 
-            // txt_CantiHoras
-            // 
-            this.txt_CantiHoras.Location = new System.Drawing.Point(154, 78);
-            this.txt_CantiHoras.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.txt_CantiHoras.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txt_CantiHoras.Name = "txt_CantiHoras";
-            this.txt_CantiHoras.Size = new System.Drawing.Size(84, 23);
-            this.txt_CantiHoras.TabIndex = 2;
-            this.txt_CantiHoras.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txt_CantiHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CantiHoras_KeyPress);
-            // 
-            // txt_Entrada
-            // 
-            this.txt_Entrada.Location = new System.Drawing.Point(142, 121);
-            this.txt_Entrada.Mask = "00/00/0000 00:00";
-            this.txt_Entrada.Name = "txt_Entrada";
-            this.txt_Entrada.Size = new System.Drawing.Size(130, 23);
-            this.txt_Entrada.TabIndex = 3;
-            this.txt_Entrada.ValidatingType = typeof(System.DateTime);
-            // 
-            // txt_Salida
-            // 
-            this.txt_Salida.Location = new System.Drawing.Point(138, 176);
-            this.txt_Salida.Mask = "00/00/0000 00:00";
-            this.txt_Salida.Name = "txt_Salida";
-            this.txt_Salida.Size = new System.Drawing.Size(134, 23);
-            this.txt_Salida.TabIndex = 4;
-            this.txt_Salida.ValidatingType = typeof(System.DateTime);
-            // 
             // FRM_Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,12 +375,12 @@
             this.Load += new System.EventHandler(this.FRM_Horarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CantiHoras)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Horarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CantiHoras)).EndInit();
             this.ResumeLayout(false);
 
         }

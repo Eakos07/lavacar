@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Proveedores));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPlazoPago = new System.Windows.Forms.NumericUpDown();
+            this.lbl_meses = new System.Windows.Forms.Label();
+            this.txtTelefoProveedor = new System.Windows.Forms.MaskedTextBox();
             this.txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_IdEstadoProveedor = new System.Windows.Forms.ComboBox();
@@ -56,15 +59,12 @@
             this.txt_FiltrarProveedores = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTelefoProveedor = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_meses = new System.Windows.Forms.Label();
-            this.txtPlazoPago = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -95,6 +95,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Proveedores";
             // 
+            // txtPlazoPago
+            // 
+            this.txtPlazoPago.Location = new System.Drawing.Point(574, 70);
+            this.txtPlazoPago.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.txtPlazoPago.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtPlazoPago.Name = "txtPlazoPago";
+            this.txtPlazoPago.Size = new System.Drawing.Size(40, 23);
+            this.txtPlazoPago.TabIndex = 36;
+            this.txtPlazoPago.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lbl_meses
+            // 
+            this.lbl_meses.AutoSize = true;
+            this.lbl_meses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_meses.Location = new System.Drawing.Point(619, 72);
+            this.lbl_meses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_meses.Name = "lbl_meses";
+            this.lbl_meses.Size = new System.Drawing.Size(49, 17);
+            this.lbl_meses.TabIndex = 35;
+            this.lbl_meses.Text = "meses";
+            // 
+            // txtTelefoProveedor
+            // 
+            this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 31);
+            this.txtTelefoProveedor.Mask = "00000000";
+            this.txtTelefoProveedor.Name = "txtTelefoProveedor";
+            this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
+            this.txtTelefoProveedor.TabIndex = 34;
+            // 
             // txt_IdProveedor
             // 
             this.txt_IdProveedor.Location = new System.Drawing.Point(205, 31);
@@ -117,6 +158,7 @@
             // 
             // cmb_IdEstadoProveedor
             // 
+            this.cmb_IdEstadoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstadoProveedor.FormattingEnabled = true;
             this.cmb_IdEstadoProveedor.Location = new System.Drawing.Point(565, 110);
             this.cmb_IdEstadoProveedor.Margin = new System.Windows.Forms.Padding(2);
@@ -349,47 +391,6 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
-            // txtTelefoProveedor
-            // 
-            this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 31);
-            this.txtTelefoProveedor.Mask = "00000000";
-            this.txtTelefoProveedor.Name = "txtTelefoProveedor";
-            this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
-            this.txtTelefoProveedor.TabIndex = 34;
-            // 
-            // lbl_meses
-            // 
-            this.lbl_meses.AutoSize = true;
-            this.lbl_meses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meses.Location = new System.Drawing.Point(619, 72);
-            this.lbl_meses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_meses.Name = "lbl_meses";
-            this.lbl_meses.Size = new System.Drawing.Size(49, 17);
-            this.lbl_meses.TabIndex = 35;
-            this.lbl_meses.Text = "meses";
-            // 
-            // txtPlazoPago
-            // 
-            this.txtPlazoPago.Location = new System.Drawing.Point(574, 70);
-            this.txtPlazoPago.Maximum = new decimal(new int[] {
-            48,
-            0,
-            0,
-            0});
-            this.txtPlazoPago.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtPlazoPago.Name = "txtPlazoPago";
-            this.txtPlazoPago.Size = new System.Drawing.Size(40, 23);
-            this.txtPlazoPago.TabIndex = 36;
-            this.txtPlazoPago.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // FRM_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,13 +406,13 @@
             this.Load += new System.EventHandler(this.FRM_Proveedores_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).EndInit();
             this.ResumeLayout(false);
 
         }

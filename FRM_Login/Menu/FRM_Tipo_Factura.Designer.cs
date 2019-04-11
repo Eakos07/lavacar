@@ -64,9 +64,11 @@
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Controls.Add(this.dgv_TipoFactura);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox2.Location = new System.Drawing.Point(8, 357);
+            this.groupBox2.Location = new System.Drawing.Point(5, 232);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1188, 512);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(792, 333);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabla Tipo Factura";
@@ -84,10 +86,9 @@
             this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_FiltrarTipoFactura});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 27);
+            this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1182, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(788, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -97,13 +98,13 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(83, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
             // toolStripButton1
@@ -112,40 +113,40 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(87, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel2.Text = "Modificar";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(63, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(42, 24);
             this.toolStripLabel4.Text = "Buscar";
             // 
             // txt_FiltrarTipoFactura
             // 
             this.txt_FiltrarTipoFactura.Name = "txt_FiltrarTipoFactura";
-            this.txt_FiltrarTipoFactura.Size = new System.Drawing.Size(112, 31);
+            this.txt_FiltrarTipoFactura.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarTipoFactura.TextChanged += new System.EventHandler(this.txt_FiltrarTipoFactura_TextChanged);
             // 
             // dgv_TipoFactura
@@ -157,12 +158,13 @@
             this.dgv_TipoFactura.BackgroundColor = System.Drawing.Color.White;
             this.dgv_TipoFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoFactura.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_TipoFactura.Location = new System.Drawing.Point(6, 78);
+            this.dgv_TipoFactura.Location = new System.Drawing.Point(4, 51);
+            this.dgv_TipoFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_TipoFactura.MultiSelect = false;
             this.dgv_TipoFactura.Name = "dgv_TipoFactura";
             this.dgv_TipoFactura.RowTemplate.Height = 24;
             this.dgv_TipoFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TipoFactura.Size = new System.Drawing.Size(1172, 426);
+            this.dgv_TipoFactura.Size = new System.Drawing.Size(781, 277);
             this.dgv_TipoFactura.TabIndex = 0;
             // 
             // groupBox1
@@ -177,9 +179,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.groupBox1.Location = new System.Drawing.Point(8, 15);
+            this.groupBox1.Location = new System.Drawing.Point(5, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1185, 335);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(790, 218);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Factura";
@@ -187,29 +191,33 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(303, 223);
+            this.textBox1.Location = new System.Drawing.Point(202, 145);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 39);
+            this.textBox1.Size = new System.Drawing.Size(150, 27);
             this.textBox1.TabIndex = 2;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(303, 57);
+            this.comboBox2.Location = new System.Drawing.Point(202, 37);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(223, 33);
+            this.comboBox2.Size = new System.Drawing.Size(150, 25);
             this.comboBox2.TabIndex = 0;
             this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(303, 137);
+            this.textBox4.Location = new System.Drawing.Point(202, 89);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(223, 39);
+            this.textBox4.Size = new System.Drawing.Size(150, 27);
             this.textBox4.TabIndex = 1;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -219,9 +227,10 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(978, 262);
+            this.btn_Exit.Location = new System.Drawing.Point(652, 170);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(165, 46);
+            this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 4;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -233,9 +242,10 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(735, 262);
+            this.button1.Location = new System.Drawing.Point(490, 170);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 46);
+            this.button1.Size = new System.Drawing.Size(110, 30);
             this.button1.TabIndex = 3;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -244,9 +254,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 140);
+            this.label6.Location = new System.Drawing.Point(16, 91);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 25);
+            this.label6.Size = new System.Drawing.Size(92, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Tipo Factura:";
             // 
@@ -254,9 +265,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 228);
+            this.label5.Location = new System.Drawing.Point(16, 148);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 25);
+            this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Descripción:";
             // 
@@ -264,9 +276,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 63);
+            this.label4.Location = new System.Drawing.Point(16, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 25);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Id Tipo Factura:";
             // 
@@ -276,13 +289,14 @@
             // 
             // FRM_Tipo_Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 885);
+            this.ClientSize = new System.Drawing.Size(803, 575);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FRM_Tipo_Factura";
             this.Text = "FRM_Tipo_Factura";
             this.Load += new System.EventHandler(this.FRM_Tipo_Factura_Load);

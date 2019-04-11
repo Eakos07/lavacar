@@ -114,9 +114,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(6, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(766, 215);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -136,7 +136,7 @@
             // txt_IdPoliza
             // 
             this.txt_IdPoliza.Location = new System.Drawing.Point(177, 42);
-            this.txt_IdPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IdPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdPoliza.MaxLength = 5;
             this.txt_IdPoliza.Name = "txt_IdPoliza";
             this.txt_IdPoliza.Size = new System.Drawing.Size(178, 23);
@@ -147,7 +147,7 @@
             // 
             this.txt_CeduJurid.Enabled = false;
             this.txt_CeduJurid.Location = new System.Drawing.Point(557, 92);
-            this.txt_CeduJurid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_CeduJurid.Margin = new System.Windows.Forms.Padding(2);
             this.txt_CeduJurid.MaxLength = 20;
             this.txt_CeduJurid.Name = "txt_CeduJurid";
             this.txt_CeduJurid.Size = new System.Drawing.Size(178, 23);
@@ -177,9 +177,10 @@
             // 
             // cmb_IdTipoPoliza
             // 
+            this.cmb_IdTipoPoliza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdTipoPoliza.FormattingEnabled = true;
             this.cmb_IdTipoPoliza.Location = new System.Drawing.Point(177, 89);
-            this.cmb_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdTipoPoliza.Name = "cmb_IdTipoPoliza";
             this.cmb_IdTipoPoliza.Size = new System.Drawing.Size(178, 25);
             this.cmb_IdTipoPoliza.TabIndex = 2;
@@ -202,7 +203,7 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(640, 160);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 6;
@@ -217,7 +218,7 @@
             this.btn_Guardar_Polizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar_Polizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar_Polizas.Location = new System.Drawing.Point(503, 160);
-            this.btn_Guardar_Polizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Guardar_Polizas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar_Polizas.Name = "btn_Guardar_Polizas";
             this.btn_Guardar_Polizas.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar_Polizas.TabIndex = 5;
@@ -227,9 +228,10 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(557, 45);
-            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(178, 25);
             this.cmb_IdEstado.TabIndex = 1;
@@ -261,9 +263,9 @@
             this.groupBox2.Controls.Add(this.toolStrip1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(6, 224);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(776, 302);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -279,7 +281,7 @@
             this.dgv_Polizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Polizas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Polizas.Location = new System.Drawing.Point(5, 50);
-            this.dgv_Polizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Polizas.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Polizas.MultiSelect = false;
             this.dgv_Polizas.Name = "dgv_Polizas";
             this.dgv_Polizas.RowTemplate.Height = 24;
@@ -372,7 +374,7 @@
             this.tcArticulos.Controls.Add(this.tbTipoPoliza);
             this.tcArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcArticulos.Location = new System.Drawing.Point(9, 9);
-            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.tcArticulos.Name = "tcArticulos";
             this.tcArticulos.SelectedIndex = 0;
             this.tcArticulos.Size = new System.Drawing.Size(792, 557);
@@ -383,9 +385,9 @@
             this.tbPolizas.Controls.Add(this.groupBox1);
             this.tbPolizas.Controls.Add(this.groupBox2);
             this.tbPolizas.Location = new System.Drawing.Point(4, 26);
-            this.tbPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPolizas.Margin = new System.Windows.Forms.Padding(2);
             this.tbPolizas.Name = "tbPolizas";
-            this.tbPolizas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPolizas.Padding = new System.Windows.Forms.Padding(2);
             this.tbPolizas.Size = new System.Drawing.Size(784, 527);
             this.tbPolizas.TabIndex = 0;
             this.tbPolizas.Text = "Pólizas";
@@ -396,9 +398,9 @@
             this.tbTipoPoliza.Controls.Add(this.groupBox4);
             this.tbTipoPoliza.Controls.Add(this.groupBox3);
             this.tbTipoPoliza.Location = new System.Drawing.Point(4, 26);
-            this.tbTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.tbTipoPoliza.Name = "tbTipoPoliza";
-            this.tbTipoPoliza.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTipoPoliza.Padding = new System.Windows.Forms.Padding(2);
             this.tbTipoPoliza.Size = new System.Drawing.Size(784, 527);
             this.tbTipoPoliza.TabIndex = 1;
             this.tbTipoPoliza.Text = "Tipo Poliza";
@@ -410,9 +412,9 @@
             this.groupBox4.Controls.Add(this.dgv_TipoPoliza);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox4.Location = new System.Drawing.Point(4, 224);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(772, 302);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
@@ -523,7 +525,7 @@
             this.dgv_TipoPoliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TipoPoliza.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_TipoPoliza.Location = new System.Drawing.Point(4, 51);
-            this.dgv_TipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_TipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TipoPoliza.MultiSelect = false;
             this.dgv_TipoPoliza.Name = "dgv_TipoPoliza";
             this.dgv_TipoPoliza.RowTemplate.Height = 24;
@@ -547,9 +549,9 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox3.Location = new System.Drawing.Point(0, 4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(777, 215);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -559,7 +561,7 @@
             // 
             this.txt_IdTipoPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IdTipoPoliza.Location = new System.Drawing.Point(202, 38);
-            this.txt_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdTipoPoliza.MaxLength = 1;
             this.txt_IdTipoPoliza.Multiline = true;
             this.txt_IdTipoPoliza.Name = "txt_IdTipoPoliza";
@@ -569,9 +571,10 @@
             // 
             // cmb_IdProveedor
             // 
+            this.cmb_IdProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdProveedor.FormattingEnabled = true;
             this.cmb_IdProveedor.Location = new System.Drawing.Point(553, 38);
-            this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdProveedor.Name = "cmb_IdProveedor";
             this.cmb_IdProveedor.Size = new System.Drawing.Size(150, 25);
             this.cmb_IdProveedor.TabIndex = 28;
@@ -581,7 +584,7 @@
             // 
             this.txt_NombrePoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NombrePoliza.Location = new System.Drawing.Point(202, 89);
-            this.txt_NombrePoliza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NombrePoliza.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NombrePoliza.MaxLength = 30;
             this.txt_NombrePoliza.Multiline = true;
             this.txt_NombrePoliza.Name = "txt_NombrePoliza";
@@ -593,7 +596,7 @@
             // 
             this.txt_Compañia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Compañia.Location = new System.Drawing.Point(202, 149);
-            this.txt_Compañia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Compañia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Compañia.MaxLength = 30;
             this.txt_Compañia.Multiline = true;
             this.txt_Compañia.Name = "txt_Compañia";
@@ -608,7 +611,7 @@
             this.btnSalir_TipoPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir_TipoPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir_TipoPolizas.Location = new System.Drawing.Point(652, 170);
-            this.btnSalir_TipoPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir_TipoPolizas.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir_TipoPolizas.Name = "btnSalir_TipoPolizas";
             this.btnSalir_TipoPolizas.Size = new System.Drawing.Size(110, 30);
             this.btnSalir_TipoPolizas.TabIndex = 17;
@@ -623,7 +626,7 @@
             this.btn_Guardar_TipoPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar_TipoPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Guardar_TipoPolizas.Location = new System.Drawing.Point(490, 170);
-            this.btn_Guardar_TipoPolizas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Guardar_TipoPolizas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar_TipoPolizas.Name = "btn_Guardar_TipoPolizas";
             this.btn_Guardar_TipoPolizas.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar_TipoPolizas.TabIndex = 16;
@@ -687,7 +690,7 @@
             this.ClientSize = new System.Drawing.Size(803, 575);
             this.Controls.Add(this.tcArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Polizas";
             this.Text = "FRM_Polizas";
             this.Load += new System.EventHandler(this.FRM_Polizas_Load);
