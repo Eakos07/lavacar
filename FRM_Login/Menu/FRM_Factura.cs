@@ -217,7 +217,7 @@ namespace FRM_Login.Menu
             }
         }
 
-        private void cmb_CedJuri_KeyPress(object sender, KeyPressEventArgs e)
+        private void cmb_CedJuri_KeyPress(object sender, KeyPressEventArgs e) 
         {
             if (!char.IsNumber(e.KeyChar))
             {
