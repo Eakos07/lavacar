@@ -156,12 +156,16 @@ namespace FRM_Login.Menu
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Estas seguro que deseas salir del sistema?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
+            
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
         {
             AbrirVentana(new FRM_Ordenes___de_Compras());
         }
+
+        
     }
 }

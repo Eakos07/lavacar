@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Planillas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_IdPlanilla = new System.Windows.Forms.TextBox();
@@ -53,12 +52,10 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPlanillas = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Planillas = new System.Windows.Forms.DataGridView();
-            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Planillas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,6 +83,7 @@
             // txt_IdPlanilla
             // 
             this.txt_IdPlanilla.Location = new System.Drawing.Point(143, 40);
+            this.txt_IdPlanilla.MaxLength = 100;
             this.txt_IdPlanilla.Name = "txt_IdPlanilla";
             this.txt_IdPlanilla.Size = new System.Drawing.Size(156, 23);
             this.txt_IdPlanilla.TabIndex = 0;
@@ -302,10 +300,6 @@
             this.dgv_Planillas.TabIndex = 0;
             this.dgv_Planillas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Planillas_CellDoubleClick);
             // 
-            // errorIcono
-            // 
-            this.errorIcono.ContainerControl = this;
-            // 
             // FRM_Planillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,7 +320,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Planillas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,6 +349,5 @@
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarPlanillas;
         private System.Windows.Forms.DataGridView dgv_Planillas;
         private System.Windows.Forms.TextBox txt_IdPlanilla;
-        private System.Windows.Forms.ErrorProvider errorIcono;
     }
 }

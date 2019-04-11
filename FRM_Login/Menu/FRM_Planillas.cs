@@ -190,49 +190,35 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_IdPlanilla, "");
+                
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_IdPlanilla, "Solo puede digitar numeros");
+                MessageBox.Show("Solo puede digitar numeros");
             }
         }
 
         private void cmb_IdEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+           
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+          
         }
 
         private void cmb_IdHorario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+    
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void cmb_IdEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+       
+            
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
         #endregion
 
@@ -240,5 +226,7 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+   
     }
 }
