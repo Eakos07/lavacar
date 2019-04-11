@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LavaCar_DAL.Cat_Mant;
 using LavaCar_BLL.Cat_Mant;
+using System.Globalization;
 
 namespace FRM_Login.Menu
 {
@@ -115,6 +116,57 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_Factura();
         }
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(txt_MontoNeto.Text)) && !(string.IsNullOrEmpty(txt_Descuent.Text)) && !(string.IsNullOrEmpty(txt_MontoTotal.Text))
+                && cmb_NumPlaca.SelectedValue.ToString() != "Elija Placa" && cmb_CodServ.ToString() != "0" && cmb_IdTipCamb.SelectedValue.ToString() != "Elija Tipo Cambio"
+                && cmb_IdPromo.SelectedValue.ToString() != "0"
+                && cmb_IdTipFactu.Text != "0")
+            {
+                Obj_DAL.sNumPlaca = cmb_NumPlaca.SelectedText.ToString().Trim();
+
+                string sMsjError = string.Empty;
+
+                if (Obj_DAL.cBandIM == 'I')
+                {
+                    Obj_BLL.Insertar_Factura(ref sMsjError, ref Obj_DAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Factura();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else if (Obj_DAL.cBandIM == 'M')
+                {
+                    Obj_BLL.Modificar_Factura(ref sMsjError, ref Obj_DAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Factura();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                Cargar_cmb();
+            }
+            else
+            {
+                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         #region Validaciones
         private void txt_NumFact_KeyPress(object sender, KeyPressEventArgs e)
@@ -122,13 +174,11 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumFact, "");
+              
             }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
-            }
+            
+            
+         
         }
 
         private void cmb_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
@@ -205,115 +255,59 @@ namespace FRM_Login.Menu
 
         private void txt_MontoNeto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar.ToString() == cc.NumberFormat.NumberDecimalSeparator)
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumFact, "");
+              
+                
             }
-            else
+      else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+                MessageBox.Show("Solo puede digitar numeros");
+            }
+            if (txt_MontoNeto.Text.Contains(','))
+            {
+                e.Handled = true;
             }
 
-            if (e.KeyChar == ',')
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_MontoNeto, "");
-            }
         }
 
         private void txt_Descuent_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar.ToString()==cc.NumberFormat.NumberDecimalSeparator)
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumFact, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
             }
 
-            if (e.KeyChar == ',')
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_MontoNeto, "");
+           else {
+                e.Handled = true;
+                MessageBox.Show("Solo puede digitar numeros");
             }
+            
         }
+        
 
         private void txt_MontoTotal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar.ToString() == cc.NumberFormat.NumberDecimalSeparator)
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_NumFact, "");
             }
+
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_NumFact, "Solo puede digitar numeros");
+                MessageBox.Show("Solo puede digitar numeros");
             }
 
-            if (e.KeyChar == ',')
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_MontoNeto, "");
-            }
         }
+    
         #endregion
 
-        private void btn_Save_Click(object sender, EventArgs e)
-        {
-            if (!(string.IsNullOrEmpty(txt_MontoNeto.Text)) && !(string.IsNullOrEmpty(txt_Descuent.Text)) && !(string.IsNullOrEmpty(txt_MontoTotal.Text))
-                && cmb_NumPlaca.SelectedValue.ToString() != "Elija Placa" && cmb_CodServ.ToString() != "0" && cmb_IdTipCamb.SelectedValue.ToString() != "Elija Tipo Cambio"
-                && cmb_IdPromo.SelectedValue.ToString() != "0"
-                && cmb_IdTipFactu.Text != "0")
-            {
-                Obj_DAL.sNumPlaca = cmb_NumPlaca.SelectedText.ToString().Trim();
-
-                string sMsjError = string.Empty;
-
-                if (Obj_DAL.cBandIM == 'I')
-                {
-                    Obj_BLL.Insertar_Factura(ref sMsjError, ref Obj_DAL);
-                    if (sMsjError == string.Empty)
-                    {
-                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar_Datos_Factura();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
-                }
-                else if (Obj_DAL.cBandIM == 'M')
-                {
-                    Obj_BLL.Modificar_Factura(ref sMsjError, ref Obj_DAL);
-                    if (sMsjError == string.Empty)
-                    {
-                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar_Datos_Factura();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
-                }
-                Cargar_cmb();
-            }
-            else
-            {
-                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+ 
     }
 }
