@@ -165,5 +165,7 @@ namespace FRM_Login.Menu
         {
             AbrirVentana(new FRM_Ordenes___de_Compras());
         }
+
+        
     }
 }
