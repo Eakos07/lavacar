@@ -99,21 +99,21 @@ namespace FRM_Login.Menu
             cls_Promociones_BLL Obj_Promociones_BLL = new cls_Promociones_BLL();
             DataTable DT_Promociones = new DataTable();
             DT_Promociones = Obj_Promociones_BLL.Listar_Promociones(ref sMsjError);
-            cmb_IdTipCamb.DataSource = DT_Promociones;
+            cmb_IdPromo.DataSource = DT_Promociones;
             DT_Promociones.Rows.Add("0", "Elija Promocion");
-            cmb_IdTipCamb.DisplayMember = DT_Promociones.Columns[1].ToString();
-            cmb_IdTipCamb.ValueMember = DT_Promociones.Columns[0].ToString();
-            cmb_IdTipCamb.SelectedValue = "0";
+            cmb_IdPromo.DisplayMember = DT_Promociones.Columns[1].ToString();
+            cmb_IdPromo.ValueMember = DT_Promociones.Columns[0].ToString();
+            cmb_IdPromo.SelectedValue = "0";
             #endregion
 
             #region Tipo Factura
             cls_TipoFactura_BLL Obj_TipoFactura_BLL = new cls_TipoFactura_BLL();
             DataTable DT_TipoFactura = new DataTable();
             DT_TipoFactura = Obj_TipoFactura_BLL.Listar_TipoFactura(ref sMsjError);
-            cmb_IdTipFactu.DataSource = DT_Promociones;
+            cmb_IdTipFactu.DataSource = DT_TipoFactura;
             DT_TipoFactura.Rows.Add("0", "Elija Tipo Factura");
-            cmb_IdTipFactu.DisplayMember = DT_Promociones.Columns[1].ToString();
-            cmb_IdTipFactu.ValueMember = DT_Promociones.Columns[0].ToString();
+            cmb_IdTipFactu.DisplayMember = DT_TipoFactura.Columns[1].ToString();
+            cmb_IdTipFactu.ValueMember = DT_TipoFactura.Columns[0].ToString();
             cmb_IdTipFactu.SelectedValue = "0";
             #endregion
         }
