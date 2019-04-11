@@ -94,7 +94,7 @@ namespace FRM_Login.Menu
             #endregion
 
             #region Cargar TipoPolizas
-
+            cls_TipoPolizas_BLL Obj_TipoPolizas_BLL = new cls_TipoPolizas_BLL();
             DataTable DT_TipoPolizas = new DataTable();
             DT_TipoPolizas = Obj_TipoPolizas_BLL.Listar_TipoPolizas(ref sMsjError);
             cmb_IdTipoPoliza.DataSource = DT_TipoPolizas;

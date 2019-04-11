@@ -35,7 +35,7 @@ namespace FRM_Login.Menu
             Cargar_Cmb_Clientes();
             CargarDatos_Citas();
             Cargar_Cmb_Citas();
-            dtp_Fecha.MinDate = DateTime.Now;
+            
         }
 
         #region Clientes
@@ -260,6 +260,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Citas()
         {
+            dtp_Fecha.MinDate = DateTime.Now;
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
             Obj_Citas_DAL.cBandIM = 'I';
@@ -295,8 +296,8 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_EmpleadoCitas.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "", "Elija un Empleado");
-            cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[2].ToString();
+            DT_Empleados.Rows.Add("0", "", "", "Elija un Empleado");
+            cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[3].ToString();
             cmb_EmpleadoCitas.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_EmpleadoCitas.SelectedValue = "0";
             #endregion
@@ -339,73 +340,71 @@ namespace FRM_Login.Menu
         {
 
 
-            if ((txt_NomCliente.Text.Trim() != string.Empty)  /*&& (txt_NumPlaca.Text.Trim() != string.Empty)*/
-                 && (txt_Email.Text.Trim() != string.Empty) /*&&(txt_NumPlaca.Text.Trim() != string.Empty) */
-                 && (cmb_HoraCita.SelectedItem.ToString() != "Elegir Hora")/*(cmb_HoraCita.SelectedValue.ToString() != "0")*/ && (cmb_EstadoCita.SelectedValue.ToString() != "0")
-                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
+            if ((txt_NomCliente.Text.Trim() != string.Empty)
+                 && (txt_Email.Text.Trim() != string.Empty)
+                 && (cmb_HoraCita.SelectedItem.ToString() != null)
+                 && (cmb_EstadoCita.SelectedValue.ToString() != "0")
+                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") 
+                 && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
                 if (email_bien_escrito(txt_Email.Text) == true)
                 {
-                    MessageBox.Show("Correo correcto", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
+                    Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
+                    Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
+                    Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
+                    Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
+                    Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
+
+                    Obj_Citas_DAL.cIdEstado = Convert.ToChar(cmb_EstadoCita.SelectedValue.ToString());
+                    Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
+
+                    string sMsjError = string.Empty;
+
+                    if (Obj_Citas_DAL.cBandIM == 'I')
+                    {
+                        Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
+                        Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                        if (sMsjError == string.Empty)
+                        {
+                            MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar_Cmb_Citas();
+                            CargarDatos_Citas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                    else if (Obj_Citas_DAL.cBandIM == 'M')
+                    {
+                        Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
+                        Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                        if (sMsjError == string.Empty)
+                        {
+                            MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar_Cmb_Citas();
+                            CargarDatos_Citas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Correo incorrecto", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Correo incorrecto, digite una direccion de correo válida", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
-                Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
-                Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
-                Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
-                Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
-                Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
-                Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
-
-                Obj_Citas_DAL.cIdEstado = Convert.ToChar(cmb_EstadoCita.SelectedValue.ToString());
-                Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
-
-                string sMsjError = string.Empty;
-
-                if (Obj_Citas_DAL.cBandIM == 'I')
-                {
-                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
-                    Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    if (sMsjError == string.Empty)
-                    {
-                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar_Cmb_Citas();
-                        CargarDatos_Citas();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
-                }
-                else if (Obj_Citas_DAL.cBandIM == 'M')
-                {
-                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
-                    Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    if (sMsjError == string.Empty)
-                    {
-                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_NumCita.Enabled = true;
-                        Cargar_Cmb_Citas();
-                        CargarDatos_Citas();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
 
             }
             else
-                {
-                    MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            } else
+            {
                 MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+            }
 
         }
 
@@ -429,6 +428,7 @@ namespace FRM_Login.Menu
             }
             else
             {
+                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -438,7 +438,7 @@ namespace FRM_Login.Menu
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_HoraCita.SelectedItem = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
@@ -453,6 +453,7 @@ namespace FRM_Login.Menu
             }
             else
             {
+                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
