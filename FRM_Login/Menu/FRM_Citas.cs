@@ -193,28 +193,15 @@ namespace FRM_Login.Menu
         {
             string expresion;
             expresion = "^[AEIOU]*$";
-
-
             
-            if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
+            if (char.IsLetter(e.KeyChar))
             {
                 if (txt_NumPlaca.SelectionStart.ToString() == "0")
                 {
                     txt_NumPlaca.MaxLength = 7;
                 }
-
-                if (e.KeyChar == '-')
-                {
-                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
-                else if (!Regex.IsMatch(e.KeyChar.ToString(), expresion))
+                                
+                else if (!(Regex.IsMatch(e.KeyChar.ToString(), expresion)))
                 {
 
                     if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
@@ -258,7 +245,24 @@ namespace FRM_Login.Menu
                 }
                 
             }
-            
+            else if (e.KeyChar == '-')
+            {
+                expresion = "^[0-9]*$";
+
+                if(Regex.IsMatch(txt_NumPlaca.Text, expresion))
+                {
+                    e.Handled = true;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+
 
         }
 
