@@ -190,12 +190,12 @@ namespace FRM_Login.Menu
             if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                errorIcono.SetError(txt_IdPlanilla, "");
+                
             }
             else
             {
                 e.Handled = true;
-                errorIcono.SetError(txt_IdPlanilla, "Solo puede digitar numeros");
+                MessageBox.Show("Solo puede digitar numeros");
             }
         }
 
@@ -240,5 +240,7 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+   
     }
 }
