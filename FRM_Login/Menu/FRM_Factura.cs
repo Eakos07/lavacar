@@ -32,10 +32,16 @@ namespace FRM_Login.Menu
         }
         public void Cargar_Datos_Factura()
         {
-            
             string sMsjError = string.Empty;
             DataTable dtFactura = new DataTable();
             Obj_DAL.cBandIM = 'I';
+            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            DataTable dt_Octopus = new DataTable();
+            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            txt_Ced_Jur.Text = dt_Octopus.Rows[0][0].ToString();
+
+    
+     
 
             if (txt_FiltrarFacturas.Text == string.Empty)
             {
