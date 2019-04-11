@@ -396,22 +396,21 @@ namespace FRM_Login.Menu
         #region Validaciones
 
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (e.KeyChar == '-')
+        {                       
+            if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
             {
-                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                if (e.KeyChar == '-')
                 {
-                    e.Handled = false;
+                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
                 }
-                else
-                {
-                    e.Handled = true;
-                }            
-            }
-            else if (char.IsLetter(e.KeyChar))
-            {
-                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
                 {
                     e.Handled = false;
                 }
@@ -423,6 +422,14 @@ namespace FRM_Login.Menu
                 {
                     e.Handled = false;
                 }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
             }
                                          
         }
