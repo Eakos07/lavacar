@@ -94,6 +94,8 @@ namespace FRM_Login
 
                  SqlCommand cmd = new SqlCommand("Select IdUsuario, Contraseña from Sch_Administrativo.T_Usuarios where IdUsuario = '" + txtUsuarioLogin.Text+"' and Contraseña='"+txtContrase.Text+"'",Conex);
                  SqlDataReader dr = cmd.ExecuteReader();
+                
+
                 if (dr.Read() == true)
              {
                     

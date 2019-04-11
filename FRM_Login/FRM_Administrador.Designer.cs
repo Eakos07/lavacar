@@ -48,6 +48,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu2 = new System.Windows.Forms.Panel();
+            this.btnPromociones = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.btnTipoPlaca = new System.Windows.Forms.Button();
             this.btnTipoVehiculo = new System.Windows.Forms.Button();
@@ -380,6 +381,7 @@
             // pnlMenu2
             // 
             this.pnlMenu2.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnlMenu2.Controls.Add(this.btnPromociones);
             this.pnlMenu2.Controls.Add(this.button19);
             this.pnlMenu2.Controls.Add(this.btnTipoPlaca);
             this.pnlMenu2.Controls.Add(this.btnTipoVehiculo);
@@ -393,6 +395,24 @@
             this.pnlMenu2.Name = "pnlMenu2";
             this.pnlMenu2.Size = new System.Drawing.Size(189, 708);
             this.pnlMenu2.TabIndex = 6;
+            // 
+            // btnPromociones
+            // 
+            this.btnPromociones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPromociones.FlatAppearance.BorderSize = 0;
+            this.btnPromociones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPromociones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromociones.ForeColor = System.Drawing.Color.Black;
+            this.btnPromociones.Image = ((System.Drawing.Image)(resources.GetObject("btnPromociones.Image")));
+            this.btnPromociones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromociones.Location = new System.Drawing.Point(2, 497);
+            this.btnPromociones.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnPromociones.Name = "btnPromociones";
+            this.btnPromociones.Size = new System.Drawing.Size(185, 55);
+            this.btnPromociones.TabIndex = 18;
+            this.btnPromociones.Text = "Promociones";
+            this.btnPromociones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPromociones.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
@@ -600,5 +620,6 @@
         private System.Windows.Forms.Button btnFactura;
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnPromociones;
     }
 }
