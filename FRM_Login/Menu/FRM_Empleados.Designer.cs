@@ -137,6 +137,7 @@
             // 
             // txt_IdEmpleado
             // 
+            this.txt_IdEmpleado.Enabled = false;
             this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
             this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdEmpleado.MaxLength = 3;
