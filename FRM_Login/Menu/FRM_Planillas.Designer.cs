@@ -83,6 +83,7 @@
             // txt_IdPlanilla
             // 
             this.txt_IdPlanilla.Location = new System.Drawing.Point(143, 40);
+            this.txt_IdPlanilla.MaxLength = 100;
             this.txt_IdPlanilla.Name = "txt_IdPlanilla";
             this.txt_IdPlanilla.Size = new System.Drawing.Size(156, 23);
             this.txt_IdPlanilla.TabIndex = 0;

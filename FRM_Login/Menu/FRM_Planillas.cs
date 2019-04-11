@@ -201,38 +201,24 @@ namespace FRM_Login.Menu
 
         private void cmb_IdEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+           
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+          
         }
 
         private void cmb_IdHorario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+    
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void cmb_IdEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
+       
+            
                 e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
         #endregion
 
