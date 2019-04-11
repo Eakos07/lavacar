@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LavaCar_BLL.Cat_Mant;
 using LavaCar_DAL.Cat_Mant;
+using System.Text.RegularExpressions;
 
 namespace FRM_Login.Menu
 {
@@ -186,6 +187,73 @@ namespace FRM_Login.Menu
             CargarDatos_Clientes();
         }
 
+        #region Validaciones
+        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
+            {
+                if (e.KeyChar == '-')
+                {
+                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
+                {
+                    e.Handled = false;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "1")
+                {
+                    e.Handled = false;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+        }
+
+
+        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
         #endregion
 
         #region Citas
@@ -269,12 +337,22 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarCitas_Click(object sender, EventArgs e)
         {
+
+
             if ((txt_NomCliente.Text.Trim() != string.Empty)  /*&& (txt_NumPlaca.Text.Trim() != string.Empty)*/
                  && (txt_Email.Text.Trim() != string.Empty) /*&&(txt_NumPlaca.Text.Trim() != string.Empty) */
                  && (cmb_HoraCita.SelectedItem.ToString() != "Elegir Hora")/*(cmb_HoraCita.SelectedValue.ToString() != "0")*/ && (cmb_EstadoCita.SelectedValue.ToString() != "0")
                  && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
+                if (email_bien_escrito(txt_Email.Text) == true)
+                {
+                    MessageBox.Show("Correo correcto", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Correo incorrecto", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 
                 Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
                 Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
@@ -319,9 +397,9 @@ namespace FRM_Login.Menu
                     {
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
-                }
-                else
+
+            }
+            else
                 {
                     MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -390,232 +468,85 @@ namespace FRM_Login.Menu
             }
         }
 
-
-        #endregion
-
         #region Validaciones
-
-        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {                       
-            if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
-            {
-                if (e.KeyChar == '-')
-                {
-                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
-                {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "1")
-                {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
-            }
-            else if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-                                         
-        }
-        
-
-        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-       
-
-        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_NumVisitas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || 
-                char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-
-        }
-        
-
-        private void txt_NumCita_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) )
-            {
-                e.Handled = false;
-             
-            }
-            else
-            {
-                e.Handled = true;
-               MessageBox.Show( "Solo puede digitar numeros");
-            }
-        }
-
-        private void txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-               
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show( "Solo puede digitar numeros con (-)");
-            }
-
-            if (e.KeyChar == '-')
-            {
-                e.Handled = false;
-            
-            }
-        }
-        
-
-        private void cmb_HoraCita_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        
 
         private void txt_NomCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
-                char.IsSeparator(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-              
+
             }
             else
             {
                 e.Handled = true;
-               MessageBox.Show( "Solo puede digitar letras");
+                MessageBox.Show("Solo puede digitar letras");
             }
         }
-        
+
+        private void cmb_HoraCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }       
 
         private void cmb_RegistroPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
-        
 
         private void cmb_TipoServicio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void cmb_EstadoCita_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void cmb_EmpleadoCitas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
         
-
         private void dtp_Fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
-        
 
         private void txt_Email_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
-               MessageBox.Show( "Email no puede tener espacios vacios");
+                MessageBox.Show("Email no puede tener espacios vacios");
+            }
+           
+        }
+
+        public bool email_bien_escrito(string email)
+        {
+            string expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                e.Handled = false;
-               
+                return false;
             }
         }
+
+        #endregion
+
         #endregion
 
         private void btn_RC_Exit_Click(object sender, EventArgs e)
@@ -627,5 +558,7 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+       
     }
 }
