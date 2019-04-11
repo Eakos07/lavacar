@@ -407,16 +407,24 @@ namespace FRM_Login.Menu
                 else
                 {
                     e.Handled = true;
-                }                
-
+                }            
             }
-            //if (char.IsLetter(e.KeyChar))
-            //{
-            //    if(txt_NumPlaca.SelectionStart.ToString().Trim() <= "2")
-            //}
-                   
-   
-
+            else if (char.IsLetter(e.KeyChar))
+            {
+                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
+                {
+                    e.Handled = false;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "1")
+                {
+                    e.Handled = false;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
+                {
+                    e.Handled = false;
+                }
+            }
+                                         
         }
         
 
