@@ -212,6 +212,7 @@
             // 
             // txt_Ced_Jur
             // 
+            this.txt_Ced_Jur.Enabled = false;
             this.txt_Ced_Jur.Location = new System.Drawing.Point(142, 198);
             this.txt_Ced_Jur.Name = "txt_Ced_Jur";
             this.txt_Ced_Jur.Size = new System.Drawing.Size(159, 23);
