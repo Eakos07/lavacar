@@ -189,7 +189,7 @@ namespace FRM_Login.Menu
 
         #region Validaciones
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {           
             if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
             {
                 if (e.KeyChar == '-')
@@ -254,6 +254,7 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
         #endregion
 
         #region Citas
@@ -474,7 +475,7 @@ namespace FRM_Login.Menu
 
         private void txt_NomCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == (char)(Keys.Space))
             {
                 e.Handled = false;
 
