@@ -49,7 +49,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoPlaca = new DataTable();
             DT_TipoPlaca = Obj_TipoPlaca_BLL.Listar_TipoPlaca(ref sMsjError);
             cmbTipoPlacaVehiculo.DataSource = DT_TipoPlaca;
-            DT_TipoPlaca.Rows.Add("0", "Elija Estado");
+            DT_TipoPlaca.Rows.Add("0", "Elija Tipo de Placa");
             cmbTipoPlacaVehiculo.DisplayMember = DT_TipoPlaca.Columns[1].ToString();
             cmbTipoPlacaVehiculo.ValueMember = DT_TipoPlaca.Columns[0].ToString();
             cmbTipoPlacaVehiculo.SelectedValue = "0";

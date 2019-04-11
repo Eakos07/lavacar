@@ -342,6 +342,7 @@
             // 
             // cmbTipoPlacaVehiculo
             // 
+            this.cmbTipoPlacaVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
             this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(280, 119);
             this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
@@ -352,6 +353,7 @@
             // 
             // cmbTipoVehiculo
             // 
+            this.cmbTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoVehiculo.FormattingEnabled = true;
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(280, 67);
             this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
@@ -563,6 +565,7 @@
             // 
             // cmb_EmpleadoCitas
             // 
+            this.cmb_EmpleadoCitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EmpleadoCitas.FormattingEnabled = true;
             this.cmb_EmpleadoCitas.Location = new System.Drawing.Point(461, 178);
             this.cmb_EmpleadoCitas.Margin = new System.Windows.Forms.Padding(2);
@@ -583,6 +586,7 @@
             // 
             // cmb_EstadoCita
             // 
+            this.cmb_EstadoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EstadoCita.FormattingEnabled = true;
             this.cmb_EstadoCita.Location = new System.Drawing.Point(459, 135);
             this.cmb_EstadoCita.Margin = new System.Windows.Forms.Padding(2);
@@ -622,7 +626,7 @@
             // 
             // cmb_TipoServicio
             // 
-            this.cmb_TipoServicio.FormattingEnabled = true;
+            this.cmb_TipoServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoServicio.Location = new System.Drawing.Point(459, 96);
             this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoServicio.Name = "cmb_TipoServicio";
@@ -672,6 +676,7 @@
             // 
             // cmb_RegistroPlaca
             // 
+            this.cmb_RegistroPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_RegistroPlaca.FormattingEnabled = true;
             this.cmb_RegistroPlaca.Location = new System.Drawing.Point(121, 215);
             this.cmb_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2);
@@ -746,6 +751,7 @@
             // 
             // cmb_HoraCita
             // 
+            this.cmb_HoraCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_HoraCita.FormattingEnabled = true;
             this.cmb_HoraCita.Items.AddRange(new object[] {
             "08:00",
@@ -770,7 +776,6 @@
             this.cmb_HoraCita.Name = "cmb_HoraCita";
             this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
             this.cmb_HoraCita.TabIndex = 1;
-            this.cmb_HoraCita.Text = "Elegir Hora";
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
             // 
             // FRM_Citas
