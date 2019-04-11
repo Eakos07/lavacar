@@ -190,7 +190,10 @@ namespace FRM_Login.Menu
         #region Validaciones
 
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {           
+        {
+            string expresion;
+            expresion = "^[AEIOU]*$";
+            
             if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
             {
                 if (e.KeyChar == '-')
@@ -204,29 +207,33 @@ namespace FRM_Login.Menu
                         e.Handled = true;
                     }
                 }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
+                else if (!Regex.IsMatch(e.KeyChar.ToString(), expresion))
                 {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "1")
-                {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
-                {
-                    e.Handled = false;
+                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
+                    || txt_NumPlaca.SelectionStart.ToString().Trim() == "1"
+                    || txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
                 }
                 else
                 {
                     e.Handled = true;
                 }
+
             }
             else if (char.IsDigit(e.KeyChar))
-            {
+            {                
+                expresion = "^[A-Z]*$";
 
-                if (txt_NumPlaca.Text.Contains("[^A-Z]") && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
+                if (Regex.IsMatch(txt_NumPlaca.Text , expresion) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
                 {
                     e.Handled = true;
+
                 }
                 else
                 {
@@ -234,6 +241,7 @@ namespace FRM_Login.Menu
                 }
                 
             }
+            
 
         }
 
