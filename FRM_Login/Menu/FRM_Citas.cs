@@ -49,7 +49,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoPlaca = new DataTable();
             DT_TipoPlaca = Obj_TipoPlaca_BLL.Listar_TipoPlaca(ref sMsjError);
             cmbTipoPlacaVehiculo.DataSource = DT_TipoPlaca;
-            DT_TipoPlaca.Rows.Add("0", "Elija Estado");
+            DT_TipoPlaca.Rows.Add("0", "Elija Tipo de Placa");
             cmbTipoPlacaVehiculo.DisplayMember = DT_TipoPlaca.Columns[1].ToString();
             cmbTipoPlacaVehiculo.ValueMember = DT_TipoPlaca.Columns[0].ToString();
             cmbTipoPlacaVehiculo.SelectedValue = "0";
@@ -189,7 +189,7 @@ namespace FRM_Login.Menu
 
         #region Validaciones
         private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {           
             if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
             {
                 if (e.KeyChar == '-')
@@ -254,6 +254,7 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
         #endregion
 
         #region Citas
@@ -474,7 +475,7 @@ namespace FRM_Login.Menu
 
         private void txt_NomCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == (char)(Keys.Space))
             {
                 e.Handled = false;
 

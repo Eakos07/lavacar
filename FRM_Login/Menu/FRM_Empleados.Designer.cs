@@ -113,6 +113,7 @@
             // 
             // txt_Puesto
             // 
+            this.txt_Puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_Puesto.FormattingEnabled = true;
             this.txt_Puesto.Items.AddRange(new object[] {
             "Administrador",
@@ -227,6 +228,7 @@
             // 
             // cmb_IdUsuario
             // 
+            this.cmb_IdUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdUsuario.FormattingEnabled = true;
             this.cmb_IdUsuario.Location = new System.Drawing.Point(502, 196);
             this.cmb_IdUsuario.Margin = new System.Windows.Forms.Padding(2);
@@ -237,6 +239,7 @@
             // 
             // cmb_IdPoliza
             // 
+            this.cmb_IdPoliza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdPoliza.FormattingEnabled = true;
             this.cmb_IdPoliza.Location = new System.Drawing.Point(502, 155);
             this.cmb_IdPoliza.Margin = new System.Windows.Forms.Padding(2);
@@ -247,6 +250,7 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(502, 113);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
