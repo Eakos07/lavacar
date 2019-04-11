@@ -181,16 +181,7 @@ namespace FRM_Login.Menu
 
         private void txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-                errorIcono.SetError(txt_Usuario, "");
-            }
-            else
-            {
-                e.Handled = true;
-                errorIcono.SetError(txt_Usuario, "Solo puede digitar numeros");
-            }
+            
         }
 
         private void cmb_Rol_KeyPress(object sender, KeyPressEventArgs e)
