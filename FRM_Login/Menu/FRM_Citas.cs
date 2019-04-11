@@ -193,9 +193,16 @@ namespace FRM_Login.Menu
         {
             string expresion;
             expresion = "^[AEIOU]*$";
+
+
             
             if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
             {
+                if (txt_NumPlaca.SelectionStart.ToString() == "0")
+                {
+                    txt_NumPlaca.MaxLength = 7;
+                }
+
                 if (e.KeyChar == '-')
                 {
                     if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
@@ -209,6 +216,7 @@ namespace FRM_Login.Menu
                 }
                 else if (!Regex.IsMatch(e.KeyChar.ToString(), expresion))
                 {
+
                     if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
                     || txt_NumPlaca.SelectionStart.ToString().Trim() == "1"
                     || txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
@@ -230,7 +238,16 @@ namespace FRM_Login.Menu
             {                
                 expresion = "^[A-Z]*$";
 
-                if (Regex.IsMatch(txt_NumPlaca.Text , expresion) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
+                if(txt_NumPlaca.SelectionStart.ToString() == "0")
+                {
+                    txt_NumPlaca.MaxLength = 6;
+                }
+
+                if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                {
+                    e.Handled = false;
+                }
+                else if (Regex.IsMatch(txt_NumPlaca.Text , expresion) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
                 {
                     e.Handled = true;
 
