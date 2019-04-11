@@ -259,6 +259,10 @@ namespace FRM_Login.Menu
                     e.Handled = true;
                 }
             }
+            else if (e.KeyChar == (char)(Keys.Space))
+            {
+                e.Handled = true;
+            }
 
 
         }
