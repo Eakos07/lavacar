@@ -613,7 +613,7 @@ namespace FRM_Login.Menu
         #region Validaciones
         private void txt_IdTipoArticulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
