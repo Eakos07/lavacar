@@ -100,7 +100,7 @@ namespace FRM_Login.Menu
                 !(string.IsNullOrEmpty(txt_Precio.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" ||
                 cmb_IdProve.SelectedValue.ToString() != "0" && cmb_IdArticulo.SelectedValue.ToString() != "0")
             {
-                
+                Obj_OrdenesCompra_DAL.iIdNumOrden = Convert.ToInt32(txt_NumOrden.Text);
                 Obj_OrdenesCompra_DAL.iCantidad = Convert.ToInt16(txt_Cantidad.Text);
                 Obj_OrdenesCompra_DAL.dPrecio = Convert.ToDecimal(txt_Precio.Text);
                 Obj_OrdenesCompra_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
