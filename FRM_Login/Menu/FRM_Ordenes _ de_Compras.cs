@@ -172,7 +172,7 @@ namespace FRM_Login.Menu
                 cmb_IdArticulo.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[5].Value.ToString().Trim();
             }
         }
 
@@ -187,7 +187,7 @@ namespace FRM_Login.Menu
                 cmb_IdArticulo.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[5].Value.ToString().Trim();
             
         }
 
