@@ -318,7 +318,7 @@
             this.cmb_Rol.FormattingEnabled = true;
             this.cmb_Rol.Location = new System.Drawing.Point(549, 46);
             this.cmb_Rol.Name = "cmb_Rol";
-            this.cmb_Rol.Size = new System.Drawing.Size(121, 25);
+            this.cmb_Rol.Size = new System.Drawing.Size(159, 25);
             this.cmb_Rol.TabIndex = 26;
             // 
             // FRM_Usuario

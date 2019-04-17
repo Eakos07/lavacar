@@ -76,7 +76,7 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_Empleados.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "", "", "Elija un Empleado");
+            DT_Empleados.Rows.Add("0", "", "", "Elija una opción");
             cmb_Empleados.DisplayMember = DT_Empleados.Columns[3].ToString();
             cmb_Empleados.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_Empleados.SelectedValue = "0";

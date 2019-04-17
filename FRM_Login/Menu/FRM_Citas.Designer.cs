@@ -755,6 +755,7 @@
             this.cmb_HoraCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_HoraCita.FormattingEnabled = true;
             this.cmb_HoraCita.Items.AddRange(new object[] {
+            "Elija una opción",
             "08:00",
             "08:30",
             "09:00",

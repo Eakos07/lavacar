@@ -42,6 +42,7 @@ namespace FRM_Login.Menu
             txt_Direccion.Clear();
             txt_Email.Clear();
 
+            txt_Puesto.SelectedItem = "Elija una opción";
             string sMsjError = string.Empty;
             DataTable DT = new DataTable();
             Obj_DAL.cBandIM = 'I';
@@ -72,7 +73,7 @@ namespace FRM_Login.Menu
         public void Cargar_CMB()
         {
             string sMsjError = string.Empty;
-            txt_Puesto.Text = "Elija un Puesto";
+            
 
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();

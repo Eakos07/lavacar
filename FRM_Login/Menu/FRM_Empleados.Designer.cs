@@ -112,6 +112,7 @@
             this.txt_Puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_Puesto.FormattingEnabled = true;
             this.txt_Puesto.Items.AddRange(new object[] {
+            "Elija una opción",
             "Administrador",
             "Supervisor",
             "Cajero",

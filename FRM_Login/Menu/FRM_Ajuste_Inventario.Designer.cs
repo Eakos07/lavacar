@@ -307,6 +307,7 @@
             // 
             // cmb_Articulo
             // 
+            this.cmb_Articulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Articulo.FormattingEnabled = true;
             this.cmb_Articulo.Location = new System.Drawing.Point(242, 72);
             this.cmb_Articulo.Margin = new System.Windows.Forms.Padding(2);

@@ -69,6 +69,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Clientes()
         {
+
             txt_NumPlaca.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtClientes = new DataTable();
@@ -301,7 +302,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Citas()
         {
-            cmb_HoraCita.Text = "Elija una opción";
+            cmb_HoraCita.SelectedItem = "Elija una opción";
             dtp_Fecha.MinDate = DateTime.Now;
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
