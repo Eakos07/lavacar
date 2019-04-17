@@ -22,6 +22,11 @@ namespace FRM_Login.Menu
         cls_TransaccionesCompra_DAL TransC_ObjDAL = new cls_TransaccionesCompra_DAL();
         cls_TransaccionesVenta_DAL TransV_ObjDAL = new cls_TransaccionesVenta_DAL();
 
+        public void Cargar_CMBC()
+        {
+
+        }
+
         private void CargarTransaccionesCompras()
         {
             #region Deshabilitar botones
@@ -120,6 +125,7 @@ namespace FRM_Login.Menu
 
         }
 
+
         private void FRM_Transaccion_Load(object sender, EventArgs e)
         {
             CargarTransaccionesCompras();
@@ -148,31 +154,24 @@ namespace FRM_Login.Menu
                 TransC_ObjDAL = new cls_TransaccionesCompra_DAL();
                 TransC_ObjDAL.cBandera = 'U';
 
-                TransC_ObjDAL.iIdTransaccionCompra = Convert.ToInt32(dgv_TransCompra.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                TransC_ObjDAL.iIdNumOrden = Convert.ToInt32(dgv_TransCompra.SelectedRows[0].Cells[1].Value.ToString().Trim());
-                TransC_ObjDAL.sIdArticulo = dgv_TransCompra.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                TransC_ObjDAL.bIdProveedor = Convert.ToByte(dgv_TransCompra.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                TransC_ObjDAL.sDocumento = dgv_TransCompra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                TransC_ObjDAL.dtFecha = Convert.ToDateTime(dgv_TransCompra.SelectedRows[0].Cells[5].Value.ToString().Trim());
-                TransC_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransCompra.SelectedRows[0].Cells[6].Value.ToString().Trim());
-                TransC_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransCompra.SelectedRows[0].Cells[7].Value.ToString().Trim());
+                txt_IdTranC.Text = dgv_TransCompra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_Orden.Text = dgv_TransCompra.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_ArtC.Text = dgv_TransCompra.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Prov.Text = dgv_TransCompra.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_Doc.Text = dgv_TransCompra.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_FechaC.Text = dgv_TransCompra.SelectedRows[0].Cells[5].Value.ToString().Trim();
+                txt_CantidadC.Text = dgv_TransCompra.SelectedRows[0].Cells[6].Value.ToString().Trim();
+                txt_MontoC.Text = dgv_TransCompra.SelectedRows[0].Cells[7].Value.ToString().Trim();
 
-                txt_IdTranC.Text = TransC_ObjDAL.iIdTransaccionCompra.ToString();
-                txt_Doc.Text = TransC_ObjDAL.sDocumento;
-                txt_FechaC.Text = TransC_ObjDAL.dtFecha.ToString();
-                txt_CantidadC.Text = TransC_ObjDAL.iCantidad.ToString();
-                txt_MontoC.Text = TransC_ObjDAL.dMonto.ToString();
-
+                #region Carga_CMB
                 string sMsjError = string.Empty;
                 //Combobox Ordenes de Compra
                 cls_Ordenes_Compra_BLL BLLOrden = new cls_Ordenes_Compra_BLL();
                 DataTable DTO = new DataTable();
                 DTO = BLLOrden.Listar_OrdenesCompra(ref sMsjError);
-                //DTO.Rows.Add("0", "Seleccione un Valor");
                 cmb_Orden.DataSource = DTO;
-                cmb_Orden.DisplayMember = DTO.Columns[0].ToString();
+                cmb_Orden.DisplayMember = DTO.Columns[1].ToString();
                 cmb_Orden.ValueMember = DTO.Columns[0].ToString();
-                cmb_Orden.SelectedValue = TransC_ObjDAL.iIdNumOrden.ToString();
 
                 //Combobox Articulo
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
@@ -181,7 +180,7 @@ namespace FRM_Login.Menu
                 cmb_ArtC.DataSource = DTA;
                 cmb_ArtC.DisplayMember = DTA.Columns[1].ToString();
                 cmb_ArtC.ValueMember = DTA.Columns[0].ToString();
-                cmb_ArtC.SelectedValue = TransC_ObjDAL.sIdArticulo;
+
                 //Combobox Proveedores
                 cls_Proveedores_BLL BLLProveedores = new cls_Proveedores_BLL();
                 DataTable DTP = new DataTable();
@@ -189,12 +188,7 @@ namespace FRM_Login.Menu
                 cmb_Prov.DataSource = DTP;
                 cmb_Prov.DisplayMember = DTP.Columns[1].ToString();
                 cmb_Prov.ValueMember = DTP.Columns[0].ToString();
-                cmb_Prov.SelectedValue = TransC_ObjDAL.bIdProveedor;
-
-
-
-                txt_FiltrarArticulos.Text = string.Empty;
-                CargarTransaccionesCompras();
+                #endregion
             }
         }
 
@@ -219,20 +213,15 @@ namespace FRM_Login.Menu
                 TransV_ObjDAL = new cls_TransaccionesVenta_DAL();
                 TransV_ObjDAL.cBandera = 'U';
 
-                TransV_ObjDAL.iIdTransaccionVenta = Convert.ToInt32(dgv_TransVenta.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                TransV_ObjDAL.sIdArticulo = dgv_TransVenta.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                TransV_ObjDAL.iNumFactura = Convert.ToInt32(dgv_TransVenta.SelectedRows[0].Cells[2].Value.ToString().Trim());
-                TransV_ObjDAL.dFecha = Convert.ToDateTime(dgv_TransVenta.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                TransV_ObjDAL.iCantidad = Convert.ToInt16(dgv_TransVenta.SelectedRows[0].Cells[4].Value.ToString().Trim());
-                TransV_ObjDAL.dMonto = Convert.ToDecimal(dgv_TransVenta.SelectedRows[0].Cells[5].Value.ToString().Trim());
+                txt_IdTransV.Text = dgv_TransVenta.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_ArtV.Text = dgv_TransVenta.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_Fact.Text = dgv_TransVenta.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_FechaV.Text = dgv_TransVenta.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_CantidadV.Text = dgv_TransVenta.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_MontoV.Text = dgv_TransVenta.SelectedRows[0].Cells[5].Value.ToString().Trim();
 
-                txt_IdTransV.Text = TransV_ObjDAL.iIdTransaccionVenta.ToString();
-                txt_FechaV.Text = TransV_ObjDAL.dFecha.ToString();
-                txt_CantidadV.Text = TransV_ObjDAL.iCantidad.ToString();
-                txt_MontoV.Text = TransV_ObjDAL.dMonto.ToString();
-
+                #region Cargar_CMB
                 string sMsjError = string.Empty;
-
                 //Combobox Articulo
                 cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
                 DataTable DTA = new DataTable();
@@ -240,15 +229,15 @@ namespace FRM_Login.Menu
                 cmb_ArtV.DataSource = DTA;
                 cmb_ArtV.DisplayMember = DTA.Columns[1].ToString();
                 cmb_ArtV.ValueMember = DTA.Columns[0].ToString();
-                cmb_ArtV.SelectedValue = TransV_ObjDAL.sIdArticulo;
+
                 //Combobox Factura
                 cls_Factura_BLL BLLFactura = new cls_Factura_BLL();
                 DataTable DTP = new DataTable();
                 DTP = BLLFactura.Listar_Factura(ref sMsjError);
                 cmb_Fact.DataSource = DTP;
-                cmb_Fact.DisplayMember = DTP.Columns[0].ToString();
+                cmb_Fact.DisplayMember = DTP.Columns[1].ToString();
                 cmb_Fact.ValueMember = DTP.Columns[0].ToString();
-                cmb_Fact.SelectedValue = TransV_ObjDAL.iNumFactura;
+
                 //Combobox Estado
                 cls_Estados_BLL BLLEstado = new cls_Estados_BLL();
                 DataTable DTE = new DataTable();
@@ -256,10 +245,7 @@ namespace FRM_Login.Menu
                 cmb_Estado.DataSource = DTE;
                 cmb_Estado.DisplayMember = DTE.Columns[1].ToString();
                 cmb_Estado.ValueMember = DTE.Columns[0].ToString();
-                cmb_Estado.SelectedValue = TransV_ObjDAL.cIdEstado;
-                
-                toolStrip1.Text = string.Empty;
-                CargarTransaccionesVentas();
+                #endregion
             }
         }
 
