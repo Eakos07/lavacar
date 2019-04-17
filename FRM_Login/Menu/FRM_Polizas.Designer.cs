@@ -152,7 +152,6 @@
             this.txt_CeduJurid.Name = "txt_CeduJurid";
             this.txt_CeduJurid.Size = new System.Drawing.Size(178, 23);
             this.txt_CeduJurid.TabIndex = 3;
-            this.txt_CeduJurid.Text = "3101259478";
             this.txt_CeduJurid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CeduJurid_KeyPress);
             // 
             // label5

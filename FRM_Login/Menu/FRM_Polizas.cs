@@ -103,6 +103,7 @@ namespace FRM_Login.Menu
             cmb_IdTipoPoliza.SelectedValue = "0";
             #endregion
         }
+
         public void Cargar_TipoPolizas()
         {
             cls_TipoPolizas_BLL Obj_TipoPolizas_BLL = new cls_TipoPolizas_BLL();
