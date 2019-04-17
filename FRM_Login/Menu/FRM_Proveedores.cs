@@ -139,6 +139,7 @@ namespace FRM_Login.Menu
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
+                    Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
                     Obj_BLL.Modificar_Proveedores(ref sMsjError, ref Obj_DAL);
                     if (sMsjError == string.Empty)
                     {
