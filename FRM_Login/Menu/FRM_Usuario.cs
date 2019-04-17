@@ -97,12 +97,13 @@ namespace FRM_Login.Menu
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_Usuario.Text)) && !(string.IsNullOrEmpty(txt_Contraseña.Text)) && cmb_Estado.SelectedValue.ToString() != "0"
-                &&  cmb_Empleados.SelectedValue.ToString() != "0")
+                &&  cmb_Empleados.SelectedValue.ToString() != "0" && cmb_Rol.SelectedValue.ToString() != "0")
             {
                 Obj_DAL.sIdUsuario = txt_Usuario.Text;
                 Obj_DAL.sContraseña = txt_Contraseña.Text;
                 Obj_DAL.bIdRole = Convert.ToByte(cmb_Empleados.SelectedValue);
                 Obj_DAL.cIdEstado = Convert.ToChar(cmb_Estado.SelectedValue);
+                Obj_DAL.bIdEmpleado = Convert.ToByte(cmb_Empleados.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')
@@ -162,6 +163,7 @@ namespace FRM_Login.Menu
                 txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
 
@@ -180,6 +182,7 @@ namespace FRM_Login.Menu
                 txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
 

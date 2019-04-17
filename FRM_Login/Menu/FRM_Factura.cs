@@ -127,7 +127,7 @@ namespace FRM_Login.Menu
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_MontoNeto.Text)) && !(string.IsNullOrEmpty(txt_Descuent.Text)) && !(string.IsNullOrEmpty(txt_MontoTotal.Text))
-                && cmb_NumPlaca.SelectedValue.ToString() != "Elija Placa" && cmb_CodServ.ToString() != "0" && cmb_IdTipCamb.SelectedValue.ToString() != "Elija Tipo Cambio"
+                && cmb_NumPlaca.SelectedValue.ToString() != "Elija una opción" && cmb_CodServ.ToString() != "0" && cmb_IdTipCamb.SelectedValue.ToString() != "Elija una opción"
                 && cmb_IdPromo.SelectedValue.ToString() != "0"
                 && cmb_IdTipFactu.Text != "0")
             {
@@ -315,7 +315,6 @@ namespace FRM_Login.Menu
         }
     
         #endregion
-
- 
+         
     }
 }

@@ -35,6 +35,7 @@ namespace FRM_Login.Menu
             Cargar_Datos_Proveedores();
             Cargar_cmb();
         }
+
         public void Cargar_Datos_Proveedores()
         {
             

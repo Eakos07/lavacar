@@ -9,7 +9,7 @@ namespace LavaCar_DAL.Cat_Mant
     public class cls_Empleados_DAL
     {
         private int  _iTel;
-        private string _sIdenti, _sNombre, _sApellidos, _sAddress, _sEmail, _sPuesto, _sIdPoliza, _sIdUser;
+        private string _sIdenti, _sNombre, _sApellidos, _sAddress, _sEmail, _sPuesto, _sIdPoliza;
         private char _cBandIM, _cIdEstado;
         private byte _bIdEmpleado;
 
@@ -114,19 +114,6 @@ namespace LavaCar_DAL.Cat_Mant
             set
             {
                 _sIdPoliza = value;
-            }
-        }
-
-        public string sIdUser
-        {
-            get
-            {
-                return _sIdUser;
-            }
-
-            set
-            {
-                _sIdUser = value;
             }
         }
 

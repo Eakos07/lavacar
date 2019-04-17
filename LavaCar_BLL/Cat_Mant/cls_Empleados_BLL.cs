@@ -74,7 +74,6 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Empleados"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
@@ -105,7 +104,6 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Empleados"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);

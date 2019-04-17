@@ -77,7 +77,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_IdEstadoFamilia.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_IdEstadoFamilia.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_IdEstadoFamilia.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstadoFamilia.SelectedValue = "0";            
@@ -121,7 +121,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_Estado_Articulos.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_Estado_Articulos.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_Estado_Articulos.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_Estado_Articulos.SelectedValue = "0";
@@ -132,7 +132,7 @@ namespace FRM_Login.Menu
             DataTable DT_FamiliaArticulo = new DataTable();
             DT_FamiliaArticulo = Obj_FamiliaArticulos_BLL.Listar_FamiliaArticulos(ref sMsjError);
             cmb_IdFamilia_Articulo.DataSource = DT_FamiliaArticulo;
-            DT_FamiliaArticulo.Rows.Add("0", "Elija Estado");
+            DT_FamiliaArticulo.Rows.Add("0", "Elija una opción");
             cmb_IdFamilia_Articulo.DisplayMember = DT_FamiliaArticulo.Columns[1].ToString();
             cmb_IdFamilia_Articulo.ValueMember = DT_FamiliaArticulo.Columns[0].ToString();
             cmb_IdFamilia_Articulo.SelectedValue = "0";
@@ -143,7 +143,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoArticulo = new DataTable();
             DT_TipoArticulo = Obj_TipoArticulos_BLL.Listar_TipoArticulo(ref sMsjError);
             cmb_Tipo_Articulo.DataSource = DT_TipoArticulo;
-            DT_TipoArticulo.Rows.Add("0", "Elija Estado");
+            DT_TipoArticulo.Rows.Add("0", "Elija una opción");
             cmb_Tipo_Articulo.DisplayMember = DT_TipoArticulo.Columns[1].ToString();
             cmb_Tipo_Articulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
             cmb_Tipo_Articulo.SelectedValue = "0";
@@ -184,7 +184,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoArticulo = new DataTable();
             DT_TipoArticulo = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_EstadoTipoArticulo.DataSource = DT_TipoArticulo;
-            DT_TipoArticulo.Rows.Add("0", "Elija Estado");
+            DT_TipoArticulo.Rows.Add("0", "Elija una opción");
             cmb_EstadoTipoArticulo.DisplayMember = DT_TipoArticulo.Columns[1].ToString();
             cmb_EstadoTipoArticulo.ValueMember = DT_TipoArticulo.Columns[0].ToString();
             cmb_EstadoTipoArticulo.SelectedValue = "0";

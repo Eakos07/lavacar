@@ -49,7 +49,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoPlaca = new DataTable();
             DT_TipoPlaca = Obj_TipoPlaca_BLL.Listar_TipoPlaca(ref sMsjError);
             cmbTipoPlacaVehiculo.DataSource = DT_TipoPlaca;
-            DT_TipoPlaca.Rows.Add("0", "Elija Tipo de Placa");
+            DT_TipoPlaca.Rows.Add("0", "Elija una opción");
             cmbTipoPlacaVehiculo.DisplayMember = DT_TipoPlaca.Columns[1].ToString();
             cmbTipoPlacaVehiculo.ValueMember = DT_TipoPlaca.Columns[0].ToString();
             cmbTipoPlacaVehiculo.SelectedValue = "0";
@@ -60,7 +60,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoVehiculo = new DataTable();
             DT_TipoVehiculo = Obj_TipoVehiculo_BLL.Listar_TipoVehiculo(ref sMsjError);
             cmbTipoVehiculo.DataSource = DT_TipoVehiculo;
-            DT_TipoVehiculo.Rows.Add("0", "Elija Tipo Vehículo");
+            DT_TipoVehiculo.Rows.Add("0", "Elija una opción");
             cmbTipoVehiculo.DisplayMember = DT_TipoVehiculo.Columns[1].ToString();
             cmbTipoVehiculo.ValueMember = DT_TipoVehiculo.Columns[0].ToString();
             cmbTipoVehiculo.SelectedValue = "0";
@@ -301,6 +301,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Citas()
         {
+            cmb_HoraCita.Text = "Elija una opción";
             dtp_Fecha.MinDate = DateTime.Now;
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
@@ -337,7 +338,7 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_EmpleadoCitas.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "", "", "Elija un Empleado");
+            DT_Empleados.Rows.Add("0", "", "", "Elija una opción");
             cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[3].ToString();
             cmb_EmpleadoCitas.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_EmpleadoCitas.SelectedValue = "0";
@@ -348,7 +349,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_EstadoCita.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_EstadoCita.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_EstadoCita.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_EstadoCita.SelectedValue = "0";
@@ -359,10 +360,10 @@ namespace FRM_Login.Menu
             DataTable DT_Clientes = new DataTable();
             DT_Clientes = Obj_Clientes_BLL.Listar_Clientes(ref sMsjError);
             cmb_RegistroPlaca.DataSource = DT_Clientes;
-            DT_Clientes.Rows.Add("Elija un Cliente", "0");
+            DT_Clientes.Rows.Add("Elija una opción", "0");
             cmb_RegistroPlaca.DisplayMember = DT_Clientes.Columns[0].ToString();
             cmb_RegistroPlaca.ValueMember = DT_Clientes.Columns[0].ToString();
-            cmb_RegistroPlaca.SelectedValue = "Elija un Cliente";
+            cmb_RegistroPlaca.SelectedValue = "Elija una opción";
             #endregion
 
             #region Tipo Servicio
@@ -370,7 +371,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoServicio = new DataTable();
             DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
             cmb_TipoServicio.DataSource = DT_TipoServicio;
-            DT_TipoServicio.Rows.Add("0", "Elija un Servicio");
+            DT_TipoServicio.Rows.Add("0", "Elija una opción");
             cmb_TipoServicio.DisplayMember = DT_TipoServicio.Columns[1].ToString();
             cmb_TipoServicio.ValueMember = DT_TipoServicio.Columns[0].ToString();
             cmb_TipoServicio.SelectedValue = "0";
@@ -383,7 +384,7 @@ namespace FRM_Login.Menu
 
             if ((txt_NomCliente.Text.Trim() != string.Empty)
                  && (txt_Email.Text.Trim() != string.Empty)
-                 && (cmb_HoraCita.Text != "Elegir Hora")
+                 && (cmb_HoraCita.Text != "Elija una opción")
                  && (cmb_EstadoCita.SelectedValue.ToString() != "0")
                  && (cmb_RegistroPlaca.SelectedValue.ToString() != "0")
                  && (cmb_TipoServicio.SelectedValue.ToString() != "0")
@@ -458,7 +459,7 @@ namespace FRM_Login.Menu
         {
             CargarDatos_Citas();
             Cargar_Cmb_Citas();
-            cmb_HoraCita.Text = "Elegir Hora";
+            cmb_HoraCita.Text = "Elija una opción";
         }
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

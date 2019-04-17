@@ -73,6 +73,7 @@ namespace FRM_Login.Menu
         {
             string sMsjError = string.Empty;
             txt_Puesto.Text = "Elija un Puesto";
+
             #region Cargar Estados
             cls_Estados_BLL Obj_Estados_BLL = new cls_Estados_BLL();
             DataTable DT_Estados = new DataTable();
@@ -89,30 +90,19 @@ namespace FRM_Login.Menu
             DataTable DT_Polizas = new DataTable();
             DT_Polizas = Obj_Polizas_BLL.Listar_Polizas(ref sMsjError);
             cmb_IdPoliza.DataSource = DT_Polizas;
-            DT_Polizas.Rows.Add("Elija una póliza","0");
+            DT_Polizas.Rows.Add("Elija una opción", "0");
             cmb_IdPoliza.DisplayMember = DT_Polizas.Columns[0].ToString();
             cmb_IdPoliza.ValueMember = DT_Polizas.Columns[0].ToString();
-            cmb_IdPoliza.SelectedValue = "Elija una póliza";
+            cmb_IdPoliza.SelectedValue = "Elija una opción";
             #endregion
 
-            #region Cargar Usuarios
-            cls_Usuarios_BLL Obj_Usuarios_BLL = new cls_Usuarios_BLL();
-            DataTable DT_Usuarios = new DataTable();
-            DT_Usuarios = Obj_Usuarios_BLL.Listar_Usuarios(ref sMsjError);
-            cmb_IdUsuario.DataSource = DT_Usuarios;
-            DT_Usuarios.Rows.Add("Elija un usuario","0");
-            cmb_IdUsuario.DisplayMember = DT_Usuarios.Columns[0].ToString();
-            cmb_IdUsuario.ValueMember = DT_Usuarios.Columns[0].ToString();
-            cmb_IdUsuario.SelectedValue = "Elija un usuario";
-            #endregion
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_Identificacion.Text)) && !(string.IsNullOrEmpty(txt_Nombre.Text)) && !(string.IsNullOrEmpty(txt_Apellido.Text))
                 && !(string.IsNullOrEmpty(txt_Telefono.Text)) && !(string.IsNullOrEmpty(txt_Direccion.Text)) && !(string.IsNullOrEmpty(txt_Email.Text))
-                && !(string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" && cmb_IdPoliza.SelectedValue.ToString() != "Elija una póliza"
-                && cmb_IdUsuario.SelectedValue.ToString() != "Elija un usuario")
+                && !(string.IsNullOrEmpty(txt_Puesto.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" && cmb_IdPoliza.SelectedValue.ToString() != "Elija una opción")
             {
                 if (email_bien_escrito(txt_Email.Text) == true)
 
@@ -126,7 +116,6 @@ namespace FRM_Login.Menu
                     Obj_DAL.sPuesto = txt_Puesto.Text;
                     Obj_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
                     Obj_DAL.sIdPoliza = cmb_IdPoliza.SelectedValue.ToString().Trim();
-                    Obj_DAL.sIdUser = cmb_IdUsuario.SelectedValue.ToString().Trim();
                     string sMsjError = string.Empty;
 
                     if (Obj_DAL.cBandIM == 'I')
@@ -201,24 +190,29 @@ namespace FRM_Login.Menu
                 txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-                cmb_IdUsuario.Text = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
             }
         }
 
         private void dgv_Empleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txt_IdEmpleado.Text = dgv_Empleados.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Identificacion.Text = dgv_Empleados.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_Nombre.Text = dgv_Empleados.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            txt_Apellido.Text = dgv_Empleados.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            txt_Telefono.Text = dgv_Empleados.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
-            txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
-            txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
-            cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
-            cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            cmb_IdUsuario.Text = dgv_Empleados.SelectedRows[0].Cells[10].Value.ToString().Trim();
+            if (dgv_Empleados.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdEmpleado.Text = dgv_Empleados.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Identificacion.Text = dgv_Empleados.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Nombre.Text = dgv_Empleados.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Apellido.Text = dgv_Empleados.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_Telefono.Text = dgv_Empleados.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
+                txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
+                txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
+            }
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)
@@ -335,11 +329,6 @@ namespace FRM_Login.Menu
         }
 
         private void cmb_IdPoliza_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void cmb_IdUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
