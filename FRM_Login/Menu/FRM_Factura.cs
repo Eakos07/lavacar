@@ -30,6 +30,7 @@ namespace FRM_Login.Menu
             Cargar_Datos_Factura();
             Cargar_cmb();
         }
+
         public void Cargar_Datos_Factura()
         {
             string sMsjError = string.Empty;
@@ -67,10 +68,10 @@ namespace FRM_Login.Menu
             DataTable DT_Clientes = new DataTable();
             DT_Clientes = Obj_Clientes_BLL.Listar_Clientes(ref sMsjError);
             cmb_NumPlaca.DataSource = DT_Clientes;
-            DT_Clientes.Rows.Add("Elija Placa", "0");
+            DT_Clientes.Rows.Add("Elija una opción", "0");
             cmb_NumPlaca.DisplayMember = DT_Clientes.Columns[0].ToString();
             cmb_NumPlaca.ValueMember = DT_Clientes.Columns[0].ToString();
-            cmb_NumPlaca.SelectedValue = "Elija Placa";
+            cmb_NumPlaca.SelectedValue = "Elija una opción";
             #endregion
 
             #region Tipo Servicio
@@ -78,7 +79,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoServicio = new DataTable();
             DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
             cmb_CodServ.DataSource = DT_TipoServicio;
-            DT_TipoServicio.Rows.Add("0", "Elija el Servicio");
+            DT_TipoServicio.Rows.Add("0", "Elija una opción");
             cmb_CodServ.DisplayMember = DT_TipoServicio.Columns[1].ToString();
             cmb_CodServ.ValueMember = DT_TipoServicio.Columns[0].ToString();
             cmb_CodServ.SelectedValue = "0";
@@ -89,10 +90,10 @@ namespace FRM_Login.Menu
             DataTable DT_TipoCambio = new DataTable();
             DT_TipoCambio = Obj_TipoCambio_BLL.Listar_TipoCambio(ref sMsjError);
             cmb_IdTipCamb.DataSource = DT_TipoCambio;
-            DT_TipoCambio.Rows.Add("Elija Tipo Cambio", "0");
+            DT_TipoCambio.Rows.Add("Elija una opción", "0");
             cmb_IdTipCamb.DisplayMember = DT_TipoCambio.Columns[1].ToString();
             cmb_IdTipCamb.ValueMember = DT_TipoCambio.Columns[0].ToString();
-            cmb_IdTipCamb.SelectedValue = "Elija Tipo Cambio";
+            cmb_IdTipCamb.SelectedValue = "Elija una opción";
             #endregion
 
             #region Promociones
@@ -100,7 +101,7 @@ namespace FRM_Login.Menu
             DataTable DT_Promociones = new DataTable();
             DT_Promociones = Obj_Promociones_BLL.Listar_Promociones(ref sMsjError);
             cmb_IdPromo.DataSource = DT_Promociones;
-            DT_Promociones.Rows.Add("0", "Elija Promocion");
+            DT_Promociones.Rows.Add("0", "Elija una opción");
             cmb_IdPromo.DisplayMember = DT_Promociones.Columns[1].ToString();
             cmb_IdPromo.ValueMember = DT_Promociones.Columns[0].ToString();
             cmb_IdPromo.SelectedValue = "0";
@@ -111,7 +112,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoFactura = new DataTable();
             DT_TipoFactura = Obj_TipoFactura_BLL.Listar_TipoFactura(ref sMsjError);
             cmb_IdTipFactu.DataSource = DT_TipoFactura;
-            DT_TipoFactura.Rows.Add("0", "Elija Tipo Factura");
+            DT_TipoFactura.Rows.Add("0", "Elija una opción");
             cmb_IdTipFactu.DisplayMember = DT_TipoFactura.Columns[1].ToString();
             cmb_IdTipFactu.ValueMember = DT_TipoFactura.Columns[0].ToString();
             cmb_IdTipFactu.SelectedValue = "0";
@@ -122,6 +123,7 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_Factura();
         }
+
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_MontoNeto.Text)) && !(string.IsNullOrEmpty(txt_Descuent.Text)) && !(string.IsNullOrEmpty(txt_MontoTotal.Text))

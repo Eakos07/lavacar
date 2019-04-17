@@ -78,7 +78,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstado.SelectedValue = "0";

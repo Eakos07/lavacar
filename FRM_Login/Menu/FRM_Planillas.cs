@@ -61,7 +61,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstado.SelectedValue = "0";
@@ -72,7 +72,7 @@ namespace FRM_Login.Menu
             DataTable DT_Horarios = new DataTable();
             DT_Horarios = Obj_Horarios_BLL.Listar_Horarios(ref sMsjError);
             cmb_IdHorario.DataSource = DT_Horarios;
-            DT_Horarios.Rows.Add("0", "Elija Estado");
+            DT_Horarios.Rows.Add("0", "Elija una opción");
             cmb_IdHorario.DisplayMember = DT_Horarios.Columns[1].ToString();
             cmb_IdHorario.ValueMember = DT_Horarios.Columns[0].ToString();
             cmb_IdHorario.SelectedValue = "0";
@@ -83,7 +83,7 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_IdEmpleado.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "Elija un Empleado");
+            DT_Empleados.Rows.Add("0", "Elija una opción");
             cmb_IdEmpleado.DisplayMember = DT_Empleados.Columns[1].ToString();
             cmb_IdEmpleado.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_IdEmpleado.SelectedValue = "0";
