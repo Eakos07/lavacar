@@ -88,6 +88,7 @@
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // pictureBox1
             // 

@@ -70,6 +70,12 @@
     <Compile Include="FRM_Administrador.Designer.cs">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_Nivel_Uno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Nivel_Uno.Designer.cs">
+      <DependentUpon>FRM_Nivel_Uno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\FRM_Ajuste_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Administrador.resx">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Nivel_Uno.resx">
+      <DependentUpon>FRM_Nivel_Uno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\FRM_Ajuste_Inventario.resx">
       <DependentUpon>FRM_Ajuste_Inventario.cs</DependentUpon>

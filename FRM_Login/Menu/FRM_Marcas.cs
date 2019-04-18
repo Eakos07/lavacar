@@ -51,5 +51,10 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

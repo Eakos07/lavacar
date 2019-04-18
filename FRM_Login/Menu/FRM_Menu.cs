@@ -81,5 +81,20 @@ namespace FRM_Login
         {
             AbrirVentana(new Menu.FRM_Marcas());
         }
+
+        private void pnlVentana_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

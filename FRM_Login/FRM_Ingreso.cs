@@ -120,6 +120,14 @@ namespace FRM_Login
                     {
                         MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    else if (c == 1)
+                    {
+                        this.Hide();
+                        MessageBox.Show("Bienvenido: " + txtUsuarioLogin.Text);
+                        Conex.Close();
+                        FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
+                        PantallaMenu1.ShowDialog();
+                    }
                    
                     
                     
