@@ -52,8 +52,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_Refrescar_Articulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Modificar_Articulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_Modificar_Articulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -68,8 +68,8 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_RefrescarFamilia = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_ModificarFamilia = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_ModificarFamilia = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -89,14 +89,14 @@
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.btn_Refrescar_TipoArticulos = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
-            this.btn_Modificar_TipoArticulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_Modificar_TipoArticulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel11 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarTipoArticulos = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_TipoArticulos = new System.Windows.Forms.DataGridView();
@@ -425,6 +425,11 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Refrescar";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
             // btn_Modificar_Articulo
             // 
             this.btn_Modificar_Articulo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -434,11 +439,6 @@
             this.btn_Modificar_Articulo.Size = new System.Drawing.Size(24, 24);
             this.btn_Modificar_Articulo.Text = "toolStripButton1";
             this.btn_Modificar_Articulo.Click += new System.EventHandler(this.btn_Modificar_Articulo_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel2
             // 
@@ -454,6 +454,7 @@
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Enabled = false;
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
@@ -596,6 +597,11 @@
             this.toolStripLabel5.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel5.Text = "Refrescar";
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            // 
             // btn_ModificarFamilia
             // 
             this.btn_ModificarFamilia.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -605,11 +611,6 @@
             this.btn_ModificarFamilia.Size = new System.Drawing.Size(24, 24);
             this.btn_ModificarFamilia.Text = "toolStripButton1";
             this.btn_ModificarFamilia.Click += new System.EventHandler(this.btn_ModificarFamilia_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel6
             // 
@@ -625,6 +626,7 @@
             // toolStripButton6
             // 
             this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Enabled = false;
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
@@ -824,6 +826,11 @@
             this.toolStripLabel9.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel9.Text = "Refrescar";
             // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            // 
             // btn_Modificar_TipoArticulo
             // 
             this.btn_Modificar_TipoArticulo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -834,16 +841,16 @@
             this.btn_Modificar_TipoArticulo.Text = "toolStripButton1";
             this.btn_Modificar_TipoArticulo.Click += new System.EventHandler(this.btn_Modificar_TipoArticulo_Click);
             // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel10
             // 
             this.toolStripLabel10.Name = "toolStripLabel10";
             this.toolStripLabel10.Size = new System.Drawing.Size(58, 24);
             this.toolStripLabel10.Text = "Modificar";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton8
             // 
@@ -854,30 +861,26 @@
             this.toolStripButton8.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton8.Text = "toolStripButton2";
             // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel11
             // 
             this.toolStripLabel11.Name = "toolStripLabel11";
             this.toolStripLabel11.Size = new System.Drawing.Size(50, 24);
             this.toolStripLabel11.Text = "Eliminar";
             // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
+            // 
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Enabled = false;
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Text = "toolStripButton3";
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel12
             // 

@@ -53,10 +53,10 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_Filtrar = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Ordenes_Compra = new System.Windows.Forms.DataGridView();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -81,9 +81,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(788, 251);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -93,7 +93,7 @@
             // 
             this.txt_NumOrden.Enabled = false;
             this.txt_NumOrden.Location = new System.Drawing.Point(143, 37);
-            this.txt_NumOrden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NumOrden.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumOrden.Name = "txt_NumOrden";
             this.txt_NumOrden.Size = new System.Drawing.Size(156, 23);
             this.txt_NumOrden.TabIndex = 8;
@@ -104,12 +104,15 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
+            this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exit.Location = new System.Drawing.Point(663, 196);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 7;
             this.btn_Exit.Text = "Salir";
+            this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
@@ -119,19 +122,22 @@
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.Image")));
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Save.Location = new System.Drawing.Point(514, 196);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 6;
             this.btn_Save.Text = "Guardar";
+            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // txt_Precio
             // 
             this.txt_Precio.Location = new System.Drawing.Point(469, 37);
-            this.txt_Precio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Precio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(156, 23);
             this.txt_Precio.TabIndex = 4;
@@ -139,7 +145,7 @@
             // txt_Cantidad
             // 
             this.txt_Cantidad.Location = new System.Drawing.Point(143, 158);
-            this.txt_Cantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Cantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(156, 23);
             this.txt_Cantidad.TabIndex = 3;
@@ -149,7 +155,7 @@
             this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(469, 75);
-            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdEstado.TabIndex = 5;
@@ -159,7 +165,7 @@
             this.cmb_IdArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdArticulo.FormattingEnabled = true;
             this.cmb_IdArticulo.Location = new System.Drawing.Point(143, 113);
-            this.cmb_IdArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdArticulo.Name = "cmb_IdArticulo";
             this.cmb_IdArticulo.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdArticulo.TabIndex = 2;
@@ -169,7 +175,7 @@
             this.cmb_IdProve.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdProve.FormattingEnabled = true;
             this.cmb_IdProve.Location = new System.Drawing.Point(143, 75);
-            this.cmb_IdProve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_IdProve.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdProve.Name = "cmb_IdProve";
             this.cmb_IdProve.Size = new System.Drawing.Size(156, 25);
             this.cmb_IdProve.TabIndex = 1;
@@ -240,9 +246,9 @@
             this.groupBox2.Controls.Add(this.dgv_Ordenes_Compra);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(4, 272);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 293);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -258,7 +264,7 @@
             this.btn_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripSeparator3,
+            this.toolStripButton1,
             this.toolStripLabel4,
             this.txt_Filtrar});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -309,11 +315,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -336,7 +337,7 @@
             this.dgv_Ordenes_Compra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ordenes_Compra.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Ordenes_Compra.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Ordenes_Compra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Ordenes_Compra.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Ordenes_Compra.MultiSelect = false;
             this.dgv_Ordenes_Compra.Name = "dgv_Ordenes_Compra";
             this.dgv_Ordenes_Compra.RowTemplate.Height = 24;
@@ -344,6 +345,16 @@
             this.dgv_Ordenes_Compra.Size = new System.Drawing.Size(781, 237);
             this.dgv_Ordenes_Compra.TabIndex = 0;
             this.dgv_Ordenes_Compra.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ordenes_Compra_CellContentDoubleClick);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Ordenes___de_Compras
             // 
@@ -354,7 +365,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Ordenes___de_Compras";
             this.Text = "FRM_Ordenes___de_Compras";
             this.Load += new System.EventHandler(this.FRM_Ordenes___de_Compras_Load);
@@ -394,10 +405,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton btn_Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_Filtrar;
         private System.Windows.Forms.DataGridView dgv_Ordenes_Compra;
         private System.Windows.Forms.TextBox txt_NumOrden;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

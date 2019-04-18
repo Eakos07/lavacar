@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Promociones));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdPromociones = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txt_descrip = new System.Windows.Forms.TextBox();
@@ -45,11 +46,10 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPromociones = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Promociones = new System.Windows.Forms.DataGridView();
-            this.txt_IdPromociones = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -68,13 +68,23 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(8, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(782, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Promociones";
+            // 
+            // txt_IdPromociones
+            // 
+            this.txt_IdPromociones.Location = new System.Drawing.Point(208, 51);
+            this.txt_IdPromociones.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_IdPromociones.MaxLength = 1;
+            this.txt_IdPromociones.Name = "txt_IdPromociones";
+            this.txt_IdPromociones.Size = new System.Drawing.Size(171, 23);
+            this.txt_IdPromociones.TabIndex = 5;
+            this.txt_IdPromociones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPromociones_KeyPress);
             // 
             // btnSalir
             // 
@@ -82,12 +92,15 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(679, 158);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.Location = new System.Drawing.Point(656, 158);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(86, 30);
+            this.btnSalir.Size = new System.Drawing.Size(110, 30);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -97,18 +110,21 @@
             this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(545, 158);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(656, 99);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(115, 30);
+            this.btnAceptar.Size = new System.Drawing.Size(110, 30);
             this.btnAceptar.TabIndex = 3;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Guardar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
             // 
             // txt_descrip
             // 
             this.txt_descrip.Location = new System.Drawing.Point(210, 142);
-            this.txt_descrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_descrip.Margin = new System.Windows.Forms.Padding(2);
             this.txt_descrip.MaxLength = 70;
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
@@ -118,7 +134,7 @@
             // txt_TipoPromo
             // 
             this.txt_TipoPromo.Location = new System.Drawing.Point(209, 97);
-            this.txt_TipoPromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TipoPromo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TipoPromo.MaxLength = 20;
             this.txt_TipoPromo.Name = "txt_TipoPromo";
             this.txt_TipoPromo.Size = new System.Drawing.Size(171, 23);
@@ -160,9 +176,9 @@
             this.groupBox2.Controls.Add(this.dgv_Promociones);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(8, 245);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(792, 328);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -172,13 +188,13 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
             this.btn_Refrescar,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripLabel2,
             this.btn_Modificar,
+            this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripSeparator3,
+            this.toolStripButton1,
             this.toolStripLabel4,
             this.txt_FiltrarPromociones});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -228,11 +244,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -255,7 +266,7 @@
             this.dgv_Promociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Promociones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Promociones.Location = new System.Drawing.Point(4, 51);
-            this.dgv_Promociones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Promociones.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Promociones.MultiSelect = false;
             this.dgv_Promociones.Name = "dgv_Promociones";
             this.dgv_Promociones.RowTemplate.Height = 24;
@@ -264,15 +275,15 @@
             this.dgv_Promociones.TabIndex = 0;
             this.dgv_Promociones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Promociones_CellContentClick);
             // 
-            // txt_IdPromociones
+            // toolStripButton1
             // 
-            this.txt_IdPromociones.Location = new System.Drawing.Point(208, 51);
-            this.txt_IdPromociones.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_IdPromociones.MaxLength = 1;
-            this.txt_IdPromociones.Name = "txt_IdPromociones";
-            this.txt_IdPromociones.Size = new System.Drawing.Size(171, 23);
-            this.txt_IdPromociones.TabIndex = 5;
-            this.txt_IdPromociones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPromociones_KeyPress);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Promociones
             // 
@@ -283,7 +294,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Promociones";
             this.Text = "FRM_Promociones";
             this.Load += new System.EventHandler(this.FRM_Promociones_Load);
@@ -316,10 +327,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton btn_Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarPromociones;
         private System.Windows.Forms.DataGridView dgv_Promociones;
         private System.Windows.Forms.TextBox txt_IdPromociones;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

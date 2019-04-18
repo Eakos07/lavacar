@@ -41,7 +41,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarClientes = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.dgv_Cliente = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_NumVisitas = new System.Windows.Forms.TextBox();
@@ -65,7 +64,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarCitas = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.dgv_Citas = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
@@ -90,6 +88,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,9 +152,9 @@
             this.btn_RC_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
+            this.toolStripButton1,
             this.toolStripLabel3,
-            this.txt_FiltrarClientes,
-            this.toolStripSeparator3});
+            this.txt_FiltrarClientes});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(710, 27);
@@ -214,11 +214,6 @@
             this.txt_FiltrarClientes.Name = "txt_FiltrarClientes";
             this.txt_FiltrarClientes.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarClientes.TextChanged += new System.EventHandler(this.txt_FiltrarClientes_TextChanged);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // dgv_Cliente
             // 
@@ -286,12 +281,15 @@
             this.btn_RC_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Exit.Image")));
+            this.btn_RC_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Exit.Location = new System.Drawing.Point(596, 126);
             this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Exit.Name = "btn_RC_Exit";
             this.btn_RC_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Exit.TabIndex = 4;
             this.btn_RC_Exit.Text = "Salir";
+            this.btn_RC_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Exit.UseVisualStyleBackColor = false;
             this.btn_RC_Exit.Click += new System.EventHandler(this.btn_RC_Exit_Click);
             // 
@@ -301,12 +299,15 @@
             this.btn_RC_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Save.Image")));
+            this.btn_RC_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Save.Location = new System.Drawing.Point(471, 126);
             this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Save.Name = "btn_RC_Save";
             this.btn_RC_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Save.TabIndex = 3;
             this.btn_RC_Save.Text = "Guardar";
+            this.btn_RC_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Save.UseVisualStyleBackColor = false;
             this.btn_RC_Save.Click += new System.EventHandler(this.btn_RC_Save_Click);
             // 
@@ -410,9 +411,9 @@
             this.btn_ModificarCitas,
             this.toolStripLabel5,
             this.toolStripSeparator5,
+            this.toolStripButton2,
             this.toolStripLabel6,
-            this.txt_FiltrarCitas,
-            this.toolStripSeparator6});
+            this.txt_FiltrarCitas});
             this.toolStrip2.Location = new System.Drawing.Point(2, 18);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(737, 27);
@@ -472,11 +473,6 @@
             this.txt_FiltrarCitas.Name = "txt_FiltrarCitas";
             this.txt_FiltrarCitas.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarCitas.TextChanged += new System.EventHandler(this.txt_FiltrarCitas_TextChanged);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // dgv_Citas
             // 
@@ -545,12 +541,15 @@
             this.btn_GuardarCitas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GuardarCitas.Location = new System.Drawing.Point(572, 218);
+            this.btn_GuardarCitas.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarCitas.Image")));
+            this.btn_GuardarCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_GuardarCitas.Location = new System.Drawing.Point(489, 218);
             this.btn_GuardarCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarCitas.Name = "btn_GuardarCitas";
-            this.btn_GuardarCitas.Size = new System.Drawing.Size(76, 30);
+            this.btn_GuardarCitas.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarCitas.TabIndex = 29;
             this.btn_GuardarCitas.Text = "Guardar";
+            this.btn_GuardarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarCitas.UseVisualStyleBackColor = false;
             this.btn_GuardarCitas.Click += new System.EventHandler(this.btn_GuardarCitas_Click);
             // 
@@ -711,12 +710,15 @@
             this.btn_Citas_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Citas_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Citas_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Citas_Exit.Location = new System.Drawing.Point(676, 218);
+            this.btn_Citas_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Citas_Exit.Image")));
+            this.btn_Citas_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Citas_Exit.Location = new System.Drawing.Point(620, 218);
             this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Citas_Exit.Name = "btn_Citas_Exit";
-            this.btn_Citas_Exit.Size = new System.Drawing.Size(61, 30);
+            this.btn_Citas_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Citas_Exit.TabIndex = 6;
             this.btn_Citas_Exit.Text = "Salir";
+            this.btn_Citas_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Citas_Exit.UseVisualStyleBackColor = false;
             this.btn_Citas_Exit.Click += new System.EventHandler(this.btn_Citas_Exit_Click);
             // 
@@ -780,6 +782,26 @@
             this.cmb_HoraCita.TabIndex = 1;
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Enabled = false;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // FRM_Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -826,7 +848,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarClientes;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.DataGridView dgv_Cliente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
@@ -860,7 +881,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarCitas;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.DataGridView dgv_Citas;
         private System.Windows.Forms.Button btn_RC_Exit;
         private System.Windows.Forms.Button btn_RC_Save;
@@ -876,5 +896,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_NumCita;
         private System.Windows.Forms.MaskedTextBox txt_Telefono;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
