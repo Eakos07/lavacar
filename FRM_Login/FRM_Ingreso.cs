@@ -92,19 +92,35 @@ namespace FRM_Login
                 Conex.ConnectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
                  Conex.Open();
 
-                 SqlCommand cmd = new SqlCommand("Select IdUsuario, Contraseña from Sch_Administrativo.T_Usuarios where IdUsuario = '" + txtUsuarioLogin.Text+"' and Contraseña='"+txtContrase.Text+"'",Conex);
+                 SqlCommand cmd = new SqlCommand("Select IdUsuario, Contraseña, IdRole from Sch_Administrativo.T_Usuarios where IdUsuario = '" + txtUsuarioLogin.Text+"' and Contraseña='"+txtContrase.Text+"'",Conex);
                  SqlDataReader dr = cmd.ExecuteReader();
+                string a = string.Empty;
+                string b = string.Empty;
+                byte c = 0;
+
+                
                 
 
                 if (dr.Read() == true)
              {
-                    
-                    this.Hide();
-                    MessageBox.Show("Bienvenido Usuario " + txtUsuarioLogin.Text);
-                    
-                    Conex.Close();
-                    Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador();
-                    PantallaMenu.ShowDialog();
+                    a = dr.GetString(0);
+                    b = dr.GetString(1);
+                    c = dr.GetByte(2);
+
+                    if (c == 3)
+                    {
+                        this.Hide();
+                        MessageBox.Show("Bienvenido: " + txtUsuarioLogin.Text);
+
+                        Conex.Close();
+                        Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador();
+                        PantallaMenu.ShowDialog();
+                    }
+                    else if (c == 2)
+                    {
+                        MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                   
                     
                     
              }

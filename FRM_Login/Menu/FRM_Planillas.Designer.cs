@@ -48,10 +48,10 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPlanillas = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Planillas = new System.Windows.Forms.DataGridView();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -95,12 +95,15 @@
             this.btn_Exite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exite.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exite.Image")));
+            this.btn_Exite.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exite.Location = new System.Drawing.Point(659, 162);
             this.btn_Exite.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exite.Name = "btn_Exite";
             this.btn_Exite.Size = new System.Drawing.Size(110, 30);
             this.btn_Exite.TabIndex = 5;
             this.btn_Exite.Text = "Salir";
+            this.btn_Exite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exite.UseVisualStyleBackColor = false;
             this.btn_Exite.Click += new System.EventHandler(this.btn_Exite_Click);
             // 
@@ -110,12 +113,15 @@
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.Image")));
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Save.Location = new System.Drawing.Point(497, 162);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Guardar";
+            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -213,7 +219,7 @@
             this.btn_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripSeparator3,
+            this.toolStripButton1,
             this.toolStripLabel4,
             this.txt_FiltrarPlanillas});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -264,11 +270,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -299,6 +300,16 @@
             this.dgv_Planillas.Size = new System.Drawing.Size(781, 237);
             this.dgv_Planillas.TabIndex = 0;
             this.dgv_Planillas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Planillas_CellDoubleClick);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Planillas
             // 
@@ -344,10 +355,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton btn_Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarPlanillas;
         private System.Windows.Forms.DataGridView dgv_Planillas;
         private System.Windows.Forms.TextBox txt_IdPlanilla;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

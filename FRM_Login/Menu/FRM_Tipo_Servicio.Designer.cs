@@ -55,6 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TipoServicio)).BeginInit();
@@ -86,6 +87,7 @@
             this.btn_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
+            this.toolStripButton1,
             this.toolStripLabel4,
             this.txt_Filtrar});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -272,12 +274,15 @@
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salir.Image")));
+            this.btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Salir.Location = new System.Drawing.Point(652, 170);
             this.btn_Salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(110, 30);
             this.btn_Salir.TabIndex = 6;
             this.btn_Salir.Text = "Salir";
+            this.btn_Salir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Salir.UseVisualStyleBackColor = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
@@ -287,12 +292,15 @@
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guardar.Image")));
+            this.btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Guardar.Location = new System.Drawing.Point(490, 170);
             this.btn_Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(110, 30);
             this.btn_Guardar.TabIndex = 5;
             this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Guardar.UseVisualStyleBackColor = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
@@ -332,6 +340,16 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Tipo_Servicio
             // 
@@ -385,5 +403,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txt_Duracion;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

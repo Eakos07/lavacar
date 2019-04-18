@@ -30,7 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Proveedores));
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPlazoPago = new System.Windows.Forms.NumericUpDown();
+            this.lbl_meses = new System.Windows.Forms.Label();
+            this.txtTelefoProveedor = new System.Windows.Forms.MaskedTextBox();
             this.txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_IdEstadoProveedor = new System.Windows.Forms.ComboBox();
@@ -51,21 +55,27 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarProveedores = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTelefoProveedor = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_meses = new System.Windows.Forms.Label();
-            this.txtPlazoPago = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // groupBox1
             // 
@@ -94,6 +104,47 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Proveedores";
+            // 
+            // txtPlazoPago
+            // 
+            this.txtPlazoPago.Location = new System.Drawing.Point(574, 70);
+            this.txtPlazoPago.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.txtPlazoPago.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtPlazoPago.Name = "txtPlazoPago";
+            this.txtPlazoPago.Size = new System.Drawing.Size(40, 23);
+            this.txtPlazoPago.TabIndex = 36;
+            this.txtPlazoPago.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lbl_meses
+            // 
+            this.lbl_meses.AutoSize = true;
+            this.lbl_meses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_meses.Location = new System.Drawing.Point(619, 72);
+            this.lbl_meses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_meses.Name = "lbl_meses";
+            this.lbl_meses.Size = new System.Drawing.Size(49, 17);
+            this.lbl_meses.TabIndex = 35;
+            this.lbl_meses.Text = "meses";
+            // 
+            // txtTelefoProveedor
+            // 
+            this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 31);
+            this.txtTelefoProveedor.Mask = "00000000";
+            this.txtTelefoProveedor.Name = "txtTelefoProveedor";
+            this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
+            this.txtTelefoProveedor.TabIndex = 34;
             // 
             // txt_IdProveedor
             // 
@@ -131,12 +182,15 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(670, 171);
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.Location = new System.Drawing.Point(642, 171);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(86, 30);
+            this.btnSalir.Size = new System.Drawing.Size(110, 30);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -146,12 +200,15 @@
             this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(522, 171);
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(490, 171);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(115, 30);
+            this.btnAceptar.Size = new System.Drawing.Size(110, 30);
             this.btnAceptar.TabIndex = 6;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Guardar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -258,7 +315,7 @@
             this.btn_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripSeparator3,
+            this.toolStripButton1,
             this.toolStripLabel4,
             this.txt_FiltrarProveedores});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -309,11 +366,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -349,47 +401,6 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
-            // txtTelefoProveedor
-            // 
-            this.txtTelefoProveedor.Location = new System.Drawing.Point(565, 31);
-            this.txtTelefoProveedor.Mask = "00000000";
-            this.txtTelefoProveedor.Name = "txtTelefoProveedor";
-            this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
-            this.txtTelefoProveedor.TabIndex = 34;
-            // 
-            // lbl_meses
-            // 
-            this.lbl_meses.AutoSize = true;
-            this.lbl_meses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_meses.Location = new System.Drawing.Point(619, 72);
-            this.lbl_meses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_meses.Name = "lbl_meses";
-            this.lbl_meses.Size = new System.Drawing.Size(49, 17);
-            this.lbl_meses.TabIndex = 35;
-            this.lbl_meses.Text = "meses";
-            // 
-            // txtPlazoPago
-            // 
-            this.txtPlazoPago.Location = new System.Drawing.Point(574, 70);
-            this.txtPlazoPago.Maximum = new decimal(new int[] {
-            48,
-            0,
-            0,
-            0});
-            this.txtPlazoPago.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtPlazoPago.Name = "txtPlazoPago";
-            this.txtPlazoPago.Size = new System.Drawing.Size(40, 23);
-            this.txtPlazoPago.TabIndex = 36;
-            this.txtPlazoPago.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // FRM_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,13 +416,13 @@
             this.Load += new System.EventHandler(this.FRM_Proveedores_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlazoPago)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,7 +449,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton btn_Modificar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarProveedores;
         private System.Windows.Forms.DataGridView dgv_Proveedores;
@@ -447,5 +457,6 @@
         private System.Windows.Forms.MaskedTextBox txtTelefoProveedor;
         private System.Windows.Forms.Label lbl_meses;
         private System.Windows.Forms.NumericUpDown txtPlazoPago;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

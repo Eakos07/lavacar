@@ -57,7 +57,6 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarArticulos = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Articulos = new System.Windows.Forms.DataGridView();
@@ -74,7 +73,6 @@
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarFamiliaArticulos = new System.Windows.Forms.ToolStripTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -170,7 +168,7 @@
             0,
             0});
             this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
-            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(120, 23);
+            this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(139, 23);
             this.txt_Cantidad_Articulo.TabIndex = 12;
             // 
             // cmb_Tipo_Articulo
@@ -257,12 +255,15 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
+            this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exit.Location = new System.Drawing.Point(650, 193);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 10;
             this.btn_Exit.Text = "Salir";
+            this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
@@ -272,12 +273,15 @@
             this.btn_GuardarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarArticulo.Image")));
+            this.btn_GuardarArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_GuardarArticulo.Location = new System.Drawing.Point(500, 193);
             this.btn_GuardarArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarArticulo.Name = "btn_GuardarArticulo";
             this.btn_GuardarArticulo.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarArticulo.TabIndex = 9;
             this.btn_GuardarArticulo.Text = "Guardar";
+            this.btn_GuardarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarArticulo.UseVisualStyleBackColor = false;
             this.btn_GuardarArticulo.Click += new System.EventHandler(this.btn_GuardarArticulo_Click);
             // 
@@ -389,12 +393,11 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Refrescar_Articulo,
             this.toolStripLabel1,
-            this.btn_Modificar_Articulo,
             this.toolStripSeparator1,
+            this.btn_Modificar_Articulo,
             this.toolStripLabel2,
             this.toolStripSeparator2,
             this.toolStripButton3,
-            this.toolStripSeparator3,
             this.toolStripLabel4,
             this.txt_FiltrarArticulos});
             this.toolStrip1.Location = new System.Drawing.Point(2, 18);
@@ -453,11 +456,6 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton3.Text = "toolStripButton3";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel4
             // 
@@ -566,12 +564,11 @@
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_RefrescarFamilia,
             this.toolStripLabel5,
-            this.btn_ModificarFamilia,
             this.toolStripSeparator4,
+            this.btn_ModificarFamilia,
             this.toolStripLabel6,
             this.toolStripSeparator5,
             this.toolStripButton6,
-            this.toolStripSeparator6,
             this.toolStripLabel8,
             this.txt_FiltrarFamiliaArticulos});
             this.toolStrip2.Location = new System.Drawing.Point(2, 18);
@@ -631,11 +628,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton6.Text = "toolStripButton3";
             // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
@@ -683,12 +675,15 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.Location = new System.Drawing.Point(640, 160);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 30);
             this.button3.TabIndex = 4;
             this.button3.Text = "Salir";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -698,12 +693,15 @@
             this.btn_GuardarFamilia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarFamilia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarFamilia.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarFamilia.Image")));
+            this.btn_GuardarFamilia.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_GuardarFamilia.Location = new System.Drawing.Point(485, 160);
             this.btn_GuardarFamilia.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarFamilia.Name = "btn_GuardarFamilia";
             this.btn_GuardarFamilia.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarFamilia.TabIndex = 3;
             this.btn_GuardarFamilia.Text = "Guardar";
+            this.btn_GuardarFamilia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarFamilia.UseVisualStyleBackColor = false;
             this.btn_GuardarFamilia.Click += new System.EventHandler(this.btn_GuardarFamilia_Click);
             // 
@@ -790,14 +788,14 @@
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Refrescar_TipoArticulos,
             this.toolStripLabel9,
-            this.btn_Modificar_TipoArticulo,
             this.toolStripSeparator7,
+            this.btn_Modificar_TipoArticulo,
             this.toolStripLabel10,
-            this.toolStripButton8,
             this.toolStripSeparator8,
+            this.toolStripButton8,
             this.toolStripLabel11,
-            this.toolStripButton9,
             this.toolStripSeparator9,
+            this.toolStripButton9,
             this.toolStripLabel12,
             this.txt_FiltrarTipoArticulos});
             this.toolStrip3.Location = new System.Drawing.Point(2, 18);
@@ -964,12 +962,15 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(652, 170);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 30);
             this.button5.TabIndex = 4;
             this.button5.Text = "Salir";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -979,12 +980,15 @@
             this.btn_GuardarTipoArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarTipoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarTipoArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarTipoArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarTipoArticulo.Image")));
+            this.btn_GuardarTipoArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_GuardarTipoArticulo.Location = new System.Drawing.Point(490, 170);
             this.btn_GuardarTipoArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarTipoArticulo.Name = "btn_GuardarTipoArticulo";
             this.btn_GuardarTipoArticulo.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarTipoArticulo.TabIndex = 3;
             this.btn_GuardarTipoArticulo.Text = "Guardar";
+            this.btn_GuardarTipoArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarTipoArticulo.UseVisualStyleBackColor = false;
             this.btn_GuardarTipoArticulo.Click += new System.EventHandler(this.btn_GuardarTipoArticulo_Click);
             // 
@@ -1089,7 +1093,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarArticulos;
         private System.Windows.Forms.DataGridView dgv_Articulos;
@@ -1116,7 +1119,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarFamiliaArticulos;
         private System.Windows.Forms.GroupBox groupBox5;

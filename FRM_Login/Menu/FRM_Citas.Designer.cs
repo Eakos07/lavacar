@@ -90,6 +90,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,7 +111,7 @@
             this.tcCitas.Controls.Add(this.tbcCreacionCitas);
             this.tcCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcCitas.Location = new System.Drawing.Point(19, 10);
-            this.tcCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tcCitas.Name = "tcCitas";
             this.tcCitas.SelectedIndex = 0;
             this.tcCitas.Size = new System.Drawing.Size(771, 525);
@@ -120,9 +122,9 @@
             this.tbRegistroClientes.Controls.Add(this.groupBox2);
             this.tbRegistroClientes.Controls.Add(this.groupBox1);
             this.tbRegistroClientes.Location = new System.Drawing.Point(4, 26);
-            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Name = "tbRegistroClientes";
-            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRegistroClientes.Padding = new System.Windows.Forms.Padding(2);
             this.tbRegistroClientes.Size = new System.Drawing.Size(763, 495);
             this.tbRegistroClientes.TabIndex = 0;
             this.tbRegistroClientes.Text = "Registro de Cliente";
@@ -134,9 +136,9 @@
             this.groupBox2.Controls.Add(this.dgv_Cliente);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(20, 193);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(714, 292);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -152,6 +154,7 @@
             this.btn_RC_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
+            this.toolStripButton1,
             this.toolStripLabel3,
             this.txt_FiltrarClientes,
             this.toolStripSeparator3});
@@ -230,7 +233,7 @@
             this.dgv_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Cliente.Location = new System.Drawing.Point(4, 50);
-            this.dgv_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Cliente.MultiSelect = false;
             this.dgv_Cliente.Name = "dgv_Cliente";
             this.dgv_Cliente.RowTemplate.Height = 24;
@@ -253,9 +256,9 @@
             this.groupBox1.Controls.Add(this.txt_NumPlaca);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(714, 172);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -265,7 +268,7 @@
             // 
             this.txt_NumVisitas.Enabled = false;
             this.txt_NumVisitas.Location = new System.Drawing.Point(568, 22);
-            this.txt_NumVisitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NumVisitas.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumVisitas.Name = "txt_NumVisitas";
             this.txt_NumVisitas.Size = new System.Drawing.Size(138, 23);
             this.txt_NumVisitas.TabIndex = 9;
@@ -287,12 +290,15 @@
             this.btn_RC_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Exit.Image")));
+            this.btn_RC_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Exit.Location = new System.Drawing.Point(596, 126);
-            this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Exit.Name = "btn_RC_Exit";
             this.btn_RC_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Exit.TabIndex = 4;
             this.btn_RC_Exit.Text = "Salir";
+            this.btn_RC_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Exit.UseVisualStyleBackColor = false;
             this.btn_RC_Exit.Click += new System.EventHandler(this.btn_RC_Exit_Click);
             // 
@@ -302,12 +308,15 @@
             this.btn_RC_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RC_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Save.Image")));
+            this.btn_RC_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Save.Location = new System.Drawing.Point(471, 126);
-            this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Save.Name = "btn_RC_Save";
             this.btn_RC_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Save.TabIndex = 3;
             this.btn_RC_Save.Text = "Guardar";
+            this.btn_RC_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Save.UseVisualStyleBackColor = false;
             this.btn_RC_Save.Click += new System.EventHandler(this.btn_RC_Save_Click);
             // 
@@ -345,7 +354,7 @@
             // 
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
             this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(280, 119);
-            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoPlacaVehiculo.Name = "cmbTipoPlacaVehiculo";
             this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(138, 25);
             this.cmbTipoPlacaVehiculo.TabIndex = 2;
@@ -355,7 +364,7 @@
             // 
             this.cmbTipoVehiculo.FormattingEnabled = true;
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(280, 67);
-            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
             this.cmbTipoVehiculo.Size = new System.Drawing.Size(138, 25);
             this.cmbTipoVehiculo.TabIndex = 1;
@@ -364,7 +373,7 @@
             // txt_NumPlaca
             // 
             this.txt_NumPlaca.Location = new System.Drawing.Point(280, 22);
-            this.txt_NumPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumPlaca.MaxLength = 7;
             this.txt_NumPlaca.Name = "txt_NumPlaca";
             this.txt_NumPlaca.Size = new System.Drawing.Size(138, 23);
@@ -376,9 +385,9 @@
             this.tbcCreacionCitas.Controls.Add(this.groupBox4);
             this.tbcCreacionCitas.Controls.Add(this.groupBox3);
             this.tbcCreacionCitas.Location = new System.Drawing.Point(4, 26);
-            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Name = "tbcCreacionCitas";
-            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbcCreacionCitas.Padding = new System.Windows.Forms.Padding(2);
             this.tbcCreacionCitas.Size = new System.Drawing.Size(763, 495);
             this.tbcCreacionCitas.TabIndex = 1;
             this.tbcCreacionCitas.Text = "Citas";
@@ -390,9 +399,9 @@
             this.groupBox4.Controls.Add(this.dgv_Citas);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(20, 277);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(741, 215);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
@@ -408,6 +417,7 @@
             this.btn_ModificarCitas,
             this.toolStripLabel5,
             this.toolStripSeparator5,
+            this.toolStripButton2,
             this.toolStripLabel6,
             this.txt_FiltrarCitas,
             this.toolStripSeparator6});
@@ -486,7 +496,7 @@
             this.dgv_Citas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Citas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Citas.Location = new System.Drawing.Point(4, 47);
-            this.dgv_Citas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Citas.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Citas.MultiSelect = false;
             this.dgv_Citas.Name = "dgv_Citas";
             this.dgv_Citas.RowTemplate.Height = 24;
@@ -521,9 +531,9 @@
             this.groupBox3.Controls.Add(this.cmb_HoraCita);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(20, 16);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(741, 257);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -543,12 +553,15 @@
             this.btn_GuardarCitas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GuardarCitas.Location = new System.Drawing.Point(572, 218);
-            this.btn_GuardarCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_GuardarCitas.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarCitas.Image")));
+            this.btn_GuardarCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_GuardarCitas.Location = new System.Drawing.Point(476, 218);
+            this.btn_GuardarCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarCitas.Name = "btn_GuardarCitas";
-            this.btn_GuardarCitas.Size = new System.Drawing.Size(76, 30);
+            this.btn_GuardarCitas.Size = new System.Drawing.Size(110, 30);
             this.btn_GuardarCitas.TabIndex = 29;
             this.btn_GuardarCitas.Text = "Guardar";
+            this.btn_GuardarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarCitas.UseVisualStyleBackColor = false;
             this.btn_GuardarCitas.Click += new System.EventHandler(this.btn_GuardarCitas_Click);
             // 
@@ -566,7 +579,7 @@
             // 
             this.cmb_EmpleadoCitas.FormattingEnabled = true;
             this.cmb_EmpleadoCitas.Location = new System.Drawing.Point(461, 178);
-            this.cmb_EmpleadoCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_EmpleadoCitas.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EmpleadoCitas.Name = "cmb_EmpleadoCitas";
             this.cmb_EmpleadoCitas.Size = new System.Drawing.Size(175, 25);
             this.cmb_EmpleadoCitas.TabIndex = 26;
@@ -586,7 +599,7 @@
             // 
             this.cmb_EstadoCita.FormattingEnabled = true;
             this.cmb_EstadoCita.Location = new System.Drawing.Point(459, 135);
-            this.cmb_EstadoCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_EstadoCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EstadoCita.Name = "cmb_EstadoCita";
             this.cmb_EstadoCita.Size = new System.Drawing.Size(175, 25);
             this.cmb_EstadoCita.TabIndex = 25;
@@ -605,7 +618,7 @@
             // txt_NumCita
             // 
             this.txt_NumCita.Location = new System.Drawing.Point(121, 61);
-            this.txt_NumCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NumCita.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumCita.MaxLength = 5;
             this.txt_NumCita.Name = "txt_NumCita";
             this.txt_NumCita.Size = new System.Drawing.Size(167, 23);
@@ -626,7 +639,7 @@
             // 
             this.cmb_TipoServicio.FormattingEnabled = true;
             this.cmb_TipoServicio.Location = new System.Drawing.Point(459, 96);
-            this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoServicio.Name = "cmb_TipoServicio";
             this.cmb_TipoServicio.Size = new System.Drawing.Size(175, 25);
             this.cmb_TipoServicio.TabIndex = 5;
@@ -655,7 +668,7 @@
             // txt_Email
             // 
             this.txt_Email.Location = new System.Drawing.Point(459, 61);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(175, 23);
             this.txt_Email.TabIndex = 0;
@@ -675,7 +688,7 @@
             // 
             this.cmb_RegistroPlaca.FormattingEnabled = true;
             this.cmb_RegistroPlaca.Location = new System.Drawing.Point(121, 215);
-            this.cmb_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_RegistroPlaca.Name = "cmb_RegistroPlaca";
             this.cmb_RegistroPlaca.Size = new System.Drawing.Size(167, 25);
             this.cmb_RegistroPlaca.TabIndex = 2;
@@ -684,7 +697,7 @@
             // txt_NomCliente
             // 
             this.txt_NomCliente.Location = new System.Drawing.Point(121, 101);
-            this.txt_NomCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NomCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NomCliente.Name = "txt_NomCliente";
             this.txt_NomCliente.Size = new System.Drawing.Size(167, 23);
             this.txt_NomCliente.TabIndex = 4;
@@ -693,7 +706,7 @@
             // dtp_Fecha
             // 
             this.dtp_Fecha.Location = new System.Drawing.Point(459, 0);
-            this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_Fecha.Name = "dtp_Fecha";
             this.dtp_Fecha.Size = new System.Drawing.Size(262, 23);
             this.dtp_Fecha.TabIndex = 8;
@@ -705,12 +718,15 @@
             this.btn_Citas_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Citas_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Citas_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Citas_Exit.Location = new System.Drawing.Point(676, 218);
-            this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Citas_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Citas_Exit.Image")));
+            this.btn_Citas_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Citas_Exit.Location = new System.Drawing.Point(611, 218);
+            this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Citas_Exit.Name = "btn_Citas_Exit";
-            this.btn_Citas_Exit.Size = new System.Drawing.Size(61, 30);
+            this.btn_Citas_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Citas_Exit.TabIndex = 6;
             this.btn_Citas_Exit.Text = "Salir";
+            this.btn_Citas_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Citas_Exit.UseVisualStyleBackColor = false;
             this.btn_Citas_Exit.Click += new System.EventHandler(this.btn_Citas_Exit_Click);
             // 
@@ -754,12 +770,32 @@
             "11 am",
             "12 am"});
             this.cmb_HoraCita.Location = new System.Drawing.Point(121, 176);
-            this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_HoraCita.Name = "cmb_HoraCita";
             this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
             this.cmb_HoraCita.TabIndex = 1;
             this.cmb_HoraCita.Text = "Elegir Hora";
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Enabled = false;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // FRM_Citas
             // 
@@ -769,7 +805,7 @@
             this.ClientSize = new System.Drawing.Size(810, 544);
             this.Controls.Add(this.tcCitas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_Citas";
             this.Text = "FRM_Citas";
             this.Load += new System.EventHandler(this.FRM_Citas_Load);
@@ -857,5 +893,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_NumCita;
         private System.Windows.Forms.MaskedTextBox txt_Telefono;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
