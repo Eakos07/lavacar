@@ -65,10 +65,21 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_Estado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_Estado.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_Estado.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_Estado.SelectedValue = "0";
+            #endregion
+
+            #region Empleados           
+            cls_Empleados_BLL Obj_Empleados_BLL = new cls_Empleados_BLL();
+            DataTable DT_Empleados = new DataTable();
+            DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
+            cmb_Empleados.DataSource = DT_Empleados;
+            DT_Empleados.Rows.Add("0", "", "", "Elija una opción");
+            cmb_Empleados.DisplayMember = DT_Empleados.Columns[3].ToString();
+            cmb_Empleados.ValueMember = DT_Empleados.Columns[0].ToString();
+            cmb_Empleados.SelectedValue = "0";
             #endregion
 
             #region Cargar Roles
@@ -76,7 +87,7 @@ namespace FRM_Login.Menu
             DataTable DT_Roles = new DataTable();
             DT_Roles = Obj_Roles_BLL.Listar_Roles(ref sMsjError);
             cmb_Rol.DataSource = DT_Roles;
-            DT_Roles.Rows.Add("0", "0", "Elija Estado");
+            DT_Roles.Rows.Add("0", "0", "Elija una opción");
             cmb_Rol.DisplayMember = DT_Roles.Columns[2].ToString();
             cmb_Rol.ValueMember = DT_Roles.Columns[0].ToString();
             cmb_Rol.SelectedValue = "0";
@@ -86,12 +97,13 @@ namespace FRM_Login.Menu
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_Usuario.Text)) && !(string.IsNullOrEmpty(txt_Contraseña.Text)) && cmb_Estado.SelectedValue.ToString() != "0"
-                &&  cmb_Rol.SelectedValue.ToString() != "0")
+                &&  cmb_Empleados.SelectedValue.ToString() != "0" && cmb_Rol.SelectedValue.ToString() != "0")
             {
                 Obj_DAL.sIdUsuario = txt_Usuario.Text;
                 Obj_DAL.sContraseña = txt_Contraseña.Text;
-                Obj_DAL.bIdRole = Convert.ToByte(cmb_Rol.SelectedValue);
+                Obj_DAL.bIdRole = Convert.ToByte(cmb_Empleados.SelectedValue);
                 Obj_DAL.cIdEstado = Convert.ToChar(cmb_Estado.SelectedValue);
+                Obj_DAL.bIdEmpleado = Convert.ToByte(cmb_Empleados.SelectedValue);
                 string sMsjError = string.Empty;
 
                 if (Obj_DAL.cBandIM == 'I')
@@ -149,8 +161,9 @@ namespace FRM_Login.Menu
                 txt_Usuario.Enabled = false;
                 txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
 
@@ -167,8 +180,9 @@ namespace FRM_Login.Menu
                 txt_Usuario.Enabled = false;
                 txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_Rol.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
         }
 
@@ -214,5 +228,6 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+        
     }
 }

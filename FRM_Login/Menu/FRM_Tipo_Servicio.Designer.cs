@@ -249,6 +249,7 @@
             // 
             // cmb_IdTipoVehiculo
             // 
+            this.cmb_IdTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdTipoVehiculo.FormattingEnabled = true;
             this.cmb_IdTipoVehiculo.Location = new System.Drawing.Point(584, 79);
             this.cmb_IdTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);

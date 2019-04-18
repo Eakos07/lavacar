@@ -153,7 +153,6 @@
             this.txt_CeduJurid.Name = "txt_CeduJurid";
             this.txt_CeduJurid.Size = new System.Drawing.Size(178, 23);
             this.txt_CeduJurid.TabIndex = 3;
-            this.txt_CeduJurid.Text = "3101259478";
             this.txt_CeduJurid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CeduJurid_KeyPress);
             // 
             // label5
@@ -178,6 +177,7 @@
             // 
             // cmb_IdTipoPoliza
             // 
+            this.cmb_IdTipoPoliza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdTipoPoliza.FormattingEnabled = true;
             this.cmb_IdTipoPoliza.Location = new System.Drawing.Point(177, 89);
             this.cmb_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
@@ -234,6 +234,7 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(557, 45);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
@@ -572,6 +573,7 @@
             // 
             // cmb_IdProveedor
             // 
+            this.cmb_IdProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdProveedor.FormattingEnabled = true;
             this.cmb_IdProveedor.Location = new System.Drawing.Point(553, 38);
             this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2);

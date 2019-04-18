@@ -29,6 +29,12 @@ namespace FRM_Login.Menu
             DataTable DT = new DataTable();
             AjuDAL.cBandera = 'I';
 
+            txt_IdAjus.Clear();
+            txt_Descrip.Clear();
+            txt_Fecha.Clear();
+            txt_Cantidad.Value = 0;
+            txt_Monto.Clear();
+
             if (txt_FiltrarDescrip.Text == string.Empty)
             {
                 DT = Ajuste_BLL.ListarAjustesInventario(ref sMsjError);
@@ -61,7 +67,7 @@ namespace FRM_Login.Menu
             DataTable DTA = new DataTable();
             DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
             cmb_Articulo.DataSource = DTA;
-            DTA.Rows.Add("0", "Elija Articulo");
+            DTA.Rows.Add("0", "Elija una opción");
             cmb_Articulo.DisplayMember = DTA.Columns[1].ToString();
             cmb_Articulo.ValueMember = DTA.Columns[0].ToString();
             cmb_Articulo.SelectedValue = "0";
@@ -81,7 +87,6 @@ namespace FRM_Login.Menu
             }
             else
             {              
-                //AjuDAL.cBandera = 'U';
                 AjuDAL.cBandera = 'M';
 
                 txt_IdAjus.Text = dgv_Ajuste.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -90,34 +95,7 @@ namespace FRM_Login.Menu
                 txt_Fecha.Text = dgv_Ajuste.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Cantidad.Text = dgv_Ajuste.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Monto.Text = dgv_Ajuste.SelectedRows[0].Cells[5].Value.ToString().Trim();
-
-                //AjuDAL.iIdTransaccionAjusteInventario = Convert.ToInt32(dgv_Ajuste.SelectedRows[0].Cells[0].Value.ToString().Trim());
-                //AjuDAL.sIdArticulo = dgv_Ajuste.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                //AjuDAL.sDescripcion = dgv_Ajuste.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                //AjuDAL.dtFecha = Convert.ToDateTime(dgv_Ajuste.SelectedRows[0].Cells[3].Value.ToString().Trim());
-                //AjuDAL.iCantidad = Convert.ToInt16(dgv_Ajuste.SelectedRows[0].Cells[4].Value.ToString().Trim());
-                //AjuDAL.dMonto = Convert.ToDecimal(dgv_Ajuste.SelectedRows[0].Cells[5].Value.ToString().Trim());
-
-                //txt_IdAjus.Text = AjuDAL.iIdTransaccionAjusteInventario.ToString();
-                //txt_Descrip.Text = AjuDAL.sDescripcion;
-                //txt_Fecha.Text = AjuDAL.dtFecha.ToString();
-                //txt_Cantidad.Text = AjuDAL.iCantidad.ToString();
-                //txt_Monto.Text = AjuDAL.dMonto.ToString();
-
-                //string sMsjError = string.Empty;
-
-                //Combobox Articulo
-                //cls_Articulos_BLL BLLArticulo = new cls_Articulos_BLL();
-                //DataTable DTA = new DataTable();
-                //DTA = BLLArticulo.Listar_Articulos(ref sMsjError);
-                //cmb_Articulo.DataSource = DTA;
-                //cmb_Articulo.DisplayMember = DTA.Columns[1].ToString();
-                //cmb_Articulo.ValueMember = DTA.Columns[0].ToString();
-                //cmb_Articulo.SelectedValue = AjuDAL.sIdArticulo;
-
-
-                //txt_FiltrarDescrip.Text = string.Empty;
-                //CargarAjustesInventario();
+                
             }
         }
 
@@ -148,5 +126,51 @@ namespace FRM_Login.Menu
         {
             CargarAjustesInventario();
         }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            if (cmb_Articulo.SelectedValue.ToString() != "0" && !(string.IsNullOrEmpty(txt_Descrip.Text))
+                && !(string.IsNullOrEmpty(txt_Fecha.Text)) && !(string.IsNullOrEmpty(txt_Monto.Text))
+                && txt_Cantidad.Value != 0)
+            {
+                AjuDAL.sIdArticulo = cmb_Articulo.SelectedValue.ToString().Trim();
+                AjuDAL.sDescripcion = txt_Descrip.Text;
+                AjuDAL.dtFecha = Convert.ToDateTime(txt_Fecha.Text);
+                AjuDAL.iCantidad = Convert.ToInt16(txt_Cantidad.Value);
+                AjuDAL.dMonto = Convert.ToDecimal(txt_Monto.Text);
+                string sMsjError = string.Empty;
+
+                if (AjuDAL.cBandera == 'I')
+                {
+                    Ajuste_BLL.InsertarAjustesInventario(ref sMsjError, ref AjuDAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarAjustesInventario();
+                        Cargar_cmb();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (AjuDAL.cBandera == 'M')
+                {
+                    AjuDAL.iIdTransaccionAjusteInventario = Convert.ToInt32(txt_IdAjus.Text);
+                    Ajuste_BLL.ModificarAjustesInventario(ref sMsjError, ref AjuDAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarAjustesInventario();
+                        Cargar_cmb();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+            }
     }
 }

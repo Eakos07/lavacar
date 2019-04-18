@@ -100,7 +100,6 @@ namespace FRM_Login.Menu
                 !(string.IsNullOrEmpty(txt_Precio.Text)) && cmb_IdEstado.SelectedValue.ToString() != "0" ||
                 cmb_IdProve.SelectedValue.ToString() != "0" && cmb_IdArticulo.SelectedValue.ToString() != "0")
             {
-                
                 Obj_OrdenesCompra_DAL.iCantidad = Convert.ToInt16(txt_Cantidad.Text);
                 Obj_OrdenesCompra_DAL.dPrecio = Convert.ToDecimal(txt_Precio.Text);
                 Obj_OrdenesCompra_DAL.cIdEstado = Convert.ToChar(cmb_IdEstado.SelectedValue);
@@ -124,6 +123,7 @@ namespace FRM_Login.Menu
                 }
                 else if (Obj_OrdenesCompra_DAL.cBandIM == 'M')
                 {
+                    Obj_OrdenesCompra_DAL.iIdNumOrden = Convert.ToInt32(txt_NumOrden.Text);
                     Obj_OrdenesCompra_BLL.Modificar_OrdenesCompra(ref sMsjError, ref Obj_OrdenesCompra_DAL);
                     if (sMsjError == string.Empty)
                     {
@@ -172,7 +172,7 @@ namespace FRM_Login.Menu
                 cmb_IdArticulo.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[5].Value.ToString().Trim();
             }
         }
 
@@ -187,7 +187,7 @@ namespace FRM_Login.Menu
                 cmb_IdArticulo.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 txt_Cantidad.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_Precio.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Ordenes_Compra.SelectedRows[0].Cells[5].Value.ToString().Trim();
             
         }
 

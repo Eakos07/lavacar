@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LavaCar_BLL.Cat_Mant;
 using LavaCar_DAL.Cat_Mant;
+using System.Text.RegularExpressions;
 
 namespace FRM_Login.Menu
 {
@@ -34,7 +35,7 @@ namespace FRM_Login.Menu
             Cargar_Cmb_Clientes();
             CargarDatos_Citas();
             Cargar_Cmb_Citas();
-            dtp_Fecha.MinDate = DateTime.Now;
+            
         }
 
         #region Clientes
@@ -48,7 +49,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoPlaca = new DataTable();
             DT_TipoPlaca = Obj_TipoPlaca_BLL.Listar_TipoPlaca(ref sMsjError);
             cmbTipoPlacaVehiculo.DataSource = DT_TipoPlaca;
-            DT_TipoPlaca.Rows.Add("0", "Elija Estado");
+            DT_TipoPlaca.Rows.Add("0", "Elija una opción");
             cmbTipoPlacaVehiculo.DisplayMember = DT_TipoPlaca.Columns[1].ToString();
             cmbTipoPlacaVehiculo.ValueMember = DT_TipoPlaca.Columns[0].ToString();
             cmbTipoPlacaVehiculo.SelectedValue = "0";
@@ -59,7 +60,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoVehiculo = new DataTable();
             DT_TipoVehiculo = Obj_TipoVehiculo_BLL.Listar_TipoVehiculo(ref sMsjError);
             cmbTipoVehiculo.DataSource = DT_TipoVehiculo;
-            DT_TipoVehiculo.Rows.Add("0", "Elija Tipo Vehículo");
+            DT_TipoVehiculo.Rows.Add("0", "Elija una opción");
             cmbTipoVehiculo.DisplayMember = DT_TipoVehiculo.Columns[1].ToString();
             cmbTipoVehiculo.ValueMember = DT_TipoVehiculo.Columns[0].ToString();
             cmbTipoVehiculo.SelectedValue = "0";
@@ -68,6 +69,7 @@ namespace FRM_Login.Menu
 
         public void CargarDatos_Clientes()
         {
+
             txt_NumPlaca.Enabled = true;
             string sMsjError = string.Empty;
             DataTable dtClientes = new DataTable();
@@ -186,12 +188,122 @@ namespace FRM_Login.Menu
             CargarDatos_Clientes();
         }
 
+        #region Validaciones
+
+        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string expresion;
+            
+            if (char.IsLetter(e.KeyChar))
+            {
+                if (e.KeyChar == 'A' || e.KeyChar == 'E' || e.KeyChar == 'I' || e.KeyChar == 'O' || e.KeyChar == 'U'
+                 || e.KeyChar == 'a' || e.KeyChar == 'e' || e.KeyChar == 'i' || e.KeyChar == 'o' || e.KeyChar == 'u'
+                    )
+                    {
+                     e.Handled = true;
+                }
+                                
+                else if  (txt_NumPlaca.SelectionStart.ToString() == "0")
+                {
+                    txt_NumPlaca.MaxLength = 7;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0"
+                    || txt_NumPlaca.SelectionStart.ToString().Trim() == "1"
+                    || txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
+                {
+                    e.Handled = false;
+                }                    
+                else
+                {
+                    e.Handled = true;
+                }
+
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {                
+                expresion = "^[A-Z]*$";
+
+                if(txt_NumPlaca.SelectionStart.ToString() == "0")
+                {
+                    txt_NumPlaca.MaxLength = 6;
+                }
+
+                else if ((Regex.IsMatch(txt_NumPlaca.Text, expresion)) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "3"))
+                {
+                    e.Handled = true;
+                }
+                else if (Regex.IsMatch(txt_NumPlaca.Text , expresion) && (txt_NumPlaca.SelectionStart.ToString().Trim() == "1" || txt_NumPlaca.SelectionStart.ToString().Trim() == "2"))
+                {
+                    e.Handled = true;
+
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+                
+            }
+            else if (e.KeyChar == '-')
+            {
+                expresion = "^[0-9]*$";
+
+                if(Regex.IsMatch(txt_NumPlaca.Text, expresion))
+                {
+                    e.Handled = true;
+                }
+                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (e.KeyChar == (char)(Keys.Space))
+            {
+                e.Handled = true;
+            }
+
+
+        }
+
+
+        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Citas
 
         public void CargarDatos_Citas()
         {
+            cmb_HoraCita.SelectedItem = "Elija una opción";
+            dtp_Fecha.MinDate = DateTime.Now;
             string sMsjError = string.Empty;
             DataTable dtCitas = new DataTable();
             Obj_Citas_DAL.cBandIM = 'I';
@@ -227,8 +339,8 @@ namespace FRM_Login.Menu
             DataTable DT_Empleados = new DataTable();
             DT_Empleados = Obj_Empleados_BLL.Listar_Empleados(ref sMsjError);
             cmb_EmpleadoCitas.DataSource = DT_Empleados;
-            DT_Empleados.Rows.Add("0", "", "Elija un Empleado");
-            cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[2].ToString();
+            DT_Empleados.Rows.Add("0", "", "", "Elija una opción");
+            cmb_EmpleadoCitas.DisplayMember = DT_Empleados.Columns[3].ToString();
             cmb_EmpleadoCitas.ValueMember = DT_Empleados.Columns[0].ToString();
             cmb_EmpleadoCitas.SelectedValue = "0";
             #endregion
@@ -238,7 +350,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_EstadoCita.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_EstadoCita.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_EstadoCita.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_EstadoCita.SelectedValue = "0";
@@ -249,10 +361,10 @@ namespace FRM_Login.Menu
             DataTable DT_Clientes = new DataTable();
             DT_Clientes = Obj_Clientes_BLL.Listar_Clientes(ref sMsjError);
             cmb_RegistroPlaca.DataSource = DT_Clientes;
-            DT_Clientes.Rows.Add("Elija un Cliente", "0");
+            DT_Clientes.Rows.Add("Elija una opción", "0");
             cmb_RegistroPlaca.DisplayMember = DT_Clientes.Columns[0].ToString();
             cmb_RegistroPlaca.ValueMember = DT_Clientes.Columns[0].ToString();
-            cmb_RegistroPlaca.SelectedValue = "Elija un Cliente";
+            cmb_RegistroPlaca.SelectedValue = "Elija una opción";
             #endregion
 
             #region Tipo Servicio
@@ -260,7 +372,7 @@ namespace FRM_Login.Menu
             DataTable DT_TipoServicio = new DataTable();
             DT_TipoServicio = Obj_TipoServicio_BLL.Listar_TipoServicio(ref sMsjError);
             cmb_TipoServicio.DataSource = DT_TipoServicio;
-            DT_TipoServicio.Rows.Add("0", "Elija un Servicio");
+            DT_TipoServicio.Rows.Add("0", "Elija una opción");
             cmb_TipoServicio.DisplayMember = DT_TipoServicio.Columns[1].ToString();
             cmb_TipoServicio.ValueMember = DT_TipoServicio.Columns[0].ToString();
             cmb_TipoServicio.SelectedValue = "0";
@@ -269,65 +381,73 @@ namespace FRM_Login.Menu
 
         private void btn_GuardarCitas_Click(object sender, EventArgs e)
         {
-            if ((txt_NomCliente.Text.Trim() != string.Empty)  /*&& (txt_NumPlaca.Text.Trim() != string.Empty)*/
-                 && (txt_Email.Text.Trim() != string.Empty) /*&&(txt_NumPlaca.Text.Trim() != string.Empty) */
-                 && (cmb_HoraCita.SelectedItem.ToString() != "Elegir Hora")/*(cmb_HoraCita.SelectedValue.ToString() != "0")*/ && (cmb_EstadoCita.SelectedValue.ToString() != "0")
-                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0") && (cmb_TipoServicio.SelectedValue.ToString() != "0")
+
+
+            if ((txt_NomCliente.Text.Trim() != string.Empty)
+                 && (txt_Email.Text.Trim() != string.Empty)
+                 && (cmb_HoraCita.Text != "Elija una opción")
+                 && (cmb_EstadoCita.SelectedValue.ToString() != "0")
+                 && (cmb_RegistroPlaca.SelectedValue.ToString() != "0")
+                 && (cmb_TipoServicio.SelectedValue.ToString() != "0")
                  && (cmb_EmpleadoCitas.SelectedValue.ToString() != "0"))
             {
-                
-                Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
-                Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
-                Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
-                Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
-                Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
-                Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
-
-                Obj_Citas_DAL.cIdEstado = Convert.ToChar(cmb_EstadoCita.SelectedValue.ToString());
-                Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
-
-                string sMsjError = string.Empty;
-
-                if (Obj_Citas_DAL.cBandIM == 'I')
+                if (email_bien_escrito(txt_Email.Text) == true)
                 {
-                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
-                    Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    if (sMsjError == string.Empty)
+                    Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
+                    Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
+                    Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
+                    Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
+                    Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
+                    Obj_Citas_DAL.dtFechaCita = Convert.ToDateTime(dtp_Fecha.Value.Date.ToString());
+
+                    Obj_Citas_DAL.cIdEstado = Convert.ToChar(cmb_EstadoCita.SelectedValue.ToString());
+                    Obj_Citas_DAL.bIdEmpleado = Convert.ToByte(cmb_EmpleadoCitas.SelectedValue.ToString());
+
+                    string sMsjError = string.Empty;
+
+                    if (Obj_Citas_DAL.cBandIM == 'I')
                     {
-                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar_Cmb_Citas();
-                        CargarDatos_Citas();
+                        Obj_Citas_DAL.sHoraCita = cmb_HoraCita.SelectedItem.ToString();
+                        Obj_Citas_BLL.Insertar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                        if (sMsjError == string.Empty)
+                        {
+                            MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar_Cmb_Citas();
+                            CargarDatos_Citas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
-                    else
+                    else if (Obj_Citas_DAL.cBandIM == 'M')
                     {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
+                        Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
+                        if (sMsjError == string.Empty)
+                        {
+                            MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar_Cmb_Citas();
+                            CargarDatos_Citas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
-                    
-                }
-                else if (Obj_Citas_DAL.cBandIM == 'M')
-                {
-                    Obj_Citas_DAL.sHoraCita = cmb_HoraCita.Text.ToString();
-                    Obj_Citas_BLL.Modificar_Citas(ref sMsjError, ref Obj_Citas_DAL);
-                    if (sMsjError == string.Empty)
-                    {
-                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_NumCita.Enabled = true;
-                        Cargar_Cmb_Citas();
-                        CargarDatos_Citas();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
                 }
                 else
                 {
-                    MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Correo incorrecto, digite una direccion de correo válida", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            } else
-                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+            }
+            else
+            {
+                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
@@ -340,7 +460,7 @@ namespace FRM_Login.Menu
         {
             CargarDatos_Citas();
             Cargar_Cmb_Citas();
-            cmb_HoraCita.Text = "Elegir Hora";
+            cmb_HoraCita.Text = "Elija una opción";
         }
 
         private void dgv_Citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -351,6 +471,8 @@ namespace FRM_Login.Menu
             }
             else
             {
+                cmb_HoraCita.Text = "";
+                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -360,7 +482,7 @@ namespace FRM_Login.Menu
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
@@ -375,6 +497,7 @@ namespace FRM_Login.Menu
             }
             else
             {
+                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
                 Obj_Citas_DAL.cBandIM = 'M';
                 txt_NumCita.Enabled = false;
                 txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
@@ -384,238 +507,91 @@ namespace FRM_Login.Menu
                 cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
                 dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.Text = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
                 cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
                 cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
             }
         }
 
-
-        #endregion
-
         #region Validaciones
-
-        private void txt_NumPlaca_KeyPress(object sender, KeyPressEventArgs e)
-        {                       
-            if ((char.IsLetter(e.KeyChar)) || (e.KeyChar == '-'))
-            {
-                if (e.KeyChar == '-')
-                {
-                    if (txt_NumPlaca.SelectionStart.ToString().Trim() == "3")
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "0")
-                {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "1")
-                {
-                    e.Handled = false;
-                }
-                else if (txt_NumPlaca.SelectionStart.ToString().Trim() == "2")
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
-            }
-            else if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-                                         
-        }
-        
-
-        private void cmbTipoVehiculo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-       
-
-        private void cmbTipoPlacaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_NumVisitas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || 
-                char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-
-        }
-        
-
-        private void txt_NumCita_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) )
-            {
-                e.Handled = false;
-             
-            }
-            else
-            {
-                e.Handled = true;
-               MessageBox.Show( "Solo puede digitar numeros");
-            }
-        }
-
-        private void txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-               
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show( "Solo puede digitar numeros con (-)");
-            }
-
-            if (e.KeyChar == '-')
-            {
-                e.Handled = false;
-            
-            }
-        }
-        
-
-        private void cmb_HoraCita_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        
 
         private void txt_NomCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) ||
-                char.IsSeparator(e.KeyChar))
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar == (char)(Keys.Space))
             {
                 e.Handled = false;
-              
+
             }
             else
             {
                 e.Handled = true;
-               MessageBox.Show( "Solo puede digitar letras");
+                MessageBox.Show("Solo puede digitar letras");
             }
         }
-        
+
+        private void cmb_HoraCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }       
 
         private void cmb_RegistroPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
-        
 
         private void cmb_TipoServicio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void cmb_EstadoCita_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         private void cmb_EmpleadoCitas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
         
-
         private void dtp_Fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
-        
 
         private void txt_Email_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
-               MessageBox.Show( "Email no puede tener espacios vacios");
+                MessageBox.Show("Email no puede tener espacios vacios");
+            }
+           
+        }
+
+        public bool email_bien_escrito(string email)
+        {
+            string expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                e.Handled = false;
-               
+                return false;
             }
         }
+
+        #endregion
+
         #endregion
 
         private void btn_RC_Exit_Click(object sender, EventArgs e)
@@ -627,5 +603,7 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+       
     }
 }

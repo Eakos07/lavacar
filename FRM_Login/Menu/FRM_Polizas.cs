@@ -47,19 +47,18 @@ namespace FRM_Login.Menu
            
             string sMsjError = string.Empty;
             DataTable dtPolizas = new DataTable();
-            Obj_Polizas_DAL.cBandIM = 'I';            
+            Obj_Polizas_DAL.cBandIM = 'I';
 
-            //#region Cargar Centro Lavado
-            //cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
-            //DataTable dt_Octopus = new DataTable();
-            //dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
-            
-            
-            //#endregion
+            #region Cargar Centro Lavado
+            cls_Centro_de_Lavado_BLL Obj_Octopus_BLL = new cls_Centro_de_Lavado_BLL();
+            DataTable dt_Octopus = new DataTable();
+            dt_Octopus = Obj_Octopus_BLL.Listar_LavadoOctopus(ref sMsjError);
+            txt_CeduJurid.Text = dt_Octopus.Rows[0][0].ToString();
+            #endregion
 
             txt_IdPoliza.Clear();
             txt_FechaVenci.Clear();
-            txt_CeduJurid.Text = "2000000020";
+
 
             if (txt_FiltrarTipoPoliza.Text == string.Empty)
             {
@@ -94,7 +93,7 @@ namespace FRM_Login.Menu
             #endregion
 
             #region Cargar TipoPolizas
-
+            cls_TipoPolizas_BLL Obj_TipoPolizas_BLL = new cls_TipoPolizas_BLL();
             DataTable DT_TipoPolizas = new DataTable();
             DT_TipoPolizas = Obj_TipoPolizas_BLL.Listar_TipoPolizas(ref sMsjError);
             cmb_IdTipoPoliza.DataSource = DT_TipoPolizas;
@@ -104,6 +103,7 @@ namespace FRM_Login.Menu
             cmb_IdTipoPoliza.SelectedValue = "0";
             #endregion
         }
+
         public void Cargar_TipoPolizas()
         {
             cls_TipoPolizas_BLL Obj_TipoPolizas_BLL = new cls_TipoPolizas_BLL();

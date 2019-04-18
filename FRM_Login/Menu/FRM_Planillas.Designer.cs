@@ -127,6 +127,7 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(490, 37);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
@@ -137,6 +138,7 @@
             // 
             // cmb_IdHorario
             // 
+            this.cmb_IdHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdHorario.FormattingEnabled = true;
             this.cmb_IdHorario.Location = new System.Drawing.Point(143, 113);
             this.cmb_IdHorario.Margin = new System.Windows.Forms.Padding(2);
@@ -147,6 +149,7 @@
             // 
             // cmb_IdEmpleado
             // 
+            this.cmb_IdEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEmpleado.FormattingEnabled = true;
             this.cmb_IdEmpleado.Location = new System.Drawing.Point(143, 75);
             this.cmb_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);

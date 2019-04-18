@@ -67,14 +67,13 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_BLL.CrearParametros(ref Obj_DAL);
             Obj_DAL.DT_Parametros.Rows.Add("@Identificacion", 3, Obj_Empleados_DAL.sIdenti.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Nombre", 3, Obj_Empleados_DAL.sNombre.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Apellidos", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Apellidos", 3, Obj_Empleados_DAL.sApellidos.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Telefono", 6, Obj_Empleados_DAL.iTel.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Direccion", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Empleados_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Insertar_Empleados"].ToString().Trim();
             Obj_BLL.Ejec_Scalar(ref Obj_DAL);
@@ -98,14 +97,13 @@ namespace LavaCar_BLL.Cat_Mant
             Obj_DAL.DT_Parametros.Rows.Add("@IdEmpleado", 6, Obj_Empleados_DAL.bIdEmpleado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Identificacion", 3, Obj_Empleados_DAL.sIdenti.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Nombre", 3, Obj_Empleados_DAL.sNombre.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@Apellidos", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
+            Obj_DAL.DT_Parametros.Rows.Add("@Apellidos", 3, Obj_Empleados_DAL.sApellidos.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Telefono", 6, Obj_Empleados_DAL.iTel.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Direccion", 3, Obj_Empleados_DAL.sAddress.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Email", 3, Obj_Empleados_DAL.sEmail.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@Puesto", 3, Obj_Empleados_DAL.sPuesto.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdEstado", 5, Obj_Empleados_DAL.cIdEstado.ToString().Trim());
             Obj_DAL.DT_Parametros.Rows.Add("@IdPoliza", 3, Obj_Empleados_DAL.sIdPoliza.ToString().Trim());
-            Obj_DAL.DT_Parametros.Rows.Add("@IdUsuario", 3, Obj_Empleados_DAL.sIdUser.ToString().Trim());
 
             Obj_DAL.sSP_Name = ConfigurationManager.AppSettings["Modificar_Empleados"].ToString().Trim();
             Obj_BLL.Execute_NonQuery(ref Obj_DAL);

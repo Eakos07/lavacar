@@ -221,7 +221,7 @@
             // rdb_dolares
             // 
             this.rdb_dolares.AutoSize = true;
-            this.rdb_dolares.Location = new System.Drawing.Point(522, 115);
+            this.rdb_dolares.Location = new System.Drawing.Point(604, 80);
             this.rdb_dolares.Name = "rdb_dolares";
             this.rdb_dolares.Size = new System.Drawing.Size(75, 21);
             this.rdb_dolares.TabIndex = 36;
@@ -276,7 +276,7 @@
             // txt_Monto
             // 
             this.txt_Monto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Monto.Location = new System.Drawing.Point(522, 150);
+            this.txt_Monto.Location = new System.Drawing.Point(522, 108);
             this.txt_Monto.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Monto.Multiline = true;
             this.txt_Monto.Name = "txt_Monto";
@@ -287,7 +287,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(446, 153);
+            this.label2.Location = new System.Drawing.Point(446, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
@@ -307,6 +307,7 @@
             // 
             // cmb_Articulo
             // 
+            this.cmb_Articulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Articulo.FormattingEnabled = true;
             this.cmb_Articulo.Location = new System.Drawing.Point(242, 72);
             this.cmb_Articulo.Margin = new System.Windows.Forms.Padding(2);
@@ -341,15 +342,12 @@
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
-            this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exit.Location = new System.Drawing.Point(652, 170);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_Exit.TabIndex = 7;
             this.btn_Exit.Text = "Salir";
-            this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
@@ -359,16 +357,14 @@
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.Image")));
-            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Save.Location = new System.Drawing.Point(652, 119);
+            this.btn_Save.Location = new System.Drawing.Point(490, 170);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_Save.TabIndex = 6;
             this.btn_Save.Text = "Guardar";
-            this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // label7
             // 

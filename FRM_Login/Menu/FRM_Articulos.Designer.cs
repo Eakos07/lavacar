@@ -173,6 +173,7 @@
             // 
             // cmb_Tipo_Articulo
             // 
+            this.cmb_Tipo_Articulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tipo_Articulo.FormattingEnabled = true;
             this.cmb_Tipo_Articulo.Location = new System.Drawing.Point(566, 107);
             this.cmb_Tipo_Articulo.Margin = new System.Windows.Forms.Padding(2);
@@ -183,6 +184,7 @@
             // 
             // cmb_IdFamilia_Articulo
             // 
+            this.cmb_IdFamilia_Articulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdFamilia_Articulo.FormattingEnabled = true;
             this.cmb_IdFamilia_Articulo.Location = new System.Drawing.Point(209, 150);
             this.cmb_IdFamilia_Articulo.Margin = new System.Windows.Forms.Padding(2);
@@ -193,6 +195,7 @@
             // 
             // cmb_Estado_Articulos
             // 
+            this.cmb_Estado_Articulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Estado_Articulos.FormattingEnabled = true;
             this.cmb_Estado_Articulos.Location = new System.Drawing.Point(566, 27);
             this.cmb_Estado_Articulos.Margin = new System.Windows.Forms.Padding(2);
@@ -717,6 +720,7 @@
             // 
             // cmb_IdEstadoFamilia
             // 
+            this.cmb_IdEstadoFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstadoFamilia.FormattingEnabled = true;
             this.cmb_IdEstadoFamilia.Location = new System.Drawing.Point(122, 131);
             this.cmb_IdEstadoFamilia.Margin = new System.Windows.Forms.Padding(2);
@@ -936,6 +940,7 @@
             // 
             // cmb_EstadoTipoArticulo
             // 
+            this.cmb_EstadoTipoArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EstadoTipoArticulo.FormattingEnabled = true;
             this.cmb_EstadoTipoArticulo.Location = new System.Drawing.Point(202, 145);
             this.cmb_EstadoTipoArticulo.Margin = new System.Windows.Forms.Padding(2);

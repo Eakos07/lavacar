@@ -90,8 +90,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_HoraCita = new System.Windows.Forms.ComboBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tcCitas.SuspendLayout();
             this.tbRegistroClientes.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -154,7 +152,6 @@
             this.btn_RC_Modificar,
             this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripButton1,
             this.toolStripLabel3,
             this.txt_FiltrarClientes,
             this.toolStripSeparator3});
@@ -272,7 +269,6 @@
             this.txt_NumVisitas.Name = "txt_NumVisitas";
             this.txt_NumVisitas.Size = new System.Drawing.Size(138, 23);
             this.txt_NumVisitas.TabIndex = 9;
-            this.txt_NumVisitas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumVisitas_KeyPress);
             // 
             // label11
             // 
@@ -290,15 +286,12 @@
             this.btn_RC_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RC_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Exit.Image")));
-            this.btn_RC_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Exit.Location = new System.Drawing.Point(596, 126);
             this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Exit.Name = "btn_RC_Exit";
             this.btn_RC_Exit.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Exit.TabIndex = 4;
             this.btn_RC_Exit.Text = "Salir";
-            this.btn_RC_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Exit.UseVisualStyleBackColor = false;
             this.btn_RC_Exit.Click += new System.EventHandler(this.btn_RC_Exit_Click);
             // 
@@ -308,15 +301,12 @@
             this.btn_RC_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RC_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_RC_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RC_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_RC_Save.Image")));
-            this.btn_RC_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_RC_Save.Location = new System.Drawing.Point(471, 126);
             this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Save.Name = "btn_RC_Save";
             this.btn_RC_Save.Size = new System.Drawing.Size(110, 30);
             this.btn_RC_Save.TabIndex = 3;
             this.btn_RC_Save.Text = "Guardar";
-            this.btn_RC_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Save.UseVisualStyleBackColor = false;
             this.btn_RC_Save.Click += new System.EventHandler(this.btn_RC_Save_Click);
             // 
@@ -352,6 +342,7 @@
             // 
             // cmbTipoPlacaVehiculo
             // 
+            this.cmbTipoPlacaVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPlacaVehiculo.FormattingEnabled = true;
             this.cmbTipoPlacaVehiculo.Location = new System.Drawing.Point(280, 119);
             this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
@@ -362,6 +353,7 @@
             // 
             // cmbTipoVehiculo
             // 
+            this.cmbTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoVehiculo.FormattingEnabled = true;
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(280, 67);
             this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
@@ -372,6 +364,7 @@
             // 
             // txt_NumPlaca
             // 
+            this.txt_NumPlaca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_NumPlaca.Location = new System.Drawing.Point(280, 22);
             this.txt_NumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NumPlaca.MaxLength = 7;
@@ -417,7 +410,6 @@
             this.btn_ModificarCitas,
             this.toolStripLabel5,
             this.toolStripSeparator5,
-            this.toolStripButton2,
             this.toolStripLabel6,
             this.txt_FiltrarCitas,
             this.toolStripSeparator6});
@@ -553,15 +545,12 @@
             this.btn_GuardarCitas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GuardarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_GuardarCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GuardarCitas.Image = ((System.Drawing.Image)(resources.GetObject("btn_GuardarCitas.Image")));
-            this.btn_GuardarCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_GuardarCitas.Location = new System.Drawing.Point(476, 218);
+            this.btn_GuardarCitas.Location = new System.Drawing.Point(572, 218);
             this.btn_GuardarCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarCitas.Name = "btn_GuardarCitas";
-            this.btn_GuardarCitas.Size = new System.Drawing.Size(110, 30);
+            this.btn_GuardarCitas.Size = new System.Drawing.Size(76, 30);
             this.btn_GuardarCitas.TabIndex = 29;
             this.btn_GuardarCitas.Text = "Guardar";
-            this.btn_GuardarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarCitas.UseVisualStyleBackColor = false;
             this.btn_GuardarCitas.Click += new System.EventHandler(this.btn_GuardarCitas_Click);
             // 
@@ -577,6 +566,7 @@
             // 
             // cmb_EmpleadoCitas
             // 
+            this.cmb_EmpleadoCitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EmpleadoCitas.FormattingEnabled = true;
             this.cmb_EmpleadoCitas.Location = new System.Drawing.Point(461, 178);
             this.cmb_EmpleadoCitas.Margin = new System.Windows.Forms.Padding(2);
@@ -597,6 +587,7 @@
             // 
             // cmb_EstadoCita
             // 
+            this.cmb_EstadoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_EstadoCita.FormattingEnabled = true;
             this.cmb_EstadoCita.Location = new System.Drawing.Point(459, 135);
             this.cmb_EstadoCita.Margin = new System.Windows.Forms.Padding(2);
@@ -623,7 +614,6 @@
             this.txt_NumCita.Name = "txt_NumCita";
             this.txt_NumCita.Size = new System.Drawing.Size(167, 23);
             this.txt_NumCita.TabIndex = 23;
-            this.txt_NumCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumCita_KeyPress);
             // 
             // label10
             // 
@@ -637,7 +627,7 @@
             // 
             // cmb_TipoServicio
             // 
-            this.cmb_TipoServicio.FormattingEnabled = true;
+            this.cmb_TipoServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoServicio.Location = new System.Drawing.Point(459, 96);
             this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoServicio.Name = "cmb_TipoServicio";
@@ -669,6 +659,7 @@
             // 
             this.txt_Email.Location = new System.Drawing.Point(459, 61);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Email.MaxLength = 50;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(175, 23);
             this.txt_Email.TabIndex = 0;
@@ -686,6 +677,7 @@
             // 
             // cmb_RegistroPlaca
             // 
+            this.cmb_RegistroPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_RegistroPlaca.FormattingEnabled = true;
             this.cmb_RegistroPlaca.Location = new System.Drawing.Point(121, 215);
             this.cmb_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2);
@@ -698,6 +690,7 @@
             // 
             this.txt_NomCliente.Location = new System.Drawing.Point(121, 101);
             this.txt_NomCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_NomCliente.MaxLength = 30;
             this.txt_NomCliente.Name = "txt_NomCliente";
             this.txt_NomCliente.Size = new System.Drawing.Size(167, 23);
             this.txt_NomCliente.TabIndex = 4;
@@ -718,15 +711,12 @@
             this.btn_Citas_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Citas_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Citas_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Citas_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Citas_Exit.Image")));
-            this.btn_Citas_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Citas_Exit.Location = new System.Drawing.Point(611, 218);
+            this.btn_Citas_Exit.Location = new System.Drawing.Point(676, 218);
             this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Citas_Exit.Name = "btn_Citas_Exit";
-            this.btn_Citas_Exit.Size = new System.Drawing.Size(110, 30);
+            this.btn_Citas_Exit.Size = new System.Drawing.Size(61, 30);
             this.btn_Citas_Exit.TabIndex = 6;
             this.btn_Citas_Exit.Text = "Salir";
-            this.btn_Citas_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Citas_Exit.UseVisualStyleBackColor = false;
             this.btn_Citas_Exit.Click += new System.EventHandler(this.btn_Citas_Exit_Click);
             // 
@@ -762,40 +752,33 @@
             // 
             // cmb_HoraCita
             // 
+            this.cmb_HoraCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_HoraCita.FormattingEnabled = true;
             this.cmb_HoraCita.Items.AddRange(new object[] {
-            "8 am",
-            "9 am",
-            "10 am",
-            "11 am",
-            "12 am"});
+            "Elija una opción",
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00"});
             this.cmb_HoraCita.Location = new System.Drawing.Point(121, 176);
             this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_HoraCita.Name = "cmb_HoraCita";
             this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
             this.cmb_HoraCita.TabIndex = 1;
-            this.cmb_HoraCita.Text = "Elegir Hora";
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Enabled = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // FRM_Citas
             // 
@@ -893,7 +876,5 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_NumCita;
         private System.Windows.Forms.MaskedTextBox txt_Telefono;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

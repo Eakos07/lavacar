@@ -168,6 +168,7 @@
             // 
             // cmb_IdEstadoProveedor
             // 
+            this.cmb_IdEstadoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstadoProveedor.FormattingEnabled = true;
             this.cmb_IdEstadoProveedor.Location = new System.Drawing.Point(565, 110);
             this.cmb_IdEstadoProveedor.Margin = new System.Windows.Forms.Padding(2);

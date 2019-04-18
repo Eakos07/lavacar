@@ -29,18 +29,17 @@ namespace FRM_Login.Menu
             Cargar_Datos_Horarios();
             Cargar_cmb();
         }
-        
+
         public void Cargar_Datos_Horarios()
         {
-            
+
             string sMsjError = string.Empty;
             DataTable dtHorarios = new DataTable();
-            Obj_DAL.cBandIM = 'I';            
+            Obj_DAL.cBandIM = 'I';
 
             txt_IdHorario.Enabled = false;
             txt_IdHorario.Clear();
             txt_Descrip.Clear();
-            txt_CantiHoras.Clear();
             txt_Entrada.Clear();
             txt_Salida.Clear();
 
@@ -66,11 +65,11 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_IdEstado.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_IdEstado.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_IdEstado.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstado.SelectedValue = "0";
-            
+
         }
 
         private void txt_FiltrarHorarios_TextChanged(object sender, EventArgs e)
@@ -127,7 +126,7 @@ namespace FRM_Login.Menu
                     {
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
@@ -143,7 +142,7 @@ namespace FRM_Login.Menu
                     {
                         MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
                 }
                 Cargar_cmb();
             }
@@ -176,5 +175,34 @@ namespace FRM_Login.Menu
         {
             this.Close();
         }
+
+        #region Validaciones
+        private void txt_IdHorario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se Permiten Numeros");
+
+            }
+            else
+            {
+                e.Handled = false;
+
+            }
+
+        }
+
+
+
+
+        #endregion
+
+        private void txt_CantiHoras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+
     }
 }

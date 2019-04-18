@@ -35,6 +35,7 @@ namespace FRM_Login.Menu
             Cargar_Datos_Proveedores();
             Cargar_cmb();
         }
+
         public void Cargar_Datos_Proveedores()
         {
             
@@ -73,7 +74,7 @@ namespace FRM_Login.Menu
             DataTable DT_Estados = new DataTable();
             DT_Estados = Obj_Estados_BLL.Listar_Estados(ref sMsjError);
             cmb_IdEstadoProveedor.DataSource = DT_Estados;
-            DT_Estados.Rows.Add("0", "Elija Estado");
+            DT_Estados.Rows.Add("0", "Elija una opción");
             cmb_IdEstadoProveedor.DisplayMember = DT_Estados.Columns[1].ToString();
             cmb_IdEstadoProveedor.ValueMember = DT_Estados.Columns[0].ToString();
             cmb_IdEstadoProveedor.SelectedValue = "0";
@@ -139,6 +140,7 @@ namespace FRM_Login.Menu
                 }
                 else if (Obj_DAL.cBandIM == 'M')
                 {
+                    Obj_DAL.bIdProveedor = Convert.ToByte(txt_IdProveedor.Text);
                     Obj_BLL.Modificar_Proveedores(ref sMsjError, ref Obj_DAL);
                     if (sMsjError == string.Empty)
                     {

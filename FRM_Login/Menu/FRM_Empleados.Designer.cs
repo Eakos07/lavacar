@@ -41,10 +41,8 @@
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Identificacion = new System.Windows.Forms.TextBox();
-            this.cmb_IdUsuario = new System.Windows.Forms.ComboBox();
             this.cmb_IdPoliza = new System.Windows.Forms.ComboBox();
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,10 +85,8 @@
             this.groupBox1.Controls.Add(this.txt_Apellido);
             this.groupBox1.Controls.Add(this.txt_Nombre);
             this.groupBox1.Controls.Add(this.txt_Identificacion);
-            this.groupBox1.Controls.Add(this.cmb_IdUsuario);
             this.groupBox1.Controls.Add(this.cmb_IdPoliza);
             this.groupBox1.Controls.Add(this.cmb_IdEstado);
-            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -113,8 +109,10 @@
             // 
             // txt_Puesto
             // 
+            this.txt_Puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_Puesto.FormattingEnabled = true;
             this.txt_Puesto.Items.AddRange(new object[] {
+            "Elija una opción",
             "Administrador",
             "Supervisor",
             "Cajero",
@@ -137,6 +135,7 @@
             // 
             // txt_IdEmpleado
             // 
+            this.txt_IdEmpleado.Enabled = false;
             this.txt_IdEmpleado.Location = new System.Drawing.Point(143, 31);
             this.txt_IdEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IdEmpleado.MaxLength = 3;
@@ -230,18 +229,9 @@
             this.txt_Identificacion.TabIndex = 1;
             this.txt_Identificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Identificacion_KeyPress);
             // 
-            // cmb_IdUsuario
-            // 
-            this.cmb_IdUsuario.FormattingEnabled = true;
-            this.cmb_IdUsuario.Location = new System.Drawing.Point(502, 196);
-            this.cmb_IdUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_IdUsuario.Name = "cmb_IdUsuario";
-            this.cmb_IdUsuario.Size = new System.Drawing.Size(159, 25);
-            this.cmb_IdUsuario.TabIndex = 10;
-            this.cmb_IdUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdUsuario_KeyPress);
-            // 
             // cmb_IdPoliza
             // 
+            this.cmb_IdPoliza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdPoliza.FormattingEnabled = true;
             this.cmb_IdPoliza.Location = new System.Drawing.Point(502, 155);
             this.cmb_IdPoliza.Margin = new System.Windows.Forms.Padding(2);
@@ -252,6 +242,7 @@
             // 
             // cmb_IdEstado
             // 
+            this.cmb_IdEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_IdEstado.FormattingEnabled = true;
             this.cmb_IdEstado.Location = new System.Drawing.Point(502, 113);
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
@@ -259,16 +250,6 @@
             this.cmb_IdEstado.Size = new System.Drawing.Size(159, 25);
             this.cmb_IdEstado.TabIndex = 8;
             this.cmb_IdEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstado_KeyPress);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(390, 198);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 17);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Id Usuario:";
             // 
             // label10
             // 
@@ -523,10 +504,8 @@
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.TextBox txt_Identificacion;
-        private System.Windows.Forms.ComboBox cmb_IdUsuario;
         private System.Windows.Forms.ComboBox cmb_IdPoliza;
         private System.Windows.Forms.ComboBox cmb_IdEstado;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
