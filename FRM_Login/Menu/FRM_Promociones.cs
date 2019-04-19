@@ -33,6 +33,11 @@ namespace FRM_Login.Menu
             
             string sMsjError = string.Empty;
             DataTable dtPromociones = new DataTable();
+            Obj_DAL.cBandIM = 'I';
+
+            txt_IdPromociones.Clear();
+            txt_TipoPromo.Clear();
+            txt_descrip.Clear();
 
             if (txt_FiltrarPromociones.Text == string.Empty)
             {
@@ -101,6 +106,51 @@ namespace FRM_Login.Menu
                 txt_IdPromociones.Text = dgv_Promociones.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 txt_TipoPromo.Text = dgv_Promociones.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_descrip.Text = dgv_Promociones.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(txt_IdPromociones.Text)) && !(string.IsNullOrEmpty(txt_TipoPromo.Text)) && !(string.IsNullOrEmpty(txt_descrip.Text)))
+            {
+                Obj_DAL.cIdPromocion = Convert.ToChar(txt_IdPromociones.Text);
+                Obj_DAL.sTipoPromocion = txt_TipoPromo.Text;
+                Obj_DAL.sDescripcion = txt_descrip.Text;
+
+                string sMsjError = string.Empty;
+
+                if (Obj_DAL.cBandIM == 'I')
+                {
+                    Obj_BLL.Insertar_Promociones(ref sMsjError, ref Obj_DAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Promociones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else if (Obj_DAL.cBandIM == 'M')
+                {
+                    Obj_BLL.Modificar_Promociones(ref sMsjError, ref Obj_DAL);
+                    if (sMsjError == string.Empty)
+                    {
+                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Cargar_Datos_Promociones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
