@@ -57,6 +57,7 @@
             this.btnFactura = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlVentana.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
@@ -342,6 +343,7 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlTop.Controls.Add(this.label1);
             this.pnlTop.Controls.Add(this.btnMinimizar);
             this.pnlTop.Controls.Add(this.btnCerrar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -568,6 +570,18 @@
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            // 
             // FRM_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,6 +600,7 @@
             this.pnlVentana.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlMenu2.ResumeLayout(false);
@@ -623,5 +638,6 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnPromociones;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -8,15 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using LavaCar_DAL.Login;
 
 namespace FRM_Login.Menu
 {
     public partial class FRM_Administrador : Form
     {
-        public FRM_Administrador()
+
+        cls_Login_DAL obj_Log_DAL = new cls_Login_DAL();
+        public FRM_Administrador(string Usuario)
         {
             InitializeComponent();
+            obj_Log_DAL.SUsuario = Usuario;
+            label1.Text = "Bienvenido: " +obj_Log_DAL.SUsuario;
+            
         }
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -31,6 +38,7 @@ namespace FRM_Login.Menu
             pnlVentana.Controls.Add(vh);
             pnlVentana.Tag = vh;
             vh.Show();
+            
 
         }   //Evento para abrir ventana seleccionada
    
@@ -39,6 +47,7 @@ namespace FRM_Login.Menu
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
 
         private void btnPolizas_Click(object sender, EventArgs e)
@@ -176,6 +185,6 @@ namespace FRM_Login.Menu
             this.WindowState = FormWindowState.Minimized;
         }
 
-       
+        
     }
 }

@@ -79,11 +79,13 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Recuperar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtRecuperación
             // 
             this.txtRecuperación.Location = new System.Drawing.Point(139, 148);
             this.txtRecuperación.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRecuperación.MaxLength = 20;
             this.txtRecuperación.Name = "txtRecuperación";
             this.txtRecuperación.Size = new System.Drawing.Size(291, 28);
             this.txtRecuperación.TabIndex = 5;

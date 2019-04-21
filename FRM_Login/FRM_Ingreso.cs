@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Configuration;
-
 using System.Data.SqlClient;
+using LavaCar_BLL.Login;
+using LavaCar_DAL.Login;
 
 namespace FRM_Login
 {
@@ -19,7 +20,11 @@ namespace FRM_Login
         public FRM_Ingreso()
         {
             InitializeComponent();
+            
         }
+
+        cls_Login_BLL obj_Login_BLL = new cls_Login_BLL();
+        cls_Login_DAL obj_Login_DAL = new cls_Login_DAL();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -82,71 +87,40 @@ namespace FRM_Login
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
+
+            obj_Login_DAL.SUsuario = txtUsuarioLogin.Text;
+            obj_Login_DAL.SContrasena = txtContrase.Text;
+
+            obj_Login_BLL.Ingresar(ref obj_Login_DAL);
+
+            if (obj_Login_DAL.BIdRole == 3)
+            {
+                this.Hide();
+                MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador(obj_Login_DAL.SUsuario);
+                PantallaMenu.ShowDialog();
+            }
+
+            if (obj_Login_DAL.BIdRole == 2)
+            {
+                MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (obj_Login_DAL.BIdRole == 1)
+            {
+                this.Hide();
+                MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario);
+                FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
+                PantallaMenu1.ShowDialog();
+            }
+
+            if (obj_Login_DAL.BIdRole == 0)
+            {
+                MessageBox.Show(obj_Login_DAL.SMsj, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-
-            if (txtUsuarioLogin.Text != "USUARIO" && txtContrase.Text != "CONTRASEÑA")
-             {
-                 
-              SqlConnection Conex = new SqlConnection();
-
-                Conex.ConnectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
-                 Conex.Open();
-
-                 SqlCommand cmd = new SqlCommand("Select IdUsuario, Contraseña, IdRole from Sch_Administrativo.T_Usuarios where IdUsuario = '" + txtUsuarioLogin.Text+"' and Contraseña='"+txtContrase.Text+"'",Conex);
-                 SqlDataReader dr = cmd.ExecuteReader();
-                string a = string.Empty;
-                string b = string.Empty;
-                byte c = 0;
-
-                
-                
-
-                if (dr.Read() == true)
-             {
-                    a = dr.GetString(0);
-                    b = dr.GetString(1);
-                    c = dr.GetByte(2);
-
-                    if (c == 3)
-                    {
-                        this.Hide();
-                        MessageBox.Show("Bienvenido: " + txtUsuarioLogin.Text);
-
-                        Conex.Close();
-                        Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador();
-                        PantallaMenu.ShowDialog();
-                    }
-                    else if (c == 2)
-                    {
-                        MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (c == 1)
-                    {
-                        this.Hide();
-                        MessageBox.Show("Bienvenido: " + txtUsuarioLogin.Text);
-                        Conex.Close();
-                        FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
-                        PantallaMenu1.ShowDialog();
-                    }
-                   
-                    
-                    
-             }
-                    else
-                    {
-                        MessageBox.Show("Datos incorrectos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Conex.Close();
-                    }
-
-
-                 }
-
-             else
-             {
-                 MessageBox.Show("Datos incorrectos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 
-             
-             }
 
 
         }

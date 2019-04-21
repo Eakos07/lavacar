@@ -67,6 +67,8 @@
     <Compile Include="Cat_Mant\cls_TransaccionesVenta_DAL.cs" />
     <Compile Include="Cat_Mant\cls_Usuarios_DAL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_DAL.cs" />
+    <Compile Include="Login\cls_Login_DAL.cs" />
+    <Compile Include="Recuperacion_Contraseña\Cls_Recuperacion_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

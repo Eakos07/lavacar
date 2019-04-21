@@ -68,6 +68,8 @@
     <Compile Include="Cat_Mant\cls_TransaccionesVenta_BLL.cs" />
     <Compile Include="Cat_Mant\cls_Usuarios_BLL.cs" />
     <Compile Include="Data_Base\Cls_DataBase_BLL.cs" />
+    <Compile Include="Login\cls_Login_BLL.cs" />
+    <Compile Include="Recuperacion_Contraseña\Cls_Recuperacion_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
