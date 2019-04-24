@@ -153,7 +153,7 @@ namespace FRM_Login.Menu
                 else
                 {
 
-                    MessageBox.Show("Correo incorrecto, digite una direccion de correo válida", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Correo incorrecto, digite una direccion de correo válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
