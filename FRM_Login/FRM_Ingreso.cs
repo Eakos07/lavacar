@@ -88,39 +88,55 @@ namespace FRM_Login
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-
+            obj_Login_DAL.SMsjError = string.Empty;
             obj_Login_DAL.SUsuario = txtUsuarioLogin.Text;
             obj_Login_DAL.SContrasena = txtContrase.Text;
 
-            obj_Login_BLL.Ingresar(ref obj_Login_DAL);
+            
 
-            if (obj_Login_DAL.BIdRole == 3)
+            if (txtContrase.Text != "CONTRASEÑA" && txtUsuarioLogin.Text != "USUARIO")
             {
-                this.Hide();
-                MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                obj_Login_BLL.Ingresar(ref obj_Login_DAL);
 
-                Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador(obj_Login_DAL.SUsuario);
-                PantallaMenu.ShowDialog();
+                if (obj_Login_DAL.BIdRole == 3)
+                {
+                    this.Hide();
+                    MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Menu.FRM_Administrador PantallaMenu = new Menu.FRM_Administrador(obj_Login_DAL.SUsuario);
+
+                    PantallaMenu.ShowDialog();
+
+                }
+
+                if (obj_Login_DAL.BIdRole == 2)
+                {
+                    MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                if (obj_Login_DAL.BIdRole == 1)
+                {
+                    this.Hide();
+                    MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario);
+                    FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
+                    PantallaMenu1.ShowDialog();
+                }
+                if (obj_Login_DAL.BIdRole == 0)
+                {
+                    MessageBox.Show("Por favor, ingrese un Usuario o Contraseña válidas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-
-            if (obj_Login_DAL.BIdRole == 2)
+            else
             {
-                MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            if (obj_Login_DAL.BIdRole == 1)
-            {
-                this.Hide();
-                MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario);
-                FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
-                PantallaMenu1.ShowDialog();
-            }
-
-            if (obj_Login_DAL.BIdRole == 0)
-            {
-                MessageBox.Show(obj_Login_DAL.SMsj, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingrese un Usuario o Contraseña válidas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
+            if (obj_Login_DAL.SMsjError.Contains("a"))
+            {
+                MessageBox.Show(obj_Login_DAL.SMsjError);
+            }
+
+          
 
 
         }
