@@ -20,7 +20,7 @@ namespace FRM_Login.Menu
         {
             InitializeComponent();
             obj_Log_DAL.SUsuario = Usuario;
-            label1.Text = "Bienvenido: " +obj_Log_DAL.SUsuario;
+            lblUsuario.Text = "Bienvenido: " +obj_Log_DAL.SUsuario;
             
         }
         
@@ -185,6 +185,9 @@ namespace FRM_Login.Menu
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new FRM_Cambio_Contraseña(obj_Log_DAL.SUsuario));
+        }
     }
 }

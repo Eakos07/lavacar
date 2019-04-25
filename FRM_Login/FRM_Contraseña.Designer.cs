@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Contraseña));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -85,7 +86,7 @@
             // 
             this.txtRecuperación.Location = new System.Drawing.Point(139, 148);
             this.txtRecuperación.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRecuperación.MaxLength = 20;
+            this.txtRecuperación.MaxLength = 50;
             this.txtRecuperación.Name = "txtRecuperación";
             this.txtRecuperación.Size = new System.Drawing.Size(291, 28);
             this.txtRecuperación.TabIndex = 5;
@@ -109,6 +110,7 @@
             this.ClientSize = new System.Drawing.Size(638, 366);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Contraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Contraseña";

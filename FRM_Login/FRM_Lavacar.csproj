@@ -70,6 +70,12 @@
     <Compile Include="FRM_Administrador.Designer.cs">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_Nivel_Dos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Nivel_Dos.Designer.cs">
+      <DependentUpon>FRM_Nivel_Dos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_Nivel_Uno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Administrador.resx">
       <DependentUpon>FRM_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Nivel_Dos.resx">
+      <DependentUpon>FRM_Nivel_Dos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Nivel_Uno.resx">
       <DependentUpon>FRM_Nivel_Uno.cs</DependentUpon>

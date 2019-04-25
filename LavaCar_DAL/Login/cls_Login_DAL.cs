@@ -11,7 +11,7 @@ namespace LavaCar_DAL.Login
     public class cls_Login_DAL
     {
         private SqlConnection _Obj_Connec_DB;
-        private string _SUsuario, _SContrasena, _SCadena, _SMsj, _SQuery, _SMsjError;
+        private string _SUsuario, _SContrasena, _SCadena, _SMsj, _SQuery, _SMsjError, _SContraseñaActual, _SContraseñaNueva;
         private byte _BIdRole;
 
         public SqlConnection Obj_Connec_DB
@@ -115,6 +115,32 @@ namespace LavaCar_DAL.Login
             set
             {
                 _SMsjError = value;
+            }
+        }
+
+        public string SContraseñaActual
+        {
+            get
+            {
+                return _SContraseñaActual;
+            }
+
+            set
+            {
+                _SContraseñaActual = value;
+            }
+        }
+
+        public string SContraseñaNueva
+        {
+            get
+            {
+                return _SContraseñaNueva;
+            }
+
+            set
+            {
+                _SContraseñaNueva = value;
             }
         }
     }

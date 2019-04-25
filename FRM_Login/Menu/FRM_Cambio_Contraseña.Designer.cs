@@ -54,37 +54,40 @@
             this.gbCambioContraseña.Controls.Add(this.label1);
             this.gbCambioContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbCambioContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCambioContraseña.Location = new System.Drawing.Point(9, 10);
-            this.gbCambioContraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.gbCambioContraseña.Location = new System.Drawing.Point(167, 67);
+            this.gbCambioContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbCambioContraseña.Name = "gbCambioContraseña";
-            this.gbCambioContraseña.Padding = new System.Windows.Forms.Padding(2);
-            this.gbCambioContraseña.Size = new System.Drawing.Size(514, 320);
+            this.gbCambioContraseña.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbCambioContraseña.Size = new System.Drawing.Size(685, 394);
             this.gbCambioContraseña.TabIndex = 1;
             this.gbCambioContraseña.TabStop = false;
             this.gbCambioContraseña.Text = "Cambio de Contraseña";
             // 
             // txtRepetirContra
             // 
-            this.txtRepetirContra.Location = new System.Drawing.Point(262, 162);
-            this.txtRepetirContra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRepetirContra.Location = new System.Drawing.Point(349, 199);
+            this.txtRepetirContra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRepetirContra.MaxLength = 50;
             this.txtRepetirContra.Name = "txtRepetirContra";
-            this.txtRepetirContra.Size = new System.Drawing.Size(221, 27);
+            this.txtRepetirContra.Size = new System.Drawing.Size(293, 32);
             this.txtRepetirContra.TabIndex = 2;
             // 
             // txtContraNueva
             // 
-            this.txtContraNueva.Location = new System.Drawing.Point(262, 110);
-            this.txtContraNueva.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraNueva.Location = new System.Drawing.Point(349, 135);
+            this.txtContraNueva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContraNueva.MaxLength = 50;
             this.txtContraNueva.Name = "txtContraNueva";
-            this.txtContraNueva.Size = new System.Drawing.Size(221, 27);
+            this.txtContraNueva.Size = new System.Drawing.Size(293, 32);
             this.txtContraNueva.TabIndex = 1;
             // 
             // txtContraActual
             // 
-            this.txtContraActual.Location = new System.Drawing.Point(262, 50);
-            this.txtContraActual.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraActual.Location = new System.Drawing.Point(349, 62);
+            this.txtContraActual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContraActual.MaxLength = 50;
             this.txtContraActual.Name = "txtContraActual";
-            this.txtContraActual.Size = new System.Drawing.Size(221, 27);
+            this.txtContraActual.Size = new System.Drawing.Size(293, 32);
             this.txtContraActual.TabIndex = 0;
             // 
             // btnSalir
@@ -95,10 +98,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(385, 264);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(513, 325);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(110, 30);
+            this.btnSalir.Size = new System.Drawing.Size(147, 37);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,23 +116,23 @@
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(249, 264);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.Location = new System.Drawing.Point(332, 325);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(110, 30);
+            this.btnAceptar.Size = new System.Drawing.Size(147, 37);
             this.btnAceptar.TabIndex = 3;
-            this.btnAceptar.Text = "Guardar";
+            this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 171);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(59, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 20);
+            this.label3.Size = new System.Drawing.Size(216, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Confirmar contraseña:";
             // 
@@ -137,10 +140,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 114);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(59, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 20);
+            this.label2.Size = new System.Drawing.Size(191, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña nueva:";
             // 
@@ -148,22 +150,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 20);
+            this.label1.Size = new System.Drawing.Size(189, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Contraseña actual:";
             // 
             // FRM_Cambio_Contraseña
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(545, 353);
+            this.ClientSize = new System.Drawing.Size(1062, 623);
             this.Controls.Add(this.gbCambioContraseña);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FRM_Cambio_Contraseña";
             this.Text = "FRM_Cambio_Contraseña";
             this.gbCambioContraseña.ResumeLayout(false);

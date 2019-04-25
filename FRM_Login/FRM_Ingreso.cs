@@ -111,14 +111,19 @@ namespace FRM_Login
 
                 if (obj_Login_DAL.BIdRole == 2)
                 {
-                    MessageBox.Show("No sea necio aún no estan las demás pantallas", "PELIGRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Hide();
+                    MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    FRM_Nivel_Dos PantallaMenu = new FRM_Nivel_Dos(obj_Login_DAL.SUsuario);
+
+                    PantallaMenu.ShowDialog();
                 }
 
                 if (obj_Login_DAL.BIdRole == 1)
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario);
-                    FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno();
+                    FRM_Nivel_Uno PantallaMenu1 = new FRM_Nivel_Uno(obj_Login_DAL.SUsuario);
                     PantallaMenu1.ShowDialog();
                 }
                 if (obj_Login_DAL.BIdRole == 0)
