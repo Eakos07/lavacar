@@ -242,7 +242,6 @@
             this.dgv_Cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cliente.Size = new System.Drawing.Size(705, 230);
             this.dgv_Cliente.TabIndex = 0;
-            this.dgv_Cliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Cliente_CellContentClick);
             this.dgv_Cliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Cliente_CellDoubleClick);
             // 
             // groupBox1
