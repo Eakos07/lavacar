@@ -39,6 +39,7 @@ namespace FRM_Login.Menu
         }
 
         #region Clientes
+
         #region Modificar Clientes
         public void Modificar_Clientes()
         {
@@ -57,6 +58,7 @@ namespace FRM_Login.Menu
             }
         }
         #endregion
+
         public void Cargar_Cmb_Clientes()
         {
             string sMsjError = string.Empty;
@@ -115,49 +117,78 @@ namespace FRM_Login.Menu
             if (!(string.IsNullOrEmpty(txt_NumPlaca.Text)) && cmbTipoPlacaVehiculo.SelectedValue.ToString() != "0"
                 && cmbTipoVehiculo.SelectedValue.ToString() != "0")
             {
-
-                Obj_Clientes_DAL.sNumPlaca = txt_NumPlaca.Text;
-                Obj_Clientes_DAL.bIdTipoPlaca = Convert.ToByte(cmbTipoPlacaVehiculo.SelectedValue.ToString().Trim());
-                Obj_Clientes_DAL.bIdTipoVehiculo = Convert.ToByte(cmbTipoVehiculo.SelectedValue.ToString().Trim());
-
-                string sMsjError = string.Empty;
-
-                if (Obj_Clientes_DAL.cBandIM == 'I')
+                if (cmbTipoPlacaVehiculo.SelectedValue.ToString() == "1")
                 {
-                    Obj_Clientes_BLL.Insertar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
-                    if (sMsjError == string.Empty)
+                    if(cmbTipoVehiculo.SelectedValue.ToString() == "4")
                     {
-                        MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar_Cmb_Clientes();
-                        CargarDatos_Clientes();
+                        GuardarDatosClientes();
                     }
                     else
                     {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El tipo de placa no coincide con el tipo de vehiculo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
+
                 }
-                else if (Obj_Clientes_DAL.cBandIM == 'M')
+                else if(cmbTipoPlacaVehiculo.SelectedValue.ToString() != "1")
                 {
-                    Obj_Clientes_BLL.Modificar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
-                    if (sMsjError == string.Empty)
+                    if (cmbTipoVehiculo.SelectedValue.ToString() == "4")
                     {
-                        MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_NumPlaca.Enabled = true;
-                        Cargar_Cmb_Clientes();
-                        CargarDatos_Clientes();
+                        MessageBox.Show("El tipo de placa no coincide con el tipo de vehiculo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);                        
                     }
                     else
                     {
-                        MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        GuardarDatosClientes();
                     }
-                    
                 }
+                
             }
             else
             {
                 MessageBox.Show("No se pueden guardar datos vacios", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        public void GuardarDatosClientes()
+        {
+            #region Guardar Datos
+            Obj_Clientes_DAL.sNumPlaca = txt_NumPlaca.Text;
+            Obj_Clientes_DAL.bIdTipoPlaca = Convert.ToByte(cmbTipoPlacaVehiculo.SelectedValue.ToString().Trim());
+            Obj_Clientes_DAL.bIdTipoVehiculo = Convert.ToByte(cmbTipoVehiculo.SelectedValue.ToString().Trim());
+
+            string sMsjError = string.Empty;
+
+            if (Obj_Clientes_DAL.cBandIM == 'I')
+            {
+                Obj_Clientes_BLL.Insertar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
+                if (sMsjError == string.Empty)
+                {
+                    MessageBox.Show("Nuevo registro ingresado exitosamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cargar_Cmb_Clientes();
+                    CargarDatos_Clientes();
+                }
+                else
+                {
+                    MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else if (Obj_Clientes_DAL.cBandIM == 'M')
+            {
+                Obj_Clientes_BLL.Modificar_Clientes(ref sMsjError, ref Obj_Clientes_DAL);
+                if (sMsjError == string.Empty)
+                {
+                    MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_NumPlaca.Enabled = true;
+                    Cargar_Cmb_Clientes();
+                    CargarDatos_Clientes();
+                }
+                else
+                {
+                    MessageBox.Show("Se genera el siguiente error: " + "[" + sMsjError + "]", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            #endregion
         }
 
         private void btn_RC_Modificar_Click(object sender, EventArgs e)
