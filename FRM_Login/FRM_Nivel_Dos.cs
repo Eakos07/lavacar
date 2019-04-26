@@ -88,5 +88,10 @@ namespace FRM_Login
         {
             AbrirVentana(new Menu.FRM_Cambio_Contraseña(obj_Login_DAL.SUsuario));
         }
+
+        private void btnPlanillas_Click(object sender, EventArgs e)
+        {
+            AbrirVentana(new Menu.FRM_Planillas());
+        }
     }
 }

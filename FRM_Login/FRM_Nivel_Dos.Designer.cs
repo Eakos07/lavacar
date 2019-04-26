@@ -32,7 +32,6 @@
             this.pnlVentana = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnFactura = new System.Windows.Forms.Button();
-            this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnCambioContraseña = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnPlanillas = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
@@ -66,8 +66,8 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnlMenu.Controls.Add(this.btnPlanillas);
             this.pnlMenu.Controls.Add(this.btnFactura);
-            this.pnlMenu.Controls.Add(this.btnEmpleados);
             this.pnlMenu.Controls.Add(this.btnInventario);
             this.pnlMenu.Controls.Add(this.btnCambioContraseña);
             this.pnlMenu.Controls.Add(this.btnMarcas);
@@ -97,25 +97,6 @@
             this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFactura.UseVisualStyleBackColor = true;
             this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
-            this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(3, 59);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(175, 55);
-            this.btnEmpleados.TabIndex = 21;
-            this.btnEmpleados.Text = "Empleados";
-            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmpleados.UseVisualStyleBackColor = true;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnInventario
             // 
@@ -277,6 +258,25 @@
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.TabStop = false;
             // 
+            // btnPlanillas
+            // 
+            this.btnPlanillas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlanillas.FlatAppearance.BorderSize = 0;
+            this.btnPlanillas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlanillas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlanillas.ForeColor = System.Drawing.Color.Black;
+            this.btnPlanillas.Image = ((System.Drawing.Image)(resources.GetObject("btnPlanillas.Image")));
+            this.btnPlanillas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanillas.Location = new System.Drawing.Point(3, 57);
+            this.btnPlanillas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlanillas.Name = "btnPlanillas";
+            this.btnPlanillas.Size = new System.Drawing.Size(175, 55);
+            this.btnPlanillas.TabIndex = 23;
+            this.btnPlanillas.Text = "Planilla";
+            this.btnPlanillas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPlanillas.UseVisualStyleBackColor = true;
+            this.btnPlanillas.Click += new System.EventHandler(this.btnPlanillas_Click);
+            // 
             // FRM_Nivel_Dos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,7 +315,7 @@
         private System.Windows.Forms.PictureBox pbMinimizar;
         private System.Windows.Forms.PictureBox pbCerrar;
         private System.Windows.Forms.Button btnInventario;
-        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnFactura;
+        private System.Windows.Forms.Button btnPlanillas;
     }
 }
