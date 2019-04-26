@@ -37,6 +37,7 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarDescrip = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Ajuste = new System.Windows.Forms.DataGridView();
@@ -58,7 +59,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ajuste)).BeginInit();
@@ -141,6 +141,16 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -219,7 +229,7 @@
             this.rdb_dolares.Location = new System.Drawing.Point(604, 80);
             this.rdb_dolares.Name = "rdb_dolares";
             this.rdb_dolares.Size = new System.Drawing.Size(75, 21);
-            this.rdb_dolares.TabIndex = 36;
+            this.rdb_dolares.TabIndex = 7;
             this.rdb_dolares.Text = "Dolares";
             this.rdb_dolares.UseVisualStyleBackColor = true;
             // 
@@ -230,7 +240,7 @@
             this.rdb_colones.Location = new System.Drawing.Point(522, 80);
             this.rdb_colones.Name = "rdb_colones";
             this.rdb_colones.Size = new System.Drawing.Size(77, 21);
-            this.rdb_colones.TabIndex = 35;
+            this.rdb_colones.TabIndex = 6;
             this.rdb_colones.TabStop = true;
             this.rdb_colones.Text = "Colones";
             this.rdb_colones.UseVisualStyleBackColor = true;
@@ -241,7 +251,7 @@
             this.txt_Fecha.Mask = "00/00/0000";
             this.txt_Fecha.Name = "txt_Fecha";
             this.txt_Fecha.Size = new System.Drawing.Size(150, 23);
-            this.txt_Fecha.TabIndex = 34;
+            this.txt_Fecha.TabIndex = 4;
             this.txt_Fecha.ValidatingType = typeof(System.DateTime);
             // 
             // txt_Cantidad
@@ -254,7 +264,7 @@
             0});
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(120, 23);
-            this.txt_Cantidad.TabIndex = 33;
+            this.txt_Cantidad.TabIndex = 5;
             // 
             // txt_IdAjus
             // 
@@ -265,7 +275,7 @@
             this.txt_IdAjus.Multiline = true;
             this.txt_IdAjus.Name = "txt_IdAjus";
             this.txt_IdAjus.Size = new System.Drawing.Size(150, 27);
-            this.txt_IdAjus.TabIndex = 32;
+            this.txt_IdAjus.TabIndex = 1;
             this.txt_IdAjus.TabStop = false;
             // 
             // txt_Monto
@@ -276,7 +286,7 @@
             this.txt_Monto.Multiline = true;
             this.txt_Monto.Name = "txt_Monto";
             this.txt_Monto.Size = new System.Drawing.Size(83, 27);
-            this.txt_Monto.TabIndex = 3;
+            this.txt_Monto.TabIndex = 8;
             // 
             // label2
             // 
@@ -318,7 +328,7 @@
             this.txt_Descrip.Multiline = true;
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(150, 27);
-            this.txt_Descrip.TabIndex = 4;
+            this.txt_Descrip.TabIndex = 3;
             // 
             // label5
             // 
@@ -343,7 +353,7 @@
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
-            this.btn_Exit.TabIndex = 7;
+            this.btn_Exit.TabIndex = 10;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -361,7 +371,7 @@
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
-            this.btn_Save.TabIndex = 6;
+            this.btn_Save.TabIndex = 9;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -399,16 +409,6 @@
             this.label4.Size = new System.Drawing.Size(222, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Id Transaciones Ajuste Inventario:";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Ajuste_Inventario
             // 

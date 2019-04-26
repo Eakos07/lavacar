@@ -83,7 +83,7 @@
             this.txt_IdPromociones.MaxLength = 1;
             this.txt_IdPromociones.Name = "txt_IdPromociones";
             this.txt_IdPromociones.Size = new System.Drawing.Size(171, 23);
-            this.txt_IdPromociones.TabIndex = 5;
+            this.txt_IdPromociones.TabIndex = 0;
             this.txt_IdPromociones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPromociones_KeyPress);
             // 
             // btnSalir

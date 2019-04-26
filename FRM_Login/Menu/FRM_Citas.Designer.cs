@@ -298,7 +298,7 @@
             this.btn_RC_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Exit.Name = "btn_RC_Exit";
             this.btn_RC_Exit.Size = new System.Drawing.Size(110, 30);
-            this.btn_RC_Exit.TabIndex = 4;
+            this.btn_RC_Exit.TabIndex = 5;
             this.btn_RC_Exit.Text = "Salir";
             this.btn_RC_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Exit.UseVisualStyleBackColor = false;
@@ -316,7 +316,7 @@
             this.btn_RC_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_RC_Save.Name = "btn_RC_Save";
             this.btn_RC_Save.Size = new System.Drawing.Size(110, 30);
-            this.btn_RC_Save.TabIndex = 3;
+            this.btn_RC_Save.TabIndex = 4;
             this.btn_RC_Save.Text = "Guardar";
             this.btn_RC_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RC_Save.UseVisualStyleBackColor = false;
@@ -360,7 +360,7 @@
             this.cmbTipoPlacaVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoPlacaVehiculo.Name = "cmbTipoPlacaVehiculo";
             this.cmbTipoPlacaVehiculo.Size = new System.Drawing.Size(138, 25);
-            this.cmbTipoPlacaVehiculo.TabIndex = 2;
+            this.cmbTipoPlacaVehiculo.TabIndex = 3;
             this.cmbTipoPlacaVehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoPlacaVehiculo_KeyPress);
             // 
             // cmbTipoVehiculo
@@ -371,7 +371,7 @@
             this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
             this.cmbTipoVehiculo.Size = new System.Drawing.Size(138, 25);
-            this.cmbTipoVehiculo.TabIndex = 1;
+            this.cmbTipoVehiculo.TabIndex = 2;
             this.cmbTipoVehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTipoVehiculo_KeyPress);
             // 
             // txt_NumPlaca
@@ -382,7 +382,7 @@
             this.txt_NumPlaca.MaxLength = 7;
             this.txt_NumPlaca.Name = "txt_NumPlaca";
             this.txt_NumPlaca.Size = new System.Drawing.Size(138, 23);
-            this.txt_NumPlaca.TabIndex = 0;
+            this.txt_NumPlaca.TabIndex = 1;
             this.txt_NumPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NumPlaca_KeyPress);
             // 
             // tbcCreacionCitas
@@ -554,7 +554,7 @@
             this.txt_Telefono.Mask = "00000000";
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(78, 23);
-            this.txt_Telefono.TabIndex = 30;
+            this.txt_Telefono.TabIndex = 2;
             // 
             // btn_GuardarCitas
             // 
@@ -568,7 +568,7 @@
             this.btn_GuardarCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GuardarCitas.Name = "btn_GuardarCitas";
             this.btn_GuardarCitas.Size = new System.Drawing.Size(110, 30);
-            this.btn_GuardarCitas.TabIndex = 29;
+            this.btn_GuardarCitas.TabIndex = 9;
             this.btn_GuardarCitas.Text = "Guardar";
             this.btn_GuardarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuardarCitas.UseVisualStyleBackColor = false;
@@ -592,7 +592,7 @@
             this.cmb_EmpleadoCitas.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EmpleadoCitas.Name = "cmb_EmpleadoCitas";
             this.cmb_EmpleadoCitas.Size = new System.Drawing.Size(175, 25);
-            this.cmb_EmpleadoCitas.TabIndex = 26;
+            this.cmb_EmpleadoCitas.TabIndex = 8;
             this.cmb_EmpleadoCitas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_EmpleadoCitas_KeyPress);
             // 
             // label13
@@ -613,7 +613,7 @@
             this.cmb_EstadoCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_EstadoCita.Name = "cmb_EstadoCita";
             this.cmb_EstadoCita.Size = new System.Drawing.Size(175, 25);
-            this.cmb_EstadoCita.TabIndex = 25;
+            this.cmb_EstadoCita.TabIndex = 7;
             this.cmb_EstadoCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_EstadoCita_KeyPress);
             // 
             // label14
@@ -652,7 +652,7 @@
             this.cmb_TipoServicio.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoServicio.Name = "cmb_TipoServicio";
             this.cmb_TipoServicio.Size = new System.Drawing.Size(175, 25);
-            this.cmb_TipoServicio.TabIndex = 5;
+            this.cmb_TipoServicio.TabIndex = 6;
             this.cmb_TipoServicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_TipoServicio_KeyPress);
             // 
             // label9
@@ -682,7 +682,7 @@
             this.txt_Email.MaxLength = 50;
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(175, 23);
-            this.txt_Email.TabIndex = 0;
+            this.txt_Email.TabIndex = 5;
             this.txt_Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Email_KeyPress);
             // 
             // label7
@@ -703,7 +703,7 @@
             this.cmb_RegistroPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_RegistroPlaca.Name = "cmb_RegistroPlaca";
             this.cmb_RegistroPlaca.Size = new System.Drawing.Size(167, 25);
-            this.cmb_RegistroPlaca.TabIndex = 2;
+            this.cmb_RegistroPlaca.TabIndex = 4;
             this.cmb_RegistroPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_RegistroPlaca_KeyPress);
             // 
             // txt_NomCliente
@@ -713,7 +713,7 @@
             this.txt_NomCliente.MaxLength = 30;
             this.txt_NomCliente.Name = "txt_NomCliente";
             this.txt_NomCliente.Size = new System.Drawing.Size(167, 23);
-            this.txt_NomCliente.TabIndex = 4;
+            this.txt_NomCliente.TabIndex = 1;
             this.txt_NomCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NomCliente_KeyPress);
             // 
             // dtp_Fecha
@@ -722,7 +722,7 @@
             this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_Fecha.Name = "dtp_Fecha";
             this.dtp_Fecha.Size = new System.Drawing.Size(262, 23);
-            this.dtp_Fecha.TabIndex = 8;
+            this.dtp_Fecha.TabIndex = 0;
             this.dtp_Fecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_Fecha_KeyPress);
             // 
             // btn_Citas_Exit
@@ -737,7 +737,7 @@
             this.btn_Citas_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Citas_Exit.Name = "btn_Citas_Exit";
             this.btn_Citas_Exit.Size = new System.Drawing.Size(110, 30);
-            this.btn_Citas_Exit.TabIndex = 6;
+            this.btn_Citas_Exit.TabIndex = 10;
             this.btn_Citas_Exit.Text = "Salir";
             this.btn_Citas_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Citas_Exit.UseVisualStyleBackColor = false;
@@ -800,7 +800,7 @@
             this.cmb_HoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_HoraCita.Name = "cmb_HoraCita";
             this.cmb_HoraCita.Size = new System.Drawing.Size(167, 25);
-            this.cmb_HoraCita.TabIndex = 1;
+            this.cmb_HoraCita.TabIndex = 3;
             this.cmb_HoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_HoraCita_KeyPress);
             // 
             // FRM_Citas

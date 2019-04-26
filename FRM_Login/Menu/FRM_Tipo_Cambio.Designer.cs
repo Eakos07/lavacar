@@ -204,7 +204,7 @@
             this.txt_IdTipoCambio.Multiline = true;
             this.txt_IdTipoCambio.Name = "txt_IdTipoCambio";
             this.txt_IdTipoCambio.Size = new System.Drawing.Size(150, 27);
-            this.txt_IdTipoCambio.TabIndex = 35;
+            this.txt_IdTipoCambio.TabIndex = 0;
             // 
             // txt_Fecha
             // 
@@ -212,7 +212,7 @@
             this.txt_Fecha.Mask = "00/00/0000";
             this.txt_Fecha.Name = "txt_Fecha";
             this.txt_Fecha.Size = new System.Drawing.Size(150, 23);
-            this.txt_Fecha.TabIndex = 34;
+            this.txt_Fecha.TabIndex = 2;
             this.txt_Fecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Fecha.ValidatingType = typeof(System.DateTime);
             // 
