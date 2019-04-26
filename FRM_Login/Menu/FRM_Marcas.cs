@@ -48,6 +48,8 @@ namespace FRM_Login.Menu
         private void btn_salida_Click(object sender, EventArgs e)
         {
             label8.Text = label2.Text;
+            btn_entrada.Enabled = false;
+            btn_salida.Enabled = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
