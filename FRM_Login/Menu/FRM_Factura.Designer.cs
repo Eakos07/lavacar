@@ -126,7 +126,7 @@
             this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Text = "Refrescar";
             // 
             // toolStripLabel1
             // 
@@ -146,7 +146,7 @@
             this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Text = "Modificar";
             // 
             // toolStripLabel2
             // 
@@ -167,7 +167,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Buscar";
             // 
             // toolStripLabel4
             // 
@@ -177,6 +177,7 @@
             // 
             // txt_FiltrarFacturas
             // 
+            this.txt_FiltrarFacturas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarFacturas.Name = "txt_FiltrarFacturas";
             this.txt_FiltrarFacturas.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarFacturas.TextChanged += new System.EventHandler(this.txt_FiltrarFacturas_TextChanged);

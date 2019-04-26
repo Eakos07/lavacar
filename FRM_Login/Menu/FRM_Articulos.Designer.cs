@@ -93,9 +93,6 @@
             this.btn_Modificar_TipoArticulo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel11 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarTipoArticulos = new System.Windows.Forms.ToolStripTextBox();
@@ -416,7 +413,7 @@
             this.btn_Refrescar_Articulo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_Articulo.Name = "btn_Refrescar_Articulo";
             this.btn_Refrescar_Articulo.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar_Articulo.Text = "toolStripButton10";
+            this.btn_Refrescar_Articulo.Text = "Refrescar";
             this.btn_Refrescar_Articulo.Click += new System.EventHandler(this.btn_Refrescar_Articulo_Click);
             // 
             // toolStripLabel1
@@ -437,7 +434,7 @@
             this.btn_Modificar_Articulo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_Articulo.Name = "btn_Modificar_Articulo";
             this.btn_Modificar_Articulo.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar_Articulo.Text = "toolStripButton1";
+            this.btn_Modificar_Articulo.Text = "Modificar";
             this.btn_Modificar_Articulo.Click += new System.EventHandler(this.btn_Modificar_Articulo_Click);
             // 
             // toolStripLabel2
@@ -459,7 +456,7 @@
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Text = "Buscar";
             // 
             // toolStripLabel4
             // 
@@ -469,6 +466,7 @@
             // 
             // txt_FiltrarArticulos
             // 
+            this.txt_FiltrarArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarArticulos.Name = "txt_FiltrarArticulos";
             this.txt_FiltrarArticulos.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarArticulos.TextChanged += new System.EventHandler(this.txt_FiltrarArticulos_TextChanged);
@@ -588,7 +586,7 @@
             this.btn_RefrescarFamilia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_RefrescarFamilia.Name = "btn_RefrescarFamilia";
             this.btn_RefrescarFamilia.Size = new System.Drawing.Size(24, 24);
-            this.btn_RefrescarFamilia.Text = "toolStripButton11";
+            this.btn_RefrescarFamilia.Text = "Refrescar";
             this.btn_RefrescarFamilia.Click += new System.EventHandler(this.btn_RefrescarFamilia_Click);
             // 
             // toolStripLabel5
@@ -609,7 +607,7 @@
             this.btn_ModificarFamilia.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_ModificarFamilia.Name = "btn_ModificarFamilia";
             this.btn_ModificarFamilia.Size = new System.Drawing.Size(24, 24);
-            this.btn_ModificarFamilia.Text = "toolStripButton1";
+            this.btn_ModificarFamilia.Text = "Modificar";
             this.btn_ModificarFamilia.Click += new System.EventHandler(this.btn_ModificarFamilia_Click);
             // 
             // toolStripLabel6
@@ -631,7 +629,7 @@
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "toolStripButton3";
+            this.toolStripButton6.Text = "Buscar";
             // 
             // toolStripLabel8
             // 
@@ -641,6 +639,7 @@
             // 
             // txt_FiltrarFamiliaArticulos
             // 
+            this.txt_FiltrarFamiliaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarFamiliaArticulos.Name = "txt_FiltrarFamiliaArticulos";
             this.txt_FiltrarFamiliaArticulos.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarFamiliaArticulos.TextChanged += new System.EventHandler(this.txt_FiltrarFamiliaArticulos_TextChanged);
@@ -798,9 +797,6 @@
             this.btn_Modificar_TipoArticulo,
             this.toolStripLabel10,
             this.toolStripSeparator8,
-            this.toolStripButton8,
-            this.toolStripLabel11,
-            this.toolStripSeparator9,
             this.toolStripButton9,
             this.toolStripLabel12,
             this.txt_FiltrarTipoArticulos});
@@ -817,7 +813,7 @@
             this.btn_Refrescar_TipoArticulos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_TipoArticulos.Name = "btn_Refrescar_TipoArticulos";
             this.btn_Refrescar_TipoArticulos.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar_TipoArticulos.Text = "toolStripButton1";
+            this.btn_Refrescar_TipoArticulos.Text = "Refrescar";
             this.btn_Refrescar_TipoArticulos.Click += new System.EventHandler(this.btn_Refrescar_TipoArticulos_Click);
             // 
             // toolStripLabel9
@@ -838,7 +834,7 @@
             this.btn_Modificar_TipoArticulo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_TipoArticulo.Name = "btn_Modificar_TipoArticulo";
             this.btn_Modificar_TipoArticulo.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar_TipoArticulo.Text = "toolStripButton1";
+            this.btn_Modificar_TipoArticulo.Text = "Modificar";
             this.btn_Modificar_TipoArticulo.Click += new System.EventHandler(this.btn_Modificar_TipoArticulo_Click);
             // 
             // toolStripLabel10
@@ -852,26 +848,6 @@
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton8.Text = "toolStripButton2";
-            // 
-            // toolStripLabel11
-            // 
-            this.toolStripLabel11.Name = "toolStripLabel11";
-            this.toolStripLabel11.Size = new System.Drawing.Size(50, 24);
-            this.toolStripLabel11.Text = "Eliminar";
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -880,7 +856,7 @@
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton9.Text = "toolStripButton3";
+            this.toolStripButton9.Text = "Buscar";
             // 
             // toolStripLabel12
             // 
@@ -890,6 +866,7 @@
             // 
             // txt_FiltrarTipoArticulos
             // 
+            this.txt_FiltrarTipoArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarTipoArticulos.Name = "txt_FiltrarTipoArticulos";
             this.txt_FiltrarTipoArticulos.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarTipoArticulos.TextChanged += new System.EventHandler(this.txt_FiltrarTipoArticulos_TextChanged);
@@ -1143,11 +1120,8 @@
         private System.Windows.Forms.ToolStripButton btn_Modificar_TipoArticulo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripLabel toolStripLabel10;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel11;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripLabel toolStripLabel12;
         private System.Windows.Forms.ToolStripTextBox txt_FiltrarTipoArticulos;
         private System.Windows.Forms.DataGridView dgv_TipoArticulos;

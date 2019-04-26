@@ -34,7 +34,7 @@ namespace LavaCar_BLL.Cat_Mant
                 cmd.Parameters.AddWithValue("@contraseña", obj_Login_DAL.SContraseñaNueva);
                 cmd.Parameters.AddWithValue("@IdUsuario", obj_Login_DAL.SUsuario);
                 cmd.ExecuteNonQuery();
-                obj_Login_DAL.SMsj = "Cambio de contraseña realizado";
+                obj_Login_DAL.SMsj = "Cambio de contraseña realizado"; 
                 obj_Login_DAL.Obj_Connec_DB.Close();
 
             }
