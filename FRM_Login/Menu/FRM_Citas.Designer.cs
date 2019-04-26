@@ -168,7 +168,7 @@
             this.btn_RC_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_RC_Refrescar.Name = "btn_RC_Refrescar";
             this.btn_RC_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_RC_Refrescar.Text = "btn_Refrescar";
+            this.btn_RC_Refrescar.Text = "Refrescar";
             this.btn_RC_Refrescar.Click += new System.EventHandler(this.btn_RC_Refrescar_Click);
             // 
             // toolStripLabel1
@@ -189,7 +189,7 @@
             this.btn_RC_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_RC_Modificar.Name = "btn_RC_Modificar";
             this.btn_RC_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_RC_Modificar.Text = "btn_Modificar";
+            this.btn_RC_Modificar.Text = "Modificar";
             this.btn_RC_Modificar.Click += new System.EventHandler(this.btn_RC_Modificar_Click);
             // 
             // toolStripLabel2
@@ -211,7 +211,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Buscar";
             // 
             // toolStripLabel3
             // 
@@ -221,6 +221,7 @@
             // 
             // txt_FiltrarClientes
             // 
+            this.txt_FiltrarClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarClientes.Name = "txt_FiltrarClientes";
             this.txt_FiltrarClientes.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarClientes.TextChanged += new System.EventHandler(this.txt_FiltrarClientes_TextChanged);
@@ -437,7 +438,7 @@
             this.btn_RefrescarCitas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_RefrescarCitas.Name = "btn_RefrescarCitas";
             this.btn_RefrescarCitas.Size = new System.Drawing.Size(24, 24);
-            this.btn_RefrescarCitas.Text = "btn_Cita_Refrescar";
+            this.btn_RefrescarCitas.Text = "Refrescar";
             this.btn_RefrescarCitas.Click += new System.EventHandler(this.btn_RefrescarCitas_Click);
             // 
             // toolStripLabel4
@@ -458,7 +459,7 @@
             this.btn_ModificarCitas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_ModificarCitas.Name = "btn_ModificarCitas";
             this.btn_ModificarCitas.Size = new System.Drawing.Size(24, 24);
-            this.btn_ModificarCitas.Text = "btn_Cita_CrearCita";
+            this.btn_ModificarCitas.Text = "Modificar";
             this.btn_ModificarCitas.Click += new System.EventHandler(this.btn_ModificarCitas_Click);
             // 
             // toolStripLabel5
@@ -480,7 +481,7 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Buscar";
             // 
             // toolStripLabel6
             // 
@@ -490,6 +491,7 @@
             // 
             // txt_FiltrarCitas
             // 
+            this.txt_FiltrarCitas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarCitas.Name = "txt_FiltrarCitas";
             this.txt_FiltrarCitas.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarCitas.TextChanged += new System.EventHandler(this.txt_FiltrarCitas_TextChanged);

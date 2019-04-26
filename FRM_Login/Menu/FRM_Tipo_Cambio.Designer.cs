@@ -67,7 +67,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Buscar";
             // 
             // groupBox2
             // 
@@ -109,7 +109,7 @@
             this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Text = "Refrescar";
             this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripLabel1
@@ -130,7 +130,7 @@
             this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripLabel2
@@ -152,6 +152,7 @@
             // 
             // txt_FiltrarTipoCambio
             // 
+            this.txt_FiltrarTipoCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarTipoCambio.Name = "txt_FiltrarTipoCambio";
             this.txt_FiltrarTipoCambio.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarTipoCambio.TextChanged += new System.EventHandler(this.txt_FiltrarTipoCambio_TextChanged);

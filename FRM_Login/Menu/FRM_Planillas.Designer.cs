@@ -48,10 +48,10 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarPlanillas = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Planillas = new System.Windows.Forms.DataGridView();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -238,7 +238,7 @@
             this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Text = "Refrescar";
             this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripLabel1
@@ -259,7 +259,7 @@
             this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "toolStripButton2";
+            this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripLabel2
@@ -273,6 +273,16 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "Buscar";
+            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -281,6 +291,7 @@
             // 
             // txt_FiltrarPlanillas
             // 
+            this.txt_FiltrarPlanillas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarPlanillas.Name = "txt_FiltrarPlanillas";
             this.txt_FiltrarPlanillas.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarPlanillas.TextChanged += new System.EventHandler(this.txt_FiltrarPlanillas_TextChanged);
@@ -303,16 +314,6 @@
             this.dgv_Planillas.Size = new System.Drawing.Size(781, 237);
             this.dgv_Planillas.TabIndex = 0;
             this.dgv_Planillas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Planillas_CellDoubleClick);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Planillas
             // 

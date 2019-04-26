@@ -66,9 +66,6 @@
             this.btn_Modificar_TipoPolizas = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
@@ -322,7 +319,7 @@
             this.btn_Refrescar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_Polizas.Name = "btn_Refrescar_Polizas";
             this.btn_Refrescar_Polizas.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar_Polizas.Text = "toolStripButton1";
+            this.btn_Refrescar_Polizas.Text = "Refrescar";
             this.btn_Refrescar_Polizas.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripLabel1
@@ -343,7 +340,7 @@
             this.btn_Modificar_Polizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_Polizas.Name = "btn_Modificar_Polizas";
             this.btn_Modificar_Polizas.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar_Polizas.Text = "toolStripButton2";
+            this.btn_Modificar_Polizas.Text = "Modificar";
             this.btn_Modificar_Polizas.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripLabel2
@@ -365,7 +362,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Buscar";
             // 
             // toolStripLabel4
             // 
@@ -375,6 +372,7 @@
             // 
             // txt_FiltrarTipoPoliza
             // 
+            this.txt_FiltrarTipoPoliza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarTipoPoliza.Name = "txt_FiltrarTipoPoliza";
             this.txt_FiltrarTipoPoliza.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarTipoPoliza.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged_1);
@@ -441,9 +439,6 @@
             this.btn_Modificar_TipoPolizas,
             this.toolStripLabel6,
             this.toolStripSeparator5,
-            this.toolStripButton6,
-            this.toolStripLabel7,
-            this.toolStripSeparator6,
             this.toolStripButton2,
             this.toolStripLabel8,
             this.toolStripTextBox2});
@@ -460,7 +455,7 @@
             this.btn_Refrescar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar_TipoPolizas.Name = "btn_Refrescar_TipoPolizas";
             this.btn_Refrescar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar_TipoPolizas.Text = "toolStripButton1";
+            this.btn_Refrescar_TipoPolizas.Text = "Refrescar";
             this.btn_Refrescar_TipoPolizas.Click += new System.EventHandler(this.btn_Refrescar_TipoPolizas_Click);
             // 
             // toolStripLabel5
@@ -481,7 +476,7 @@
             this.btn_Modificar_TipoPolizas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar_TipoPolizas.Name = "btn_Modificar_TipoPolizas";
             this.btn_Modificar_TipoPolizas.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar_TipoPolizas.Text = "toolStripButton2";
+            this.btn_Modificar_TipoPolizas.Text = "Modificar";
             this.btn_Modificar_TipoPolizas.Click += new System.EventHandler(this.btn_Modificar_TipoPolizas_Click);
             // 
             // toolStripLabel6
@@ -495,26 +490,6 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "toolStripButton3";
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(50, 24);
-            this.toolStripLabel7.Text = "Eliminar";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -523,7 +498,7 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Buscar";
             // 
             // toolStripLabel8
             // 
@@ -533,6 +508,7 @@
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(76, 27);
             this.toolStripTextBox2.TextChanged += new System.EventHandler(this.toolStripTextBox2_TextChanged);
@@ -789,9 +765,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripButton btn_Modificar_TipoPolizas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.DataGridView dgv_TipoPoliza;

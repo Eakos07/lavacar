@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Roles));
             System.Windows.Forms.ToolStripButton toolStripButton1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Roles));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_IdRol = new System.Windows.Forms.TextBox();
             this.cmb_IdEstado = new System.Windows.Forms.ComboBox();
@@ -61,6 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Roles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Enabled = false;
+            toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            toolStripButton1.Text = "Buscar";
             // 
             // groupBox1
             // 
@@ -245,7 +255,7 @@
             this.btn_Refrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Refrescar.Name = "btn_Refrescar";
             this.btn_Refrescar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Refrescar.Text = "toolStripButton1";
+            this.btn_Refrescar.Text = "Refrescar";
             this.btn_Refrescar.Click += new System.EventHandler(this.btn_Refrescar_Click);
             // 
             // toolStripLabel1
@@ -266,7 +276,7 @@
             this.btn_Modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(24, 24);
-            this.btn_Modificar.Text = "btn_Modificar";
+            this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // toolStripLabel2
@@ -288,6 +298,7 @@
             // 
             // txt_FiltrarRoles
             // 
+            this.txt_FiltrarRoles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_FiltrarRoles.Name = "txt_FiltrarRoles";
             this.txt_FiltrarRoles.Size = new System.Drawing.Size(76, 27);
             this.txt_FiltrarRoles.TextChanged += new System.EventHandler(this.txt_FiltrarRoles_TextChanged);
@@ -314,16 +325,6 @@
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Enabled = false;
-            toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Roles
             // 
