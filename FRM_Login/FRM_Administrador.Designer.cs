@@ -49,7 +49,7 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCambioContra = new System.Windows.Forms.Button();
             this.btnPromociones = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.btnTipoPlaca = new System.Windows.Forms.Button();
@@ -396,7 +396,7 @@
             // pnlMenu2
             // 
             this.pnlMenu2.BackColor = System.Drawing.Color.SkyBlue;
-            this.pnlMenu2.Controls.Add(this.button1);
+            this.pnlMenu2.Controls.Add(this.btnCambioContra);
             this.pnlMenu2.Controls.Add(this.btnPromociones);
             this.pnlMenu2.Controls.Add(this.button19);
             this.pnlMenu2.Controls.Add(this.btnTipoPlaca);
@@ -414,22 +414,24 @@
             this.pnlMenu2.Size = new System.Drawing.Size(190, 708);
             this.pnlMenu2.TabIndex = 6;
             // 
-            // button1
+            // btnCambioContra
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 617);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 55);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Cambio Contraseña";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCambioContra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambioContra.FlatAppearance.BorderSize = 0;
+            this.btnCambioContra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCambioContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambioContra.ForeColor = System.Drawing.Color.Black;
+            this.btnCambioContra.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioContra.Image")));
+            this.btnCambioContra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambioContra.Location = new System.Drawing.Point(3, 617);
+            this.btnCambioContra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCambioContra.Name = "btnCambioContra";
+            this.btnCambioContra.Size = new System.Drawing.Size(184, 62);
+            this.btnCambioContra.TabIndex = 20;
+            this.btnCambioContra.Text = "Cambio\r\nContraseña";
+            this.btnCambioContra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCambioContra.UseVisualStyleBackColor = true;
+            this.btnCambioContra.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPromociones
             // 
@@ -660,6 +662,6 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnPromociones;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCambioContra;
     }
 }

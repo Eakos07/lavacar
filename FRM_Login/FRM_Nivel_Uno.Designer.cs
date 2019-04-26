@@ -117,6 +117,7 @@
             this.btnCambioContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCambioContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambioContraseña.ForeColor = System.Drawing.Color.Black;
+            this.btnCambioContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnCambioContraseña.Image")));
             this.btnCambioContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCambioContraseña.Location = new System.Drawing.Point(2, 125);
             this.btnCambioContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -124,6 +125,7 @@
             this.btnCambioContraseña.Size = new System.Drawing.Size(176, 66);
             this.btnCambioContraseña.TabIndex = 20;
             this.btnCambioContraseña.Text = "Cambio Contraseña";
+            this.btnCambioContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCambioContraseña.UseVisualStyleBackColor = true;
             this.btnCambioContraseña.Click += new System.EventHandler(this.btnCambioContraseña_Click);
             // 
