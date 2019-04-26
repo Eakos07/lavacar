@@ -58,6 +58,8 @@
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.Location = new System.Drawing.Point(454, 246);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(115, 37);
@@ -98,9 +100,9 @@
             this.label2.Location = new System.Drawing.Point(135, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(295, 21);
+            this.label2.Size = new System.Drawing.Size(306, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Ingrese su número de Identifiacion";
+            this.label2.Text = "Ingrese su número de Identificación";
             // 
             // FRM_Contraseña
             // 

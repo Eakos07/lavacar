@@ -98,7 +98,7 @@ namespace FRM_Login
             {
                 obj_Login_BLL.Ingresar(ref obj_Login_DAL);
 
-                if (obj_Login_DAL.BIdRole == 3)
+                if (obj_Login_DAL.BIdRole == 3 && obj_Login_DAL.SIdEstado == "A")
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,7 +109,7 @@ namespace FRM_Login
 
                 }
 
-                if (obj_Login_DAL.BIdRole == 2)
+                if (obj_Login_DAL.BIdRole == 2 && obj_Login_DAL.SIdEstado == "A")
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario, "Octupus", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -119,7 +119,7 @@ namespace FRM_Login
                     PantallaMenu.ShowDialog();
                 }
 
-                if (obj_Login_DAL.BIdRole == 1)
+                if (obj_Login_DAL.BIdRole == 1 && obj_Login_DAL.SIdEstado == "A")
                 {
                     this.Hide();
                     MessageBox.Show("Bienvenido: " + obj_Login_DAL.SUsuario);
@@ -139,6 +139,10 @@ namespace FRM_Login
             if (obj_Login_DAL.SMsjError.Contains("a"))
             {
                 MessageBox.Show(obj_Login_DAL.SMsjError);
+            }
+            if (obj_Login_DAL.SIdEstado != "A")
+            {
+                MessageBox.Show(obj_Login_DAL.SMsj, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
           
