@@ -27,18 +27,16 @@ namespace LavaCar_BLL.Recuperacion
             {
                 Obj_RECU_DAL.BIdEmpleado = dr.GetByte(0);
                 Obj_RECU_DAL.SEmail = dr.GetString(1);
-                dr.Close();
+                
             }
-
+            dr.Close();
             Obj_RECU_DAL.SQuery1 = @"Select Contraseña from Sch_Administrativo.T_Usuarios where IdEmpleado ='" + Obj_RECU_DAL.BIdEmpleado + "'";
             SqlCommand cmd1 = new SqlCommand(Obj_RECU_DAL.SQuery1, Obj_RECU_DAL.Obj_Connec_DB);
             SqlDataReader dr1 = cmd1.ExecuteReader();
             if (dr1.Read() == true)
             {
                 Obj_RECU_DAL.SContraseña = dr1.GetString(0);
-            }
 
-            
                 Obj_RECU_DAL.Obj_Connec_DB.Dispose();
 
                 MailMessage msg = new MailMessage();
@@ -53,7 +51,6 @@ namespace LavaCar_BLL.Recuperacion
                 clienteSmtp.EnableSsl = true;
 
                 clienteSmtp.Host = "smtp.gmail.com";
-
                 try
 
                 {
@@ -74,6 +71,12 @@ namespace LavaCar_BLL.Recuperacion
 
 
                 }
+            }
+
+            
+                
+
+               
             
             if (Obj_RECU_DAL.SEmail == "a")     
             {
