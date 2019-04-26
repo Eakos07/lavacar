@@ -16,6 +16,7 @@ namespace FRM_Login.Menu
         {
             InitializeComponent();
             timer1.Enabled = true;
+            btn_salida.Enabled = false;
         }
 
         
@@ -23,6 +24,7 @@ namespace FRM_Login.Menu
         private void FRM_Marcas_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+           
         }
 
    
@@ -40,6 +42,7 @@ namespace FRM_Login.Menu
         private void btn_entrada_Click(object sender, EventArgs e)
         {
             label7.Text = label1.Text;
+            btn_salida.Enabled = true;
         }
 
         private void btn_salida_Click(object sender, EventArgs e)
