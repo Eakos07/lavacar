@@ -71,18 +71,7 @@ namespace FRM_Login.Menu
             #endregion
         }
 
-        private void txt_FiltrarRoles_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_Roles();
-        }
-
-        private void btn_Refrescar_Click(object sender, EventArgs e)
-        {
-            Cargar_Datos_Roles();
-            Cargar_cmb();
-        }
-
-        private void btn_Modificar_Click(object sender, EventArgs e)
+        public void Modificar_Roles()
         {
             if (dgv_Roles.RowCount == 0)
             {
@@ -97,6 +86,21 @@ namespace FRM_Login.Menu
                 txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_IdEstado.Text = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
+        }
+        private void txt_FiltrarRoles_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_Roles();
+        }
+
+        private void btn_Refrescar_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_Roles();
+            Cargar_cmb();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Modificar_Roles();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -149,19 +153,7 @@ namespace FRM_Login.Menu
 
         private void dgv_Roles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Roles.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdRol.Enabled = false;
-                txt_IdRol.Text = dgv_Roles.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Nivel.Text = dgv_Roles.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Descrip.Text = dgv_Roles.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Roles.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_Roles();
         }
 
         #region Validaciones

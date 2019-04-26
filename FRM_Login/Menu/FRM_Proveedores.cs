@@ -35,6 +35,24 @@ namespace FRM_Login.Menu
             Cargar_Datos_Proveedores();
             Cargar_cmb();
         }
+        public void Modificar_Proveedores()
+        {
+            if (dgv_Proveedores.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdProveedor.Enabled = false;
+                txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
+            }
+        }
 
         public void Cargar_Datos_Proveedores()
         {
@@ -94,21 +112,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_Proveedores.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdProveedor.Enabled = false;
-                txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
-            }
+            Modificar_Proveedores();   
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -160,21 +164,7 @@ namespace FRM_Login.Menu
 
         private void dgv_Proveedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Proveedores.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdProveedor.Enabled = false;
-                txt_IdProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txtNomProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txtEmailProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txtTelefoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txtPlazoPago.Text = dgv_Proveedores.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstadoProveedor.Text = dgv_Proveedores.SelectedRows[0].Cells[5].Value.ToString().Trim();
-            }
+            Modificar_Proveedores();
         }
 
         #region Validaciones

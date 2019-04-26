@@ -39,7 +39,24 @@ namespace FRM_Login.Menu
         }
 
         #region Clientes
-
+        #region Modificar Clientes
+        public void Modificar_Clientes()
+        {
+            if (dgv_Cliente.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_Clientes_DAL.cBandIM = 'M';
+                txt_NumPlaca.Enabled = false;
+                txt_NumPlaca.Text = dgv_Cliente.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmbTipoPlacaVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmbTipoVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_NumVisitas.Text = dgv_Cliente.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
+        }
+        #endregion
         public void Cargar_Cmb_Clientes()
         {
             string sMsjError = string.Empty;
@@ -145,19 +162,7 @@ namespace FRM_Login.Menu
 
         private void btn_RC_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_Cliente.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_Clientes_DAL.cBandIM = 'M';
-                txt_NumPlaca.Enabled = false;
-                txt_NumPlaca.Text = dgv_Cliente.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmbTipoPlacaVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmbTipoVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_NumVisitas.Text = dgv_Cliente.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_Clientes();
         }
 
         private void btn_RC_Refrescar_Click(object sender, EventArgs e)
@@ -168,19 +173,7 @@ namespace FRM_Login.Menu
 
         private void dgv_Cliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Cliente.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_Clientes_DAL.cBandIM = 'M';
-                txt_NumPlaca.Enabled = false;
-                txt_NumPlaca.Text = dgv_Cliente.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmbTipoPlacaVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmbTipoVehiculo.Text = dgv_Cliente.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_NumVisitas.Text = dgv_Cliente.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_Clientes();
         }
 
         private void txt_FiltrarClientes_TextChanged(object sender, EventArgs e)
@@ -299,7 +292,31 @@ namespace FRM_Login.Menu
         #endregion
 
         #region Citas
-
+        #region Modificar Citas
+        public void Modificar_Citas()
+        {
+            if (dgv_Citas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
+                Obj_Citas_DAL.cBandIM = 'M';
+                txt_NumCita.Enabled = false;
+                txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
+                dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
+                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
+            }
+        }
+        #endregion
         public void CargarDatos_Citas()
         {
             cmb_HoraCita.SelectedItem = "Elija una opción";
@@ -491,26 +508,12 @@ namespace FRM_Login.Menu
 
         private void btn_ModificarCitas_Click(object sender, EventArgs e)
         {
-            if (dgv_Citas.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                dtp_Fecha.MinDate = Convert.ToDateTime("01/01/2019");
-                Obj_Citas_DAL.cBandIM = 'M';
-                txt_NumCita.Enabled = false;
-                txt_NumCita.Text = dgv_Citas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NomCliente.Text = dgv_Citas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Telefono.Text = dgv_Citas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_RegistroPlaca.SelectedValue = dgv_Citas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_TipoServicio.Text = dgv_Citas.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                txt_Email.Text = dgv_Citas.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                dtp_Fecha.Value = Convert.ToDateTime(dgv_Citas.SelectedRows[0].Cells[6].Value);
-                cmb_HoraCita.SelectedText = dgv_Citas.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_EstadoCita.Text = dgv_Citas.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_EmpleadoCitas.Text = dgv_Citas.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            }
+            Modificar_Citas();
+        }
+
+        private void dgv_Cliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Modificar_Citas();
         }
 
         #region Validaciones

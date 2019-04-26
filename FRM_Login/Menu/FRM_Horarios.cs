@@ -71,19 +71,7 @@ namespace FRM_Login.Menu
             cmb_IdEstado.SelectedValue = "0";
 
         }
-
-        private void txt_FiltrarHorarios_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_Horarios();
-        }
-
-        private void btn_Refrescar_Click(object sender, EventArgs e)
-        {
-            Cargar_Datos_Horarios();
-            Cargar_cmb();
-        }
-
-        private void btn_Modificar_Click(object sender, EventArgs e)
+        public void Modificar_Horarios()
         {
             if (dgv_Horarios.RowCount == 0)
             {
@@ -100,6 +88,22 @@ namespace FRM_Login.Menu
                 txt_Salida.Text = dgv_Horarios.SelectedRows[0].Cells[4].Value.ToString().Trim();
                 cmb_IdEstado.Text = dgv_Horarios.SelectedRows[0].Cells[5].Value.ToString().Trim();
             }
+        }
+
+        private void txt_FiltrarHorarios_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_Horarios();
+        }
+
+        private void btn_Refrescar_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_Horarios();
+            Cargar_cmb();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Modificar_Horarios();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -135,7 +139,6 @@ namespace FRM_Login.Menu
                     if (sMsjError == string.Empty)
                     {
                         MessageBox.Show("Modificación de registro exitoso", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //txt_IdHorario.Enabled = true;
                         Cargar_Datos_Horarios();
                     }
                     else
@@ -154,21 +157,7 @@ namespace FRM_Login.Menu
 
         private void dgv_Horarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Horarios.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdHorario.Enabled = false;
-                txt_IdHorario.Text = dgv_Horarios.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Descrip.Text = dgv_Horarios.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_CantiHoras.Text = dgv_Horarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Entrada.Text = dgv_Horarios.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txt_Salida.Text = dgv_Horarios.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Horarios.SelectedRows[0].Cells[5].Value.ToString().Trim();
-            }
+            Modificar_Horarios();
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -192,9 +181,6 @@ namespace FRM_Login.Menu
             }
 
         }
-
-
-
 
         #endregion
 

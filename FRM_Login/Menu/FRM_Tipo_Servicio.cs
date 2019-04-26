@@ -51,6 +51,25 @@ namespace FRM_Login.Menu
             }
         }
 
+        public void Modificar_Tipo_Servicio()
+        {
+            if (dgv_TipoServicio.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_TipoServicio_DAL.cBandIM = 'M';
+                txt_CodigoServicio.Enabled = false;
+
+                txt_CodigoServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_NombreServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Precio.Text = dgv_TipoServicio.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Duracion.Text = dgv_TipoServicio.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdTipoVehiculo.Text = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            }
+        }
+
         public void Cargar_cmb()
         {
             string sMsjError = string.Empty;
@@ -137,22 +156,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_TipoServicio.RowCount==0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoServicio_DAL.cBandIM = 'M';
-                txt_CodigoServicio.Enabled = false;
-                
-                txt_CodigoServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NombreServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Precio.Text = dgv_TipoServicio.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Duracion.Text = dgv_TipoServicio.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_IdTipoVehiculo.Text = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
-
+            Modificar_Tipo_Servicio();
         }
 
         private void txt_CodigoServicio_KeyPress(object sender, KeyPressEventArgs e)
@@ -218,21 +222,7 @@ namespace FRM_Login.Menu
 
         private void dgv_TipoServicio_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_TipoServicio.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoServicio_DAL.cBandIM = 'M';
-                txt_CodigoServicio.Enabled = false;
-
-                txt_CodigoServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NombreServicio.Text = dgv_TipoServicio.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Precio.Text = dgv_TipoServicio.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Duracion.Text = dgv_TipoServicio.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_IdTipoVehiculo.Text = dgv_TipoServicio.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
+            Modificar_Tipo_Servicio();
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)

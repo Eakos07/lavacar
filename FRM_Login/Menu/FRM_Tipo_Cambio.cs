@@ -28,6 +28,21 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_TipoCambio();
         }
+        public void Modificar_Tipo_Cambio()
+        {
+            if (dgv_TipoCambio.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdTipoCambio.Enabled = false;
+                txt_IdTipoCambio.Text = dgv_TipoCambio.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Valor.Text = dgv_TipoCambio.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Fecha.Text = dgv_TipoCambio.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
         public void Cargar_Datos_TipoCambio()
         {
 
@@ -93,19 +108,7 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        //private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-        //    {
-        //        e.Handled = false;
-        //        errorIcono.SetError(txt_Fecha, "");
-        //    }
-        //    else
-        //    {
-        //        e.Handled = true;
-        //        errorIcono.SetError(txt_Fecha, "Solo puede digitar numeros");
-        //    }
-        //}
+
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
@@ -158,30 +161,15 @@ namespace FRM_Login.Menu
             }
 
         }
-
+       
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if(dgv_TipoCambio.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdTipoCambio.Enabled = false;
-                txt_IdTipoCambio.Text = dgv_TipoCambio.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Valor.Text = dgv_TipoCambio.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Fecha.Text = dgv_TipoCambio.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Tipo_Cambio();
         }
 
         private void dgv_TipoCambio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_DAL.cBandIM = 'M';
-            txt_IdTipoCambio.Enabled = false;
-            txt_IdTipoCambio.Text = dgv_TipoCambio.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Valor.Text = dgv_TipoCambio.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            txt_Fecha.Text = dgv_TipoCambio.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            Modificar_Tipo_Cambio();
         }
 
         private void btn_Refrescar_Click(object sender, EventArgs e)

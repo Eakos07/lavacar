@@ -31,7 +31,29 @@ namespace FRM_Login.Menu
             Cargar_CMB();
         }
 
-        private void CargarEmpleados()
+        public void Modificar_Empleados()
+        {
+            if (dgv_Empleados.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdEmpleado.Text = dgv_Empleados.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Identificacion.Text = dgv_Empleados.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_Nombre.Text = dgv_Empleados.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                txt_Apellido.Text = dgv_Empleados.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                txt_Telefono.Text = dgv_Empleados.SelectedRows[0].Cells[4].Value.ToString().Trim();
+                txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
+                txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
+                txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
+                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
+            }
+
+        }
+        public void CargarEmpleados()
         {
 
             txt_IdEmpleado.Clear();
@@ -174,46 +196,12 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_Empleados.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdEmpleado.Text = dgv_Empleados.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Identificacion.Text = dgv_Empleados.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Nombre.Text = dgv_Empleados.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Apellido.Text = dgv_Empleados.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txt_Telefono.Text = dgv_Empleados.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
-                txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            }
+            Modificar_Empleados();
         }
 
         private void dgv_Empleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Empleados.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdEmpleado.Text = dgv_Empleados.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Identificacion.Text = dgv_Empleados.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Nombre.Text = dgv_Empleados.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                txt_Apellido.Text = dgv_Empleados.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txt_Telefono.Text = dgv_Empleados.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                txt_Direccion.Text = dgv_Empleados.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                txt_Email.Text = dgv_Empleados.SelectedRows[0].Cells[6].Value.ToString().Trim();
-                txt_Puesto.Text = dgv_Empleados.SelectedRows[0].Cells[7].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Empleados.SelectedRows[0].Cells[8].Value.ToString().Trim();
-                cmb_IdPoliza.Text = dgv_Empleados.SelectedRows[0].Cells[9].Value.ToString().Trim();
-            }
+            Modificar_Empleados();
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)

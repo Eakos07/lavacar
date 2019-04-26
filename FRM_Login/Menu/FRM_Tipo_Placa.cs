@@ -48,6 +48,21 @@ namespace FRM_Login.Menu
 
         }
 
+        public void Modificar_TipoPlaca()
+        {
+            if (dgv_TipoPlaca.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_TipoPlaca_DAL.cBandIM = 'M';
+                txt_IdTipoPlaca.Enabled = false;
+                txt_IdTipoPlaca.Text = dgv_TipoPlaca.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Descripcion.Text = dgv_TipoPlaca.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            }
+        }
+
         private void FRM_Tipo_Placa_Load(object sender, EventArgs e)
         {
             Cargar_Datos();
@@ -106,17 +121,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_TipoPlaca.RowCount==0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoPlaca_DAL.cBandIM = 'M';
-                txt_IdTipoPlaca.Enabled = false;
-                txt_IdTipoPlaca.Text = dgv_TipoPlaca.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Descripcion.Text = dgv_TipoPlaca.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            }
+            Modificar_TipoPlaca();
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
@@ -160,10 +165,7 @@ namespace FRM_Login.Menu
 
         private void dgv_TipoPlaca_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_TipoPlaca_DAL.cBandIM = 'M';
-            txt_IdTipoPlaca.Enabled = false;
-            txt_IdTipoPlaca.Text = dgv_TipoPlaca.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Descripcion.Text = dgv_TipoPlaca.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            Modificar_TipoPlaca();
         }
     }
 }

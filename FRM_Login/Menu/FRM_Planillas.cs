@@ -94,7 +94,22 @@ namespace FRM_Login.Menu
         {
             Cargar_Datos_Planilla();
         }
-
+        public void Modificar_Planillas()
+        {
+            if (dgv_Planillas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdPlanilla.Enabled = false;
+                txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+            }
+        }
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_IdPlanilla.Text)) && cmb_IdHorario.SelectedValue.ToString() == "0"
@@ -151,37 +166,12 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-
-            if (dgv_Planillas.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdPlanilla.Enabled = false;
-                txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_Planillas();
         }
 
         private void dgv_Planillas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Planillas.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdPlanilla.Enabled = false;
-                txt_IdPlanilla.Text = dgv_Planillas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmb_IdEmpleado.Text = dgv_Planillas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_IdHorario.Text = dgv_Planillas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Planillas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_Planillas();
         }
 
         #region Validaciones

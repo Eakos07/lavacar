@@ -192,8 +192,26 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        
+
         #region Familia
+
+        #region Modificar Familia
+        public void Modificar_Familia() {
+
+            if (dgv_FamiliaArticulos.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL_Familia.cBandIM = 'M';
+                txt_IdFamilia.Enabled = false;
+                txt_IdFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_DescripcionFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_IdEstadoFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
+        #endregion
         private void btn_RefrescarFamilia_Click(object sender, EventArgs e)
         {
             Cargar_cmb_FamiliaArticulos();
@@ -202,34 +220,12 @@ namespace FRM_Login.Menu
 
         private void btn_ModificarFamilia_Click(object sender, EventArgs e)
         {
-            if (dgv_FamiliaArticulos.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL_Familia.cBandIM = 'M';
-                txt_IdFamilia.Enabled = false;
-                txt_IdFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_DescripcionFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_IdEstadoFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Familia();   
         }
 
         private void dgv_FamiliaArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_FamiliaArticulos.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL_Familia.cBandIM = 'M';
-                txt_IdFamilia.Enabled = false;
-                txt_IdFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_DescripcionFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_IdEstadoFamilia.Text = dgv_FamiliaArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Familia();
         }
 
         private void btn_GuardarFamilia_Click(object sender, EventArgs e)
@@ -326,7 +322,8 @@ namespace FRM_Login.Menu
         #endregion
 
         #region Articulos
-        private void dgv_Articulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        #region Modificar Articulos
+        public void Modificar_Articulos()
         {
             if (dgv_Articulos.RowCount == 0)
             {
@@ -345,27 +342,16 @@ namespace FRM_Login.Menu
                 txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim();
                 cmb_Estado_Articulos.Text = dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim();
             }
+        }
+        #endregion
+        private void dgv_Articulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Modificar_Articulos();
         }              
 
         private void btn_Modificar_Articulo_Click(object sender, EventArgs e)
         {
-            if (dgv_Articulos.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL_Articulos.cBandIM = 'M';
-                txt_Articulo.Enabled = false;
-                txt_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NombreArticulo.Text = dgv_Articulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Cantidad_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdFamilia_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_Tipo_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[4].Value.ToString().Trim();
-                txt_InventarioMin_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[5].Value.ToString().Trim();
-                txt_PrecioVenta_Articulo.Text = dgv_Articulos.SelectedRows[0].Cells[6].Value.ToString().Trim();
-                cmb_Estado_Articulos.Text = dgv_Articulos.SelectedRows[0].Cells[7].Value.ToString().Trim();
-            }
+            Modificar_Articulos();
         }
 
         private void btn_GuardarArticulo_Click(object sender, EventArgs e)
@@ -519,18 +505,8 @@ namespace FRM_Login.Menu
         #endregion
 
         #region Tipo Articulos
-        private void txt_FiltrarTipoArticulos_TextChanged(object sender, EventArgs e)
-        {
-            Cargar_Datos_TipoArticulo();
-        }
-
-        private void btn_Refrescar_TipoArticulos_Click(object sender, EventArgs e)
-        {
-            Cargar_Datos_TipoArticulo();
-            Cargar_cmb_TipoArticulos();
-        }
-
-        private void btn_Modificar_TipoArticulo_Click(object sender, EventArgs e)
+        #region Modificar Tipo Articulos
+        public void Modificar_Tipo_Articulos()
         {
             if (dgv_TipoArticulos.RowCount == 0)
             {
@@ -544,6 +520,22 @@ namespace FRM_Login.Menu
                 txt_DescripcionTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 cmb_EstadoTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
             }
+        }
+        #endregion
+        private void txt_FiltrarTipoArticulos_TextChanged(object sender, EventArgs e)
+        {
+            Cargar_Datos_TipoArticulo();
+        }
+
+        private void btn_Refrescar_TipoArticulos_Click(object sender, EventArgs e)
+        {
+            Cargar_Datos_TipoArticulo();
+            Cargar_cmb_TipoArticulos();
+        }
+
+        private void btn_Modificar_TipoArticulo_Click(object sender, EventArgs e)
+        {
+            Modificar_Tipo_Articulos();
         }
 
         private void btn_GuardarTipoArticulo_Click(object sender, EventArgs e)
@@ -596,18 +588,7 @@ namespace FRM_Login.Menu
 
         private void dgv_TipoArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_TipoArticulos.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL_Tipo.cBandIM = 'M';
-                txt_IdTipoArticulo.Enabled = false;
-                txt_IdTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_DescripcionTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_EstadoTipoArticulo.Text = dgv_TipoArticulos.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Tipo_Articulos();
         }
 
         #region Validaciones

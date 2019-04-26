@@ -178,7 +178,7 @@ namespace FRM_Login.Menu
         }
 
         #region Polizas
-        private void btn_Modificar_Click(object sender, EventArgs e)
+        public void Modificar_Polizas()
         {
             if (dgv_Polizas.RowCount == 0)
             {
@@ -192,9 +192,13 @@ namespace FRM_Login.Menu
                 txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
                 cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
                 txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.Text= dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_IdEstado.Text = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
                 txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
             }
+        }
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Modificar_Polizas();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -261,6 +265,11 @@ namespace FRM_Login.Menu
             Cargar_Polizas();
             Cargar_cmb_Polizas();
         }
+
+        private void dgv_Polizas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Modificar_Polizas();
+        }
         #endregion
 
         #region Tipo Polizas
@@ -269,10 +278,8 @@ namespace FRM_Login.Menu
             Cargar_TipoPolizas();
             Cargar_cmb_TipoPolizas();
         }
-
-        private void dgv_TipoPoliza_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void Modificar_TipoPoliza()
         {
-
             if (dgv_TipoPoliza.RowCount == 0)
             {
                 MessageBox.Show("No hay datos para modificar");
@@ -287,6 +294,11 @@ namespace FRM_Login.Menu
                 txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
                 cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
             }
+        }
+
+        private void dgv_TipoPoliza_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Modificar_TipoPoliza();
         }
 
         private void btn_Guardar_TipoPolizas_Click(object sender, EventArgs e)
@@ -341,20 +353,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_TipoPolizas_Click(object sender, EventArgs e)
         {
-            if (dgv_TipoPoliza.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoPolizas_DAL.cBandIM = 'M';
-                txt_IdTipoPoliza.Enabled = false;
-
-                txt_IdTipoPoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_NombrePoliza.Text = dgv_TipoPoliza.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_Compañia.Text = dgv_TipoPoliza.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdProveedor.Text = dgv_TipoPoliza.SelectedRows[0].Cells[3].Value.ToString().Trim();
-            }
+            Modificar_TipoPoliza();
         }
         #endregion
 
@@ -483,23 +482,5 @@ namespace FRM_Login.Menu
         }
         #endregion
 
-        private void dgv_Polizas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgv_Polizas.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_Polizas_DAL.cBandIM = 'M';
-                txt_IdPoliza.Enabled = false;
-
-                txt_IdPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                cmb_IdTipoPoliza.Text = dgv_Polizas.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_FechaVenci.Text = dgv_Polizas.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_IdEstado.Text = dgv_Polizas.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                txt_CeduJurid.Text = dgv_Polizas.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
-        }
     }
 }

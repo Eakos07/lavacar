@@ -47,6 +47,20 @@ namespace FRM_Login.Menu
             }
         }
 
+        public void Modificar_TipoVehiculo()
+        {
+            if (dgv_TipoVehiculo.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_TipoVehiculo_DAL.cBandIM = 'M';
+                txt_TipoVehiculo.Enabled = false;
+                txt_TipoVehiculo.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Descrip.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            }
+        }
 
         private void FRM_Tipo_Vehículo_Load(object sender, EventArgs e)
         {
@@ -102,17 +116,7 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_TipoVehiculo.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_TipoVehiculo_DAL.cBandIM = 'M';
-                txt_TipoVehiculo.Enabled = false;
-                txt_TipoVehiculo.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Descrip.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[1].Value.ToString().Trim();
-            }
+            Modificar_TipoVehiculo();  
         }
 
 
@@ -161,10 +165,7 @@ namespace FRM_Login.Menu
 
         private void dgv_TipoVehiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Obj_TipoVehiculo_DAL.cBandIM = 'M';
-            txt_TipoVehiculo.Enabled = false;
-            txt_TipoVehiculo.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[0].Value.ToString().Trim();
-            txt_Descrip.Text = dgv_TipoVehiculo.SelectedRows[0].Cells[1].Value.ToString().Trim();
+            Modificar_TipoVehiculo();
         }
     }
 }

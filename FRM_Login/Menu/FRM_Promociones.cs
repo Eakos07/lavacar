@@ -24,6 +24,21 @@ namespace FRM_Login.Menu
             Cargar_Datos_Promociones();
 
         }
+        public void Modificar_Promos()
+        {
+            if (dgv_Promociones.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_IdPromociones.Enabled = false;
+                txt_IdPromociones.Text = dgv_Promociones.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_TipoPromo.Text = dgv_Promociones.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                txt_descrip.Text = dgv_Promociones.SelectedRows[0].Cells[2].Value.ToString().Trim();
+            }
+        }
         #region Variables Globales
         cls_Promociones_BLL Obj_BLL = new cls_Promociones_BLL();
         cls_Promociones_DAL Obj_DAL = new cls_Promociones_DAL();
@@ -76,39 +91,14 @@ namespace FRM_Login.Menu
                 MessageBox.Show("Solo se permiten letras");
             }
         }
-
         private void dgv_Promociones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_Promociones.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdPromociones.Enabled = false;
-                txt_IdPromociones.Text = dgv_Promociones.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_TipoPromo.Text = dgv_Promociones.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_descrip.Text = dgv_Promociones.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Promos();
         }
-
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_Promociones.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_IdPromociones.Enabled = false;
-                txt_IdPromociones.Text = dgv_Promociones.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_TipoPromo.Text = dgv_Promociones.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                txt_descrip.Text = dgv_Promociones.SelectedRows[0].Cells[2].Value.ToString().Trim();
-            }
+            Modificar_Promos();
         }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (!(string.IsNullOrEmpty(txt_IdPromociones.Text)) && !(string.IsNullOrEmpty(txt_TipoPromo.Text)) && !(string.IsNullOrEmpty(txt_descrip.Text)))

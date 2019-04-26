@@ -29,6 +29,23 @@ namespace FRM_Login.Menu
             Cargar_Datos();
             Cargar_cmb();
         }
+        public void Modificar_Usuario()
+        {
+            if (dgv_Usuario.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos para modificar");
+            }
+            else
+            {
+                Obj_DAL.cBandIM = 'M';
+                txt_Usuario.Enabled = false;
+                txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
+                txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
+                cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
+                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
+            }
+        }
 
         public void Cargar_Datos()
         {
@@ -151,39 +168,12 @@ namespace FRM_Login.Menu
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            if (dgv_Usuario.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_Usuario.Enabled = false;
-                txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
+            Modificar_Usuario();
         }
 
         private void dgv_Usuario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (dgv_Usuario.RowCount == 0)
-            {
-                MessageBox.Show("No hay datos para modificar");
-            }
-            else
-            {
-                Obj_DAL.cBandIM = 'M';
-                txt_Usuario.Enabled = false;
-                txt_Usuario.Text = dgv_Usuario.SelectedRows[0].Cells[0].Value.ToString().Trim();
-                txt_Contraseña.Text = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString().Trim();
-                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[2].Value.ToString().Trim();
-                cmb_Estado.Text = dgv_Usuario.SelectedRows[0].Cells[3].Value.ToString().Trim();
-                cmb_Empleados.Text = dgv_Usuario.SelectedRows[0].Cells[4].Value.ToString().Trim();
-            }
+            Modificar_Usuario();
         }
 
         private void txt_Filtrar_TextChanged(object sender, EventArgs e)
