@@ -442,7 +442,15 @@ namespace FRM_Login.Menu
                 if (email_bien_escrito(txt_Email.Text) == true)
                 {
                     Obj_Citas_DAL.sNombre = txt_NomCliente.Text.ToString();
-                    Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
+                    if(txt_Telefono.Text.Trim() == string.Empty)
+                    {
+                        Obj_Citas_DAL.iTel = Convert.ToInt32(null);
+                    }
+                    else
+                    {
+                        Obj_Citas_DAL.iTel = Convert.ToInt32(txt_Telefono.Text.ToString());
+                    }
+                    
                     Obj_Citas_DAL.sNumPlaca = cmb_RegistroPlaca.SelectedValue.ToString();
                     Obj_Citas_DAL.cCodeServ = Convert.ToChar(cmb_TipoServicio.SelectedValue.ToString());
                     Obj_Citas_DAL.sEmail = txt_Email.Text.ToString();
