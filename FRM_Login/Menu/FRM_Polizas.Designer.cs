@@ -129,7 +129,7 @@
             this.txt_FechaVenci.Mask = "00/00/0000";
             this.txt_FechaVenci.Name = "txt_FechaVenci";
             this.txt_FechaVenci.Size = new System.Drawing.Size(178, 23);
-            this.txt_FechaVenci.TabIndex = 33;
+            this.txt_FechaVenci.TabIndex = 2;
             this.txt_FechaVenci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_FechaVenci.ValidatingType = typeof(System.DateTime);
             this.txt_FechaVenci.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_FechaVenci_KeyPress);
@@ -141,7 +141,7 @@
             this.txt_IdPoliza.MaxLength = 5;
             this.txt_IdPoliza.Name = "txt_IdPoliza";
             this.txt_IdPoliza.Size = new System.Drawing.Size(178, 23);
-            this.txt_IdPoliza.TabIndex = 31;
+            this.txt_IdPoliza.TabIndex = 0;
             this.txt_IdPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPoliza_KeyPress);
             // 
             // txt_CeduJurid
@@ -152,7 +152,7 @@
             this.txt_CeduJurid.MaxLength = 20;
             this.txt_CeduJurid.Name = "txt_CeduJurid";
             this.txt_CeduJurid.Size = new System.Drawing.Size(178, 23);
-            this.txt_CeduJurid.TabIndex = 3;
+            this.txt_CeduJurid.TabIndex = 4;
             this.txt_CeduJurid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CeduJurid_KeyPress);
             // 
             // label5
@@ -183,7 +183,7 @@
             this.cmb_IdTipoPoliza.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdTipoPoliza.Name = "cmb_IdTipoPoliza";
             this.cmb_IdTipoPoliza.Size = new System.Drawing.Size(178, 25);
-            this.cmb_IdTipoPoliza.TabIndex = 2;
+            this.cmb_IdTipoPoliza.TabIndex = 1;
             this.cmb_IdTipoPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdTipoPoliza_KeyPress);
             // 
             // label4
@@ -240,7 +240,7 @@
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(178, 25);
-            this.cmb_IdEstado.TabIndex = 1;
+            this.cmb_IdEstado.TabIndex = 3;
             this.cmb_IdEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdEstado_KeyPress);
             // 
             // label3
@@ -588,7 +588,7 @@
             this.txt_IdTipoPoliza.Multiline = true;
             this.txt_IdTipoPoliza.Name = "txt_IdTipoPoliza";
             this.txt_IdTipoPoliza.Size = new System.Drawing.Size(150, 27);
-            this.txt_IdTipoPoliza.TabIndex = 29;
+            this.txt_IdTipoPoliza.TabIndex = 0;
             this.txt_IdTipoPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdTipoPoliza_KeyPress);
             // 
             // cmb_IdProveedor
@@ -599,7 +599,7 @@
             this.cmb_IdProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdProveedor.Name = "cmb_IdProveedor";
             this.cmb_IdProveedor.Size = new System.Drawing.Size(150, 25);
-            this.cmb_IdProveedor.TabIndex = 28;
+            this.cmb_IdProveedor.TabIndex = 3;
             this.cmb_IdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_IdProveedor_KeyPress);
             // 
             // txt_NombrePoliza
@@ -611,7 +611,7 @@
             this.txt_NombrePoliza.Multiline = true;
             this.txt_NombrePoliza.Name = "txt_NombrePoliza";
             this.txt_NombrePoliza.Size = new System.Drawing.Size(150, 27);
-            this.txt_NombrePoliza.TabIndex = 22;
+            this.txt_NombrePoliza.TabIndex = 1;
             this.txt_NombrePoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NombrePoliza_KeyPress);
             // 
             // txt_Compañia
@@ -623,7 +623,7 @@
             this.txt_Compañia.Multiline = true;
             this.txt_Compañia.Name = "txt_Compañia";
             this.txt_Compañia.Size = new System.Drawing.Size(150, 27);
-            this.txt_Compañia.TabIndex = 20;
+            this.txt_Compañia.TabIndex = 2;
             this.txt_Compañia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Compañia_KeyPress);
             // 
             // btnSalir_TipoPolizas
@@ -638,7 +638,7 @@
             this.btnSalir_TipoPolizas.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir_TipoPolizas.Name = "btnSalir_TipoPolizas";
             this.btnSalir_TipoPolizas.Size = new System.Drawing.Size(110, 30);
-            this.btnSalir_TipoPolizas.TabIndex = 17;
+            this.btnSalir_TipoPolizas.TabIndex = 5;
             this.btnSalir_TipoPolizas.Text = "Salir";
             this.btnSalir_TipoPolizas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir_TipoPolizas.UseVisualStyleBackColor = false;
@@ -656,7 +656,7 @@
             this.btn_Guardar_TipoPolizas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Guardar_TipoPolizas.Name = "btn_Guardar_TipoPolizas";
             this.btn_Guardar_TipoPolizas.Size = new System.Drawing.Size(110, 30);
-            this.btn_Guardar_TipoPolizas.TabIndex = 16;
+            this.btn_Guardar_TipoPolizas.TabIndex = 4;
             this.btn_Guardar_TipoPolizas.Text = "Guardar";
             this.btn_Guardar_TipoPolizas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Guardar_TipoPolizas.UseVisualStyleBackColor = false;

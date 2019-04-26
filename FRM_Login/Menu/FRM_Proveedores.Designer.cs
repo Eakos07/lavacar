@@ -120,7 +120,7 @@
             0});
             this.txtPlazoPago.Name = "txtPlazoPago";
             this.txtPlazoPago.Size = new System.Drawing.Size(40, 23);
-            this.txtPlazoPago.TabIndex = 36;
+            this.txtPlazoPago.TabIndex = 4;
             this.txtPlazoPago.Value = new decimal(new int[] {
             1,
             0,
@@ -144,7 +144,7 @@
             this.txtTelefoProveedor.Mask = "00000000";
             this.txtTelefoProveedor.Name = "txtTelefoProveedor";
             this.txtTelefoProveedor.Size = new System.Drawing.Size(72, 23);
-            this.txtTelefoProveedor.TabIndex = 34;
+            this.txtTelefoProveedor.TabIndex = 3;
             // 
             // txt_IdProveedor
             // 
@@ -152,7 +152,7 @@
             this.txt_IdProveedor.MaxLength = 5;
             this.txt_IdProveedor.Name = "txt_IdProveedor";
             this.txt_IdProveedor.Size = new System.Drawing.Size(167, 23);
-            this.txt_IdProveedor.TabIndex = 33;
+            this.txt_IdProveedor.TabIndex = 0;
             this.txt_IdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdProveedor_KeyPress);
             // 
             // label1

@@ -53,10 +53,10 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btn_Buscar = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarHorarios = new System.Windows.Forms.ToolStripTextBox();
             this.dgv_Horarios = new System.Windows.Forms.DataGridView();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_CantiHoras)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -182,7 +182,7 @@
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
-            this.btn_Exit.TabIndex = 5;
+            this.btn_Exit.TabIndex = 8;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -200,7 +200,7 @@
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
-            this.btn_Save.TabIndex = 4;
+            this.btn_Save.TabIndex = 7;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -214,7 +214,7 @@
             this.cmb_IdEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_IdEstado.Name = "cmb_IdEstado";
             this.cmb_IdEstado.Size = new System.Drawing.Size(180, 25);
-            this.cmb_IdEstado.TabIndex = 9;
+            this.cmb_IdEstado.TabIndex = 6;
             // 
             // txt_Descrip
             // 
@@ -223,7 +223,7 @@
             this.txt_Descrip.MaxLength = 100;
             this.txt_Descrip.Name = "txt_Descrip";
             this.txt_Descrip.Size = new System.Drawing.Size(232, 23);
-            this.txt_Descrip.TabIndex = 6;
+            this.txt_Descrip.TabIndex = 5;
             // 
             // label3
             // 
@@ -330,6 +330,16 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // btn_Buscar
             // 
             this.btn_Buscar.Name = "btn_Buscar";
@@ -360,16 +370,6 @@
             this.dgv_Horarios.Size = new System.Drawing.Size(781, 274);
             this.dgv_Horarios.TabIndex = 0;
             this.dgv_Horarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Horarios_CellDoubleClick);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Horarios
             // 

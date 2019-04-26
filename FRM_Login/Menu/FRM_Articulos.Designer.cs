@@ -169,7 +169,7 @@
             0});
             this.txt_Cantidad_Articulo.Name = "txt_Cantidad_Articulo";
             this.txt_Cantidad_Articulo.Size = new System.Drawing.Size(139, 23);
-            this.txt_Cantidad_Articulo.TabIndex = 12;
+            this.txt_Cantidad_Articulo.TabIndex = 3;
             // 
             // cmb_Tipo_Articulo
             // 

@@ -123,7 +123,7 @@
             this.txt_Puesto.Location = new System.Drawing.Point(502, 77);
             this.txt_Puesto.Name = "txt_Puesto";
             this.txt_Puesto.Size = new System.Drawing.Size(159, 25);
-            this.txt_Puesto.TabIndex = 15;
+            this.txt_Puesto.TabIndex = 7;
             // 
             // txt_Telefono
             // 
@@ -131,7 +131,7 @@
             this.txt_Telefono.Mask = "00000000";
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(159, 23);
-            this.txt_Telefono.TabIndex = 14;
+            this.txt_Telefono.TabIndex = 4;
             // 
             // txt_IdEmpleado
             // 
@@ -141,7 +141,7 @@
             this.txt_IdEmpleado.MaxLength = 3;
             this.txt_IdEmpleado.Name = "txt_IdEmpleado";
             this.txt_IdEmpleado.Size = new System.Drawing.Size(158, 23);
-            this.txt_IdEmpleado.TabIndex = 13;
+            this.txt_IdEmpleado.TabIndex = 0;
             // 
             // btn_Exit
             // 
@@ -155,7 +155,7 @@
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(110, 30);
-            this.btn_Exit.TabIndex = 12;
+            this.btn_Exit.TabIndex = 11;
             this.btn_Exit.Text = "Salir";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -173,7 +173,7 @@
             this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(110, 30);
-            this.btn_Save.TabIndex = 11;
+            this.btn_Save.TabIndex = 10;
             this.btn_Save.Text = "Guardar";
             this.btn_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -223,7 +223,7 @@
             // 
             this.txt_Identificacion.Location = new System.Drawing.Point(143, 72);
             this.txt_Identificacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Identificacion.MaxLength = 50;
+            this.txt_Identificacion.MaxLength = 20;
             this.txt_Identificacion.Name = "txt_Identificacion";
             this.txt_Identificacion.Size = new System.Drawing.Size(158, 23);
             this.txt_Identificacion.TabIndex = 1;

@@ -38,6 +38,7 @@
             this.btn_Modificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.txt_FiltrarFacturas = new System.Windows.Forms.ToolStripTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -63,7 +64,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Facturas)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -159,6 +159,16 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -211,7 +221,7 @@
             this.txt_Ced_Jur.Location = new System.Drawing.Point(142, 198);
             this.txt_Ced_Jur.Name = "txt_Ced_Jur";
             this.txt_Ced_Jur.Size = new System.Drawing.Size(159, 23);
-            this.txt_Ced_Jur.TabIndex = 14;
+            this.txt_Ced_Jur.TabIndex = 4;
             // 
             // cmb_CodServ
             // 
@@ -221,7 +231,7 @@
             this.cmb_CodServ.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_CodServ.Name = "cmb_CodServ";
             this.cmb_CodServ.Size = new System.Drawing.Size(159, 25);
-            this.cmb_CodServ.TabIndex = 13;
+            this.cmb_CodServ.TabIndex = 2;
             this.cmb_CodServ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_CodServ_KeyPress);
             // 
             // cmb_NumPlaca
@@ -232,7 +242,7 @@
             this.cmb_NumPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_NumPlaca.Name = "cmb_NumPlaca";
             this.cmb_NumPlaca.Size = new System.Drawing.Size(159, 25);
-            this.cmb_NumPlaca.TabIndex = 12;
+            this.cmb_NumPlaca.TabIndex = 1;
             this.cmb_NumPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_NumPlaca_KeyPress);
             // 
             // cmb_IdTipCamb
@@ -443,16 +453,6 @@
             this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Número Factura:";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // FRM_Factura
             // 
